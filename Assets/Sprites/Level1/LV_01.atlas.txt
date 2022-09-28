@@ -1,0 +1,132 @@
+
+LV_01.png
+size: 1708,724
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BASEnew1705 (2)
+  rotate: false
+  xy: 2, 9
+  size: 677, 712
+  orig: 677, 712
+  offset: 0, 0
+  index: -1
+Layer 41
+  rotate: false
+  xy: 1166, 9
+  size: 308, 269
+  orig: 308, 269
+  offset: 0, 0
+  index: -1
+Layer 45
+  rotate: true
+  xy: 1476, 297
+  size: 246, 215
+  orig: 246, 215
+  offset: 0, 0
+  index: -1
+face
+  rotate: true
+  xy: 1476, 545
+  size: 176, 230
+  orig: 176, 230
+  offset: 0, 0
+  index: -1
+khan
+  rotate: true
+  xy: 681, 2
+  size: 265, 295
+  orig: 265, 295
+  offset: 0, 0
+  index: -1
+matphai
+  rotate: false
+  xy: 1598, 237
+  size: 83, 58
+  orig: 83, 58
+  offset: 0, 0
+  index: -1
+matphai1
+  rotate: false
+  xy: 1598, 116
+  size: 80, 59
+  orig: 80, 59
+  offset: 0, 0
+  index: -1
+matphai2
+  rotate: false
+  xy: 1598, 177
+  size: 83, 58
+  orig: 83, 58
+  offset: 0, 0
+  index: -1
+mattrai
+  rotate: false
+  xy: 1598, 61
+  size: 71, 53
+  orig: 71, 53
+  offset: 0, 0
+  index: -1
+mattrai1
+  rotate: false
+  xy: 1351, 381
+  size: 69, 59
+  orig: 69, 59
+  offset: 0, 0
+  index: -1
+mattrai2
+  rotate: false
+  xy: 1598, 6
+  size: 71, 53
+  orig: 71, 53
+  offset: 0, 0
+  index: -1
+mieng
+  rotate: true
+  xy: 1680, 122
+  size: 53, 26
+  orig: 53, 26
+  offset: 0, 0
+  index: -1
+mom
+  rotate: true
+  xy: 1422, 376
+  size: 64, 47
+  orig: 64, 47
+  offset: 0, 0
+  index: -1
+nguc
+  rotate: true
+  xy: 978, 9
+  size: 258, 186
+  orig: 258, 186
+  offset: 0, 0
+  index: -1
+tay ph
+  rotate: false
+  xy: 1351, 442
+  size: 120, 279
+  orig: 120, 279
+  offset: 0, 0
+  index: -1
+tay tr
+  rotate: false
+  xy: 1476, 16
+  size: 120, 279
+  orig: 120, 279
+  offset: 0, 0
+  index: -1
+than
+  rotate: false
+  xy: 681, 269
+  size: 333, 452
+  orig: 333, 452
+  offset: 0, 0
+  index: -1
+than1
+  rotate: false
+  xy: 1016, 280
+  size: 333, 441
+  orig: 333, 441
+  offset: 0, 0
+  index: -1
