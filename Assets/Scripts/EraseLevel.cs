@@ -4,7 +4,7 @@ using UnityEngine;
 using Spine.Unity;
 using DarkcupGames;
 
-public class Level1 : MonoBehaviour
+public class EraseLevel : LevelManager
 {
     public DrawController draw;
 
@@ -15,14 +15,25 @@ public class Level1 : MonoBehaviour
     }
 
     public IEnumerator IELevel1() {
+        skeletonAnimation.AnimationName = "normal";
+
         yield return new WaitUntil(() => {
             return draw.IsDrawFinished();
         });
 
+        Win();
+
+        yield return new WaitForSeconds(2f);    
+    }
+
+    public override void Hint() {
+        throw new System.NotImplementedException();
+    }
+
+    public override void Win() {
         Gameplay.Instance.PlayCongratulationEffect();
 
         draw.gameObject.SetActive(false);
         skeletonAnimation.AnimationName = "win";
-
-        yield return new WaitForSeconds(2f);    }
+    }
 }

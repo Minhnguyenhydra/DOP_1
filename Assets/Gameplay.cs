@@ -21,4 +21,8 @@ public class Gameplay : MonoBehaviour
             effects[i].Play();
         }
     }
+
+    public void Hint() {
+        FindObjectOfType<LevelManager>()?.Hint();
+    }
 }

@@ -1,0 +1,188 @@
+
+LV_05.png
+size: 1544,700
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bieu cam 2 co gai
+  rotate: false
+  xy: 1102, 29
+  size: 76, 80
+  orig: 76, 80
+  offset: 0, 0
+  index: -1
+Cay
+  rotate: true
+  xy: 931, 194
+  size: 325, 250
+  orig: 325, 250
+  offset: 0, 0
+  index: -1
+Layer 10 copy
+  rotate: false
+  xy: 1185, 54
+  size: 128, 154
+  orig: 128, 154
+  offset: 0, 0
+  index: -1
+Layer 11
+  rotate: false
+  xy: 888, 2
+  size: 23, 11
+  orig: 23, 11
+  offset: 0, 0
+  index: -1
+Layer 17
+  rotate: true
+  xy: 1451, 77
+  size: 100, 46
+  orig: 100, 46
+  offset: 0, 0
+  index: -1
+Layer 18
+  rotate: true
+  xy: 888, 15
+  size: 94, 115
+  orig: 94, 115
+  offset: 0, 0
+  index: -1
+Layer 18 copy
+  rotate: false
+  xy: 1482, 204
+  size: 42, 105
+  orig: 42, 105
+  offset: 0, 0
+  index: -1
+Layer 19
+  rotate: false
+  xy: 1269, 2
+  size: 32, 14
+  orig: 32, 14
+  offset: 0, 0
+  index: -1
+Layer 20
+  rotate: false
+  xy: 1183, 210
+  size: 134, 309
+  orig: 134, 309
+  offset: 0, 0
+  index: -1
+Layer 21
+  rotate: false
+  xy: 1236, 540
+  size: 248, 158
+  orig: 248, 158
+  offset: 0, 0
+  index: -1
+Layer 22
+  rotate: false
+  xy: 758, 114
+  size: 171, 405
+  orig: 171, 405
+  offset: 0, 0
+  index: -1
+Layer 23
+  rotate: true
+  xy: 1319, 179
+  size: 130, 161
+  orig: 130, 161
+  offset: 0, 0
+  index: -1
+Layer 24
+  rotate: false
+  xy: 1486, 558
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+Layer 25 copy
+  rotate: false
+  xy: 1303, 2
+  size: 27, 14
+  orig: 27, 14
+  offset: 0, 0
+  index: -1
+Layer 28 copy
+  rotate: true
+  xy: 1315, 44
+  size: 133, 134
+  orig: 133, 134
+  offset: 0, 0
+  index: -1
+Layer 32 copy
+  rotate: true
+  xy: 1486, 598
+  size: 100, 56
+  orig: 100, 56
+  offset: 0, 0
+  index: -1
+Layer 32 copy 2
+  rotate: false
+  xy: 1269, 18
+  size: 35, 34
+  orig: 35, 34
+  offset: 0, 0
+  index: -1
+Layer 7
+  rotate: true
+  xy: 2, 16
+  size: 682, 754
+  orig: 682, 754
+  offset: 0, 0
+  index: -1
+Vector Smart Object
+  rotate: true
+  xy: 1319, 311
+  size: 94, 220
+  orig: 94, 220
+  offset: 0, 0
+  index: -1
+Vector Smart Object copy 3
+  rotate: true
+  xy: 1319, 407
+  size: 131, 223
+  orig: 131, 223
+  offset: 0, 0
+  index: -1
+Vector Smart Object copy 4
+  rotate: false
+  xy: 758, 521
+  size: 476, 177
+  orig: 476, 177
+  offset: 0, 0
+  index: -1
+Vector Smart Object1
+  rotate: true
+  xy: 1005, 15
+  size: 94, 95
+  orig: 94, 95
+  offset: 0, 0
+  index: -1
+hand
+  rotate: false
+  xy: 1180, 3
+  size: 87, 49
+  orig: 87, 49
+  offset: 0, 0
+  index: -1
+motuh
+  rotate: false
+  xy: 1451, 54
+  size: 42, 21
+  orig: 42, 21
+  offset: 0, 0
+  index: -1
+water copy
+  rotate: false
+  xy: 758, 3
+  size: 128, 109
+  orig: 128, 109
+  offset: 0, 0
+  index: -1
+wire
+  rotate: false
+  xy: 931, 111
+  size: 252, 81
+  orig: 252, 81
+  offset: 0, 0
+  index: -1
