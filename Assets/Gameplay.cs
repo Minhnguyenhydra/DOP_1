@@ -22,6 +22,8 @@ public class Gameplay : MonoBehaviour
     private void Start() {
         GameSystem.LoadUserData();
         int level = GameSystem.userdata.level;
+        if (level > Constants.MAX_LEVEL) level = 0;
+
         GameObject obj = Resources.Load<GameObject>("Levels/Level" + (level + 1));
         Instantiate(obj);
     }
