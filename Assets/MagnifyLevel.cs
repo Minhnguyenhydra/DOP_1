@@ -22,10 +22,12 @@ public class MagnifyLevel : LevelManager
             LeanTween.move(magnify, positions[i], 1f).setEaseOutCubic();
             yield return new WaitForSeconds(1f);
         }
+
+        Win();
     }
 
     public override void Win() {
-        Gameplay.Instance.PlayCongratulationEffect();
+        Gameplay.Instance.Win();
 
         //draw.gameObject.SetActive(false);
         skeletonAnimation.AnimationName = "win";
