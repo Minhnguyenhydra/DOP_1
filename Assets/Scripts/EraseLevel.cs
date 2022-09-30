@@ -31,7 +31,7 @@ public class EraseLevel : LevelManager
     }
 
     public override void Win() {
-        Gameplay.Instance.PlayCongratulationEffect();
+        Gameplay.Instance.Win();
 
         draw.gameObject.SetActive(false);
         skeletonAnimation.AnimationName = "win";

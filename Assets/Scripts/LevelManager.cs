@@ -1,10 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DarkcupGames;
+using UnityEngine.SceneManagement;
 
-public abstract class LevelManager : MonoBehaviour
+public class LevelManager : MonoBehaviour
 {
-    public abstract void Hint();
+    public virtual void Hint() {
 
-    public abstract void Win();
+    }
+
+    public virtual void Win() {
+
+    }
 }
