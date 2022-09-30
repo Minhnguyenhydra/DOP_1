@@ -6,7 +6,7 @@ using DarkcupGames;
 
 public class EraseLevel : LevelManager
 {
-    public DrawController draw;
+    public PaintToSpriteMaskController draw;
 
     public SkeletonAnimation skeletonAnimation;
 
@@ -35,5 +35,6 @@ public class EraseLevel : LevelManager
 
         draw.gameObject.SetActive(false);
         skeletonAnimation.AnimationName = "win";
+        skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
     }
 }

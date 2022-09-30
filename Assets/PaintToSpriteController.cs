@@ -1,15 +1,17 @@
 using UnityEngine;
 
 namespace DarkcupGames {
-    public class DrawController : MonoBehaviour {
+    public class PaintToSpriteController : MonoBehaviour {
+        public Color paintColor = Color.clear;
+
         private Texture2D m_Texture;
         private Color[] m_Colors;
         RaycastHit2D hit;
         SpriteRenderer spriteRend;
-        Color zeroAlpha = Color.clear;
         public int erSize = 10;
         public Vector2Int lastPos;
         public bool Drawing = false;
+
         void Start() {
             spriteRend = gameObject.GetComponent<SpriteRenderer>();
             var tex = spriteRend.sprite.texture;
@@ -62,8 +64,9 @@ namespace DarkcupGames {
                         d = Mathf.Clamp01(d);
                         linePos = Vector2.Lerp(lastPos, p, d);
                     }
+
                     if ((pixel - linePos).sqrMagnitude <= erSize * erSize) {
-                        m_Colors[x + y * w] = zeroAlpha;
+                        m_Colors[x + y * w] = paintColor;
                     }
                 }
             }
@@ -83,7 +86,7 @@ namespace DarkcupGames {
             float count = 0;
 
             for (int i = 0; i < m_Colors.Length; i++) {
-                if (m_Colors[i] == zeroAlpha) {
+                if (m_Colors[i] == paintColor) {
                     count++;
                 }
             }
