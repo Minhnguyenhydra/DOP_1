@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2f7587b2dc16d49fbb5588daf4128acd, type: 2}
+  - {fileID: 2100000, guid: a610f4c465eb34601988f06646a38259, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,10 +114,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: a610f4c465eb34601988f06646a38259, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 2f7587b2dc16d49fbb5588daf4128acd, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: win
@@ -136,6 +134,7 @@ GameObject:
   - component: {fileID: 594262435365634475}
   - component: {fileID: 594262435365634454}
   - component: {fileID: 594262435365634455}
+  - component: {fileID: 8233418962234976531}
   m_Layer: 0
   m_Name: spriteMask
   m_TagString: Untagged
@@ -277,7 +276,8 @@ MonoBehaviour:
   spriteMask: {fileID: 594262435365634475}
   erSize: 10
   lastPos: {x: 0, y: 0}
-  Drawing: 0
+  lastWorldPos: {x: 0, y: 0}
+  isDrawing: 0
 --- !u!61 &594262435365634455
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -304,6 +304,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &8233418962234976531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594262435365634474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def59936f61ad994fa6897327db1bfaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eraser: {fileID: 0}
 --- !u!1 &4525722718352084583
 GameObject:
   m_ObjectHideFlags: 0

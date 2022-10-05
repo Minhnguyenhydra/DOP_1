@@ -304,6 +304,7 @@ GameObject:
   - component: {fileID: 2957989335039240534}
   - component: {fileID: 2957989335039240555}
   - component: {fileID: 2957989335039240554}
+  - component: {fileID: 7699910631295288324}
   m_Layer: 0
   m_Name: spriteMask
   m_TagString: Untagged
@@ -445,7 +446,8 @@ MonoBehaviour:
   spriteMask: {fileID: 2957989335039240534}
   erSize: 5
   lastPos: {x: 0, y: 0}
-  Drawing: 0
+  lastWorldPos: {x: 0, y: 0}
+  isDrawing: 0
 --- !u!61 &2957989335039240554
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -472,3 +474,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &7699910631295288324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2957989335039240535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def59936f61ad994fa6897327db1bfaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eraser: {fileID: 0}

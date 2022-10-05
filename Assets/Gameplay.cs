@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using DarkcupGames;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,8 @@ public class Gameplay : MonoBehaviour
 
     public List<ParticleSystem> effects;
     public UIEffect winPopup;
+    public Image findItemDemo;
+    public List<RectTransform> findBoxs;
 
     private void Awake() {
         Instance = this;
@@ -17,6 +20,7 @@ public class Gameplay : MonoBehaviour
         for (int i = 0; i < effects.Count; i++) {
             effects[i].Stop();
         }
+        findItemDemo.gameObject.SetActive(false);
     }
 
     private void Start() {
@@ -50,5 +54,28 @@ public class Gameplay : MonoBehaviour
         GameSystem.userdata.level++;
         GameSystem.SaveUserDataToLocal();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void FindItem(SpriteRenderer renderer) {
+        Transform emptyBox = null;
+
+        for (int i = 0; i < findBoxs.Count; i++) {
+            Transform box = findBoxs[i].transform;
+            if (box.childCount == 0) {
+                emptyBox = box;
+                break;
+            }
+        }
+
+        if (emptyBox == null) return;
+
+        var demo = Instantiate(findItemDemo);
+
+        demo.transform.position = Camera.main.WorldToScreenPoint(renderer.transform.position);
+        demo.sprite = renderer.sprite;
+        demo.transform.SetParent(emptyBox);
+        demo.gameObject.SetActive(true);
+
+        LeanTween.move(demo.gameObject, emptyBox.transform.position, 1f).setEaseOutCubic();
     }
 }

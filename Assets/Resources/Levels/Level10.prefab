@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1117486869962932479}
   - component: {fileID: 1117486869962932418}
   - component: {fileID: 1117486869962932419}
+  - component: {fileID: 2490244326943493046}
   m_Layer: 0
   m_Name: spriteMask
   m_TagString: Untagged
@@ -154,7 +155,8 @@ MonoBehaviour:
   spriteMask: {fileID: 1117486869962932479}
   erSize: 10
   lastPos: {x: 0, y: 0}
-  Drawing: 0
+  lastWorldPos: {x: 0, y: 0}
+  isDrawing: 0
 --- !u!61 &1117486869962932419
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -181,6 +183,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &2490244326943493046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117486869962932478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def59936f61ad994fa6897327db1bfaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eraser: {fileID: 0}
 --- !u!1 &1117486870779947911
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +258,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a06b53afe9d774952a39ab694f880fc8, type: 2}
+  - {fileID: 2100000, guid: e216ca6b372c54f4f86edf6dc400f6bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -295,10 +310,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: e216ca6b372c54f4f86edf6dc400f6bc, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: a06b53afe9d774952a39ab694f880fc8, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal

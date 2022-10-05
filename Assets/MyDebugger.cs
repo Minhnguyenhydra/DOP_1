@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class MyDebugger : MonoBehaviour
 {
-    public SpriteRenderer source;
-    public SpriteMask spriteMask;
+    public SpriteRenderer find;
+    //public SpriteRenderer source;
+    //public SpriteMask spriteMask;
 
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            UpdateSpriteMask();
+            //UpdateSpriteMask();
+            Gameplay.Instance.FindItem(find);
         }
     }
 
 
-    public void UpdateSpriteMask()
-    {
-        spriteMask.sprite = source.sprite;
-    }
+    //public void UpdateSpriteMask()
+    //{
+    //    spriteMask.sprite = source.sprite;
+    //}
 }

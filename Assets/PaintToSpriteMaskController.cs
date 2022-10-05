@@ -9,7 +9,8 @@ public class PaintToSpriteMaskController : MonoBehaviour
 
     public int erSize = 10;
     public Vector2Int lastPos;
-    public bool Drawing = false;
+    public Vector2 lastWorldPos;
+    public bool isDrawing = false;
 
     private Texture2D m_Texture;
     private Color[] m_Colors;
@@ -42,24 +43,25 @@ public class PaintToSpriteMaskController : MonoBehaviour
                 Debug.Log("this is collider: " + hit.collider);
 
                 UpdateTexture();
-                Drawing = true;
+                isDrawing = true;
             }
         }
         else
-            Drawing = false;
+            isDrawing = false;
     }
 
     public void UpdateTexture()
     {
         int w = m_Texture.width;
         int h = m_Texture.height;
+        lastWorldPos = hit.point;
         var mousePos = hit.point - (Vector2)hit.collider.bounds.min;
         mousePos.x *= w / hit.collider.bounds.size.x;
         mousePos.y *= h / hit.collider.bounds.size.y;
         Vector2Int p = new Vector2Int((int)mousePos.x, (int)mousePos.y);
         Vector2Int start = new Vector2Int();
         Vector2Int end = new Vector2Int();
-        if (!Drawing)
+        if (!isDrawing)
             lastPos = p;
         start.x = Mathf.Clamp(Mathf.Min(p.x, lastPos.x) - erSize, 0, w);
         start.y = Mathf.Clamp(Mathf.Min(p.y, lastPos.y) - erSize, 0, h);
@@ -72,7 +74,7 @@ public class PaintToSpriteMaskController : MonoBehaviour
             {
                 Vector2 pixel = new Vector2(x, y);
                 Vector2 linePos = p;
-                if (Drawing)
+                if (isDrawing)
                 {
                     float d = Vector2.Dot(pixel - lastPos, dir) / dir.sqrMagnitude;
                     d = Mathf.Clamp01(d);

@@ -33,7 +33,14 @@ public class EraseLevel : LevelManager
     public override void Win() {
         Gameplay.Instance.Win();
 
+        draw.isDrawing = false;
         draw.gameObject.SetActive(false);
+
+        EraserShowPosition erase = draw.GetComponent<EraserShowPosition>();
+        if (erase != null) {
+            erase.eraser.SetActive(false);
+        }
+
         skeletonAnimation.AnimationName = "win";
         skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
     }
