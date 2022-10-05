@@ -7,7 +7,7 @@ using DarkcupGames;
 public class FindItemLevel : LevelManager {
     public GameObject magnify;
     public List<SpriteRenderer> findObjects;
-    //public SkeletonAnimation skeletonAnimation;
+    
 
     Dictionary<SpriteRenderer, bool> founds;
 
@@ -26,10 +26,6 @@ public class FindItemLevel : LevelManager {
     }
 
     public IEnumerator IEHint() {
-        //for (int i = 0; i < positions.Count; i++) {
-        //    LeanTween.move(magnify, positions[i], 1f).setEaseOutCubic();
-        //    yield return new WaitForSeconds(1f);
-        //}
         yield return new WaitForSeconds(1f);
         Win();
     }
@@ -52,7 +48,7 @@ public class FindItemLevel : LevelManager {
         CheckWin();
     }
 
-    public void Found(SpriteRenderer spriteRenderer) {
+    public virtual void Found(SpriteRenderer spriteRenderer) {
         if (founds[spriteRenderer] == false) {
             founds[spriteRenderer] = true;
             spriteRenderer.gameObject.SetActive(false);
