@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using DarkcupGames;
 using UnityEngine.SceneManagement;
 using Spine.Unity;
+using TMPro;
 
 public class Gameplay : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Gameplay : MonoBehaviour
     public UIEffect winPopup;
     public Image findItemDemo;
     public List<RectTransform> findBoxs;
+    public TextMeshProUGUI txtLevel;
 
     private void Awake() {
         Instance = this;
@@ -27,10 +29,33 @@ public class Gameplay : MonoBehaviour
     private void Start() {
         GameSystem.LoadUserData();
         int level = GameSystem.userdata.level;
-        if (level > Constants.MAX_LEVEL) level = 0;
 
-        GameObject obj = Resources.Load<GameObject>("Levels/Level" + (level + 1));
-        Instantiate(obj);
+        int count = 0;
+
+        GameObject levelObject = null;
+
+        while (count < 10) {
+            GameObject obj = Resources.Load<GameObject>("Levels/Level" + (level + count + 1));
+
+            if (obj != null) {
+                levelObject = Instantiate(obj);
+                txtLevel.text = "LEVEL " + (level + count + 1);
+                GameSystem.userdata.level = level + count;
+                GameSystem.SaveUserDataToLocal();
+                break;
+            } else {
+                count++;
+            }
+        }
+        
+        if (levelObject == null) {
+            GameSystem.userdata.level = 0;
+            GameSystem.SaveUserDataToLocal();
+
+            levelObject = Resources.Load<GameObject>("Levels/Level1");
+
+            txtLevel.text = "LEVEL 1";
+        }
     }
 
     public void Win(LevelManager level) {

@@ -47,8 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1736e0d6eed5474abcc56b20925d59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animAfter: {fileID: 4585878672211434710}
+  animBefore: {fileID: 672714227062356077}
   draw: {fileID: 4585878670924478365}
-  skeletonAnimation: {fileID: 4585878672211434710}
 --- !u!1 &672714227062356076
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,11 +323,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintColor: {r: 1, g: 1, b: 1, a: 1}
-  spriteMask: {fileID: 4585878670924478368}
-  erSize: 10
   lastPos: {x: 0, y: 0}
   lastWorldPos: {x: 0, y: 0}
+  drawPoints: []
   isDrawing: 0
+  erSize: 10
+  spriteMask: {fileID: 4585878670924478368}
 --- !u!61 &4585878670924478364
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -480,8 +482,10 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: 0beb44272c1eb4e18b7e871f706128cd, type: 2}
+    materialsInsideMask:
+    - {fileID: 0}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: win
