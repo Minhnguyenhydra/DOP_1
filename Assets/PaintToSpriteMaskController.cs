@@ -114,6 +114,6 @@ public class PaintToSpriteMaskController : MonoBehaviour
         float percent = count / m_Colors.Length;
         Debug.Log("percent = " + percent);
 
-        return percent > Constants.DRAW_PERCENT_REQUIRE;
+        return percent > Constants.ERASE_PERCENT_REQUIRE;
     }
 }

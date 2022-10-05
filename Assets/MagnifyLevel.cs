@@ -7,7 +7,7 @@ public class MagnifyLevel : LevelManager
 {
     public GameObject magnify;
     public List<Vector2> positions;
-    public SkeletonAnimation skeletonAnimation;
+    //public SkeletonAnimation skeletonAnimation;
 
     public void Start() {
         Hint();

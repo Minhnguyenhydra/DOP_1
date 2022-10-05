@@ -8,7 +8,7 @@ public class EraseLevel : LevelManager
 {
     public PaintToSpriteMaskController draw;
 
-    public SkeletonAnimation skeletonAnimation;
+    //public SkeletonAnimation skeletonAnimation;
 
     private void Start() {
         StartCoroutine(IELevel1());

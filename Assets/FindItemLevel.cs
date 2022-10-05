@@ -7,7 +7,7 @@ using DarkcupGames;
 public class FindItemLevel : LevelManager {
     public GameObject magnify;
     public List<SpriteRenderer> findObjects;
-    public SkeletonAnimation skeletonAnimation;
+    //public SkeletonAnimation skeletonAnimation;
 
     Dictionary<SpriteRenderer, bool> founds;
 

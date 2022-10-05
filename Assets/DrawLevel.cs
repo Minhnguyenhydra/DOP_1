@@ -1,18 +1,74 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DarkcupGames;
+using Spine.Unity;
+using UnityEngine.SceneManagement;
 
-public class DrawLevel : MonoBehaviour
+public class DrawLevel : LevelManager
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public PaintToSpriteController draw;
+    public Collider2D checkArea;
+    public SkeletonAnimation skeletonAnimation;
+    public string winAnimationName;
+
+    private void Start() {
+        StartCoroutine(IEGameplay());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public IEnumerator IEGameplay() {
+        while (true) {
+            yield return new WaitUntil(() => {
+                return draw.isDrawing == true;
+            });
+
+            yield return new WaitUntil(() => {
+                return draw.isDrawing == false;
+            });
+
+            Debug.Log("Draw finished!");
+
+            int insideCount = 0;
+            for (int i = 0; i < draw.drawPoints.Count; i++) {
+                if (checkArea.OverlapPoint(draw.drawPoints[i])) {
+                    insideCount++;
+                }
+            }
+
+            float percent = ((float)insideCount) / draw.drawPoints.Count;
+
+            Debug.Log("Percent = " + percent);
+
+            if (percent > Constants.DRAW_PERCENT_REQUIRE) {
+                Win();
+            } else {
+                //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                draw.ClearDraw();
+            }
+            //if (item.Value.GetComponent<PolygonCollider2D>().OverlapPoint(CurrentCar.transform.position)) {
+            //    inside = true;
+            //}
+        }
+    }
+
+    public override void Win() {
+        //base.Win();
+        Gameplay.Instance.Win();
+
+        draw.isDrawing = false;
+        draw.gameObject.SetActive(false);
+
+        EraserShowPosition erase = draw.GetComponent<EraserShowPosition>();
+        if (erase != null) {
+            erase.eraser.SetActive(false);
+        }
+
+        if (winAnimationName != "") {
+            skeletonAnimation.AnimationName = winAnimationName;
+            
+        } else {
+            skeletonAnimation.AnimationName = "win";
+        }
+        skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
     }
 }
