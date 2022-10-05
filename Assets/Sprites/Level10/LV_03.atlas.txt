@@ -1,0 +1,244 @@
+
+LV_03.png
+size: 2004,748
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Group 4
+  rotate: false
+  xy: 1538, 248
+  size: 185, 498
+  orig: 185, 498
+  offset: 0, 0
+  index: -1
+Layer 10
+  rotate: true
+  xy: 1723, 124
+  size: 91, 156
+  orig: 91, 156
+  offset: 0, 0
+  index: -1
+Layer 11
+  rotate: false
+  xy: 1911, 23
+  size: 60, 109
+  orig: 60, 109
+  offset: 0, 0
+  index: -1
+Layer 12
+  rotate: true
+  xy: 869, 8
+  size: 163, 122
+  orig: 163, 122
+  offset: 0, 0
+  index: -1
+Layer 26 copy
+  rotate: false
+  xy: 1725, 593
+  size: 159, 153
+  orig: 159, 153
+  offset: 0, 0
+  index: -1
+Layer 26 copy 2
+  rotate: true
+  xy: 1130, 17
+  size: 157, 130
+  orig: 157, 130
+  offset: 0, 0
+  index: -1
+Layer 26 copy 3
+  rotate: true
+  xy: 689, 18
+  size: 153, 178
+  orig: 153, 178
+  offset: 0, 0
+  index: -1
+Layer 27 copy
+  rotate: false
+  xy: 1725, 217
+  size: 127, 156
+  orig: 127, 156
+  offset: 0, 0
+  index: -1
+Layer 29 copy
+  rotate: false
+  xy: 1904, 417
+  size: 97, 192
+  orig: 97, 192
+  offset: 0, 0
+  index: -1
+Layer 29 copy 21
+  rotate: false
+  xy: 1854, 217
+  size: 70, 162
+  orig: 70, 162
+  offset: 0, 0
+  index: -1
+Layer 29 copy 22
+  rotate: false
+  xy: 1926, 253
+  size: 70, 162
+  orig: 70, 162
+  offset: 0, 0
+  index: -1
+Layer 30 copy
+  rotate: false
+  xy: 1395, 7
+  size: 80, 185
+  orig: 80, 185
+  offset: 0, 0
+  index: -1
+Layer 32 copy
+  rotate: false
+  xy: 1477, 111
+  size: 128, 135
+  orig: 128, 135
+  offset: 0, 0
+  index: -1
+Layer 35 copy
+  rotate: false
+  xy: 1625, 2
+  size: 135, 120
+  orig: 135, 120
+  offset: 0, 0
+  index: -1
+Layer 36 copy
+  rotate: true
+  xy: 1239, 194
+  size: 163, 183
+  orig: 163, 183
+  offset: 0, 0
+  index: -1
+Layer 36 copy1
+  rotate: false
+  xy: 993, 17
+  size: 135, 157
+  orig: 135, 157
+  offset: 0, 0
+  index: -1
+Layer 36 copy2
+  rotate: false
+  xy: 1262, 34
+  size: 131, 158
+  orig: 131, 158
+  offset: 0, 0
+  index: -1
+Layer 37 copy
+  rotate: true
+  xy: 1239, 182
+  size: 10, 17
+  orig: 10, 17
+  offset: 0, 0
+  index: -1
+Layer 38 copy
+  rotate: true
+  xy: 1904, 392
+  size: 23, 17
+  orig: 23, 17
+  offset: 0, 0
+  index: -1
+Layer 39 copy 2
+  rotate: true
+  xy: 1424, 195
+  size: 55, 24
+  orig: 55, 24
+  offset: 0, 0
+  index: -1
+Layer 45 copy
+  rotate: false
+  xy: 1926, 223
+  size: 66, 28
+  orig: 66, 28
+  offset: 0, 0
+  index: -1
+Layer 46 copy
+  rotate: true
+  xy: 1477, 12
+  size: 97, 146
+  orig: 97, 146
+  offset: 0, 0
+  index: -1
+Layer 46 copy 2
+  rotate: false
+  xy: 1725, 375
+  size: 95, 216
+  orig: 95, 216
+  offset: 0, 0
+  index: -1
+Layer 47 copy 2
+  rotate: false
+  xy: 1822, 381
+  size: 80, 210
+  orig: 80, 210
+  offset: 0, 0
+  index: -1
+Layer 49 copy
+  rotate: true
+  xy: 1762, 54
+  size: 68, 147
+  orig: 68, 147
+  offset: 0, 0
+  index: -1
+Layer 50 copy
+  rotate: true
+  xy: 1607, 126
+  size: 120, 114
+  orig: 120, 114
+  offset: 0, 0
+  index: -1
+Layer 52 copy
+  rotate: false
+  xy: 689, 2
+  size: 22, 14
+  orig: 22, 14
+  offset: 0, 0
+  index: -1
+Layer 6
+  rotate: true
+  xy: 1424, 252
+  size: 105, 112
+  orig: 105, 112
+  offset: 0, 0
+  index: -1
+Layer 7
+  rotate: false
+  xy: 1881, 134
+  size: 70, 81
+  orig: 70, 81
+  offset: 0, 0
+  index: -1
+Layer 8
+  rotate: false
+  xy: 1886, 611
+  size: 116, 135
+  orig: 116, 135
+  offset: 0, 0
+  index: -1
+Vector Smart Object
+  rotate: false
+  xy: 1239, 359
+  size: 297, 387
+  orig: 297, 387
+  offset: 0, 0
+  index: -1
+Vector Smart Object copy
+  rotate: false
+  xy: 689, 173
+  size: 275, 573
+  orig: 275, 573
+  offset: 0, 0
+  index: -1
+Vector Smart Object1
+  rotate: false
+  xy: 966, 176
+  size: 271, 570
+  orig: 271, 570
+  offset: 0, 0
+  index: -1
+Vector Smart Object12
+  rotate: false
+  xy: 2, 13
+  size: 685, 733
+  orig: 685, 733
+  offset: 0, 0
+  index: -1

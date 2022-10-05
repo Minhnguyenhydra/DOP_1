@@ -1,0 +1,125 @@
+
+LV_14.png
+size: 1232,1232
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ellipse 1
+  rotate: false
+  xy: 959, 256
+  size: 235, 142
+  orig: 235, 142
+  offset: 0, 0
+  index: -1
+Layer 25 copy
+  rotate: false
+  xy: 2, 666
+  size: 622, 564
+  orig: 622, 564
+  offset: 0, 0
+  index: -1
+Layer 26
+  rotate: true
+  xy: 1037, 105
+  size: 149, 154
+  orig: 149, 154
+  offset: 0, 0
+  index: -1
+Layer 26 copy
+  rotate: true
+  xy: 959, 400
+  size: 206, 244
+  orig: 206, 244
+  offset: 0, 0
+  index: -1
+Layer 28
+  rotate: true
+  xy: 626, 608
+  size: 622, 564
+  orig: 622, 564
+  offset: 0, 0
+  index: -1
+Layer 28 copy
+  rotate: true
+  xy: 1192, 1146
+  size: 84, 38
+  orig: 84, 38
+  offset: 0, 0
+  index: -1
+Layer 29
+  rotate: false
+  xy: 875, 13
+  size: 160, 174
+  orig: 160, 174
+  offset: 0, 0
+  index: -1
+Shape 9
+  rotate: true
+  xy: 246, 16
+  size: 302, 156
+  orig: 302, 156
+  offset: 0, 0
+  index: -1
+Shape 9 copy
+  rotate: false
+  xy: 733, 189
+  size: 196, 144
+  orig: 196, 144
+  offset: 0, 0
+  index: -1
+chan_p2
+  rotate: true
+  xy: 618, 335
+  size: 271, 339
+  orig: 271, 339
+  offset: 0, 0
+  index: -1
+chan_t2
+  rotate: false
+  xy: 577, 21
+  size: 154, 297
+  orig: 154, 297
+  offset: 0, 0
+  index: -1
+chanp
+  rotate: true
+  xy: 246, 320
+  size: 344, 370
+  orig: 344, 370
+  offset: 0, 0
+  index: -1
+chant
+  rotate: false
+  xy: 404, 20
+  size: 171, 298
+  orig: 171, 298
+  offset: 0, 0
+  index: -1
+hong
+  rotate: true
+  xy: 733, 12
+  size: 175, 140
+  orig: 175, 140
+  offset: 0, 0
+  index: -1
+mat nham
+  rotate: true
+  xy: 1192, 1102
+  size: 42, 10
+  orig: 42, 10
+  offset: 0, 0
+  index: -1
+than1
+  rotate: true
+  xy: 2, 231
+  size: 375, 242
+  orig: 375, 242
+  offset: 0, 0
+  index: -1
+than2
+  rotate: true
+  xy: 2, 6
+  size: 223, 222
+  orig: 223, 222
+  offset: 0, 0
+  index: -1

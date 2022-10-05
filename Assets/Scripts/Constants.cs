@@ -4,6 +4,6 @@ using UnityEngine;
 
 public static class Constants 
 {
-    public static float DRAW_PERCENT_REQUIRE = 0.85f;
+    public static float DRAW_PERCENT_REQUIRE = 0.5f;
     public const int MAX_LEVEL = 5;
 }
