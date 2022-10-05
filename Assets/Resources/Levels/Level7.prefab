@@ -290,7 +290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb12e60aebc7cb45bd00fd1593714e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonAnimation: {fileID: 4341861311303463415}
+  animAfter: {fileID: 4341861311303463415}
+  animBefore: {fileID: 6347615350045890752}
   draw: {fileID: 7642102461084928801}
   checkArea: {fileID: 7642102459945668976}
   winAnimationName: 
@@ -505,6 +506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paintColor: {r: 0, g: 0, b: 0, a: 1}
   lastPos: {x: 0, y: 0}
+  lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
   erSize: 5

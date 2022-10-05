@@ -15,7 +15,7 @@ public class EraseLevel : LevelManager
     }
 
     public IEnumerator IELevel1() {
-        skeletonAnimation.AnimationName = "normal";
+        animAfter.AnimationName = "normal";
 
         yield return new WaitUntil(() => {
             return draw.IsDrawFinished();
@@ -31,8 +31,6 @@ public class EraseLevel : LevelManager
     }
 
     public override void Win() {
-        Gameplay.Instance.Win();
-
         draw.isDrawing = false;
         draw.gameObject.SetActive(false);
 
@@ -40,8 +38,9 @@ public class EraseLevel : LevelManager
         if (erase != null) {
             erase.eraser.SetActive(false);
         }
+        Gameplay.Instance.Win(this);
 
-        skeletonAnimation.AnimationName = "win";
-        skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
+        //skeletonAnimation.AnimationName = "win";
+        //skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
     }
 }

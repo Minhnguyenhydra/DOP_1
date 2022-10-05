@@ -806,7 +806,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6002da30e54c3304abacc948cb2461d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonAnimation: {fileID: 6499282311623155296}
+  animAfter: {fileID: 6499282311623155296}
+  animBefore: {fileID: 7837301906460637915}
   checkers: []
 --- !u!1 &7837301906460637914
 GameObject:

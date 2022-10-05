@@ -27,9 +27,9 @@ public class MagnifyLevel : LevelManager
     }
 
     public override void Win() {
-        Gameplay.Instance.Win();
+        Gameplay.Instance.Win(this);
 
         //draw.gameObject.SetActive(false);
-        skeletonAnimation.AnimationName = "win";
+        //skeletonAnimation.AnimationName = "win";
     }
 }

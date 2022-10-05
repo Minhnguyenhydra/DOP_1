@@ -637,11 +637,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f82fb647b0c0144081abccf251f230f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animAfter: {fileID: 2710660978662670666}
+  animBefore: {fileID: 2710660979114213016}
   magnify: {fileID: 2710660977865295407}
   findObjects:
   - {fileID: 8916882619409130477}
   - {fileID: 8916882620209829840}
-  skeletonAnimation: {fileID: 2710660978662670666}
 --- !u!1 &8916882619409130482
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,9 +17,9 @@ public class EraseMultipleLevel : LevelManager
             checkers[i].gameObject.SetActive(false);
         }
 
-        Gameplay.Instance.Win();
-        skeletonAnimation.AnimationName = "win";
-        skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
+        Gameplay.Instance.Win(this);
+        //skeletonAnimation.AnimationName = "win";
+        //skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
     }
 
     public void Reset() {

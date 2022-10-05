@@ -320,7 +320,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6b6545d72fba225429529a56c4e13e53, type: 2}
+  - {fileID: 2100000, guid: 3568589819a2a9640bead5b0a6af5c5a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -372,10 +372,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: 3568589819a2a9640bead5b0a6af5c5a, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 6b6545d72fba225429529a56c4e13e53, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -722,6 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd74fb4ca2125d48a9cb3f8f180bb59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonAnimation: {fileID: 2268520564782792401}
+  animAfter: {fileID: 2268520564782792401}
+  animBefore: {fileID: 2268520564297892099}
   magnify: {fileID: 2268520565529967028}
   findObject: {fileID: 4709205952275160182}

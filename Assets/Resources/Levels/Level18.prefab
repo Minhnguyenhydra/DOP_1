@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f29f13652c7695d4382bef5c5030b282, type: 2}
+  - {fileID: 2100000, guid: 3906d1e0482b4cd4688ba611217c60df, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,10 +114,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: 3906d1e0482b4cd4688ba611217c60df, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: f29f13652c7695d4382bef5c5030b282, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: win1
@@ -533,7 +531,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb12e60aebc7cb45bd00fd1593714e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonAnimation: {fileID: 865473480220655243}
+  animAfter: {fileID: 865473480220655243}
+  animBefore: {fileID: 7517887489837553596}
   draw: {fileID: 6507024034902344797}
   checkArea: {fileID: 6507024034299960844}
   winAnimationName: 

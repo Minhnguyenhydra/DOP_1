@@ -169,9 +169,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb12e60aebc7cb45bd00fd1593714e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animAfter: {fileID: 9171137612055031662}
+  animBefore: {fileID: 1950142532697441881}
   draw: {fileID: 2956962217672152504}
   checkArea: {fileID: 2956962216398671849}
-  skeletonAnimation: {fileID: 9171137612055031662}
   winAnimationName: win2
 --- !u!1 &2956962216398671851
 GameObject:
@@ -383,10 +384,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintColor: {r: 0, g: 0, b: 0, a: 1}
-  erSize: 5
   lastPos: {x: 0, y: 0}
-  isDrawing: 0
+  lastWorldPos: {x: 0, y: 0}
   drawPoints: []
+  isDrawing: 0
+  erSize: 5
 --- !u!61 &2956962217672152505
 BoxCollider2D:
   m_ObjectHideFlags: 0

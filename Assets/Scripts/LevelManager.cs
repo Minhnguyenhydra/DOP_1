@@ -7,7 +7,8 @@ using Spine.Unity;
 
 public class LevelManager : MonoBehaviour
 {
-    public SkeletonAnimation skeletonAnimation;
+    public SkeletonAnimation animAfter;
+    public SkeletonAnimation animBefore;
 
     public virtual void Hint() {
 

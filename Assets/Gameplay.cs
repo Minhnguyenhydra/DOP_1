@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DarkcupGames;
 using UnityEngine.SceneManagement;
+using Spine.Unity;
 
 public class Gameplay : MonoBehaviour
 {
@@ -32,19 +33,56 @@ public class Gameplay : MonoBehaviour
         Instantiate(obj);
     }
 
-    public void Win() {
-        StartCoroutine(IEPlayCongratulation());
+    public void Win(LevelManager level) {
+        if (level.animBefore != null) {
+            level.animBefore.gameObject.SetActive(false);
+        }
+        StartCoroutine(IEWin(level.animAfter));
     }
 
-    public IEnumerator IEPlayCongratulation() {
+    IEnumerator IEWin(SkeletonAnimation skeletonAnimation) {
+        skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
+
         for (int i = 0; i < effects.Count; i++) {
             effects[i].Play();
         }
 
+        var animations = skeletonAnimation.Skeleton.Data.Animations;
+        foreach (Spine.Animation item in animations) {
+            if (item.Name == "win") {
+                skeletonAnimation.AnimationName = "win";
+                yield return new WaitForSeconds(item.Duration);
+                break;
+            }
+
+            if (item.Name == "win1") {
+                skeletonAnimation.AnimationState.SetAnimation(0, "win1", false);
+                //skeletonAnimation.AnimationName = "win1";
+
+                yield return new WaitForSeconds(item.Duration);
+
+                Spine.Animation win2 = skeletonAnimation.Skeleton.Data.FindAnimation("win2");
+
+                if (win2 != null) {
+                    skeletonAnimation.AnimationName = "win2";
+                    yield return new WaitForSeconds(win2.Duration);
+                }
+            }
+        }
+
+        //StartCoroutine(IEPlayCongratulation());
         yield return new WaitForSeconds(1f);
 
         winPopup.DoEffect();
     }
+
+    //public IEnumerator IEPlayCongratulation() {
+       
+
+    //    yield return new WaitForSeconds(2f);
+
+    //    winPopup.DoEffect();
+    //}
 
     public void Hint() {
         FindObjectOfType<LevelManager>()?.Hint();

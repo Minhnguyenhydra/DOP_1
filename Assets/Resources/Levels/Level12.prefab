@@ -170,7 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6002da30e54c3304abacc948cb2461d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonAnimation: {fileID: 3219568448789953085}
+  animAfter: {fileID: 3219568448789953085}
+  animBefore: {fileID: 1900398297185181318}
   checkers: []
 --- !u!1 &3219568448789953075
 GameObject:

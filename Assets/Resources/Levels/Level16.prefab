@@ -132,7 +132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd74fb4ca2125d48a9cb3f8f180bb59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonAnimation: {fileID: 5175690850140467716}
+  animAfter: {fileID: 5175690850140467716}
+  animBefore: {fileID: 5175690849655344598}
   magnify: {fileID: 5175690848737932641}
   findObject: {fileID: 1869747922293444771}
 --- !u!1 &5175690848737932641

@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2173800fe22964c8891eb42b4f375a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animAfter: {fileID: 5563067163788511407}
+  animBefore: {fileID: 5563067163841918845}
   magnify: {fileID: 5563067162876055498}
   positions:
   - {x: -0.18, y: 2.3}
@@ -56,7 +58,6 @@ MonoBehaviour:
   - {x: 2.14, y: -0.4}
   - {x: 2.03, y: -1.57}
   - {x: -0.18, y: 2.3}
-  skeletonAnimation: {fileID: 5563067163841918845}
 --- !u!1 &5563067162491030260
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,7 +466,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 730b2a4b8a42be54a9cc6ab51b10bad9, type: 2}
+  - {fileID: 2100000, guid: 6097efee4f7acd8478726c80900cda96, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -517,8 +518,10 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: 730b2a4b8a42be54a9cc6ab51b10bad9, type: 2}
+    materialsInsideMask:
+    - {fileID: 2100000, guid: 6097efee4f7acd8478726c80900cda96, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal

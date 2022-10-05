@@ -47,8 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1736e0d6eed5474abcc56b20925d59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animAfter: {fileID: 8714489974976474154}
+  animBefore: {fileID: 5620967502197033105}
   draw: {fileID: 8714489973654505313}
-  skeletonAnimation: {fileID: 8714489974976474154}
 --- !u!1 &5620967502197033104
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,11 +323,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintColor: {r: 1, g: 1, b: 1, a: 1}
-  spriteMask: {fileID: 8714489973654505308}
-  erSize: 10
   lastPos: {x: 0, y: 0}
   lastWorldPos: {x: 0, y: 0}
+  drawPoints: []
   isDrawing: 0
+  erSize: 10
+  spriteMask: {fileID: 8714489973654505308}
 --- !u!61 &8714489973654505312
 BoxCollider2D:
   m_ObjectHideFlags: 0

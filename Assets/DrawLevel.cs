@@ -52,19 +52,6 @@ public class DrawLevel : LevelManager
     }
 
     public override void Win() {
-        //base.Win();
-
-
-        //if (winAnimationName != "") {
-        //    skeletonAnimation.AnimationName = winAnimationName;
-
-        //} else {
-
-        //}
-        StartCoroutine(IEWin());
-    }
-
-    IEnumerator IEWin() {
         draw.isDrawing = false;
         draw.gameObject.SetActive(false);
 
@@ -72,32 +59,6 @@ public class DrawLevel : LevelManager
         if (erase != null) {
             erase.eraser.SetActive(false);
         }
-
-        skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
-
-        var animations = skeletonAnimation.Skeleton.Data.Animations;
-        foreach (Spine.Animation item in animations) {
-            if (item.Name == "win") {
-                skeletonAnimation.AnimationName = "win";
-                yield return new WaitForSeconds(item.Duration);
-                break;
-            }
-
-            if (item.Name == "win1") {
-                skeletonAnimation.AnimationState.SetAnimation(0, "win1", false);
-                //skeletonAnimation.AnimationName = "win1";
-
-                yield return new WaitForSeconds(item.Duration);
-
-                Spine.Animation win2 = skeletonAnimation.Skeleton.Data.FindAnimation("win2");
-
-                if (win2 != null) {
-                    skeletonAnimation.AnimationName = "win2";
-                    yield return new WaitForSeconds(win2.Duration);
-                }
-            }
-        }
-
-        Gameplay.Instance.Win();
+        Gameplay.Instance.Win(this);
     }
 }

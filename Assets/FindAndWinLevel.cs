@@ -27,9 +27,9 @@ public class FindAndWinLevel : LevelManager
     }
 
     public override void Win() {
-        Gameplay.Instance.Win();
-        skeletonAnimation.AnimationName = "win";
-        skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
+        Gameplay.Instance.Win(this);
+        //skeletonAnimation.AnimationName = "win";
+        //skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
     }
 
     private void Update() {
