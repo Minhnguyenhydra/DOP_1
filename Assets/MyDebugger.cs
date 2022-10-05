@@ -13,7 +13,7 @@ public class MyDebugger : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //UpdateSpriteMask();
-            Gameplay.Instance.FindItem(find);
+            Gameplay.Instance.FoundItem(find);
         }
     }
 

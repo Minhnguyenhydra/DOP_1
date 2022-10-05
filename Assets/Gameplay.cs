@@ -56,7 +56,7 @@ public class Gameplay : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void FindItem(SpriteRenderer renderer) {
+    public void FoundItem(SpriteRenderer renderer) {
         Transform emptyBox = null;
 
         for (int i = 0; i < findBoxs.Count; i++) {
@@ -69,12 +69,20 @@ public class Gameplay : MonoBehaviour
 
         if (emptyBox == null) return;
 
+        StartCoroutine(IEFoundItem(renderer, emptyBox));
+    }
+
+    IEnumerator IEFoundItem(SpriteRenderer renderer, Transform emptyBox) {
         var demo = Instantiate(findItemDemo);
 
         demo.transform.position = Camera.main.WorldToScreenPoint(renderer.transform.position);
         demo.sprite = renderer.sprite;
         demo.transform.SetParent(emptyBox);
         demo.gameObject.SetActive(true);
+
+        EasyEffect.Appear(demo.gameObject, 0f, 1f);
+
+        yield return new WaitForSeconds(1f);
 
         LeanTween.move(demo.gameObject, emptyBox.transform.position, 1f).setEaseOutCubic();
     }
