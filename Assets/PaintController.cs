@@ -6,6 +6,7 @@ public class PaintController : MonoBehaviour
 {
     public Color paintColor = Color.clear;
     public Vector2Int lastPos;
+    public Vector2 lastWorldPos;
     public List<Vector2> drawPoints;
     public bool isDrawing = false;
     public int erSize = 10;
@@ -15,6 +16,8 @@ public class PaintController : MonoBehaviour
 
     protected Color[] originalColors;
     protected Color[] m_Colors;
+
+    bool canDraw = false;
 
     public virtual Texture2D GetSourceTexture() {
         var renderer = GetComponent<SpriteRenderer>();
@@ -40,32 +43,30 @@ public class PaintController : MonoBehaviour
     }
 
     public void Init() {
-        //spriteRend = gameObject.GetComponent<SpriteRenderer>();
-        //var tex = spriteRend.sprite.texture;
         var tex = GetSourceTexture();
         m_Texture = new Texture2D(tex.width, tex.height, TextureFormat.ARGB32, false);
         m_Texture.filterMode = FilterMode.Bilinear;
         m_Texture.wrapMode = TextureWrapMode.Clamp;
         m_Colors = tex.GetPixels();
-
         originalColors = tex.GetPixels();
-        //originalTexture = new Texture2D(tex.width, tex.height, TextureFormat.ARGB32, false);
-        //Graphics.CopyTexture(tex, originalTexture);
-        //originalColors = tex.GetPixels();
         m_Texture.SetPixels(m_Colors);
         m_Texture.Apply();
-        //spriteRend.sprite = Sprite.Create(m_Texture, spriteRend.sprite.rect, new Vector2(0.5f, 0.5f));
         drawPoints = new List<Vector2>();
+        canDraw = false;
 
         ApplyTexture(m_Texture);
     }
 
     void Update() {
-        if (Input.GetMouseButton(0)) {
+        if (Input.GetMouseButtonDown(0)) {
+            canDraw = true;
+        }
+
+        if (Input.GetMouseButton(0) && canDraw) {
             hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             Debug.Log("hit = " + hit);
 
-            if (hit.collider != null) {
+            if (hit.collider != null && hit.collider.gameObject == gameObject) {
                 Debug.Log("this is collider: " + hit.collider);
 
                 UpdateTexture();
@@ -78,6 +79,7 @@ public class PaintController : MonoBehaviour
     public void UpdateTexture() {
         int w = m_Texture.width;
         int h = m_Texture.height;
+        lastWorldPos = hit.point;
         drawPoints.Add(hit.point);
 
         var mousePos = hit.point - (Vector2)hit.collider.bounds.min;
@@ -108,16 +110,11 @@ public class PaintController : MonoBehaviour
                 }
             }
         }
-        //for (int i = 0; i < m_Colors.Length; i++)
-        //{
-        //    m_Colors[i] = zeroAlpha;
-        //}
         lastPos = p;
         m_Texture.SetPixels(m_Colors);
         m_Texture.Apply();
 
         ApplyTexture(m_Texture);
-        //spriteRend.sprite = Sprite.Create(m_Texture, spriteRend.sprite.rect, new Vector2(0.5f, 0.5f));
     }
 
     public bool IsDrawFinished() {
@@ -138,14 +135,10 @@ public class PaintController : MonoBehaviour
     }
 
     public void ClearDraw() {
-        //m_Texture.SetPixels(originalColors);
-        //m_Texture.Apply();
         m_Texture.SetPixels(originalColors);
         m_Texture.Apply();
         ApplyTexture(m_Texture);
 
-        //spriteRend.sprite = Sprite.Create(m_Texture, spriteRend.sprite.rect, new Vector2(0.5f, 0.5f));
         Init();
-        //spriteRend.sprite = Sprite.Create(originalTexture, spriteRend.sprite.rect, new Vector2(0.5f, 0.5f));
     }
 }

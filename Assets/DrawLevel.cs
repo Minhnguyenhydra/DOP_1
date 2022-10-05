@@ -9,7 +9,7 @@ public class DrawLevel : LevelManager
 {
     public PaintToSpriteController draw;
     public Collider2D checkArea;
-    public SkeletonAnimation skeletonAnimation;
+    //public SkeletonAnimation skeletonAnimation;
     public string winAnimationName;
 
     private void Start() {

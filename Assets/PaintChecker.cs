@@ -4,22 +4,29 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(PaintController))]
 public class PaintChecker : MonoBehaviour
 {
     public UnityEvent drawFinishEvent;
-    public PaintToSpriteMaskController draw;
+    [HideInInspector]
+    public PaintController draw;
 
     private void Start() {
+        draw = GetComponent<PaintController>();
+        StartChecking();
+    }
+
+    public void StartChecking() {
+        StopCoroutine(IECheckFinish());
         StartCoroutine(IECheckFinish());
     }
 
     public IEnumerator IECheckFinish() {
-        //skeletonAnimation.AnimationName = "normal";
-
         yield return new WaitUntil(() => {
             return draw.IsDrawFinished();
         });
 
+        Debug.Log("Draw finished!!");
         drawFinishEvent?.Invoke();
 
         yield return new WaitForSeconds(2f);
