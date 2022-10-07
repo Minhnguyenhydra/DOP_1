@@ -1,0 +1,286 @@
+
+LV_26.png
+size: 1143,1143
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ao2
+  rotate: true
+  xy: 812, 802
+  size: 138, 217
+  orig: 138, 217
+  offset: 0, 0
+  index: -1
+ban
+  rotate: true
+  xy: 2, 36
+  size: 339, 388
+  orig: 339, 388
+  offset: 0, 0
+  index: -1
+bg
+  rotate: false
+  xy: 2, 377
+  size: 667, 764
+  orig: 667, 764
+  offset: 0, 0
+  index: -1
+body1
+  rotate: false
+  xy: 671, 624
+  size: 139, 316
+  orig: 139, 316
+  offset: 0, 0
+  index: -1
+body2
+  rotate: true
+  xy: 671, 450
+  size: 172, 306
+  orig: 172, 306
+  offset: 0, 0
+  index: -1
+chan sau
+  rotate: true
+  xy: 812, 646
+  size: 72, 291
+  orig: 72, 291
+  offset: 0, 0
+  index: -1
+chan sau2
+  rotate: true
+  xy: 392, 172
+  size: 203, 248
+  orig: 203, 248
+  offset: 0, 0
+  index: -1
+chan trc1
+  rotate: true
+  xy: 812, 720
+  size: 80, 293
+  orig: 80, 293
+  offset: 0, 0
+  index: -1
+chan trc2
+  rotate: true
+  xy: 857, 98
+  size: 129, 270
+  orig: 129, 270
+  offset: 0, 0
+  index: -1
+chu viet
+  rotate: true
+  xy: 1099, 603
+  size: 41, 36
+  orig: 41, 36
+  offset: 0, 0
+  index: -1
+chu viet tren nguc
+  rotate: false
+  xy: 937, 977
+  size: 74, 49
+  orig: 74, 49
+  offset: 0, 0
+  index: -1
+dau1
+  rotate: true
+  xy: 671, 382
+  size: 66, 97
+  orig: 66, 97
+  offset: 0, 0
+  index: -1
+dau2
+  rotate: false
+  xy: 1065, 345
+  size: 72, 92
+  orig: 72, 92
+  offset: 0, 0
+  index: -1
+fx khoi
+  rotate: false
+  xy: 969, 13
+  size: 87, 83
+  orig: 87, 83
+  offset: 0, 0
+  index: -1
+ghe
+  rotate: true
+  xy: 642, 229
+  size: 146, 345
+  orig: 146, 345
+  offset: 0, 0
+  index: -1
+khung 1
+  rotate: false
+  xy: 1031, 922
+  size: 97, 104
+  orig: 97, 104
+  offset: 0, 0
+  index: -1
+khung 2
+  rotate: false
+  xy: 1031, 922
+  size: 97, 104
+  orig: 97, 104
+  offset: 0, 0
+  index: -1
+lm1
+  rotate: false
+  xy: 1122, 50
+  size: 11, 13
+  orig: 11, 13
+  offset: 0, 0
+  index: -1
+lm2
+  rotate: false
+  xy: 969, 3
+  size: 18, 8
+  orig: 18, 8
+  offset: 0, 0
+  index: -1
+mat
+  rotate: false
+  xy: 1122, 81
+  size: 15, 15
+  orig: 15, 15
+  offset: 0, 0
+  index: -1
+mat nham1
+  rotate: false
+  xy: 1122, 37
+  size: 11, 11
+  orig: 11, 11
+  offset: 0, 0
+  index: -1
+mat2
+  rotate: false
+  xy: 2, 10
+  size: 42, 24
+  orig: 42, 24
+  offset: 0, 0
+  index: -1
+mieng
+  rotate: false
+  xy: 1122, 11
+  size: 10, 10
+  orig: 10, 10
+  offset: 0, 0
+  index: -1
+miengn2
+  rotate: true
+  xy: 1122, 23
+  size: 12, 10
+  orig: 12, 10
+  offset: 0, 0
+  index: -1
+miengw1
+  rotate: true
+  xy: 1122, 65
+  size: 14, 13
+  orig: 14, 13
+  offset: 0, 0
+  index: -1
+miengw2
+  rotate: false
+  xy: 989, 4
+  size: 13, 7
+  orig: 13, 7
+  offset: 0, 0
+  index: -1
+quan2
+  rotate: true
+  xy: 642, 27
+  size: 200, 213
+  orig: 200, 213
+  offset: 0, 0
+  index: -1
+quanchan trc
+  rotate: false
+  xy: 671, 942
+  size: 179, 199
+  orig: 179, 199
+  offset: 0, 0
+  index: -1
+sach
+  rotate: true
+  xy: 1043, 1041
+  size: 100, 81
+  orig: 100, 81
+  offset: 0, 0
+  index: -1
+sach'] Copy
+  rotate: true
+  xy: 1031, 820
+  size: 100, 81
+  orig: 100, 81
+  offset: 0, 0
+  index: -1
+tay ao trc2
+  rotate: true
+  xy: 857, 9
+  size: 87, 110
+  orig: 87, 110
+  offset: 0, 0
+  index: -1
+tay sau2
+  rotate: false
+  xy: 852, 1028
+  size: 189, 113
+  orig: 189, 113
+  offset: 0, 0
+  index: -1
+tay trc2
+  rotate: false
+  xy: 392, 28
+  size: 241, 142
+  orig: 241, 142
+  offset: 0, 0
+  index: -1
+tayao sau2
+  rotate: false
+  xy: 1058, 2
+  size: 62, 94
+  orig: 62, 94
+  offset: 0, 0
+  index: -1
+tayp1
+  rotate: false
+  xy: 989, 239
+  size: 74, 198
+  orig: 74, 198
+  offset: 0, 0
+  index: -1
+tayt1
+  rotate: true
+  xy: 979, 439
+  size: 205, 118
+  orig: 205, 118
+  offset: 0, 0
+  index: -1
+toc mai2
+  rotate: false
+  xy: 833, 394
+  size: 70, 54
+  orig: 70, 54
+  offset: 0, 0
+  index: -1
+toc sau
+  rotate: false
+  xy: 852, 949
+  size: 83, 77
+  orig: 83, 77
+  offset: 0, 0
+  index: -1
+toc sau1
+  rotate: true
+  xy: 1065, 254
+  size: 89, 71
+  orig: 89, 71
+  offset: 0, 0
+  index: -1
+toc trc1
+  rotate: false
+  xy: 770, 389
+  size: 61, 59
+  orig: 61, 59
+  offset: 0, 0
+  index: -1

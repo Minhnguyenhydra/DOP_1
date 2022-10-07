@@ -7,7 +7,7 @@ public class MagnifyLevel : LevelManager
 {
     public GameObject magnify;
     public List<Vector2> positions;
-    public SkeletonAnimation skeletonAnimation;
+    //public SkeletonAnimation skeletonAnimation;
 
     public void Start() {
         Hint();
@@ -27,9 +27,9 @@ public class MagnifyLevel : LevelManager
     }
 
     public override void Win() {
-        Gameplay.Instance.Win();
+        Gameplay.Instance.Win(this);
 
         //draw.gameObject.SetActive(false);
-        skeletonAnimation.AnimationName = "win";
+        //skeletonAnimation.AnimationName = "win";
     }
 }

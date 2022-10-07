@@ -1,0 +1,111 @@
+
+LV_29.png
+size: 1385,1385
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bg
+  rotate: false
+  xy: 2, 279
+  size: 705, 1104
+  orig: 705, 1104
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 709, 15
+  size: 414, 797
+  orig: 414, 797
+  offset: 0, 0
+  index: -1
+cah tay
+  rotate: true
+  xy: 221, 18
+  size: 90, 94
+  orig: 90, 94
+  offset: 0, 0
+  index: -1
+dau
+  rotate: false
+  xy: 584, 166
+  size: 83, 111
+  orig: 83, 111
+  offset: 0, 0
+  index: -1
+logmay
+  rotate: false
+  xy: 584, 148
+  size: 53, 16
+  orig: 53, 16
+  offset: 0, 0
+  index: -1
+mat1
+  rotate: false
+  xy: 543, 2
+  size: 65, 21
+  orig: 65, 21
+  offset: 0, 0
+  index: -1
+matnham
+  rotate: false
+  xy: 639, 9
+  size: 61, 14
+  orig: 61, 14
+  offset: 0, 0
+  index: -1
+mouth1
+  rotate: false
+  xy: 639, 149
+  size: 27, 15
+  orig: 27, 15
+  offset: 0, 0
+  index: -1
+mouth2
+  rotate: false
+  xy: 610, 2
+  size: 27, 21
+  orig: 27, 21
+  offset: 0, 0
+  index: -1
+non
+  rotate: false
+  xy: 543, 25
+  size: 118, 106
+  orig: 118, 106
+  offset: 0, 0
+  index: -1
+riu a
+  rotate: true
+  xy: 709, 814
+  size: 569, 534
+  orig: 569, 534
+  offset: 0, 0
+  index: -1
+riu b
+  rotate: false
+  xy: 221, 110
+  size: 187, 167
+  orig: 187, 167
+  offset: 0, 0
+  index: -1
+tay tr
+  rotate: true
+  xy: 410, 133
+  size: 144, 172
+  orig: 144, 172
+  offset: 0, 0
+  index: -1
+toc sau
+  rotate: true
+  xy: 2, 106
+  size: 171, 217
+  orig: 171, 217
+  offset: 0, 0
+  index: -1
+toc trc
+  rotate: true
+  xy: 410, 8
+  size: 123, 131
+  orig: 123, 131
+  offset: 0, 0
+  index: -1

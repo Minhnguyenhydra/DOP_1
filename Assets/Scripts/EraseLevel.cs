@@ -8,14 +8,14 @@ public class EraseLevel : LevelManager
 {
     public PaintToSpriteMaskController draw;
 
-    public SkeletonAnimation skeletonAnimation;
+    //public SkeletonAnimation skeletonAnimation;
 
     private void Start() {
         StartCoroutine(IELevel1());
     }
 
     public IEnumerator IELevel1() {
-        skeletonAnimation.AnimationName = "normal";
+        animAfter.AnimationName = "normal";
 
         yield return new WaitUntil(() => {
             return draw.IsDrawFinished();
@@ -31,10 +31,16 @@ public class EraseLevel : LevelManager
     }
 
     public override void Win() {
-        Gameplay.Instance.Win();
-
+        draw.isDrawing = false;
         draw.gameObject.SetActive(false);
-        skeletonAnimation.AnimationName = "win";
-        skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
+
+        EraserShowPosition erase = draw.GetComponent<EraserShowPosition>();
+        if (erase != null) {
+            erase.eraser.SetActive(false);
+        }
+        Gameplay.Instance.Win(this);
+
+        //skeletonAnimation.AnimationName = "win";
+        //skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
     }
 }

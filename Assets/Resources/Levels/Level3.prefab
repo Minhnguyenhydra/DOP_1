@@ -168,8 +168,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1736e0d6eed5474abcc56b20925d59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animAfter: {fileID: 9082049425960930323}
+  animBefore: {fileID: 5258037815922780328}
   draw: {fileID: 9082049427282896728}
-  skeletonAnimation: {fileID: 9082049425960930323}
 --- !u!1 &9082049425960930333
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +233,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0a67f0ec9faa54b1986f982056cfa5d9, type: 2}
+  - {fileID: 2100000, guid: 86f757e8d8bc8e141a7520cdc4e7abb6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -284,10 +285,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: 86f757e8d8bc8e141a7520cdc4e7abb6, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 0a67f0ec9faa54b1986f982056cfa5d9, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -444,10 +443,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintColor: {r: 1, g: 1, b: 1, a: 1}
-  spriteMask: {fileID: 9082049427282896741}
-  erSize: 10
   lastPos: {x: 0, y: 0}
-  Drawing: 0
+  lastWorldPos: {x: 0, y: 0}
+  drawPoints: []
+  isDrawing: 0
+  erSize: 10
+  spriteMask: {fileID: 9082049427282896741}
 --- !u!61 &9082049427282896729
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -553,6 +553,7 @@ MonoBehaviour:
   - {fileID: 453783611}
   - {fileID: 198783573972310306}
   winPopup: {fileID: 81553834}
+  eraser: {fileID: 0}
 --- !u!1 &321643311
 GameObject:
   m_ObjectHideFlags: 0

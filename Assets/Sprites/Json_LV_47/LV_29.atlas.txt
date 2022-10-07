@@ -1,0 +1,132 @@
+
+LV_29.png
+size: 1144,1144
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BAP TAY PHAI copy
+  rotate: false
+  xy: 864, 510
+  size: 194, 281
+  orig: 194, 281
+  offset: 0, 0
+  index: -1
+BG
+  rotate: false
+  xy: 2, 430
+  size: 677, 712
+  orig: 677, 712
+  offset: 0, 0
+  index: -1
+bap tay trai copy
+  rotate: false
+  xy: 996, 825
+  size: 110, 317
+  orig: 110, 317
+  offset: 0, 0
+  index: -1
+dau
+  rotate: false
+  xy: 671, 122
+  size: 200, 234
+  orig: 200, 234
+  offset: 0, 0
+  index: -1
+dau1
+  rotate: false
+  xy: 873, 274
+  size: 200, 234
+  orig: 200, 234
+  offset: 0, 0
+  index: -1
+daytai nghe
+  rotate: false
+  xy: 334, 181
+  size: 335, 247
+  orig: 335, 247
+  offset: 0, 0
+  index: -1
+hieu ung
+  rotate: false
+  xy: 751, 68
+  size: 86, 52
+  orig: 86, 52
+  offset: 0, 0
+  index: -1
+long may
+  rotate: true
+  xy: 1108, 1009
+  size: 133, 27
+  orig: 133, 27
+  offset: 0, 0
+  index: -1
+long may2
+  rotate: true
+  xy: 1108, 886
+  size: 121, 26
+  orig: 121, 26
+  offset: 0, 0
+  index: -1
+mat mo
+  rotate: false
+  xy: 334, 18
+  size: 143, 43
+  orig: 143, 43
+  offset: 0, 0
+  index: -1
+mat nham
+  rotate: false
+  xy: 479, 16
+  size: 127, 45
+  orig: 127, 45
+  offset: 0, 0
+  index: -1
+mp3
+  rotate: true
+  xy: 636, 18
+  size: 102, 113
+  orig: 102, 113
+  offset: 0, 0
+  index: -1
+notnhac
+  rotate: true
+  xy: 681, 358
+  size: 433, 181
+  orig: 433, 181
+  offset: 0, 0
+  index: -1
+tai nghe
+  rotate: false
+  xy: 636, 142
+  size: 31, 37
+  orig: 31, 37
+  offset: 0, 0
+  index: -1
+tay phai
+  rotate: true
+  xy: 334, 63
+  size: 116, 300
+  orig: 116, 300
+  offset: 0, 0
+  index: -1
+than
+  rotate: false
+  xy: 2, 2
+  size: 330, 426
+  orig: 330, 426
+  offset: 0, 0
+  index: -1
+toc sau
+  rotate: false
+  xy: 681, 793
+  size: 313, 349
+  orig: 313, 349
+  offset: 0, 0
+  index: -1
+toc trc
+  rotate: false
+  xy: 873, 56
+  size: 234, 216
+  orig: 234, 216
+  offset: 0, 0
+  index: -1

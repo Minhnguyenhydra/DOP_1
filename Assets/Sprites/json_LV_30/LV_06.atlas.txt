@@ -1,0 +1,111 @@
+
+LV_06.png
+size: 1516,704
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 1064, 288
+  size: 222, 411
+  orig: 222, 411
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 1288, 288
+  size: 222, 411
+  orig: 222, 411
+  offset: 0, 0
+  index: -1
+Layer 10
+  rotate: true
+  xy: 1058, 44
+  size: 118, 157
+  orig: 118, 157
+  offset: 0, 0
+  index: -1
+Layer 11
+  rotate: false
+  xy: 1217, 47
+  size: 95, 115
+  orig: 95, 115
+  offset: 0, 0
+  index: -1
+Layer 13 copy
+  rotate: true
+  xy: 781, 25
+  size: 146, 275
+  orig: 146, 275
+  offset: 0, 0
+  index: -1
+Layer 13 copy 1
+  rotate: false
+  xy: 1432, 183
+  size: 81, 32
+  orig: 81, 32
+  offset: 0, 0
+  index: -1
+Layer 13 copy 2
+  rotate: false
+  xy: 1314, 60
+  size: 81, 32
+  orig: 81, 32
+  offset: 0, 0
+  index: -1
+Layer 17
+  rotate: false
+  xy: 1058, 28
+  size: 29, 14
+  orig: 29, 14
+  offset: 0, 0
+  index: -1
+Layer 21 copy
+  rotate: true
+  xy: 1266, 167
+  size: 48, 164
+  orig: 48, 164
+  offset: 0, 0
+  index: -1
+Layer 22
+  rotate: true
+  xy: 1266, 217
+  size: 69, 239
+  orig: 69, 239
+  offset: 0, 0
+  index: -1
+Layer 6
+  rotate: true
+  xy: 2, 2
+  size: 697, 777
+  orig: 697, 777
+  offset: 0, 0
+  index: -1
+Layer 7
+  rotate: false
+  xy: 781, 173
+  size: 281, 526
+  orig: 281, 526
+  offset: 0, 0
+  index: -1
+Layer 8
+  rotate: false
+  xy: 1314, 94
+  size: 102, 71
+  orig: 102, 71
+  offset: 0, 0
+  index: -1
+Layer 9
+  rotate: true
+  xy: 1064, 164
+  size: 122, 200
+  orig: 122, 200
+  offset: 0, 0
+  index: -1
+mom
+  rotate: false
+  xy: 781, 2
+  size: 33, 21
+  orig: 33, 21
+  offset: 0, 0
+  index: -1
