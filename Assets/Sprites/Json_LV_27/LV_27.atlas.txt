@@ -1,0 +1,139 @@
+
+LV_27.png
+size: 1387,1387
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+anh sang choi loa
+  rotate: false
+  xy: 709, 666
+  size: 421, 719
+  orig: 421, 719
+  offset: 0, 0
+  index: -1
+bg
+  rotate: false
+  xy: 2, 346
+  size: 705, 1039
+  orig: 705, 1039
+  offset: 0, 0
+  index: -1
+bo xuong
+  rotate: true
+  xy: 664, 11
+  size: 263, 670
+  orig: 263, 670
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 2, 15
+  size: 329, 660
+  orig: 329, 660
+  offset: 0, 0
+  index: -1
+body2
+  rotate: false
+  xy: 1165, 604
+  size: 117, 159
+  orig: 117, 159
+  offset: 0, 0
+  index: -1
+canh ph2
+  rotate: false
+  xy: 1132, 982
+  size: 211, 144
+  orig: 211, 144
+  offset: 0, 0
+  index: -1
+canh tr2
+  rotate: true
+  xy: 1274, 783
+  size: 197, 104
+  orig: 197, 104
+  offset: 0, 0
+  index: -1
+dau
+  rotate: false
+  xy: 1132, 765
+  size: 140, 215
+  orig: 140, 215
+  offset: 0, 0
+  index: -1
+dau`
+  rotate: false
+  xy: 1165, 527
+  size: 73, 75
+  orig: 73, 75
+  offset: 0, 0
+  index: -1
+lm
+  rotate: true
+  xy: 1345, 1036
+  size: 90, 40
+  orig: 90, 40
+  offset: 0, 0
+  index: -1
+mat 2
+  rotate: true
+  xy: 1345, 982
+  size: 52, 26
+  orig: 52, 26
+  offset: 0, 0
+  index: -1
+mat nham tr
+  rotate: true
+  xy: 1354, 1301
+  size: 84, 29
+  orig: 84, 29
+  offset: 0, 0
+  index: -1
+mat tr
+  rotate: true
+  xy: 1165, 370
+  size: 89, 43
+  orig: 89, 43
+  offset: 0, 0
+  index: -1
+mat troi
+  rotate: false
+  xy: 1132, 1128
+  size: 220, 257
+  orig: 220, 257
+  offset: 0, 0
+  index: -1
+mieng
+  rotate: false
+  xy: 1165, 461
+  size: 71, 64
+  orig: 71, 64
+  offset: 0, 0
+  index: -1
+mieng2
+  rotate: true
+  xy: 1132, 729
+  size: 34, 24
+  orig: 34, 24
+  offset: 0, 0
+  index: -1
+rem cua
+  rotate: false
+  xy: 709, 276
+  size: 454, 388
+  orig: 454, 388
+  offset: 0, 0
+  index: -1
+tai 1
+  rotate: false
+  xy: 664, 279
+  size: 43, 65
+  orig: 43, 65
+  offset: 0, 0
+  index: -1
+tai2
+  rotate: false
+  xy: 1165, 283
+  size: 40, 85
+  orig: 40, 85
+  offset: 0, 0
+  index: -1
