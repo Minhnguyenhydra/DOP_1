@@ -15,15 +15,46 @@ public class EraseLevel : LevelManager
     }
 
     public IEnumerator IELevel1() {
-        animAfter.AnimationName = "normal";
+        while (true)
+        {
+            animAfter.AnimationName = "normal";
+            //yield return new WaitUntil(() => {
+            //    return draw.isDrawing == false;
+            //});
 
-        yield return new WaitUntil(() => {
-            return draw.IsDrawFinished();
-        });
+            //yield return new WaitUntil(() => {
+            //    return draw.isDrawing == true;
+            //});
 
-        Win();
+            //yield return new WaitUntil(() => {
+            //    return draw.isDrawing == false;
+            //});
 
-        yield return new WaitForSeconds(2f);    
+
+            yield return new WaitUntil(() => {
+                return Input.GetMouseButtonUp(0);
+            });
+
+            Debug.Log("Ease finished");
+
+            if (draw.IsDrawFinished())
+            {
+                Win();
+                break;
+            }
+            else
+            {
+                draw.ClearDraw();
+            }
+            //yield return new WaitUntil(() => {
+            //    return draw.IsDrawFinished();
+            //});
+
+            //Win();
+        }
+
+        yield return new WaitForSeconds(2f);
+
     }
 
     public override void Hint() {

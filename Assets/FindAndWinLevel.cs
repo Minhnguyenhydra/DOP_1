@@ -39,7 +39,7 @@ public class FindAndWinLevel : LevelManager
     public void CheckWin() {
         if (isWin) return;
 
-        float distance = Vector2.Distance(findObject.transform.position, magnify.transform.position);
+        float distance = Vector2.Distance(findObject.transform.position, magnify.transform.GetChild(0).position);
 
         isWin = distance < Constants.FIND_ITEM_RANGE;
 

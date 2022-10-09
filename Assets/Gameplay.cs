@@ -16,6 +16,7 @@ public class Gameplay : MonoBehaviour
     public Image findItemDemo;
     public List<RectTransform> findBoxs;
     public TextMeshProUGUI txtLevel;
+    bool won = false;
 
     private void Awake() {
         Instance = this;
@@ -31,6 +32,7 @@ public class Gameplay : MonoBehaviour
         int level = GameSystem.userdata.level;
 
         int count = 0;
+        won = false;
 
         GameObject levelObject = null;
 
@@ -59,55 +61,64 @@ public class Gameplay : MonoBehaviour
     }
 
     public void Win(LevelManager level) {
+        if (won) return;
+        won = true;
+
         if (level.animBefore != null) {
             level.animBefore.gameObject.SetActive(false);
         }
-        StartCoroutine(IEWin(level.animAfter));
+        StartCoroutine(IEWin(level.animAfter, level.winAnims));
     }
 
-    IEnumerator IEWin(SkeletonAnimation skeletonAnimation) {
+    IEnumerator IEWin(SkeletonAnimation skeletonAnimation, List<string> anims = null) {
         skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
 
         for (int i = 0; i < effects.Count; i++) {
             effects[i].Play();
         }
 
-        var animations = skeletonAnimation.Skeleton.Data.Animations;
-        foreach (Spine.Animation item in animations) {
-            if (item.Name == "win") {
-                skeletonAnimation.AnimationName = "win";
-                yield return new WaitForSeconds(item.Duration);
-                break;
-            }
+        skeletonAnimation.AnimationState.Data.DefaultMix = 0;
 
-            if (item.Name == "win1") {
-                skeletonAnimation.AnimationState.SetAnimation(0, "win1", false);
-                //skeletonAnimation.AnimationName = "win1";
+        if (anims != null && anims.Count > 0)
+        {
+            for (int i = 0; i < anims.Count; i++)
+            {
+                Spine.Animation win = skeletonAnimation.Skeleton.Data.FindAnimation(anims[i]);
+                if (win != null)
+                {
+                    skeletonAnimation.AnimationName = anims[i];
 
-                yield return new WaitForSeconds(item.Duration);
-
-                Spine.Animation win2 = skeletonAnimation.Skeleton.Data.FindAnimation("win2");
-
-                if (win2 != null) {
-                    skeletonAnimation.AnimationName = "win2";
-                    yield return new WaitForSeconds(win2.Duration);
+                    yield return new WaitForSeconds(win.Duration);
                 }
             }
-        }
+        } else
+        {
+            Spine.Animation win = skeletonAnimation.Skeleton.Data.FindAnimation("win");
+            if (win != null)
+            {
+                skeletonAnimation.AnimationName = "win";
 
-        //StartCoroutine(IEPlayCongratulation());
+                yield return new WaitForSeconds(win.Duration);
+            }
+
+            Spine.Animation win1 = skeletonAnimation.Skeleton.Data.FindAnimation("win1");
+            if (win1 != null)
+            {
+                skeletonAnimation.AnimationName = "win1";
+                yield return new WaitForSeconds(win1.Duration);
+            }
+
+            Spine.Animation win2 = skeletonAnimation.Skeleton.Data.FindAnimation("win2");
+            if (win2 != null)
+            {
+                skeletonAnimation.AnimationName = "win2";
+                yield return new WaitForSeconds(win2.Duration);
+            }
+        }
         yield return new WaitForSeconds(1f);
 
         winPopup.DoEffect();
     }
-
-    //public IEnumerator IEPlayCongratulation() {
-       
-
-    //    yield return new WaitForSeconds(2f);
-
-    //    winPopup.DoEffect();
-    //}
 
     public void Hint() {
         FindObjectOfType<LevelManager>()?.Hint();

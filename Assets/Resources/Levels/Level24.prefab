@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animAfter: {fileID: 7576734902496681657}
   animBefore: {fileID: 6905247605832989186}
+  winAnims: []
   draw: {fileID: 7576734903892702706}
 --- !u!1 &7576734902496681655
 GameObject:
@@ -321,8 +322,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7576734903892702670}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0739, y: -3.6531, z: -0.0058392202}
-  m_LocalScale: {x: 1.9153664, y: 1.8678674, z: 1}
+  m_LocalPosition: {x: -0.14, y: -3.35, z: -0.0058392202}
+  m_LocalScale: {x: 4.1680098, y: 3.9879866, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6905247607139637510}

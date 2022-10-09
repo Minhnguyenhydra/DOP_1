@@ -10,6 +10,7 @@ public class PaintChecker : MonoBehaviour
     public UnityEvent drawFinishEvent;
     [HideInInspector]
     public PaintController draw;
+    
 
     private void Start() {
         draw = GetComponent<PaintController>();
@@ -22,12 +23,23 @@ public class PaintChecker : MonoBehaviour
     }
 
     public IEnumerator IECheckFinish() {
-        yield return new WaitUntil(() => {
-            return draw.IsDrawFinished();
-        });
+        while (true)
+        {
+            yield return new WaitUntil(() => {
+                return Input.GetMouseButtonUp(0);
+            });
 
-        Debug.Log("Draw finished!!");
-        drawFinishEvent?.Invoke();
+            if (draw.IsDrawFinished())
+            {
+                Debug.Log("Draw finished!!");
+                drawFinishEvent?.Invoke();
+                break;
+            }
+            else
+            {
+                draw.ClearDraw();
+            }
+        }
 
         yield return new WaitForSeconds(2f);
     }

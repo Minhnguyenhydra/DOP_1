@@ -38,7 +38,7 @@ public class FindItemLevel : LevelManager {
 
     private void Update() {
         for (int i = 0; i < findObjects.Count; i++) {
-            float distance = Vector2.Distance(findObjects[i].transform.position, magnify.transform.position);
+            float distance = Vector2.Distance(findObjects[i].transform.position, magnify.transform.GetChild(0).position);
 
             if (distance < Constants.FIND_ITEM_RANGE) {
                 Found(findObjects[i]);
