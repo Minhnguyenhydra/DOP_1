@@ -60,17 +60,17 @@ public class Gameplay : MonoBehaviour
         }
     }
 
-    public void Win(LevelManager level) {
+    public void Win(LevelManager level, bool showWinPopupImediately = true) {
         if (won) return;
         won = true;
 
         if (level.animBefore != null) {
             level.animBefore.gameObject.SetActive(false);
         }
-        StartCoroutine(IEWin(level.animAfter, level.winAnims));
+        StartCoroutine(IEWin(level.animAfter, level.winAnims, showWinPopupImediately));
     }
 
-    IEnumerator IEWin(SkeletonAnimation skeletonAnimation, List<string> anims = null) {
+    IEnumerator IEWin(SkeletonAnimation skeletonAnimation, List<string> anims = null, bool showWinPopupImediately = true) {
         skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
 
         for (int i = 0; i < effects.Count; i++) {
@@ -117,6 +117,12 @@ public class Gameplay : MonoBehaviour
         }
         yield return new WaitForSeconds(1f);
 
+        if (showWinPopupImediately) {
+            ShowWinPopup();
+        }
+    }
+
+    public void ShowWinPopup() {
         winPopup.DoEffect();
     }
 

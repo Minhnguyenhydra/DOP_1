@@ -11,6 +11,11 @@ public class EraseLevel : LevelManager
     //public SkeletonAnimation skeletonAnimation;
 
     private void Start() {
+        EraserShowPosition eraserShowPosition = draw.GetComponent<EraserShowPosition>();
+        if (eraserShowPosition == null) {
+            eraserShowPosition = draw.gameObject.AddComponent<EraserShowPosition>();
+        }
+
         StartCoroutine(IELevel1());
     }
 

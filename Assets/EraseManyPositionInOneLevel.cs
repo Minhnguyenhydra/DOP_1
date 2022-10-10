@@ -8,6 +8,13 @@ public class EraseManyPositionInOneLevel : LevelManager
 
     private void Start() {
         checkers = GetComponentsInChildren<PaintChecker>();
+
+        for (int i = 0; i < checkers.Length; i++) {
+            EraserShowPosition eraserShowPosition = checkers[i].GetComponent<EraserShowPosition>();
+            if (eraserShowPosition == null) {
+                eraserShowPosition = checkers[i].gameObject.AddComponent<EraserShowPosition>();
+            }
+        }
     }
 
     public override void Win() {

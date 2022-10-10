@@ -1,0 +1,83 @@
+
+LV_39.png
+size: 1544,1544
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: true
+  xy: 107, 15
+  size: 21, 42
+  orig: 21, 42
+  offset: 0, 0
+  index: -1
+2
+  rotate: true
+  xy: 62, 4
+  size: 32, 43
+  orig: 32, 43
+  offset: 0, 0
+  index: -1
+3
+  rotate: true
+  xy: 2, 2
+  size: 34, 58
+  orig: 34, 58
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 163, 10
+  size: 39, 55
+  orig: 39, 55
+  offset: 0, 0
+  index: -1
+bg
+  rotate: false
+  xy: 2, 716
+  size: 711, 826
+  orig: 711, 826
+  offset: 0, 0
+  index: -1
+cốc
+  rotate: true
+  xy: 2, 159
+  size: 555, 332
+  orig: 555, 332
+  offset: 0, 0
+  index: -1
+hl
+  rotate: true
+  xy: 557, 246
+  size: 150, 143
+  orig: 150, 143
+  offset: 0, 0
+  index: -1
+nuoc chay
+  rotate: true
+  xy: 2, 38
+  size: 27, 159
+  orig: 27, 159
+  offset: 0, 0
+  index: -1
+nuoc trong binh
+  rotate: true
+  xy: 336, 174
+  size: 540, 219
+  orig: 540, 219
+  offset: 0, 0
+  index: -1
+voi nuoc
+  rotate: true
+  xy: 557, 398
+  size: 316, 85
+  orig: 316, 85
+  offset: 0, 0
+  index: -1
+wall
+  rotate: true
+  xy: 2, 67
+  size: 90, 729
+  orig: 90, 729
+  offset: 0, 0
+  index: -1

@@ -12,7 +12,7 @@ public class DrawLevel : LevelManager
     //public SkeletonAnimation skeletonAnimation;
     public string winAnimationName;
 
-    private void Start() {
+    public virtual void Start() {
         StartCoroutine(IEGameplay());
     }
 
