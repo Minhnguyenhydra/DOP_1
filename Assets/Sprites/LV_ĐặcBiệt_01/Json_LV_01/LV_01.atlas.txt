@@ -1,0 +1,160 @@
+
+LV_01.png
+size: 1573,1573
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bangdo
+  rotate: true
+  xy: 1271, 765
+  size: 157, 61
+  orig: 157, 61
+  offset: 0, 0
+  index: -1
+bg
+  rotate: false
+  xy: 2, 456
+  size: 702, 1115
+  orig: 702, 1115
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 2, 52
+  size: 402, 506
+  orig: 402, 506
+  offset: 0, 0
+  index: -1
+chan
+  rotate: false
+  xy: 706, 805
+  size: 161, 465
+  orig: 161, 465
+  offset: 0, 0
+  index: -1
+chan 2
+  rotate: false
+  xy: 1372, 641
+  size: 166, 357
+  orig: 166, 357
+  offset: 0, 0
+  index: -1
+dau
+  rotate: false
+  xy: 1362, 396
+  size: 175, 243
+  orig: 175, 243
+  offset: 0, 0
+  index: -1
+ghile
+  rotate: false
+  xy: 963, 850
+  size: 306, 347
+  orig: 306, 347
+  offset: 0, 0
+  index: -1
+khay
+  rotate: true
+  xy: 1071, 407
+  size: 356, 289
+  orig: 356, 289
+  offset: 0, 0
+  index: -1
+lm2
+  rotate: false
+  xy: 150, 6
+  size: 147, 44
+  orig: 147, 44
+  offset: 0, 0
+  index: -1
+mat nham 2
+  rotate: false
+  xy: 2, 2
+  size: 146, 48
+  orig: 146, 48
+  offset: 0, 0
+  index: -1
+mattr
+  rotate: false
+  xy: 1071, 789
+  size: 149, 59
+  orig: 149, 59
+  offset: 0, 0
+  index: -1
+mieng
+  rotate: true
+  xy: 299, 6
+  size: 44, 35
+  orig: 44, 35
+  offset: 0, 0
+  index: -1
+somi
+  rotate: false
+  xy: 979, 1199
+  size: 404, 372
+  orig: 404, 372
+  offset: 0, 0
+  index: -1
+tai
+  rotate: true
+  xy: 1271, 924
+  size: 273, 99
+  orig: 273, 99
+  offset: 0, 0
+  index: -1
+tap de
+  rotate: true
+  xy: 706, 470
+  size: 333, 363
+  orig: 333, 363
+  offset: 0, 0
+  index: -1
+tay
+  rotate: false
+  xy: 1385, 1000
+  size: 151, 571
+  orig: 151, 571
+  offset: 0, 0
+  index: -1
+tay 2
+  rotate: false
+  xy: 869, 904
+  size: 92, 366
+  orig: 92, 366
+  offset: 0, 0
+  index: -1
+toc sau
+  rotate: false
+  xy: 510, 53
+  size: 467, 401
+  orig: 467, 401
+  offset: 0, 0
+  index: -1
+toc trc
+  rotate: true
+  xy: 1268, 166
+  size: 228, 242
+  orig: 228, 242
+  offset: 0, 0
+  index: -1
+tất da
+  rotate: true
+  xy: 706, 1272
+  size: 299, 255
+  orig: 299, 255
+  offset: 0, 0
+  index: -1
+vay'
+  rotate: false
+  xy: 979, 154
+  size: 287, 251
+  orig: 287, 251
+  offset: 0, 0
+  index: -1
+vong tay
+  rotate: false
+  xy: 869, 833
+  size: 73, 69
+  orig: 73, 69
+  offset: 0, 0
+  index: -1

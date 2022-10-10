@@ -1,0 +1,236 @@
+
+LV_06.png
+size: 2042,2042
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ao
+  rotate: true
+  xy: 540, 1878
+  size: 112, 127
+  orig: 112, 127
+  offset: 0, 0
+  index: -1
+ao choang
+  rotate: false
+  xy: 1006, 1809
+  size: 176, 164
+  orig: 176, 164
+  offset: 0, 0
+  index: -1
+bap chan
+  rotate: false
+  xy: 1620, 1964
+  size: 111, 76
+  orig: 111, 76
+  offset: 0, 0
+  index: -1
+bap chan 2
+  rotate: false
+  xy: 1733, 1964
+  size: 127, 76
+  orig: 127, 76
+  offset: 0, 0
+  index: -1
+bap tay 1
+  rotate: true
+  xy: 358, 2002
+  size: 38, 113
+  orig: 38, 113
+  offset: 0, 0
+  index: -1
+bap tay 2
+  rotate: true
+  xy: 245, 2010
+  size: 30, 111
+  orig: 30, 111
+  offset: 0, 0
+  index: -1
+bg
+  rotate: true
+  xy: 2, 1135
+  size: 702, 875
+  orig: 702, 875
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 1862, 1951
+  size: 89, 178
+  orig: 89, 178
+  offset: 0, 0
+  index: -1
+chan 1
+  rotate: true
+  xy: 1421, 1969
+  size: 71, 197
+  orig: 71, 197
+  offset: 0, 0
+  index: -1
+chan 2
+  rotate: true
+  xy: 1051, 1975
+  size: 65, 198
+  orig: 65, 198
+  offset: 0, 0
+  index: -1
+cui~ nho Copy
+  rotate: false
+  xy: 897, 1977
+  size: 152, 63
+  orig: 152, 63
+  offset: 0, 0
+  index: -1
+cui~ to Copy
+  rotate: false
+  xy: 669, 1866
+  size: 182, 111
+  orig: 182, 111
+  offset: 0, 0
+  index: -1
+dau1
+  rotate: true
+  xy: 1251, 1975
+  size: 65, 83
+  orig: 65, 83
+  offset: 0, 0
+  index: -1
+dau2
+  rotate: true
+  xy: 1336, 1975
+  size: 65, 83
+  orig: 65, 83
+  offset: 0, 0
+  index: -1
+fx
+  rotate: true
+  xy: 570, 1992
+  size: 48, 101
+  orig: 48, 101
+  offset: 0, 0
+  index: -1
+fx2
+  rotate: true
+  xy: 1392, 1749
+  size: 213, 387
+  orig: 213, 387
+  offset: 0, 0
+  index: -1
+ghe
+  rotate: true
+  xy: 1184, 1791
+  size: 182, 206
+  orig: 182, 206
+  offset: 0, 0
+  index: -1
+lm1
+  rotate: false
+  xy: 139, 2019
+  size: 49, 21
+  orig: 49, 21
+  offset: 0, 0
+  index: -1
+lm2
+  rotate: false
+  xy: 86, 2021
+  size: 51, 19
+  orig: 51, 19
+  offset: 0, 0
+  index: -1
+lua Copy
+  rotate: true
+  xy: 291, 1901
+  size: 99, 136
+  orig: 99, 136
+  offset: 0, 0
+  index: -1
+mat nham1
+  rotate: false
+  xy: 17, 2026
+  size: 45, 14
+  orig: 45, 14
+  offset: 0, 0
+  index: -1
+mat2
+  rotate: false
+  xy: 190, 2016
+  size: 53, 24
+  orig: 53, 24
+  offset: 0, 0
+  index: -1
+mieng 2
+  rotate: false
+  xy: 64, 2026
+  size: 20, 14
+  orig: 20, 14
+  offset: 0, 0
+  index: -1
+mieng1
+  rotate: false
+  xy: 2, 2031
+  size: 13, 9
+  orig: 13, 9
+  offset: 0, 0
+  index: -1
+nguc
+  rotate: false
+  xy: 673, 1980
+  size: 94, 60
+  orig: 94, 60
+  offset: 0, 0
+  index: -1
+tay1
+  rotate: false
+  xy: 769, 1979
+  size: 126, 61
+  orig: 126, 61
+  offset: 0, 0
+  index: -1
+tay2
+  rotate: false
+  xy: 473, 2000
+  size: 95, 40
+  orig: 95, 40
+  offset: 0, 0
+  index: -1
+toc 1
+  rotate: true
+  xy: 161, 1910
+  size: 98, 128
+  orig: 98, 128
+  offset: 0, 0
+  index: -1
+toc sau
+  rotate: true
+  xy: 853, 1839
+  size: 136, 151
+  orig: 136, 151
+  offset: 0, 0
+  index: -1
+toc trc
+  rotate: false
+  xy: 429, 1895
+  size: 109, 103
+  orig: 109, 103
+  offset: 0, 0
+  index: -1
+vay'
+  rotate: false
+  xy: 2, 1927
+  size: 157, 90
+  orig: 157, 90
+  offset: 0, 0
+  index: -1
+
+LV_062.png
+size: 2046,2046
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+mangio
+  rotate: false
+  xy: 2, 2
+  size: 1619, 2042
+  orig: 1619, 2042
+  offset: 0, 0
+  index: -1
