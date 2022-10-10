@@ -1,0 +1,132 @@
+
+LV_28.png
+size: 1408,1408
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 2
+  rotate: false
+  xy: 1205, 53
+  size: 62, 176
+  orig: 62, 176
+  offset: 0, 0
+  index: -1
+Layer 3
+  rotate: true
+  xy: 505, 193
+  size: 83, 124
+  orig: 83, 124
+  offset: 0, 0
+  index: -1
+bap chan trai
+  rotate: false
+  xy: 2, 35
+  size: 316, 94
+  orig: 316, 94
+  offset: 0, 0
+  index: -1
+bg
+  rotate: false
+  xy: 2, 366
+  size: 704, 1040
+  orig: 704, 1040
+  offset: 0, 0
+  index: -1
+bong co gai
+  rotate: false
+  xy: 369, 2
+  size: 434, 171
+  orig: 434, 171
+  offset: 0, 0
+  index: -1
+bè
+  rotate: false
+  xy: 708, 475
+  size: 695, 931
+  orig: 695, 931
+  offset: 0, 0
+  index: -1
+canh buom
+  rotate: true
+  xy: 2, 131
+  size: 233, 365
+  orig: 233, 365
+  offset: 0, 0
+  index: -1
+lm
+  rotate: false
+  xy: 1326, 37
+  size: 59, 10
+  orig: 59, 10
+  offset: 0, 0
+  index: -1
+mat ph
+  rotate: false
+  xy: 1326, 52
+  size: 60, 18
+  orig: 60, 18
+  offset: 0, 0
+  index: -1
+matnham
+  rotate: false
+  xy: 1326, 27
+  size: 59, 8
+  orig: 59, 8
+  offset: 0, 0
+  index: -1
+mieng
+  rotate: true
+  xy: 1387, 22
+  size: 25, 13
+  orig: 25, 13
+  offset: 0, 0
+  index: -1
+mieng1
+  rotate: true
+  xy: 1388, 49
+  size: 21, 14
+  orig: 21, 14
+  offset: 0, 0
+  index: -1
+nươc mat
+  rotate: false
+  xy: 1269, 35
+  size: 55, 35
+  orig: 55, 35
+  offset: 0, 0
+  index: -1
+tay trai
+  rotate: true
+  xy: 505, 278
+  size: 86, 147
+  orig: 86, 147
+  offset: 0, 0
+  index: -1
+tay trai2
+  rotate: true
+  xy: 1269, 72
+  size: 157, 125
+  orig: 157, 125
+  offset: 0, 0
+  index: -1
+than
+  rotate: true
+  xy: 708, 175
+  size: 298, 495
+  orig: 298, 495
+  offset: 0, 0
+  index: -1
+toc sau
+  rotate: false
+  xy: 1205, 231
+  size: 182, 242
+  orig: 182, 242
+  offset: 0, 0
+  index: -1
+toc trc
+  rotate: true
+  xy: 369, 258
+  size: 106, 134
+  orig: 106, 134
+  offset: 0, 0
+  index: -1

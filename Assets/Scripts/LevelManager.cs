@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
 {
     public SkeletonAnimation animAfter;
     public SkeletonAnimation animBefore;
+    public List<string> winAnims;
 
     public virtual void Hint() {
 

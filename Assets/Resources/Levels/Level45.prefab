@@ -171,6 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animAfter: {fileID: 2646730707199102038}
   animBefore: {fileID: 1318065757223676141}
+  winAnims: []
   checkers: []
 --- !u!1 &2646730707199102040
 GameObject:
@@ -234,7 +235,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9d6b4f6e9de7e4f2283ddb3563633555, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -286,8 +287,10 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: 9d6b4f6e9de7e4f2283ddb3563633555, type: 2}
+    materialsInsideMask:
+    - {fileID: 0}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -534,8 +537,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6068599941982841425}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8519, y: 2.7509, z: -0.0058392202}
-  m_LocalScale: {x: 0.5446161, y: 1.0852386, z: 1}
+  m_LocalPosition: {x: -0.8804, y: 2.4989, z: -0.0058392202}
+  m_LocalScale: {x: 2.7227027, y: 2.4504175, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1318065758592977897}

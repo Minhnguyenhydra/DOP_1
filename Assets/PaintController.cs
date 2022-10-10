@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PaintController : MonoBehaviour
 {
+    public static PaintController currentPaint = null;
+
     public Color paintColor = Color.clear;
     public Vector2Int lastPos;
     public Vector2 lastWorldPos;
@@ -12,14 +14,12 @@ public class PaintController : MonoBehaviour
     public int erSize = 10;
 
     protected Texture2D m_Texture;
-    //protected RaycastHit2D hit;
-
     protected Collider2D drawBoundCollider;
-
     protected Color[] originalColors;
     protected Color[] m_Colors;
 
     bool canDraw = false;
+    bool selected;
 
     public virtual Texture2D GetSourceTexture() {
         var renderer = GetComponent<SpriteRenderer>();
@@ -75,50 +75,27 @@ public class PaintController : MonoBehaviour
             Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             bool inside = drawBoundCollider.OverlapPoint(pos);
 
-            if (inside) {
+            if (inside && currentPaint == null)
+            {
+                currentPaint = this;
+            }
+
+            if (inside && currentPaint == this) {
                 UpdateTexture(pos);
                 isDrawing = true;
                 return;
             } 
         }
 
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (currentPaint == this)
+            {
+                currentPaint = null;
+            }
+        }
+
         isDrawing = false;
-        //if (Input.GetMouseButton(0) && canDraw) { 
-        //    hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-        //    Debug.Log("hit = " + hit);
-
-        //    if (hit.collider != null) {
-        //        Debug.Log("this is collider: " + hit.collider);
-
-        //        var paintController = hit.collider.GetComponent<PaintController>();
-        //        if (paintController == null || paintController== this) {
-        //            UpdateTexture();
-        //            isDrawing = true;
-        //        } else {
-        //            isDrawing = false;
-        //        }
-        //    }
-        //} else
-        //    isDrawing = false;
-        //bool inside = drawBoundCollider.OverlapPoint();
-
-        //if (Input.GetMouseButton(0) && canDraw) { 
-        //    hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-        //    Debug.Log("hit = " + hit);
-
-        //    if (hit.collider != null) {
-        //        Debug.Log("this is collider: " + hit.collider);
-
-        //        var paintController = hit.collider.GetComponent<PaintController>();
-        //        if (paintController == null || paintController== this) {
-        //            UpdateTexture();
-        //            isDrawing = true;
-        //        } else {
-        //            isDrawing = false;
-        //        }
-        //    }
-        //} else
-        //    isDrawing = false;
     }
 
     public void UpdateTexture(Vector2 pos) {
@@ -162,6 +139,10 @@ public class PaintController : MonoBehaviour
         ApplyTexture(m_Texture);
     }
 
+    /// <summary>
+    /// Check if paint is enough base on PERCENT
+    /// </summary>
+    /// <returns></returns>
     public bool IsDrawFinished() {
         if (m_Colors == null) return false;
 
@@ -185,5 +166,10 @@ public class PaintController : MonoBehaviour
         ApplyTexture(m_Texture);
 
         Init();
+
+        if (currentPaint == this)
+        {
+            currentPaint = null;
+        }
     }
 }
