@@ -15,6 +15,7 @@ public class EraseManyTimes : MonoBehaviour
     private void Start()
     {
         eraseLevels.UpdateSelected(0, x => x.gameObject.SetActive(true), x => x.gameObject.SetActive(false));
+
         buttonErase.gameObject.SetActive(true);
         buttonWatchAds.gameObject.SetActive(false);
     }

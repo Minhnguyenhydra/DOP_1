@@ -11,6 +11,7 @@ public class Gameplay : MonoBehaviour
 {
     public static Gameplay Instance;
 
+    public GameObject dautich;
     public List<ParticleSystem> effects;
     public UIEffect winPopup;
     public Image findItemDemo;
@@ -28,6 +29,7 @@ public class Gameplay : MonoBehaviour
     }
 
     private void Start() {
+        dautich.SetActive(false);
         GameSystem.LoadUserData();
         int level = GameSystem.userdata.level;
 
@@ -73,9 +75,10 @@ public class Gameplay : MonoBehaviour
     IEnumerator IEWin(SkeletonAnimation skeletonAnimation, List<string> anims = null, bool showWinPopupImediately = true) {
         skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
 
-        for (int i = 0; i < effects.Count; i++) {
-            effects[i].Play();
-        }
+        EasyEffect.Appear(dautich, 0f, 1f, 0.15f);
+        //for (int i = 0; i < effects.Count; i++) {
+        //    effects[i].Play();
+        //}
 
         skeletonAnimation.AnimationState.Data.DefaultMix = 0;
 
