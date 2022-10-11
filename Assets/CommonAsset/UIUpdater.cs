@@ -20,14 +20,93 @@ namespace DarkcupGames {
     }
 
     [System.Serializable]
+    public class ObjectComponentInfo {
+        public List<UIInfo> texts = new List<UIInfo>();
+        public List<UIInfo> imgs = new List<UIInfo>();
+        public List<UIInfo> buttons = new List<UIInfo>();
+    }
+
+    [System.Serializable]
     public class UIInfo {
         public string uiName;
         public UIInfoType type;
         public MonoBehaviour component;
+        public string originalText = "";
     }
 
     public class UIUpdater : MonoBehaviour {
+        public bool appendText = false;
+        bool inited = false;
 
+        ObjectComponentInfo componentInfo;
+        Dictionary<GameObject, ObjectComponentInfo> dicComponent = new Dictionary<GameObject, ObjectComponentInfo>();
+
+        //List<UIInfo> texts = new List<UIInfo>();
+        //List<UIInfo> imgs = new List<UIInfo>();
+        //List<UIInfo> buttons = new List<UIInfo>();
+
+        private void Start() {
+            if (componentInfo == null) {
+                componentInfo = GetComponentInfo(gameObject);
+            }
+        }
+
+        ObjectComponentInfo GetComponentInfo(GameObject obj) {
+            //if (inited) return;
+
+            //inited = true;
+            ObjectComponentInfo info = new ObjectComponentInfo();
+
+            var allTexts = obj.GetComponentsInChildren<TextMeshProUGUI>(true);
+            if (allTexts != null && allTexts.Length > 0) {
+                for (int i = 0; i < allTexts.Length; i++) {
+                    info.texts.Add(new UIInfo() {
+                        uiName = allTexts[i].gameObject.name,
+                        type = UIInfoType.Text,
+                        component = allTexts[i],
+                        originalText = allTexts[i].text
+                    });
+                }
+            }
+
+            var allImages = obj.GetComponentsInChildren<Image>(true);
+            if (allImages != null && allImages.Length > 0) {
+                for (int i = 0; i < allImages.Length; i++) {
+                    info.imgs.Add(new UIInfo() {
+                        uiName = allImages[i].gameObject.name,
+                        type = UIInfoType.Image,
+                        component = allImages[i]
+                    });
+                }
+            }
+
+            var allButtons = obj.GetComponentsInChildren<Button>(true);
+            if (allButtons != null && allButtons.Length > 0) {
+                for (int i = 0; i < allButtons.Length; i++) {
+                    info.buttons.Add(new UIInfo() {
+                        uiName = allButtons[i].gameObject.name,
+                        type = UIInfoType.Button,
+                        component = allButtons[i]
+                    });
+                }
+            }
+
+            return info;
+        }
+
+        /// <summary>
+        /// Update data to gameObject attached by this script, child Object with same name with the field name will receive data
+        /// </summary>
+        /// <param name="sourceData"></param>
+        public void UpdateUI(object sourceData) {
+            UpdateUI(sourceData, gameObject, componentInfo);
+        }
+
+        /// <summary>
+        /// Update data from source data to targetObject, child Object with same name with the field name will receive data
+        /// </summary>
+        /// <param name="sourceData"></param>
+        /// <param name="targetObject"></param>
         public void UpdateUI(object sourceData, GameObject targetObject) {
             UIUpdaterData dataContainer = targetObject.GetComponent<UIUpdaterData>();
 
@@ -39,55 +118,73 @@ namespace DarkcupGames {
                 dataContainer.data = sourceData;
             }
 
-            List<UIInfo> texts = new List<UIInfo>();
-            List<UIInfo> imgs = new List<UIInfo>();
-            List<UIInfo> buttons = new List<UIInfo>();
-
-            var allTexts = targetObject.GetComponentsInChildren<TextMeshProUGUI>(true);
-            if (allTexts != null && allTexts.Length > 0) {
-                for (int i = 0; i < allTexts.Length; i++) {
-                    texts.Add(new UIInfo() {
-                        uiName = allTexts[i].gameObject.name,
-                        type = UIInfoType.Text,
-                        component = allTexts[i]
-                    });
-                }
+            ObjectComponentInfo info = null;
+            if (dicComponent.ContainsKey(targetObject)) {
+                info = dicComponent[targetObject];
+            } else {
+                info = GetComponentInfo(targetObject);
+                dicComponent.Add(targetObject, info);
             }
 
-            var allImages = targetObject.GetComponentsInChildren<Image>(true);
-            if (allImages != null && allImages.Length > 0) {
-                for (int i = 0; i < allImages.Length; i++) {
-                    imgs.Add(new UIInfo() {
-                        uiName = allImages[i].gameObject.name,
-                        type = UIInfoType.Image,
-                        component = allImages[i]
-                    });
-                }
-            }
+            //List<UIInfo> texts = new List<UIInfo>();
+            //List<UIInfo> imgs = new List<UIInfo>();
+            //List<UIInfo> buttons = new List<UIInfo>();
 
-            var allButtons = targetObject.GetComponentsInChildren<Button>(true);
-            if (allButtons != null && allButtons.Length > 0) {
-                for (int i = 0; i < allButtons.Length; i++) {
-                    buttons.Add(new UIInfo() {
-                        uiName = allButtons[i].gameObject.name,
-                        type = UIInfoType.Button,
-                        component = allButtons[i]
-                    });
-                    Debug.Log("ADD BUTTON NAME = " + allButtons[i].gameObject.name);
-                }
-            }
+            //var allTexts = targetObject.GetComponentsInChildren<TextMeshProUGUI>(true);
+            //if (allTexts != null && allTexts.Length > 0) {
+            //    for (int i = 0; i < allTexts.Length; i++) {
+            //        texts.Add(new UIInfo() {
+            //            uiName = allTexts[i].gameObject.name,
+            //            type = UIInfoType.Text,
+            //            component = allTexts[i]
+            //        });
+            //    }
+            //}
 
+            //var allImages = targetObject.GetComponentsInChildren<Image>(true);
+            //if (allImages != null && allImages.Length > 0) {
+            //    for (int i = 0; i < allImages.Length; i++) {
+            //        imgs.Add(new UIInfo() {
+            //            uiName = allImages[i].gameObject.name,
+            //            type = UIInfoType.Image,
+            //            component = allImages[i]
+            //        });
+            //    }
+            //}
+
+            //var allButtons = targetObject.GetComponentsInChildren<Button>(true);
+            //if (allButtons != null && allButtons.Length > 0) {
+            //    for (int i = 0; i < allButtons.Length; i++) {
+            //        buttons.Add(new UIInfo() {
+            //            uiName = allButtons[i].gameObject.name,
+            //            type = UIInfoType.Button,
+            //            component = allButtons[i]
+            //        });
+            //    }
+            //}
+
+            UpdateUI(sourceData, targetObject, info);
+        }
+
+        void UpdateUI(object sourceData, GameObject targetObject, ObjectComponentInfo info) {
             MemberInfo[] members = sourceData.GetType().GetMembers();
+
+            List<UIInfo> texts = info.texts;
+            List<UIInfo> imgs = info.imgs;
+            List<UIInfo> buttons = info.buttons;
 
             foreach (MemberInfo memberInfo in members) {
                 string memberName = memberInfo.Name;
 
                 for (int i = 0; i < texts.Count; i++) {
-
-
                     if (texts[i].uiName == memberName) {
                         object dataValue = GetMemberValue(memberInfo, sourceData);
-                        texts[i].component.GetComponent<TextMeshProUGUI>().text += dataValue.ToString();
+
+                        if (appendText && texts[i].originalText != "") {
+                            texts[i].component.GetComponent<TextMeshProUGUI>().text = texts[i].originalText + " " + dataValue.ToString();
+                        } else {
+                            texts[i].component.GetComponent<TextMeshProUGUI>().text = dataValue.ToString();
+                        }
                     }
                 }
 
@@ -97,15 +194,11 @@ namespace DarkcupGames {
 
                         if (dataValue == null) continue;
 
-                        //object dataValue = GetMemberValue(memberInfo, sourceData);
                         if (dataValue.GetType() == typeof(Sprite)) {
-                            Debug.Log("this is sprite!!");
-                            //object dataValue = GetMemberValue(memberInfo, sourceData);
                             imgs[i].component.GetComponent<Image>().sprite = (Sprite)dataValue;
                         } else if (dataValue.GetType() == typeof(System.Action)) {
 
                         } else {
-                            //object dataValue = GetMemberValue(memberInfo, sourceData);
                             imgs[i].component.GetComponent<Image>().sprite = Resources.Load<Sprite>(dataValue.ToString());
                         }
                     }
@@ -113,17 +206,10 @@ namespace DarkcupGames {
 
                 for (int i = 0; i < buttons.Count; i++) {
                     if (buttons[i].uiName == memberName) {
-                        Debug.Log("UPDATE BUTTON " + memberName);
-
                         object dataValue = GetMemberValue(memberInfo, sourceData);
                         if (dataValue == null) continue;
 
-                        Debug.Log("DATA VALUE: " + dataValue);
-                        Debug.Log("DATA VALUE TYPE: " + dataValue.GetType());
-                        //object dataValue = GetMemberValue(memberInfo, sourceData);
                         if (dataValue.GetType() == typeof(System.Action)) {
-                            Debug.Log("This is an action!!");
-                            //object dataValue = GetMemberValue(memberInfo, sourceData);
                             UnityAction unityAction = new UnityAction((System.Action)dataValue);
 
                             buttons[i].component.GetComponent<Button>().onClick.RemoveAllListeners();
@@ -132,11 +218,7 @@ namespace DarkcupGames {
                     }
                 }
 
-                Debug.Log("membername: " + memberName);
-
                 if (memberName == "unlocked") {
-                    //Debug.Log("member type is " + memberInfo.MemberType);
-                    //Debug.LogError("This is unlcoked");
                     object dataValue = GetMemberValue(memberInfo, sourceData);
 
                     if (dataValue == null) continue;

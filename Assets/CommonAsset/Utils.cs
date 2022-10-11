@@ -8,188 +8,156 @@ using UnityEngine.SceneManagement;
 using System;
 using System.Linq.Expressions;
 
-namespace DarkcupGames
-{
+namespace DarkcupGames {
 
-public static class Utils
-{
-    public static WaitForSeconds WAIT_1_SECOND = new WaitForSeconds(1f);
-    public static WaitForSeconds WAIT_2_SECOND = new WaitForSeconds(2f);
-    public static WaitForSeconds WAIT_3_SECOND = new WaitForSeconds(3f);
-    public static WaitForSeconds WAIT_0_DOT_02_SECOND = new WaitForSeconds(0.02f);
-    public static WaitForSeconds WAIT_0_DOT_2_SECOND = new WaitForSeconds(0.2f);
-    public static WaitForSeconds WAIT_0_DOT_1_SECOND = new WaitForSeconds(0.1f);
+    public static class Utils {
+        public static WaitForSeconds WAIT_1_SECOND = new WaitForSeconds(1f);
+        public static WaitForSeconds WAIT_2_SECOND = new WaitForSeconds(2f);
+        public static WaitForSeconds WAIT_3_SECOND = new WaitForSeconds(3f);
+        public static WaitForSeconds WAIT_0_DOT_02_SECOND = new WaitForSeconds(0.02f);
+        public static WaitForSeconds WAIT_0_DOT_2_SECOND = new WaitForSeconds(0.2f);
+        public static WaitForSeconds WAIT_0_DOT_1_SECOND = new WaitForSeconds(0.1f);
 
-    public static T GetChildComponent<T>(this GameObject obj, string name)
-    {
-        if (name.Contains("/")){
-            var find = GetGameObjectWithPath(obj, name);
-            if (find == null) {
-                return default(T);
-            } else {
-                return GetComponentFromObject<T>(find.gameObject);
+        public static T GetChildComponent<T>(this GameObject obj, string name) {
+            if (name.Contains("/")) {
+                var find = GetGameObjectWithPath(obj, name);
+                if (find == null) {
+                    return default(T);
+                } else {
+                    return GetComponentFromObject<T>(find.gameObject);
+                }
             }
-        }
 
-        foreach (Transform child in obj.transform)
-        {
-            if (child.name == name)
-            {
-                return GetComponentFromObject<T>(child.gameObject);
+            foreach (Transform child in obj.transform) {
+                if (child.name == name) {
+                    return GetComponentFromObject<T>(child.gameObject);
+                }
             }
-        }
-        Debug.LogError($"Not found object with name {name} in {obj.name}'s childrens!");
-        return default(T);
-    }
-
-    static T GetComponentFromObject<T>(GameObject baseObj) {
-        if (typeof(T) == typeof(GameObject)) {
-            return (T)((object)baseObj.gameObject);
-        }
-        var result = baseObj.GetComponent<T>();
-
-        if (result == null) {
-            Debug.LogError("Component not found!");
-        }
-        return result;
-    }
-
-    public static GameObject GetChildGameObject(this GameObject obj, string name)
-    {
-        foreach (Transform child in obj.transform)
-        {
-            if (child.name == name)
-            {
-                return child.gameObject;
-            }
-        }
-        Debug.LogError($"Not found object with name {name} in {obj.name}'s childrens!");
-        return null;
-    }
-
-
-    public static T GetComponentWithPath<T>(this GameObject obj, string path)
-    {
-        GameObject child = GetGameObjectWithPath(obj, path);
-
-        if (child == null)
-        {
-            Debug.LogError($"Cannot found any game object with path {path} in {obj.gameObject.name}'s child!");
+            Debug.LogError($"Not found object with name {name} in {obj.name}'s childrens!");
             return default(T);
         }
-        else
-        {
-            var result = child.GetComponent<T>();
-            if (result == null)
-            {
-                Debug.LogError($"Cannot found given type of component in object {child}!");
+
+        static T GetComponentFromObject<T>(GameObject baseObj) {
+            if (typeof(T) == typeof(GameObject)) {
+                return (T)((object)baseObj.gameObject);
+            }
+            var result = baseObj.GetComponent<T>();
+
+            if (result == null) {
+                Debug.LogError("Component not found!");
             }
             return result;
         }
-    }
 
-    public static T GetOrCreateComponent<T>(this GameObject obj) where T : Component
-    {
-        var result = obj.GetComponent<T>();
-        if (result == null)
-        {
-            result = obj.AddComponent<T>();
-        }
-        return result;
-    }
-
-    private static string[] _paths;
-
-    public static GameObject GetGameObjectWithPath(this GameObject root, string path)
-    {
-        _paths = path.Split('/');
-        GameObject result = root;
-        for (int i = 0; i < _paths.Length; i++)
-        {
-            result = FindObjectInChildren(result, _paths[i]);
-            if (!result)
-            {
-                Debug.LogError($"Cant find {_paths[i]} in {result.name}");
-                return null;
+        public static GameObject GetChildGameObject(this GameObject obj, string name) {
+            foreach (Transform child in obj.transform) {
+                if (child.name == name) {
+                    return child.gameObject;
+                }
             }
-        }
-
-        return result;
-    }
-
-    public static GameObject FindObjectInChildren(GameObject root, string name)
-    {
-        for (int i = 0; i < root.transform.childCount; i++)
-        {
-            if (root.transform.GetChild(i).name == name)
-            {
-                return root.transform.GetChild(i).gameObject;
-            }
-        }
-        Debug.LogError($"Cant find {name} in {root.name}");
-        return null;
-    }
-
-    public static GameObject FindObjectIncludingInactive(GameObject root, string name)
-    {
-        if (root.transform.childCount <= 0)
-        {
-            Debug.LogError($"{root} have no child!");
+            Debug.LogError($"Not found object with name {name} in {obj.name}'s childrens!");
             return null;
         }
-        GameObject result = null;
 
-        if (root.name == name)
-        {
-            return root;
-        }
 
-        for (int i = 0; i < root.transform.childCount; i++)
-        {
-            result = FindObjectIncludingInactive(root.transform.GetChild(i).gameObject, name);
-            if (result)
-            {
+        public static T GetComponentWithPath<T>(this GameObject obj, string path) {
+            GameObject child = GetGameObjectWithPath(obj, path);
+
+            if (child == null) {
+                Debug.LogError($"Cannot found any game object with path {path} in {obj.gameObject.name}'s child!");
+                return default(T);
+            } else {
+                var result = child.GetComponent<T>();
+                if (result == null) {
+                    Debug.LogError($"Cannot found given type of component in object {child}!");
+                }
                 return result;
             }
         }
 
-        Debug.LogError($"Cant find {name} in {root.name}");
-        return null;
-    }
+        public static T GetOrCreateComponent<T>(this GameObject obj) where T : Component {
+            var result = obj.GetComponent<T>();
+            if (result == null) {
+                result = obj.AddComponent<T>();
+            }
+            return result;
+        }
 
-    public static GameObject FindObjectInRoot(string name)
-    {
-        return GameObject.Find(name);
-    }
+        private static string[] _paths;
 
-    public static GameObject FindObjectInRootIncludingInactive(string name)
-    {
-        Scene scene = SceneManager.GetActiveScene();
-        if (!scene.isLoaded)
-        {
-            Debug.LogError("No scene loaded");
+        public static GameObject GetGameObjectWithPath(this GameObject root, string path) {
+            _paths = path.Split('/');
+            GameObject result = root;
+            for (int i = 0; i < _paths.Length; i++) {
+                result = FindObjectInChildren(result, _paths[i]);
+                if (!result) {
+                    Debug.LogError($"Cant find {_paths[i]} in {result.name}");
+                    return null;
+                }
+            }
+
+            return result;
+        }
+
+        public static GameObject FindObjectInChildren(GameObject root, string name) {
+            for (int i = 0; i < root.transform.childCount; i++) {
+                if (root.transform.GetChild(i).name == name) {
+                    return root.transform.GetChild(i).gameObject;
+                }
+            }
+            Debug.LogError($"Cant find {name} in {root.name}");
             return null;
         }
 
-        var roots = new List<GameObject>();
-        scene.GetRootGameObjects(roots);
+        public static GameObject FindObjectIncludingInactive(GameObject root, string name) {
+            if (root.transform.childCount <= 0) {
+                Debug.LogError($"{root} have no child!");
+                return null;
+            }
+            GameObject result = null;
 
-        foreach (GameObject obj in roots)
-        {
-            if (obj.transform.name == name) return obj;
+            if (root.name == name) {
+                return root;
+            }
+
+            for (int i = 0; i < root.transform.childCount; i++) {
+                result = FindObjectIncludingInactive(root.transform.GetChild(i).gameObject, name);
+                if (result) {
+                    return result;
+                }
+            }
+
+            Debug.LogError($"Cant find {name} in {root.name}");
+            return null;
         }
 
-        Debug.LogError($"Cant find {name} in root");
-        return null;
-    }
+        public static GameObject FindObjectInRoot(string name) {
+            return GameObject.Find(name);
+        }
+
+        public static GameObject FindObjectInRootIncludingInactive(string name) {
+            Scene scene = SceneManager.GetActiveScene();
+            if (!scene.isLoaded) {
+                Debug.LogError("No scene loaded");
+                return null;
+            }
+
+            var roots = new List<GameObject>();
+            scene.GetRootGameObjects(roots);
+
+            foreach (GameObject obj in roots) {
+                if (obj.transform.name == name) return obj;
+            }
+
+            Debug.LogError($"Cant find {name} in root");
+            return null;
+        }
 
         private static System.Random rng = new System.Random();
 
-        public static void Shuffle<T>(this IList<T> list)
-        {
+        public static void Shuffle<T>(this IList<T> list) {
             int n = list.Count;
-            while (n > 1)
-            {
+            while (n > 1) {
                 n--;
                 int k = rng.Next(n + 1);
                 T value = list[k];
@@ -198,50 +166,37 @@ public static class Utils
             }
         }
 
-        public static T RandomElement<T>(this IList<T> list)
-        {
-            if (list.Count == 0)
-            {
+        public static T RandomElement<T>(this IList<T> list) {
+            if (list.Count == 0) {
                 Debug.LogError("Get random element on a null list");
                 return default(T);
             }
             return list[UnityEngine.Random.Range(0, list.Count)];
         }
 
-        public static float DistanceTo(this Transform transform, Transform target)
-        {
+        public static float DistanceTo(this Transform transform, Transform target) {
             return Vector3.Distance(transform.position, target.position);
         }
 
-        public static float DistanceTo2D(this Transform transform, Transform target)
-        {
+        public static float DistanceTo2D(this Transform transform, Transform target) {
             return Vector2.Distance(transform.position, target.position);
         }
 
-        public static void UpdateSelected<T>(this List<T> list, int index, Action<T> selected, Action<T> notSelected)
-        {
-            for (int i = 0; i < list.Count; i++)
-            {
-                if (i == index)
-                {
+        public static void UpdateSelected<T>(this List<T> list, int index, Action<T> selected, Action<T> notSelected) {
+            for (int i = 0; i < list.Count; i++) {
+                if (i == index) {
                     selected(list[i]);
-                } else
-                {
+                } else {
                     notSelected(list[i]);
                 }
             }
         }
 
-        public static void UpdateSelected(this Transform thisTransform, int index, Action<Transform> notSelected, Action<Transform> selected)
-        {
-            for (int i = 0; i < thisTransform.childCount; i++)
-            {
-                if (i == index)
-                {
+        public static void UpdateSelected(this Transform thisTransform, int index, Action<Transform> notSelected, Action<Transform> selected) {
+            for (int i = 0; i < thisTransform.childCount; i++) {
+                if (i == index) {
                     selected(thisTransform.GetChild(i));
-                }
-                else
-                {
+                } else {
                     notSelected(thisTransform.GetChild(i));
                 }
             }
@@ -249,6 +204,30 @@ public static class Utils
 
         public static void ReloadScene() {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        public static int GetNextIndex<T>(this List<T> list, int currentIndex) {
+            currentIndex++;
+            if (currentIndex >= list.Count) {
+                currentIndex = 0;
+            }
+            return currentIndex;
+        }
+
+        public static int GetPreviousIndex<T>(this List<T> list, int currentIndex) {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = list.Count - 1;
+            }
+            return currentIndex;
+        }
+
+        public static void SetEnableChild(this Transform thisTransform, int index) {
+            if (index >= thisTransform.childCount) return;
+
+            for (int i = 0; i < thisTransform.childCount; i++) {
+                thisTransform.GetChild(i).gameObject.SetActive(i == index);
+            }
         }
     }
 }

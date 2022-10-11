@@ -25,7 +25,8 @@ public class Gameplay : MonoBehaviour
         for (int i = 0; i < effects.Count; i++) {
             effects[i].Stop();
         }
-        findItemDemo.gameObject.SetActive(false);
+        if (findItemDemo)
+            findItemDemo.gameObject.SetActive(false);
     }
 
     private void Start() {
