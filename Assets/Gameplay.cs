@@ -82,10 +82,6 @@ public class Gameplay : MonoBehaviour
 
         EasyEffect.Appear(dautich, 0f, 1f, 0.15f);
         AudioSystem.Instance.PlaySound(winSound, 1);
-        //for (int i = 0; i < effects.Count; i++) {
-        //    effects[i].Play();
-        //}
-
         skeletonAnimation.AnimationState.Data.DefaultMix = 0;
 
         if (anims != null && anims.Count > 0)
@@ -190,9 +186,7 @@ public class Gameplay : MonoBehaviour
                 break;
             }
         }
-
         if (emptyBox == null) return;
-
         StartCoroutine(IEFoundItem(renderer, emptyBox));
     }
 
@@ -209,5 +203,10 @@ public class Gameplay : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         LeanTween.move(demo.gameObject, emptyBox.transform.position, 1f).setEaseOutCubic();
+    }
+
+    public void AddGold(int amount) {
+        GameSystem.userdata.gold += amount;
+        GameSystem.SaveUserDataToLocal();
     }
 }
