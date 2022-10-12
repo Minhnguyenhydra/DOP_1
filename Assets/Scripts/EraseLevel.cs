@@ -51,19 +51,10 @@ public class EraseLevel : LevelManager
             {
                 draw.ClearDraw();
             }
-            //yield return new WaitUntil(() => {
-            //    return draw.IsDrawFinished();
-            //});
-
-            //Win();
         }
 
         yield return new WaitForSeconds(2f);
 
-    }
-
-    public override void Hint() {
-        throw new System.NotImplementedException();
     }
 
     public override void Win() {
@@ -78,5 +69,9 @@ public class EraseLevel : LevelManager
 
         //skeletonAnimation.AnimationName = "win";
         //skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
+    }
+
+    public override Vector3 GetGuidePosition() {
+        return draw.transform.position;
     }
 }

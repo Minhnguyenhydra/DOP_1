@@ -11,6 +11,7 @@ public class EraseManyTimes : MonoBehaviour
     public GameObject buttonWatchAds;
 
     public int currentLevel = 0;
+    public Transform guidePosition;
 
     private void Start()
     {
@@ -49,5 +50,9 @@ public class EraseManyTimes : MonoBehaviour
                 eraseLevels[currentLevel].checkers[i].StartChecking();
             }
         }
+    }
+
+    public void Hint() {
+
     }
 }

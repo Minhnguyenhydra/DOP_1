@@ -74,4 +74,12 @@ public class Home : MonoBehaviour
         storyUpdater.UpdateUI(data, storyUpdater.gameObject);
         storySprites.SetEnableChild(index);
     }
+
+    public void Show(GameObject obj) {
+        obj.SetActive(true);
+    }
+
+    public void Hide(GameObject obj) {
+        obj.SetActive(false);
+    }
 }

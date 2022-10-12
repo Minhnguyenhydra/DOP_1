@@ -12,11 +12,15 @@ public class Gameplay : MonoBehaviour
     public static Gameplay Instance;
 
     public GameObject dautich;
+    public GameObject guideObject;
+
     public List<ParticleSystem> effects;
     public UIEffect winPopup;
     public Image findItemDemo;
     public List<RectTransform> findBoxs;
     public TextMeshProUGUI txtLevel;
+    public AudioClip winSound;
+
     bool won = false;
 
     private void Awake() {
@@ -63,7 +67,7 @@ public class Gameplay : MonoBehaviour
         }
     }
 
-    public void Win(LevelManager level, bool showWinPopupImediately = true) {
+    public void Win(LevelManager level, bool showWinPopupImediately = true, bool loopAnimation = true) {
         if (won) return;
         won = true;
 
@@ -73,10 +77,11 @@ public class Gameplay : MonoBehaviour
         StartCoroutine(IEWin(level.animAfter, level.winAnims, showWinPopupImediately));
     }
 
-    IEnumerator IEWin(SkeletonAnimation skeletonAnimation, List<string> anims = null, bool showWinPopupImediately = true) {
+    IEnumerator IEWin(SkeletonAnimation skeletonAnimation, List<string> anims = null, bool showWinPopupImediately = true, bool loopAnimation = true) {
         skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
 
         EasyEffect.Appear(dautich, 0f, 1f, 0.15f);
+        AudioSystem.Instance.PlaySound(winSound, 1);
         //for (int i = 0; i < effects.Count; i++) {
         //    effects[i].Play();
         //}
@@ -100,7 +105,11 @@ public class Gameplay : MonoBehaviour
             Spine.Animation win = skeletonAnimation.Skeleton.Data.FindAnimation("win");
             if (win != null)
             {
-                skeletonAnimation.AnimationName = "win";
+                if (loopAnimation) {
+                    skeletonAnimation.AnimationName = "win";
+                } else {
+                    skeletonAnimation.AnimationState.SetAnimation(0, "win", false);
+                }
 
                 yield return new WaitForSeconds(win.Duration);
             }
@@ -108,14 +117,23 @@ public class Gameplay : MonoBehaviour
             Spine.Animation win1 = skeletonAnimation.Skeleton.Data.FindAnimation("win1");
             if (win1 != null)
             {
-                skeletonAnimation.AnimationName = "win1";
+                if (loopAnimation) {
+                    skeletonAnimation.AnimationName = "win1";
+                } else {
+                    skeletonAnimation.AnimationState.SetAnimation(0, "win1", false);
+                }
+
                 yield return new WaitForSeconds(win1.Duration);
             }
 
             Spine.Animation win2 = skeletonAnimation.Skeleton.Data.FindAnimation("win2");
             if (win2 != null)
             {
-                skeletonAnimation.AnimationName = "win2";
+                if (loopAnimation) {
+                    skeletonAnimation.AnimationName = "win2";
+                } else {
+                    skeletonAnimation.AnimationState.SetAnimation(0, "win2", false);
+                }
                 yield return new WaitForSeconds(win2.Duration);
             }
         }
@@ -131,11 +149,33 @@ public class Gameplay : MonoBehaviour
     }
 
     public void Hint() {
-        FindObjectOfType<LevelManager>()?.Hint();
+        var manyTimes = FindObjectOfType<EraseManyTimes>();
+        if (manyTimes != null) {
+            GuidePosition(manyTimes.guidePosition.position);
+            return;
+        }
+
+        var level = FindObjectOfType<LevelManager>();
+        if (level != null) {
+            GuidePosition(level.GetGuidePosition());
+        }
+    }
+
+    public void GuidePosition(Vector2 pos) {
+        guideObject.SetActive(true);
+        guideObject.transform.position = new Vector2(0, 0);
+        LeanTween.move(guideObject, pos, 1f).setEaseOutCubic().setOnComplete(() => {
+            guideObject.SetActive(false);
+        });
     }
 
     public void Next() {
         GameSystem.userdata.level++;
+
+        if (GameSystem.userdata.level > GameSystem.userdata.maxLevel) {
+            GameSystem.userdata.maxLevel = GameSystem.userdata.level;
+        }
+
         GameSystem.SaveUserDataToLocal();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

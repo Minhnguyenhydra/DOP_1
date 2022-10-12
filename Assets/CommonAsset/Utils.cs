@@ -206,6 +206,10 @@ namespace DarkcupGames {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
+        public static void ChangeScene(string sceneName) {
+            SceneManager.LoadScene(sceneName);
+        }
+
         public static int GetNextIndex<T>(this List<T> list, int currentIndex) {
             currentIndex++;
             if (currentIndex >= list.Count) {

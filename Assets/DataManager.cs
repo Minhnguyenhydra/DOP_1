@@ -7,14 +7,25 @@ public enum LevelType {
 }
 
 public class LevelInfo {
+    public int levelId;
+    public int levelIdDisplay;
     public string levelTitle;
     public bool unlocked;
     public LevelType levelType;
+    public System.Action btnUse;
 }
 
 public class DataManager : MonoBehaviour
 {
+    public static DataManager Instance;
+
     public List<LevelInfo> levelInfos;
+
+    private void Awake() {
+        GameSystem.LoadUserData();
+        Instance = this;
+        Init();
+    }
 
     public void Init() {
         levelInfos = new List<LevelInfo>();
@@ -92,10 +103,24 @@ public class DataManager : MonoBehaviour
         titles.Add("Some text");
 
         for (int i = 0; i < titles.Count; i++) {
+            int index = i;
+
             levelInfos.Add(new LevelInfo() {
+                levelId = i,
+                levelIdDisplay = i + 1,
                 levelTitle = titles[i],
-                unlocked = i < GameSystem.userdata.maxLevel
+                unlocked = i < GameSystem.userdata.maxLevel || i == 0,
+                btnUse = () => {
+                    PlayLevel(index);
+                }
             });
         }
+    }
+
+    public void PlayLevel(int level) {
+        GameSystem.userdata.level = level;
+        GameSystem.SaveUserDataToLocal();
+
+        DarkcupGames.Utils.ChangeScene(Constants.SCENE_GAMEPLAY);
     }
 }

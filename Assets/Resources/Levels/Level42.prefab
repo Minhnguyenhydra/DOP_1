@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &222160738356709147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5426394747117475600}
+  m_Layer: 0
+  m_Name: guide
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5426394747117475600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222160738356709147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.53, y: 0.98, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4321845896318772245}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &940093080403288996
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,7 +93,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fd8e917517f04460f821e05f266b88b0, type: 2}
+  - {fileID: 2100000, guid: bb6baaa68368840ff88d6bc02b807f2f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,10 +145,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: bb6baaa68368840ff88d6bc02b807f2f, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: fd8e917517f04460f821e05f266b88b0, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -491,6 +520,7 @@ Transform:
   - {fileID: 9045213072637521228}
   - {fileID: 9045213072671819186}
   - {fileID: 6285326879004979937}
+  - {fileID: 5426394747117475600}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -508,7 +538,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animAfter: {fileID: 940093080403289002}
   animBefore: {fileID: 4321845895016040209}
+  winAnims: []
+  loopAnimation: 1
   checkers: []
+  guidePosition: {fileID: 5426394747117475600}
 --- !u!1 &6285326879004979936
 GameObject:
   m_ObjectHideFlags: 0

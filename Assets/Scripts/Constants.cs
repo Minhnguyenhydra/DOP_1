@@ -9,4 +9,6 @@ public static class Constants
     public static float DRAW_PERCENT_REQUIRE = 0.8f;
 
     public const int MAX_LEVEL = 50;
+
+    public const string SCENE_GAMEPLAY = "Gameplay";
 }

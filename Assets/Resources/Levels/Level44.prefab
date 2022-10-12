@@ -335,6 +335,37 @@ MonoBehaviour:
   _animationName: normal
   loop: 1
   timeScale: 1
+--- !u!1 &6310970206271894106
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4090795576581704622}
+  m_Layer: 0
+  m_Name: guide
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4090795576581704622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6310970206271894106}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.07, y: -4.34, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8836922989962658183}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8836922989962658182
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +399,7 @@ Transform:
   - {fileID: 8836922991340364430}
   - {fileID: 4386017921783603232}
   - {fileID: 5755667694790056043}
+  - {fileID: 4090795576581704622}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -386,7 +418,9 @@ MonoBehaviour:
   animAfter: {fileID: 5499643910240585272}
   animBefore: {fileID: 8836922991340364419}
   winAnims: []
+  loopAnimation: 1
   checkers: []
+  guidePosition: {fileID: 4090795576581704622}
 --- !u!1 &8836922991340364418
 GameObject:
   m_ObjectHideFlags: 0

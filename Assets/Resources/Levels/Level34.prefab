@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6285921279794724911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4968653248586614564}
+  m_Layer: 0
+  m_Name: guide
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4968653248586614564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6285921279794724911}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.25, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7616494088406424464}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6864223983116557345
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,7 +93,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ff88152f8b32547d2abc59e1d9e15a90, type: 2}
+  - {fileID: 2100000, guid: 942e7112d39bc354d8079ed0b0d808bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,8 +145,10 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: ff88152f8b32547d2abc59e1d9e15a90, type: 2}
+    materialsInsideMask:
+    - {fileID: 2100000, guid: 942e7112d39bc354d8079ed0b0d808bc, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -275,6 +308,7 @@ Transform:
   - {fileID: 7616494087095842969}
   - {fileID: 6929596576859534986}
   - {fileID: 2982515985088722343}
+  - {fileID: 4968653248586614564}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -293,9 +327,11 @@ MonoBehaviour:
   animAfter: {fileID: 6864223983116557359}
   animBefore: {fileID: 7616494087095842964}
   winAnims: []
+  loopAnimation: 1
   checkers:
   - {fileID: 6929596576859534990}
   - {fileID: 2982515985088722342}
+  guidePosition: {fileID: 4968653248586614564}
 --- !u!1001 &6370930987658127439
 PrefabInstance:
   m_ObjectHideFlags: 0

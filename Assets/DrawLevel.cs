@@ -9,7 +9,6 @@ public class DrawLevel : LevelManager
 {
     public PaintToSpriteController draw;
     public Collider2D checkArea;
-    //public SkeletonAnimation skeletonAnimation;
     public string winAnimationName;
 
     public virtual void Start() {
@@ -60,5 +59,9 @@ public class DrawLevel : LevelManager
             erase.eraser.SetActive(false);
         }
         Gameplay.Instance.Win(this);
+    }
+
+    public override Vector3 GetGuidePosition() {
+        return checkArea.transform.position;
     }
 }

@@ -75,4 +75,13 @@ public class FindItemLevel : LevelManager {
             });
         }
     }
+
+    public override Vector3 GetGuidePosition() {
+        for (int i = 0; i < findObjects.Count; i++) {
+            if (founds.ContainsKey(findObjects[i]) == false || founds[findObjects[i]] == false) {
+                return findObjects[i].transform.position;
+            }
+        }
+        return findObjects[0].transform.position;
+    }
 }

@@ -33,6 +33,7 @@ Transform:
   - {fileID: 4327381415765623574}
   - {fileID: 791600151813859233}
   - {fileID: 5512720992322528527}
+  - {fileID: 6446036120114109986}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51,7 +52,9 @@ MonoBehaviour:
   animAfter: {fileID: 4327381415765623575}
   animBefore: {fileID: 791600151813859244}
   winAnims: []
+  loopAnimation: 1
   checkers: []
+  guidePosition: {fileID: 6446036120114109986}
 --- !u!1 &791600151813859245
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,6 +176,37 @@ MonoBehaviour:
   _animationName: normal
   loop: 1
   timeScale: 1
+--- !u!1 &1578860930173135133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6446036120114109986}
+  m_Layer: 0
+  m_Name: guide
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6446036120114109986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578860930173135133}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.49, y: -2.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 791600150511649960}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4327381415765623577
 GameObject:
   m_ObjectHideFlags: 0

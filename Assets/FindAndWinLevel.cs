@@ -47,4 +47,8 @@ public class FindAndWinLevel : LevelManager
             Win();
         }
     }
+
+    public override Vector3 GetGuidePosition() {
+        return findObject.transform.position;
+    }
 }

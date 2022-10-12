@@ -5,6 +5,7 @@ using UnityEngine;
 public class EraseManyPositionInOneLevel : LevelManager
 {
     public PaintChecker[] checkers;
+    public Transform guidePosition;
 
     private void Start() {
         checkers = GetComponentsInChildren<PaintChecker>();
@@ -32,5 +33,9 @@ public class EraseManyPositionInOneLevel : LevelManager
             checkers[i].draw.ClearDraw();
             checkers[i].StartChecking();
         }
+    }
+
+    public override Vector3 GetGuidePosition() {
+        return guidePosition.transform.position;
     }
 }

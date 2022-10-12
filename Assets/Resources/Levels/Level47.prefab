@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &864139293890970746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3350797724315165678}
+  m_Layer: 0
+  m_Name: guide
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3350797724315165678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864139293890970746}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.37, y: 0.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 940449441659885847}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &940449440282196498
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,6 +185,7 @@ Transform:
   - {fileID: 4322474414087659177}
   - {fileID: 940449440282196510}
   - {fileID: 5435967228493674672}
+  - {fileID: 3350797724315165678}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -171,7 +203,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animAfter: {fileID: 4322474414087659176}
   animBefore: {fileID: 940449440282196499}
+  winAnims: []
+  loopAnimation: 1
   checkers: []
+  guidePosition: {fileID: 3350797724315165678}
 --- !u!1 &4322474414087659174
 GameObject:
   m_ObjectHideFlags: 0
