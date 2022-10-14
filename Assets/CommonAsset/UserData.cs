@@ -19,7 +19,9 @@ public class UserData
     public int monsterSlot = 4;
     public List<string> boughtItems;
     public int currentStory;
-
+    public bool playBGM;
+    public bool playSound;
+    public bool virate;
     public UserData()
     {
         boughtItems = new List<string>();

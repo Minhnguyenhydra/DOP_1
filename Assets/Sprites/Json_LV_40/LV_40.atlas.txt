@@ -1,166 +1,166 @@
 
 LV_40.png
-size: 1439,1439
+size: 2628,780
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 bg
-  rotate: false
-  xy: 2, 494
+  rotate: true
+  xy: 2, 69
   size: 706, 943
   orig: 706, 943
   offset: 0, 0
   index: -1
 body
   rotate: false
-  xy: 1168, 874
+  xy: 1633, 2
   size: 202, 309
   orig: 202, 309
   offset: 0, 0
   index: -1
 bon tam
   rotate: true
-  xy: 2, 30
+  xy: 947, 313
   size: 462, 931
   orig: 462, 931
   offset: 0, 0
   index: -1
 bot xp
-  rotate: false
-  xy: 710, 691
+  rotate: true
+  xy: 1880, 454
   size: 321, 746
   orig: 321, 746
   offset: 0, 0
   index: -1
 chan 1
-  rotate: false
-  xy: 1231, 295
+  rotate: true
+  xy: 1880, 125
   size: 192, 403
   orig: 192, 403
   offset: 0, 0
   index: -1
 chan 2
-  rotate: false
-  xy: 1033, 692
+  rotate: true
+  xy: 1880, 319
   size: 133, 491
   orig: 133, 491
   offset: 0, 0
   index: -1
 dau
   rotate: false
-  xy: 834, 583
+  xy: 2072, 17
   size: 82, 106
   orig: 82, 106
   offset: 0, 0
   index: -1
 do mat
-  rotate: false
-  xy: 710, 503
+  rotate: true
+  xy: 1856, 181
   size: 57, 22
   orig: 57, 22
   offset: 0, 0
   index: -1
 dây
-  rotate: false
-  xy: 710, 527
+  rotate: true
+  xy: 1837, 240
   size: 71, 41
   orig: 71, 41
   offset: 0, 0
   index: -1
 lm1
   rotate: true
-  xy: 783, 502
+  xy: 1837, 172
   size: 66, 17
   orig: 66, 17
   offset: 0, 0
   index: -1
 lm2
-  rotate: true
-  xy: 918, 626
+  rotate: false
+  xy: 2, 24
   size: 63, 14
   orig: 63, 14
   offset: 0, 0
   index: -1
 mat nham
-  rotate: true
-  xy: 906, 494
+  rotate: false
+  xy: 2072, 5
   size: 58, 10
   orig: 58, 10
   offset: 0, 0
   index: -1
 mat tr
-  rotate: true
-  xy: 887, 494
+  rotate: false
+  xy: 92, 50
   size: 58, 17
   orig: 58, 17
   offset: 0, 0
   index: -1
 mieng1
-  rotate: true
-  xy: 802, 540
+  rotate: false
+  xy: 2156, 40
   size: 28, 21
   orig: 28, 21
   offset: 0, 0
   index: -1
 mo hoi
-  rotate: true
-  xy: 825, 518
+  rotate: false
+  xy: 2156, 63
   size: 34, 60
   orig: 34, 60
   offset: 0, 0
   index: -1
 moi2
-  rotate: true
-  xy: 918, 600
+  rotate: false
+  xy: 2192, 109
   size: 24, 14
   orig: 24, 14
   offset: 0, 0
   index: -1
 nuoc
-  rotate: false
-  xy: 935, 5
+  rotate: true
+  xy: 947, 17
   size: 294, 684
   orig: 294, 684
   offset: 0, 0
   index: -1
 tay trc
   rotate: true
-  xy: 1168, 700
+  xy: 2373, 73
   size: 172, 248
   orig: 172, 248
   offset: 0, 0
   index: -1
 tay2
   rotate: false
-  xy: 710, 570
+  xy: 1837, 4
   size: 122, 119
   orig: 122, 119
   offset: 0, 0
   index: -1
 toc sau
-  rotate: false
-  xy: 1033, 1185
+  rotate: true
+  xy: 2373, 247
   size: 205, 252
   orig: 205, 252
   offset: 0, 0
   index: -1
 toc trc
   rotate: false
-  xy: 1328, 1318
+  xy: 1961, 4
   size: 109, 119
   orig: 109, 119
   offset: 0, 0
   index: -1
 voi nuoc full
   rotate: true
-  xy: 1240, 1190
+  xy: 2285, 70
   size: 247, 86
   orig: 247, 86
   offset: 0, 0
   index: -1
 voi nuoc vỡ
   rotate: false
-  xy: 834, 554
+  xy: 2, 40
   size: 88, 27
   orig: 88, 27
   offset: 0, 0

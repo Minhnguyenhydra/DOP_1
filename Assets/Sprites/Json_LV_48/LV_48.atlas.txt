@@ -1,334 +1,334 @@
 
 LV_48.png
-size: 1162,1162
+size: 1900,716
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 2
   rotate: true
-  xy: 813, 167
+  xy: 789, 208
   size: 506, 193
   orig: 506, 193
   offset: 0, 0
   index: -1
 bb
-  rotate: false
-  xy: 1122, 739
+  rotate: true
+  xy: 1431, 333
   size: 31, 22
   orig: 31, 22
   offset: 0, 0
   index: -1
 bg
-  rotate: false
-  xy: 2, 375
+  rotate: true
+  xy: 2, 10
   size: 704, 785
   orig: 704, 785
   offset: 0, 0
   index: -1
 chan
-  rotate: false
-  xy: 524, 6
+  rotate: true
+  xy: 1738, 469
   size: 125, 152
   orig: 125, 152
   offset: 0, 0
   index: -1
 chan sau
   rotate: true
-  xy: 1008, 247
+  xy: 1627, 174
   size: 89, 91
   orig: 89, 91
   offset: 0, 0
   index: -1
 chan sau 2
   rotate: false
-  xy: 1120, 581
+  xy: 1853, 110
   size: 40, 57
   orig: 40, 57
   offset: 0, 0
   index: -1
 chan trom
   rotate: true
-  xy: 521, 160
+  xy: 1482, 16
   size: 213, 125
   orig: 213, 125
   offset: 0, 0
   index: -1
 chan1
-  rotate: false
-  xy: 265, 4
+  rotate: true
+  xy: 1738, 330
   size: 137, 147
   orig: 137, 147
   offset: 0, 0
   index: -1
 chan2
   rotate: false
-  xy: 1008, 397
+  xy: 868, 38
   size: 121, 168
   orig: 121, 168
   offset: 0, 0
   index: -1
 chancho1
-  rotate: true
-  xy: 1008, 177
+  rotate: false
+  xy: 1732, 6
   size: 68, 89
   orig: 68, 89
   offset: 0, 0
   index: -1
 chancho2
-  rotate: false
-  xy: 1122, 1036
+  rotate: true
+  xy: 1048, 5
   size: 36, 68
   orig: 36, 68
   offset: 0, 0
   index: -1
 dau2
   rotate: false
-  xy: 2, 2
+  xy: 1732, 97
   size: 119, 115
   orig: 119, 115
   offset: 0, 0
   index: -1
 dau`
   rotate: true
-  xy: 123, 3
+  xy: 1724, 214
   size: 114, 140
   orig: 114, 140
   offset: 0, 0
   index: -1
 daucho1
-  rotate: false
-  xy: 1008, 567
+  rotate: true
+  xy: 1627, 350
   size: 110, 106
   orig: 110, 106
   offset: 0, 0
   index: -1
 daucho2
-  rotate: true
-  xy: 708, 580
+  rotate: false
+  xy: 1532, 232
   size: 93, 96
   orig: 93, 96
   offset: 0, 0
   index: -1
 duoi
-  rotate: false
-  xy: 1122, 849
+  rotate: true
+  xy: 870, 2
   size: 34, 86
   orig: 34, 86
   offset: 0, 0
   index: -1
 duoi1
-  rotate: true
-  xy: 1122, 937
+  rotate: false
+  xy: 1173, 6
   size: 42, 35
   orig: 42, 35
   offset: 0, 0
   index: -1
 fx
   rotate: false
-  xy: 1122, 763
+  xy: 1398, 333
   size: 31, 31
   orig: 31, 31
   offset: 0, 0
   index: -1
 fx 2
-  rotate: true
-  xy: 1102, 349
+  rotate: false
+  xy: 1802, 48
   size: 46, 47
   orig: 46, 47
   offset: 0, 0
   index: -1
 hoithoai
-  rotate: true
-  xy: 404, 2
+  rotate: false
+  xy: 1738, 596
   size: 153, 118
   orig: 153, 118
   offset: 0, 0
   index: -1
 lo hoa nor
   rotate: false
-  xy: 256, 153
+  xy: 1217, 7
   size: 108, 220
   orig: 108, 220
   offset: 0, 0
   index: -1
 lohoawin
-  rotate: true
-  xy: 648, 162
+  rotate: false
+  xy: 991, 43
   size: 211, 163
   orig: 211, 163
   offset: 0, 0
   index: -1
 longmay2
   rotate: false
-  xy: 651, 6
+  xy: 1078, 213
   size: 64, 14
   orig: 64, 14
   offset: 0, 0
   index: -1
 mat
-  rotate: true
-  xy: 774, 2
+  rotate: false
+  xy: 1866, 305
   size: 24, 23
   orig: 24, 23
   offset: 0, 0
   index: -1
 mat nham
   rotate: false
-  xy: 854, 7
+  xy: 984, 208
   size: 25, 19
   orig: 25, 19
   offset: 0, 0
   index: -1
 mat2
   rotate: false
-  xy: 799, 4
+  xy: 1564, 344
   size: 53, 22
   orig: 53, 22
   offset: 0, 0
   index: -1
 matcho
-  rotate: true
-  xy: 1122, 981
+  rotate: false
+  xy: 1118, 6
   size: 53, 35
   orig: 53, 35
   offset: 0, 0
   index: -1
 matcho1
   rotate: false
-  xy: 1122, 721
+  xy: 1045, 211
   size: 31, 16
   orig: 31, 16
   offset: 0, 0
   index: -1
 matnham2
   rotate: true
-  xy: 1150, 669
+  xy: 1204, 177
   size: 50, 10
   orig: 50, 10
   offset: 0, 0
   index: -1
 mieng duoi
-  rotate: false
-  xy: 1099, 177
+  rotate: true
+  xy: 1398, 366
   size: 43, 68
   orig: 43, 68
   offset: 0, 0
   index: -1
 mieng1
   rotate: false
-  xy: 1102, 304
+  xy: 1853, 169
   size: 44, 43
   orig: 44, 43
   offset: 0, 0
   index: -1
 mieng2
-  rotate: true
-  xy: 1122, 1106
+  rotate: false
+  xy: 992, 4
   size: 54, 37
   orig: 54, 37
   offset: 0, 0
   index: -1
 miengcho1
   rotate: false
-  xy: 1122, 796
+  xy: 1011, 210
   size: 32, 17
   orig: 32, 17
   offset: 0, 0
   index: -1
 miengcho2
   rotate: true
-  xy: 1088, 15
+  xy: 1398, 521
   size: 71, 72
   orig: 71, 72
   offset: 0, 0
   index: -1
 shadow
   rotate: true
-  xy: 708, 675
+  xy: 984, 229
   size: 485, 412
   orig: 485, 412
   offset: 0, 0
   index: -1
 tai
-  rotate: true
-  xy: 1122, 815
+  rotate: false
+  xy: 958, 2
   size: 32, 34
   orig: 32, 34
   offset: 0, 0
   index: -1
 tay
-  rotate: true
-  xy: 966, 11
+  rotate: false
+  xy: 1398, 594
   size: 75, 120
   orig: 75, 120
   offset: 0, 0
   index: -1
 tay trc
   rotate: true
-  xy: 651, 22
+  xy: 1609, 34
   size: 138, 121
   orig: 138, 121
   offset: 0, 0
   index: -1
 tay1
   rotate: true
-  xy: 708, 385
+  xy: 1398, 411
   size: 108, 71
   orig: 108, 71
   offset: 0, 0
   index: -1
 tay2
-  rotate: false
-  xy: 1008, 338
+  rotate: true
+  xy: 1564, 368
   size: 92, 57
   orig: 92, 57
   offset: 0, 0
   index: -1
 taycho
-  rotate: true
-  xy: 1122, 640
+  rotate: false
+  xy: 789, 6
   size: 79, 26
   orig: 79, 26
   offset: 0, 0
   index: -1
 than1
   rotate: false
-  xy: 873, 35
+  xy: 1471, 330
   size: 91, 130
   orig: 91, 130
   offset: 0, 0
   index: -1
 than2
   rotate: true
-  xy: 708, 495
+  xy: 1627, 265
   size: 83, 95
   orig: 83, 95
   offset: 0, 0
   index: -1
 thancho1
-  rotate: false
-  xy: 966, 88
+  rotate: true
+  xy: 789, 34
   size: 172, 77
   orig: 172, 77
   offset: 0, 0
   index: -1
 thancho2
-  rotate: true
-  xy: 774, 28
+  rotate: false
+  xy: 1398, 231
   size: 132, 97
   orig: 132, 97
   offset: 0, 0
   index: -1
 tu
-  rotate: false
-  xy: 2, 119
+  rotate: true
+  xy: 1482, 462
   size: 252, 254
   orig: 252, 254
   offset: 0, 0
   index: -1
 tui
   rotate: true
-  xy: 366, 157
+  xy: 1327, 11
   size: 216, 153
   orig: 216, 153
   offset: 0, 0

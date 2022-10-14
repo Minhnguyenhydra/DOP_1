@@ -115,7 +115,25 @@ public class GameSystem : MonoBehaviour
             GameSystem.userdata = FileUtilities.DeserializeObjectFromFile<UserData>(GameSystem.USER_DATA_FILE_NAME);
         }
     }
+    public void ClickButtonMusic()
+    {
+        userdata.playBGM = !GameSystem.userdata.playBGM;
+        AudioSystem.Instance.SetBGM(GameSystem.userdata.playBGM);
+        SaveUserDataToLocal();
+    }
 
+    public void ClickButtonSound()
+    {
+        userdata.playSound = !GameSystem.userdata.playSound;
+        AudioSystem.Instance.SetFXSound(GameSystem.userdata.playSound);
+        SaveUserDataToLocal();
+    }
+
+    public void ClickVirateButton()
+    {
+        userdata.virate = !userdata.virate;
+        SaveUserDataToLocal();
+    }
     public static void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);

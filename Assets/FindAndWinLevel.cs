@@ -46,6 +46,7 @@ public class FindAndWinLevel : LevelManager
         if (isWin) {
             Win();
         }
+
     }
 
     public override Vector3 GetGuidePosition() {

@@ -1,138 +1,138 @@
 
 LV_27.png
-size: 1387,1387
+size: 1796,1044
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 anh sang choi loa
   rotate: false
-  xy: 709, 666
+  xy: 709, 322
   size: 421, 719
   orig: 421, 719
   offset: 0, 0
   index: -1
 bg
   rotate: false
-  xy: 2, 346
+  xy: 2, 2
   size: 705, 1039
   orig: 705, 1039
   offset: 0, 0
   index: -1
 bo xuong
-  rotate: true
-  xy: 664, 11
+  rotate: false
+  xy: 1132, 40
   size: 263, 670
   orig: 263, 670
   offset: 0, 0
   index: -1
 body
   rotate: true
-  xy: 2, 15
+  xy: 1132, 712
   size: 329, 660
   orig: 329, 660
   offset: 0, 0
   index: -1
 body2
   rotate: false
-  xy: 1165, 604
+  xy: 1539, 95
   size: 117, 159
   orig: 117, 159
   offset: 0, 0
   index: -1
 canh ph2
-  rotate: false
-  xy: 1132, 982
+  rotate: true
+  xy: 931, 3
   size: 211, 144
   orig: 211, 144
   offset: 0, 0
   index: -1
 canh tr2
-  rotate: true
-  xy: 1274, 783
+  rotate: false
+  xy: 931, 216
   size: 197, 104
   orig: 197, 104
   offset: 0, 0
   index: -1
 dau
   rotate: false
-  xy: 1132, 765
+  xy: 1397, 39
   size: 140, 215
   orig: 140, 215
   offset: 0, 0
   index: -1
 dau`
   rotate: false
-  xy: 1165, 527
+  xy: 1623, 18
   size: 73, 75
   orig: 73, 75
   offset: 0, 0
   index: -1
 lm
   rotate: true
-  xy: 1345, 1036
+  xy: 1539, 3
   size: 90, 40
   orig: 90, 40
   offset: 0, 0
   index: -1
 mat 2
-  rotate: true
-  xy: 1345, 982
+  rotate: false
+  xy: 821, 12
   size: 52, 26
   orig: 52, 26
   offset: 0, 0
   index: -1
 mat nham tr
-  rotate: true
-  xy: 1354, 1301
+  rotate: false
+  xy: 735, 9
   size: 84, 29
   orig: 84, 29
   offset: 0, 0
   index: -1
 mat tr
   rotate: true
-  xy: 1165, 370
+  xy: 1077, 125
   size: 89, 43
   orig: 89, 43
   offset: 0, 0
   index: -1
 mat troi
   rotate: false
-  xy: 1132, 1128
+  xy: 709, 63
   size: 220, 257
   orig: 220, 257
   offset: 0, 0
   index: -1
 mieng
   rotate: false
-  xy: 1165, 461
+  xy: 1698, 190
   size: 71, 64
   orig: 71, 64
   offset: 0, 0
   index: -1
 mieng2
   rotate: true
-  xy: 1132, 729
+  xy: 709, 4
   size: 34, 24
   orig: 34, 24
   offset: 0, 0
   index: -1
 rem cua
-  rotate: false
-  xy: 709, 276
+  rotate: true
+  xy: 1397, 256
   size: 454, 388
   orig: 454, 388
   offset: 0, 0
   index: -1
 tai 1
   rotate: false
-  xy: 664, 279
+  xy: 1077, 58
   size: 43, 65
   orig: 43, 65
   offset: 0, 0
   index: -1
 tai2
   rotate: false
-  xy: 1165, 283
+  xy: 1581, 8
   size: 40, 85
   orig: 40, 85
   offset: 0, 0

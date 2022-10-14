@@ -1,250 +1,250 @@
 
 LV_18.png
-size: 1206,1206
+size: 1344,1036
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 1
   rotate: false
-  xy: 951, 640
+  xy: 1111, 17
   size: 200, 184
   orig: 200, 184
   offset: 0, 0
   index: -1
 2
   rotate: false
-  xy: 1093, 463
+  xy: 777, 150
   size: 106, 175
   orig: 106, 175
   offset: 0, 0
   index: -1
 bap benh Copy
-  rotate: false
-  xy: 2, 108
+  rotate: true
+  xy: 1147, 405
   size: 627, 193
   orig: 627, 193
   offset: 0, 0
   index: -1
 bg
-  rotate: false
-  xy: 2, 303
+  rotate: true
+  xy: 2, 327
   size: 705, 901
   orig: 705, 901
   offset: 0, 0
   index: -1
 body
   rotate: false
-  xy: 951, 826
+  xy: 905, 103
   size: 204, 378
   orig: 204, 378
   offset: 0, 0
   index: -1
 body1
   rotate: true
-  xy: 709, 655
+  xy: 905, 483
   size: 549, 240
   orig: 549, 240
   offset: 0, 0
   index: -1
 body2
   rotate: true
-  xy: 709, 247
+  xy: 446, 175
   size: 150, 195
   orig: 150, 195
   offset: 0, 0
   index: -1
 chan sau
-  rotate: true
-  xy: 366, 19
+  rotate: false
+  xy: 138, 2
   size: 87, 141
   orig: 87, 141
   offset: 0, 0
   index: -1
 chan2
-  rotate: false
-  xy: 906, 252
+  rotate: true
+  xy: 258, 169
   size: 156, 186
   orig: 156, 186
   offset: 0, 0
   index: -1
 chanp1
   rotate: true
-  xy: 2, 4
+  xy: 446, 71
   size: 102, 182
   orig: 102, 182
   offset: 0, 0
   index: -1
 chant1
-  rotate: true
-  xy: 631, 113
+  rotate: false
+  xy: 643, 144
   size: 132, 181
   orig: 132, 181
   offset: 0, 0
   index: -1
 dau
-  rotate: true
-  xy: 640, 2
+  rotate: false
+  xy: 882, 6
   size: 109, 95
   orig: 109, 95
   offset: 0, 0
   index: -1
 dau1
   rotate: false
-  xy: 883, 38
+  xy: 373, 5
   size: 59, 71
   orig: 59, 71
   offset: 0, 0
   index: -1
 dau2
   rotate: false
-  xy: 944, 40
+  xy: 1054, 40
   size: 53, 61
   orig: 53, 61
   offset: 0, 0
   index: -1
 fx
-  rotate: false
-  xy: 709, 399
+  rotate: true
+  xy: 2, 145
   size: 180, 254
   orig: 180, 254
   offset: 0, 0
   index: -1
 lm
-  rotate: false
-  xy: 999, 85
+  rotate: true
+  xy: 1311, 327
   size: 18, 16
   orig: 18, 16
   offset: 0, 0
   index: -1
 longmay1
   rotate: true
-  xy: 1196, 1168
+  xy: 1111, 406
   size: 36, 8
   orig: 36, 8
   offset: 0, 0
   index: -1
 longmay2
   rotate: true
-  xy: 1064, 407
+  xy: 1129, 411
   size: 31, 16
   orig: 31, 16
   offset: 0, 0
   index: -1
 mat nham
   rotate: true
-  xy: 692, 285
+  xy: 1311, 289
   size: 16, 15
   orig: 16, 15
   offset: 0, 0
   index: -1
 mat nham 2
-  rotate: false
-  xy: 891, 641
+  rotate: true
+  xy: 1132, 451
   size: 30, 12
   orig: 30, 12
   offset: 0, 0
   index: -1
 mat'
   rotate: false
-  xy: 1157, 1165
+  xy: 1311, 307
   size: 16, 18
   orig: 16, 18
   offset: 0, 0
   index: -1
 mat1
-  rotate: false
-  xy: 1157, 1185
+  rotate: true
+  xy: 1111, 444
   size: 37, 19
   orig: 37, 19
   offset: 0, 0
   index: -1
 mat2
-  rotate: false
-  xy: 1093, 444
+  rotate: true
+  xy: 1311, 347
   size: 32, 17
   orig: 32, 17
   offset: 0, 0
   index: -1
 matnham1
   rotate: true
-  xy: 891, 404
+  xy: 1121, 408
   size: 34, 6
   orig: 34, 6
   offset: 0, 0
   index: -1
 mieng
-  rotate: false
-  xy: 737, 24
+  rotate: true
+  xy: 1311, 381
   size: 22, 18
   orig: 22, 18
   offset: 0, 0
   index: -1
 mouth1
-  rotate: false
-  xy: 692, 273
+  rotate: true
+  xy: 1311, 254
   size: 15, 10
   orig: 15, 10
   offset: 0, 0
   index: -1
 mouth2
-  rotate: false
-  xy: 1127, 447
+  rotate: true
+  xy: 1311, 271
   size: 16, 14
   orig: 16, 14
   offset: 0, 0
   index: -1
 tay
-  rotate: false
-  xy: 891, 440
+  rotate: true
+  xy: 1111, 203
   size: 200, 198
   orig: 200, 198
   offset: 0, 0
   index: -1
 tay1
-  rotate: false
-  xy: 814, 111
+  rotate: true
+  xy: 2, 12
   size: 131, 134
   orig: 131, 134
   offset: 0, 0
   index: -1
 tayp2
   rotate: true
-  xy: 810, 45
+  xy: 300, 12
   size: 64, 71
   orig: 64, 71
   offset: 0, 0
   index: -1
 tayt2
-  rotate: true
-  xy: 509, 5
+  rotate: false
+  xy: 779, 19
   size: 101, 129
   orig: 101, 129
   offset: 0, 0
   index: -1
 toc sau1
   rotate: true
-  xy: 186, 17
+  xy: 258, 78
   size: 89, 178
   orig: 89, 178
   offset: 0, 0
   index: -1
 toc sau2
-  rotate: true
-  xy: 947, 103
+  rotate: false
+  xy: 630, 20
   size: 147, 122
   orig: 147, 122
   offset: 0, 0
   index: -1
 toc trc1
   rotate: false
-  xy: 631, 247
+  xy: 993, 47
   size: 59, 54
   orig: 59, 54
   offset: 0, 0
   index: -1
 toc trc2
   rotate: false
-  xy: 737, 44
+  xy: 227, 9
   size: 71, 67
   orig: 71, 67
   offset: 0, 0

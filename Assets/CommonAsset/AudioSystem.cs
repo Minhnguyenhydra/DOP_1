@@ -15,7 +15,7 @@ namespace DarkcupGames {
         public AudioClip buttonSound;
 
         private Dictionary<string, AudioClip> clips;
-        private AudioSource[] chanels;
+        [SerializeField]private AudioSource[] chanels;
         private AudioSource chanelBgSong;
         private AudioSource chanelBgSong2;
 
@@ -100,6 +100,20 @@ namespace DarkcupGames {
 
         public void SetLooping(bool looping, int chanel_id = 0) {
             chanels[chanel_id].loop = looping;
+        }
+
+        public void SetBGM(bool play)
+        {
+            chanelBgSong.mute = play;
+            chanelBgSong2.mute = play;
+        }
+
+        public void SetFXSound(bool play)
+        {
+            for (int i = 0; i < chanels.Length; i++)
+            {
+                chanels[i].mute = play;
+            }
         }
     }
 }

@@ -43,6 +43,7 @@ public class DrawLevel : LevelManager
             } else {
                 //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 draw.ClearDraw();
+                Gameplay.Instance.Virate();
             }
             //if (item.Value.GetComponent<PolygonCollider2D>().OverlapPoint(CurrentCar.transform.position)) {
             //    inside = true;

@@ -50,6 +50,7 @@ public class EraseLevel : LevelManager
             else
             {
                 draw.ClearDraw();
+                Gameplay.Instance.Virate();
             }
         }
 

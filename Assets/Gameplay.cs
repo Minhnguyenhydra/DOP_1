@@ -65,6 +65,8 @@ public class Gameplay : MonoBehaviour
 
             txtLevel.text = "LEVEL 1";
         }
+        AudioSystem.Instance.SetBGM(GameSystem.userdata.playBGM);
+        AudioSystem.Instance.SetFXSound(GameSystem.userdata.playSound);
     }
 
     public void Win(LevelManager level, bool showWinPopupImediately = true, bool loopAnimation = true) {
@@ -208,5 +210,11 @@ public class Gameplay : MonoBehaviour
     public void AddGold(int amount) {
         GameSystem.userdata.gold += amount;
         GameSystem.SaveUserDataToLocal();
+    }
+
+    public void Virate()
+    {
+        if (GameSystem.userdata.virate)
+            Handheld.Vibrate();
     }
 }

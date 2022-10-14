@@ -1,131 +1,131 @@
 
 LV_29.png
-size: 1144,1144
+size: 1848,684
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 BAP TAY PHAI copy
-  rotate: false
-  xy: 864, 510
+  rotate: true
+  xy: 1363, 302
   size: 194, 281
   orig: 194, 281
   offset: 0, 0
   index: -1
 BG
-  rotate: false
-  xy: 2, 430
+  rotate: true
+  xy: 2, 2
   size: 677, 712
   orig: 677, 712
   offset: 0, 0
   index: -1
 bap tay trai copy
-  rotate: false
-  xy: 996, 825
+  rotate: true
+  xy: 1289, 190
   size: 110, 317
   orig: 110, 317
   offset: 0, 0
   index: -1
 dau
   rotate: false
-  xy: 671, 122
+  xy: 1646, 262
   size: 200, 234
   orig: 200, 234
   offset: 0, 0
   index: -1
 dau1
-  rotate: false
-  xy: 873, 274
+  rotate: true
+  xy: 1608, 60
   size: 200, 234
   orig: 200, 234
   offset: 0, 0
   index: -1
 daytai nghe
   rotate: false
-  xy: 334, 181
+  xy: 716, 4
   size: 335, 247
   orig: 335, 247
   offset: 0, 0
   index: -1
 hieu ung
   rotate: false
-  xy: 751, 68
+  xy: 1168, 58
   size: 86, 52
   orig: 86, 52
   offset: 0, 0
   index: -1
 long may
-  rotate: true
-  xy: 1108, 1009
+  rotate: false
+  xy: 1297, 43
   size: 133, 27
   orig: 133, 27
   offset: 0, 0
   index: -1
 long may2
-  rotate: true
-  xy: 1108, 886
+  rotate: false
+  xy: 1297, 15
   size: 121, 26
   orig: 121, 26
   offset: 0, 0
   index: -1
 mat mo
-  rotate: false
-  xy: 334, 18
+  rotate: true
+  xy: 1798, 536
   size: 143, 43
   orig: 143, 43
   offset: 0, 0
   index: -1
 mat nham
   rotate: false
-  xy: 479, 16
+  xy: 1168, 11
   size: 127, 45
   orig: 127, 45
   offset: 0, 0
   index: -1
 mp3
   rotate: true
-  xy: 636, 18
+  xy: 1053, 8
   size: 102, 113
   orig: 102, 113
   offset: 0, 0
   index: -1
 notnhac
-  rotate: true
-  xy: 681, 358
+  rotate: false
+  xy: 1363, 498
   size: 433, 181
   orig: 433, 181
   offset: 0, 0
   index: -1
 tai nghe
   rotate: false
-  xy: 636, 142
+  xy: 1256, 73
   size: 31, 37
   orig: 31, 37
   offset: 0, 0
   index: -1
 tay phai
   rotate: true
-  xy: 334, 63
+  xy: 1289, 72
   size: 116, 300
   orig: 116, 300
   offset: 0, 0
   index: -1
 than
   rotate: false
-  xy: 2, 2
+  xy: 716, 253
   size: 330, 426
   orig: 330, 426
   offset: 0, 0
   index: -1
 toc sau
   rotate: false
-  xy: 681, 793
+  xy: 1048, 330
   size: 313, 349
   orig: 313, 349
   offset: 0, 0
   index: -1
 toc trc
   rotate: false
-  xy: 873, 56
+  xy: 1053, 112
   size: 234, 216
   orig: 234, 216
   offset: 0, 0

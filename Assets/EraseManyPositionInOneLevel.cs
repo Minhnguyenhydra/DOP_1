@@ -33,6 +33,7 @@ public class EraseManyPositionInOneLevel : LevelManager
             checkers[i].draw.ClearDraw();
             checkers[i].StartChecking();
         }
+        Gameplay.Instance.Virate();
     }
 
     public override Vector3 GetGuidePosition() {

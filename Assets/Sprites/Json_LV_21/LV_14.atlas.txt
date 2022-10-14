@@ -1,124 +1,124 @@
 
 LV_14.png
-size: 1232,1232
+size: 2584,572
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Ellipse 1
-  rotate: false
-  xy: 959, 256
+  rotate: true
+  xy: 2427, 335
   size: 235, 142
   orig: 235, 142
   offset: 0, 0
   index: -1
 Layer 25 copy
   rotate: false
-  xy: 2, 666
+  xy: 2, 6
   size: 622, 564
   orig: 622, 564
   offset: 0, 0
   index: -1
 Layer 26
-  rotate: true
-  xy: 1037, 105
+  rotate: false
+  xy: 2432, 139
   size: 149, 154
   orig: 149, 154
   offset: 0, 0
   index: -1
 Layer 26 copy
-  rotate: true
-  xy: 959, 400
+  rotate: false
+  xy: 2224, 22
   size: 206, 244
   orig: 206, 244
   offset: 0, 0
   index: -1
 Layer 28
-  rotate: true
-  xy: 626, 608
+  rotate: false
+  xy: 626, 6
   size: 622, 564
   orig: 622, 564
   offset: 0, 0
   index: -1
 Layer 28 copy
-  rotate: true
-  xy: 1192, 1146
+  rotate: false
+  xy: 2427, 295
   size: 84, 38
   orig: 84, 38
   offset: 0, 0
   index: -1
 Layer 29
   rotate: false
-  xy: 875, 13
+  xy: 1392, 19
   size: 160, 174
   orig: 160, 174
   offset: 0, 0
   index: -1
 Shape 9
   rotate: true
-  xy: 246, 16
+  xy: 2113, 268
   size: 302, 156
   orig: 302, 156
   offset: 0, 0
   index: -1
 Shape 9 copy
-  rotate: false
-  xy: 733, 189
+  rotate: true
+  xy: 1554, 2
   size: 196, 144
   orig: 196, 144
   offset: 0, 0
   index: -1
 chan_p2
-  rotate: true
-  xy: 618, 335
+  rotate: false
+  xy: 1840, 231
   size: 271, 339
   orig: 271, 339
   offset: 0, 0
   index: -1
 chan_t2
   rotate: false
-  xy: 577, 21
+  xy: 2271, 273
   size: 154, 297
   orig: 154, 297
   offset: 0, 0
   index: -1
 chanp
-  rotate: true
-  xy: 246, 320
+  rotate: false
+  xy: 1494, 200
   size: 344, 370
   orig: 344, 370
   offset: 0, 0
   index: -1
 chant
-  rotate: false
-  xy: 404, 20
+  rotate: true
+  xy: 1700, 27
   size: 171, 298
   orig: 171, 298
   offset: 0, 0
   index: -1
 hong
   rotate: true
-  xy: 733, 12
+  xy: 1250, 18
   size: 175, 140
   orig: 175, 140
   offset: 0, 0
   index: -1
 mat nham
-  rotate: true
-  xy: 1192, 1102
+  rotate: false
+  xy: 1250, 6
   size: 42, 10
   orig: 42, 10
   offset: 0, 0
   index: -1
 than1
   rotate: true
-  xy: 2, 231
+  xy: 1250, 195
   size: 375, 242
   orig: 375, 242
   offset: 0, 0
   index: -1
 than2
   rotate: true
-  xy: 2, 6
+  xy: 2000, 6
   size: 223, 222
   orig: 223, 222
   offset: 0, 0
