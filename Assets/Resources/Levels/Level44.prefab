@@ -156,7 +156,7 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
-  erSize: 10
+  erSize: 50
   spriteMask: {fileID: 4386017921783603236}
 --- !u!61 &4386017921783603234
 BoxCollider2D:
@@ -274,7 +274,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b69f65af7b231457db8b5b4ddb380d7a, type: 2}
+  - {fileID: 2100000, guid: f98a3e1f0f45a49278bd8dbb20508537, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -329,7 +329,7 @@ MonoBehaviour:
     materialsMaskDisabled:
     - {fileID: 2100000, guid: f98a3e1f0f45a49278bd8dbb20508537, type: 2}
     materialsInsideMask:
-    - {fileID: 2100000, guid: b69f65af7b231457db8b5b4ddb380d7a, type: 2}
+    - {fileID: 0}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal

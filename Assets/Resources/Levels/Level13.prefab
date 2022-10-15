@@ -330,7 +330,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cec4eee149fbc4581a6c2ba9d6c6f877, type: 2}
+  - {fileID: 2100000, guid: 84dc4a468dca12641ab39c318dbc28d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -382,8 +382,10 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 0
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: cec4eee149fbc4581a6c2ba9d6c6f877, type: 2}
+    materialsInsideMask:
+    - {fileID: 2100000, guid: 84dc4a468dca12641ab39c318dbc28d8, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -694,7 +696,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cec4eee149fbc4581a6c2ba9d6c6f877, type: 2}
+  - {fileID: 2100000, guid: 84dc4a468dca12641ab39c318dbc28d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -746,8 +748,10 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: cec4eee149fbc4581a6c2ba9d6c6f877, type: 2}
+    materialsInsideMask:
+    - {fileID: 2100000, guid: 84dc4a468dca12641ab39c318dbc28d8, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal

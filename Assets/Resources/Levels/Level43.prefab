@@ -49,7 +49,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animAfter: {fileID: 4585878672211434710}
   animBefore: {fileID: 672714227062356077}
-  winAnims: []
+  winAnims:
+  - win
+  - win_idle
+  loopAnimation: 1
   draw: {fileID: 4585878670924478365}
 --- !u!1 &672714227062356076
 GameObject:
@@ -431,7 +434,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4d47568c24f1049bfbd0f51323c64deb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -466,7 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 99e05e39ec3d44966822814badf0cbdd, type: 2}
-  initialSkinName: no_item
+  initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -486,9 +489,9 @@ MonoBehaviour:
     materialsMaskDisabled:
     - {fileID: 2100000, guid: 0beb44272c1eb4e18b7e871f706128cd, type: 2}
     materialsInsideMask:
-    - {fileID: 0}
+    - {fileID: 2100000, guid: 4d47568c24f1049bfbd0f51323c64deb, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: win
+  _animationName: win_idle
   loop: 1
   timeScale: 1

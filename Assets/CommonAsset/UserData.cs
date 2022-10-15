@@ -22,6 +22,8 @@ public class UserData
     public bool playBGM;
     public bool playSound;
     public bool virate;
+    public int currentSpecialLevel;
+
     public UserData()
     {
         boughtItems = new List<string>();

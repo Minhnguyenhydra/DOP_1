@@ -21,6 +21,8 @@ public class Gameplay : MonoBehaviour
     public TextMeshProUGUI txtLevel;
     public AudioClip winSound;
 
+
+    [SerializeField]private GameObject levelObject;
     bool won = false;
 
     private void Awake() {
@@ -41,15 +43,26 @@ public class Gameplay : MonoBehaviour
         int count = 0;
         won = false;
 
-        GameObject levelObject = null;
 
         while (count < 10) {
-            GameObject obj = Resources.Load<GameObject>("Levels/Level" + (level + count + 1));
+            GameObject obj = null;
+            if (SpecialLevel())
+            {
+                GameSystem.userdata.currentSpecialLevel++;
+                
+                obj = Resources.Load<GameObject>("LevelSpecials/Special" + GameSystem.userdata.currentSpecialLevel);
+                txtLevel.text = "SPECIAL LEVEL " + (GameSystem.userdata.currentSpecialLevel + 1);
+            }
+            else
+            {
+                obj = Resources.Load<GameObject>("Levels/Level" + (level + count + 1));
+                //GameSystem.userdata.level = level + count;
+
+                txtLevel.text = "LEVEL " + (level + count + 1);
+            }            
 
             if (obj != null) {
-                levelObject = Instantiate(obj);
-                txtLevel.text = "LEVEL " + (level + count + 1);
-                GameSystem.userdata.level = level + count;
+                levelObject = Instantiate(obj);                                
                 GameSystem.SaveUserDataToLocal();
                 break;
             } else {
@@ -166,11 +179,32 @@ public class Gameplay : MonoBehaviour
             guideObject.SetActive(false);
         });
     }
+    private bool SpecialLevel()
+    {
+        var userLevel = GameSystem.userdata.level;
+        for (int i = 0; i < DataManager.specialLevel.Count; i++)
+        {
+            if (userLevel == DataManager.specialLevel[i])
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 
-    public void Next() {
-        GameSystem.userdata.level++;
+    public void Next() 
+    {
+        if(!SpecialLevel())
+        {
+            GameSystem.userdata.level++;
+        }
+        else
+        {
+            DataManager.specialLevel.Remove(GameSystem.userdata.level);
+        }
 
-        if (GameSystem.userdata.level > GameSystem.userdata.maxLevel) {
+        if (GameSystem.userdata.level > GameSystem.userdata.maxLevel)
+        {
             GameSystem.userdata.maxLevel = GameSystem.userdata.level;
         }
 

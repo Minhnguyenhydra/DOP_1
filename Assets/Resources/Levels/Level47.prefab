@@ -696,7 +696,7 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
-  erSize: 10
+  erSize: 50
   spriteMask: {fileID: 5435967228493674676}
 --- !u!61 &5435967228493674674
 BoxCollider2D:

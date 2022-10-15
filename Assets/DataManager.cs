@@ -18,7 +18,7 @@ public class LevelInfo {
 public class DataManager : MonoBehaviour
 {
     public static DataManager Instance;
-
+    public static List<int> specialLevel = new List<int>() { 3, 8, 13, 18, 23 };
     public List<LevelInfo> levelInfos;
 
     private void Awake() {
