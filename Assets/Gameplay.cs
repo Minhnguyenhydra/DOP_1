@@ -20,8 +20,10 @@ public class Gameplay : MonoBehaviour
     public List<RectTransform> findBoxs;
     public TextMeshProUGUI txtLevel;
     public AudioClip winSound;
+    public GameObject closeSpecialLevelButton;
+    public Image scanImg;
 
-
+    public Sprite cucgom;
     [SerializeField]private GameObject levelObject;
     bool won = false;
 
@@ -46,23 +48,23 @@ public class Gameplay : MonoBehaviour
 
         while (count < 10) {
             GameObject obj = null;
-            if (SpecialLevel())
-            {
-                GameSystem.userdata.currentSpecialLevel++;
-                
-                obj = Resources.Load<GameObject>("LevelSpecials/Special" + GameSystem.userdata.currentSpecialLevel);
-                txtLevel.text = "SPECIAL LEVEL " + (GameSystem.userdata.currentSpecialLevel + 1);
-            }
-            else
-            {
+            //if (GetSpecialLevel() > 0)
+            //{
+            //    closeSpecialLevelButton.SetActive(true);
+            //    obj = Resources.Load<GameObject>("LevelSpecials/Special" + GetSpecialLevel());
+            //    txtLevel.text = "SPECIAL LEVEL " + (GameSystem.userdata.currentSpecialLevel + 1);
+            //}
+            //else
+            //{
                 obj = Resources.Load<GameObject>("Levels/Level" + (level + count + 1));
-                //GameSystem.userdata.level = level + count;
-
+                //
+                closeSpecialLevelButton.SetActive(false);
                 txtLevel.text = "LEVEL " + (level + count + 1);
-            }            
+            //}            
 
             if (obj != null) {
-                levelObject = Instantiate(obj);                                
+                levelObject = Instantiate(obj);
+                GameSystem.userdata.level = level + count;
                 GameSystem.SaveUserDataToLocal();
                 break;
             } else {
@@ -80,6 +82,15 @@ public class Gameplay : MonoBehaviour
         }
         AudioSystem.Instance.SetBGM(GameSystem.userdata.playBGM);
         AudioSystem.Instance.SetFXSound(GameSystem.userdata.playSound);
+
+
+        var findLevel = FindObjectOfType<FindAndWinLevel>();
+
+        if (findLevel != null) return;
+
+        var findItemLevel = FindObjectOfType<FindItemLevel>();
+        if (findItemLevel != null) return;
+        scanImg.sprite = cucgom;
     }
 
     public void Win(LevelManager level, bool showWinPopupImediately = true, bool loopAnimation = true) {
@@ -179,37 +190,55 @@ public class Gameplay : MonoBehaviour
             guideObject.SetActive(false);
         });
     }
-    private bool SpecialLevel()
+
+    public int GetSpecialLevel()
     {
         var userLevel = GameSystem.userdata.level;
-        for (int i = 0; i < DataManager.specialLevel.Count; i++)
+        for (int i = 0; i < DataManager.specialLevels.Count; i++)
         {
-            if (userLevel == DataManager.specialLevel[i])
+            if (userLevel == DataManager.specialLevels[i])
             {
-                return true;
+                return i+1;
             }
         }
-        return false;
+        return -1;
     }
 
-    public void Next() 
+    public void Next()
     {
-        if(!SpecialLevel())
+        if (GetSpecialLevel() > 0)
         {
-            GameSystem.userdata.level++;
-        }
-        else
-        {
-            DataManager.specialLevel.Remove(GameSystem.userdata.level);
+            Destroy(levelObject);
+            closeSpecialLevelButton.SetActive(true);
+            var obj = Resources.Load<GameObject>("LevelSpecials/Special" + GetSpecialLevel());
+            txtLevel.text = "LEVEL " + GameSystem.userdata.level;
+            levelObject = Instantiate(obj);
+            EasyEffect.Disappear(winPopup.gameObject, 1, 0);
+            return;
         }
 
+        GameSystem.userdata.level++;
         if (GameSystem.userdata.level > GameSystem.userdata.maxLevel)
         {
             GameSystem.userdata.maxLevel = GameSystem.userdata.level;
         }
-
         GameSystem.SaveUserDataToLocal();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void LevelUp()
+    {
+        closeSpecialLevelButton.SetActive(false);
+        GameSystem.userdata.level++;
+        GameSystem.SaveUserDataToLocal();
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        //Destroy(levelObject);
+        //var obj = Resources.Load<GameObject>("Levels/Level" + GameSystem.userdata.level);
+        //txtLevel.text = "LEVEL " + GameSystem.userdata.level;
+        //levelObject = Instantiate(obj);
+        //EasyEffect.Disappear(winPopup.gameObject, 1, 0);
     }
 
     public void FoundItem(SpriteRenderer renderer) {
