@@ -6218,6 +6218,7 @@ MonoBehaviour:
   winSound: {fileID: 0}
   closeSpecialLevelButton: {fileID: 0}
   scanImg: {fileID: 0}
+  popUpRating: {fileID: 0}
   cucgom: {fileID: 0}
   levelObject: {fileID: 0}
 --- !u!1 &321643311

@@ -23,6 +23,7 @@ public class UserData
     public bool playSound;
     public bool virate;
     public int currentSpecialLevel;
+    public bool showRating = false;
 
     public UserData()
     {

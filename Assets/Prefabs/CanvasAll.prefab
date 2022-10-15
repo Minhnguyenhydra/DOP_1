@@ -122,13 +122,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 773415815}
+        m_TargetAssemblyTypeName: RatingPopUp, Assembly-CSharp
+        m_MethodName: Dissapear
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 294973931}
   - component: {fileID: 294973930}
   - component: {fileID: 294973933}
+  - component: {fileID: 602047132}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -270,7 +271,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 294973931}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 602047132}
+        m_TargetAssemblyTypeName: StarButton, Assembly-CSharp
+        m_MethodName: StarClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &294973933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +299,21 @@ MonoBehaviour:
   effectElementType: 0
   effectTime: 0.2
   number: 0
+--- !u!114 &602047132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294973928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e478c72e9f0734a924fdd580fd1cb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackStar: {fileID: 21300000, guid: 7a9e06aa4551f2547b489a71e8464502, type: 3}
+  yellowStar: {fileID: 21300000, guid: d395cb31a38a740419ff1edd97f60617, type: 3}
+  id: 0
 --- !u!1 &385087614
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,6 +327,7 @@ GameObject:
   - component: {fileID: 385087617}
   - component: {fileID: 385087616}
   - component: {fileID: 385087619}
+  - component: {fileID: 1247185649}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -407,7 +436,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 385087617}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1247185649}
+        m_TargetAssemblyTypeName: StarButton, Assembly-CSharp
+        m_MethodName: StarClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &385087619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,6 +464,21 @@ MonoBehaviour:
   effectElementType: 0
   effectTime: 0.2
   number: 0
+--- !u!114 &1247185649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385087614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e478c72e9f0734a924fdd580fd1cb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackStar: {fileID: 21300000, guid: 7a9e06aa4551f2547b489a71e8464502, type: 3}
+  yellowStar: {fileID: 21300000, guid: d395cb31a38a740419ff1edd97f60617, type: 3}
+  id: 3
 --- !u!1 &405654444
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +599,7 @@ GameObject:
   - component: {fileID: 486040400}
   - component: {fileID: 486040399}
   - component: {fileID: 486040401}
+  - component: {fileID: 773415815}
   m_Layer: 5
   m_Name: popupRating
   m_TagString: Untagged
@@ -632,6 +689,25 @@ MonoBehaviour:
   - {fileID: 961719661}
   - {fileID: 190631934}
   doEffectOnEnable: 1
+--- !u!114 &773415815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486040397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51db48d8a6bc38d42aeb0245ed387ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starButtons:
+  - {fileID: 602047132}
+  - {fileID: 22219233}
+  - {fileID: 2034398479}
+  - {fileID: 1247185649}
+  - {fileID: 51650809}
+  id: 0
 --- !u!1 &685489089
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,7 +828,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 685489092}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 773415815}
+        m_TargetAssemblyTypeName: RatingPopUp, Assembly-CSharp
+        m_MethodName: Dissapear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &961719656
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,6 +854,7 @@ GameObject:
   - component: {fileID: 961719659}
   - component: {fileID: 961719658}
   - component: {fileID: 961719661}
+  - component: {fileID: 51650809}
   m_Layer: 5
   m_Name: Button (4)
   m_TagString: Untagged
@@ -874,7 +963,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 961719659}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 51650809}
+        m_TargetAssemblyTypeName: StarButton, Assembly-CSharp
+        m_MethodName: StarClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &961719661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -890,6 +991,21 @@ MonoBehaviour:
   effectElementType: 0
   effectTime: 0.2
   number: 0
+--- !u!114 &51650809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961719656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e478c72e9f0734a924fdd580fd1cb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackStar: {fileID: 21300000, guid: 7a9e06aa4551f2547b489a71e8464502, type: 3}
+  yellowStar: {fileID: 21300000, guid: d395cb31a38a740419ff1edd97f60617, type: 3}
+  id: 4
 --- !u!1 &1023488717
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,6 +1019,7 @@ GameObject:
   - component: {fileID: 1023488720}
   - component: {fileID: 1023488719}
   - component: {fileID: 1023488722}
+  - component: {fileID: 22219233}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1011,7 +1128,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1023488720}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 22219233}
+        m_TargetAssemblyTypeName: StarButton, Assembly-CSharp
+        m_MethodName: StarClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1023488722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1027,6 +1156,21 @@ MonoBehaviour:
   effectElementType: 0
   effectTime: 0.2
   number: 0
+--- !u!114 &22219233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023488717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e478c72e9f0734a924fdd580fd1cb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackStar: {fileID: 21300000, guid: 7a9e06aa4551f2547b489a71e8464502, type: 3}
+  yellowStar: {fileID: 21300000, guid: d395cb31a38a740419ff1edd97f60617, type: 3}
+  id: 1
 --- !u!1 &1279608220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,6 +1260,7 @@ GameObject:
   - component: {fileID: 1990774224}
   - component: {fileID: 1990774223}
   - component: {fileID: 1990774226}
+  - component: {fileID: 2034398479}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -1224,7 +1369,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1990774224}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2034398479}
+        m_TargetAssemblyTypeName: StarButton, Assembly-CSharp
+        m_MethodName: StarClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1990774226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1240,6 +1397,21 @@ MonoBehaviour:
   effectElementType: 0
   effectTime: 0.2
   number: 0
+--- !u!114 &2034398479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990774221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e478c72e9f0734a924fdd580fd1cb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackStar: {fileID: 21300000, guid: 7a9e06aa4551f2547b489a71e8464502, type: 3}
+  yellowStar: {fileID: 21300000, guid: d395cb31a38a740419ff1edd97f60617, type: 3}
+  id: 2
 --- !u!1 &7464312468847295323
 GameObject:
   m_ObjectHideFlags: 0

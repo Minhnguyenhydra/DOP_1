@@ -657,6 +657,7 @@ MonoBehaviour:
   winSound: {fileID: 8300000, guid: dca27389904275a458f388fea04309c5, type: 3}
   closeSpecialLevelButton: {fileID: 546199593}
   scanImg: {fileID: 722823980}
+  popUpRating: {fileID: 1509757184}
   cucgom: {fileID: 21300000, guid: 9d68fa050c7f3cb46913dbc50dd91d17, type: 3}
   levelObject: {fileID: 0}
 --- !u!1 &310946230 stripped
@@ -3303,6 +3304,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonSound: {fileID: 8300000, guid: 11f0466dc986fc34191dc8d1e1a4c30d, type: 3}
+--- !u!1 &1509757184 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 486040397, guid: 6783e9d96e1774f4aa7ef353ae57bb4e, type: 3}
+  m_PrefabInstance: {fileID: 722909433}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1522728515
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,6 +22,7 @@ public class Gameplay : MonoBehaviour
     public AudioClip winSound;
     public GameObject closeSpecialLevelButton;
     public Image scanImg;
+    public GameObject popUpRating;
 
     public Sprite cucgom;
     [SerializeField]private GameObject levelObject;
@@ -70,6 +71,7 @@ public class Gameplay : MonoBehaviour
             } else {
                 count++;
             }
+            
         }
         
         if (levelObject == null) {
@@ -80,10 +82,16 @@ public class Gameplay : MonoBehaviour
 
             txtLevel.text = "LEVEL 1";
         }
+        
         AudioSystem.Instance.SetBGM(GameSystem.userdata.playBGM);
         AudioSystem.Instance.SetFXSound(GameSystem.userdata.playSound);
 
-
+        if (!GameSystem.userdata.showRating && GameSystem.userdata.level == 6)
+        {
+            popUpRating.SetActive(true);
+            GameSystem.userdata.showRating = true;
+            GameSystem.SaveUserDataToLocal();
+        }
         var findLevel = FindObjectOfType<FindAndWinLevel>();
 
         if (findLevel != null) return;
