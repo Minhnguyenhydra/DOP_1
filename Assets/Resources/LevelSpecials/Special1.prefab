@@ -760,6 +760,7 @@ MonoBehaviour:
   buttonErase: {fileID: 1816466047}
   buttonWatchAds: {fileID: 1882836387}
   currentLevel: 0
+  guidePosition: {fileID: 0}
 --- !u!1 &1094228300647603555
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,7 +858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 5c4f4fe3b81ba4f4c8807b370ef9089c, type: 2}
-  initialSkinName: item4
+  initialSkinName: Item3
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -910,8 +911,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094228300997399894}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3186, y: -2.1595, z: -0.0058392202}
-  m_LocalScale: {x: 2.1426246, y: 3.6088202, z: 1}
+  m_LocalPosition: {x: 0.5271, y: -5.4197, z: -0.0058392202}
+  m_LocalScale: {x: 1.2713236, y: 1.0617149, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1094228302412907858}
@@ -1175,7 +1176,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 32767
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &1094228301123026496
 MonoBehaviour:
@@ -1190,7 +1191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 5c4f4fe3b81ba4f4c8807b370ef9089c, type: 2}
-  initialSkinName: item3
+  initialSkinName: Item2
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -1265,7 +1266,9 @@ MonoBehaviour:
   animBefore: {fileID: 1094228301479325462}
   winAnims:
   - win2
+  loopAnimation: 1
   checkers: []
+  guidePosition: {fileID: 0}
 --- !u!1 &1094228301223174491
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,7 +1366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 5c4f4fe3b81ba4f4c8807b370ef9089c, type: 2}
-  initialSkinName: item4
+  initialSkinName: Item3
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -1484,7 +1487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 5c4f4fe3b81ba4f4c8807b370ef9089c, type: 2}
-  initialSkinName: item2
+  initialSkinName: Item2
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -1605,7 +1608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 5c4f4fe3b81ba4f4c8807b370ef9089c, type: 2}
-  initialSkinName: no_item
+  initialSkinName: Item4
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -1658,8 +1661,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094228302077590916}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3186, y: -2.1595, z: -0.0058392202}
-  m_LocalScale: {x: 2.1426246, y: 3.6088202, z: 1}
+  m_LocalPosition: {x: 0.3555, y: -3.1375, z: -0.0058392202}
+  m_LocalScale: {x: 1.4628099, y: 1.5566553, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1094228302238583127}
@@ -2150,7 +2153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 5c4f4fe3b81ba4f4c8807b370ef9089c, type: 2}
-  initialSkinName: item3
+  initialSkinName: Item3
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -2225,7 +2228,9 @@ MonoBehaviour:
   animBefore: {fileID: 1094228301123026496}
   winAnims:
   - win2
+  loopAnimation: 1
   checkers: []
+  guidePosition: {fileID: 0}
 --- !u!1 &1094228302412907861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,7 +2282,9 @@ MonoBehaviour:
   animBefore: {fileID: 1094228301223174489}
   winAnims:
   - win2
+  loopAnimation: 1
   checkers: []
+  guidePosition: {fileID: 0}
 --- !u!1 &1697077704170214893
 GameObject:
   m_ObjectHideFlags: 0
@@ -2375,7 +2382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 5c4f4fe3b81ba4f4c8807b370ef9089c, type: 2}
-  initialSkinName: item1
+  initialSkinName: Item1
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -2496,7 +2503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 5c4f4fe3b81ba4f4c8807b370ef9089c, type: 2}
-  initialSkinName: item2
+  initialSkinName: Item2
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -2571,7 +2578,9 @@ MonoBehaviour:
   animBefore: {fileID: 1014054496321045730}
   winAnims:
   - win1
+  loopAnimation: 1
   checkers: []
+  guidePosition: {fileID: 0}
 --- !u!1 &6619966209927769513
 GameObject:
   m_ObjectHideFlags: 0
@@ -2669,7 +2678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 5c4f4fe3b81ba4f4c8807b370ef9089c, type: 2}
-  initialSkinName: item1
+  initialSkinName: Item1
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -3077,7 +3086,9 @@ MonoBehaviour:
   animBefore: {fileID: 1180589319408546279}
   winAnims:
   - win2
+  loopAnimation: 1
   checkers: []
+  guidePosition: {fileID: 0}
 --- !u!1 &9052187262266195332
 GameObject:
   m_ObjectHideFlags: 0
@@ -3107,8 +3118,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9052187262266195332}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2649, y: -1.3212, z: -0.0058392202}
-  m_LocalScale: {x: 1.8675256, y: 3.1982481, z: 1}
+  m_LocalPosition: {x: -0.3949, y: -0.5768, z: -0.0058392202}
+  m_LocalScale: {x: 1.3520885, y: 1.4534295, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1578622215617610626}
