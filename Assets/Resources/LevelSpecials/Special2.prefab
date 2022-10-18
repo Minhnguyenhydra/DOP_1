@@ -112,6 +112,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1094228301223174489, guid: 9ae97e30f94dd3b4cbae677c92f7a3ed, type: 3}
+      propertyPath: initialSkinName
+      value: item3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094228301223174489, guid: 9ae97e30f94dd3b4cbae677c92f7a3ed, type: 3}
       propertyPath: skeletonDataAsset
       value: 
       objectReference: {fileID: 11400000, guid: 14295726a9ff7294b9e95ee9ded6521f, type: 2}
@@ -132,29 +136,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: f151c83a5d11393479a182b66d208ccc, type: 2}
     - target: {fileID: 1094228301606350336, guid: 9ae97e30f94dd3b4cbae677c92f7a3ed, type: 3}
+      propertyPath: initialSkinName
+      value: item4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094228301606350336, guid: 9ae97e30f94dd3b4cbae677c92f7a3ed, type: 3}
       propertyPath: skeletonDataAsset
       value: 
       objectReference: {fileID: 11400000, guid: 14295726a9ff7294b9e95ee9ded6521f, type: 2}
     - target: {fileID: 1094228301606350336, guid: 9ae97e30f94dd3b4cbae677c92f7a3ed, type: 3}
       propertyPath: maskMaterials.materialsInsideMask.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1094228301606350336, guid: 9ae97e30f94dd3b4cbae677c92f7a3ed, type: 3}
       propertyPath: maskMaterials.materialsMaskDisabled.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1094228301606350336, guid: 9ae97e30f94dd3b4cbae677c92f7a3ed, type: 3}
       propertyPath: maskMaterials.materialsInsideMask.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5f9da7f9116380c41867d10b7b04a05b, type: 2}
+      objectReference: {fileID: 2100000, guid: 0316aa17eff48d74a8514b0a2432415c, type: 2}
     - target: {fileID: 1094228301606350336, guid: 9ae97e30f94dd3b4cbae677c92f7a3ed, type: 3}
       propertyPath: maskMaterials.materialsMaskDisabled.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c2223c00a5fc2f9439fdb9a995fa340a, type: 2}
+      objectReference: {fileID: 2100000, guid: f151c83a5d11393479a182b66d208ccc, type: 2}
     - target: {fileID: 1094228301606350337, guid: 9ae97e30f94dd3b4cbae677c92f7a3ed, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f151c83a5d11393479a182b66d208ccc, type: 2}
+      objectReference: {fileID: 2100000, guid: 0316aa17eff48d74a8514b0a2432415c, type: 2}
     - target: {fileID: 1094228301606350350, guid: 9ae97e30f94dd3b4cbae677c92f7a3ed, type: 3}
       propertyPath: m_Mesh
       value: 
