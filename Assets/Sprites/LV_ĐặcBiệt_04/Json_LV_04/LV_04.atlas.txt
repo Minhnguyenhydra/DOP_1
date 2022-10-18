@@ -1,166 +1,166 @@
 
 LV_04.png
-size: 3536,728
+size: 2048,2048
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 ao khoac
   rotate: true
-  xy: 2557, 313
+  xy: 714, 1223
   size: 411, 365
   orig: 411, 365
   offset: 0, 0
   index: -1
 ao somi
   rotate: false
-  xy: 2924, 314
+  xy: 714, 1636
   size: 366, 410
   orig: 366, 410
   offset: 0, 0
   index: -1
 bap tay
-  rotate: false
-  xy: 3375, 33
+  rotate: true
+  xy: 422, 438
   size: 111, 322
   orig: 111, 322
   offset: 0, 0
   index: -1
 bg
-  rotate: true
-  xy: 2, 12
-  size: 712, 1160
+  rotate: false
+  xy: 2, 888
+  size: 710, 1158
   orig: 712, 1160
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 body
-  rotate: false
-  xy: 1164, 188
+  rotate: true
+  xy: 2, 100
   size: 322, 536
   orig: 322, 536
   offset: 0, 0
   index: -1
 chan
-  rotate: false
-  xy: 1488, 211
+  rotate: true
+  xy: 422, 551
   size: 335, 513
   orig: 335, 513
   offset: 0, 0
   index: -1
 chan sau
-  rotate: false
-  xy: 2551, 32
+  rotate: true
+  xy: 2, 21
   size: 77, 228
   orig: 77, 228
   offset: 0, 0
   index: -1
 dau`
-  rotate: true
-  xy: 1231, 17
-  size: 169, 191
+  rotate: false
+  xy: 1055, 154
+  size: 167, 189
   orig: 169, 191
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 duoi meo
-  rotate: false
-  xy: 1164, 12
+  rotate: true
+  xy: 232, 33
   size: 65, 174
   orig: 65, 174
   offset: 0, 0
   index: -1
 lm2
   rotate: true
-  xy: 3454, 362
-  size: 98, 79
+  xy: 746, 453
+  size: 96, 77
   orig: 98, 79
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 mat
-  rotate: true
-  xy: 3292, 353
-  size: 107, 79
+  rotate: false
+  xy: 408, 21
+  size: 104, 77
   orig: 107, 79
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 matnham
-  rotate: true
-  xy: 3373, 357
-  size: 103, 79
+  rotate: false
+  xy: 514, 21
+  size: 101, 77
   orig: 103, 79
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 meo`
-  rotate: true
-  xy: 1424, 30
+  rotate: false
+  xy: 1228, 645
   size: 156, 244
   orig: 156, 244
   offset: 0, 0
   index: -1
 moi
-  rotate: false
-  xy: 1424, 2
-  size: 31, 26
+  rotate: true
+  xy: 232, 2
+  size: 29, 23
   orig: 31, 26
-  offset: 0, 0
+  offset: 1, 2
   index: -1
 tat'
-  rotate: false
-  xy: 1825, 211
+  rotate: true
+  xy: 540, 126
   size: 310, 513
   orig: 310, 513
   offset: 0, 0
   index: -1
 tay
-  rotate: false
-  xy: 1905, 21
+  rotate: true
+  xy: 1081, 1322
   size: 312, 188
   orig: 312, 188
   offset: 0, 0
   index: -1
 tay ao khaoc
-  rotate: true
-  xy: 3043, 31
+  rotate: false
+  xy: 714, 891
   size: 281, 330
   orig: 281, 330
   offset: 0, 0
   index: -1
 tay aos somi
-  rotate: true
-  xy: 2219, 3
+  rotate: false
+  xy: 997, 891
   size: 257, 330
   orig: 257, 330
   offset: 0, 0
   index: -1
 toc mai
-  rotate: false
-  xy: 1670, 13
+  rotate: true
+  xy: 1055, 345
   size: 233, 196
   orig: 233, 196
   offset: 0, 0
   index: -1
 toc sau
   rotate: false
-  xy: 2137, 262
+  xy: 2, 424
   size: 418, 462
   orig: 418, 462
   offset: 0, 0
   index: -1
 toc trc
   rotate: true
-  xy: 2630, 2
+  xy: 937, 580
   size: 309, 289
   orig: 309, 289
   offset: 0, 0
   index: -1
 vay
-  rotate: false
-  xy: 2921, 29
+  rotate: true
+  xy: 617, 4
   size: 120, 282
   orig: 120, 282
   offset: 0, 0
   index: -1
 vay2
   rotate: true
-  xy: 3292, 462
+  xy: 1082, 1784
   size: 262, 222
   orig: 262, 222
   offset: 0, 0
