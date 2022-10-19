@@ -330,7 +330,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 84dc4a468dca12641ab39c318dbc28d8, type: 2}
+  - {fileID: 2100000, guid: cec4eee149fbc4581a6c2ba9d6c6f877, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -382,10 +382,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 0
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: cec4eee149fbc4581a6c2ba9d6c6f877, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 84dc4a468dca12641ab39c318dbc28d8, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -696,7 +694,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 84dc4a468dca12641ab39c318dbc28d8, type: 2}
+  - {fileID: 2100000, guid: 2022a039634a3bf48bfee8da45cdb31e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -730,7 +728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 03b32ea71857c45579f056b9cdb39537, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 958fb75f5bdde55419194b7b7b2c058b, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
@@ -749,9 +747,9 @@ MonoBehaviour:
   maskInteraction: 1
   maskMaterials:
     materialsMaskDisabled:
-    - {fileID: 2100000, guid: cec4eee149fbc4581a6c2ba9d6c6f877, type: 2}
+    - {fileID: 2100000, guid: 845f14c0c2ae5bb4b9831c9d657b486f, type: 2}
     materialsInsideMask:
-    - {fileID: 2100000, guid: 84dc4a468dca12641ab39c318dbc28d8, type: 2}
+    - {fileID: 2100000, guid: 2022a039634a3bf48bfee8da45cdb31e, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -770,19 +768,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.3299553
+      value: 1.5730813
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.388127
+      value: 2.788608
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9726
+      value: 1.2388
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1366
+      value: -0.4826
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.z
@@ -827,6 +825,10 @@ PrefabInstance:
     - target: {fileID: 8146468043246476777, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: drawFinishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: EraseManyPositionInOneLevel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146468043246476779, guid: 468efd58024354af6bd199135e435287, type: 3}
+      propertyPath: erSize
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476791, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_Name

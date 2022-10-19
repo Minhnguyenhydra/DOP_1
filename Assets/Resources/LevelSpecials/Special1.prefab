@@ -754,7 +754,6 @@ MonoBehaviour:
   - {fileID: 1820750550272972652}
   - {fileID: 4927771837505881416}
   - {fileID: 1094228301189161726}
-  - {fileID: 0}
   - {fileID: 1094228302412907859}
   buttonErase: {fileID: 1816466047}
   buttonWatchAds: {fileID: 1882836387}
@@ -916,7 +915,7 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
-  erSize: 10
+  erSize: 20
   spriteMask: {fileID: 1094228300997399891}
 --- !u!114 &1094228300997399893
 MonoBehaviour:
@@ -1547,7 +1546,7 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
-  erSize: 10
+  erSize: 20
   spriteMask: {fileID: 1094228302128190961}
 --- !u!114 &1094228302128190963
 MonoBehaviour:
@@ -2140,7 +2139,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5f9da7f9116380c41867d10b7b04a05b, type: 2}
+  - {fileID: 2100000, guid: c2223c00a5fc2f9439fdb9a995fa340a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2192,10 +2191,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: c2223c00a5fc2f9439fdb9a995fa340a, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 5f9da7f9116380c41867d10b7b04a05b, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -2478,7 +2475,7 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
-  erSize: 10
+  erSize: 20
   spriteMask: {fileID: 8382381734542078459}
 --- !u!114 &8382381734542078462
 MonoBehaviour:
@@ -2744,7 +2741,7 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
-  erSize: 10
+  erSize: 20
   spriteMask: {fileID: 9052187262266195359}
 --- !u!114 &9052187262266195354
 MonoBehaviour:

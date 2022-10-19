@@ -113,7 +113,9 @@ public class Gameplay : MonoBehaviour
 
     IEnumerator IEWin(SkeletonAnimation skeletonAnimation, List<string> anims = null, bool showWinPopupImediately = true, bool loopAnimation = true) {
         skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
-
+        for (int i = 0; i < effects.Count; i++) {
+            effects[i].Play();
+        }
         EasyEffect.Appear(dautich, 0f, 1f, 0.15f);
         AudioSystem.Instance.PlaySound(winSound, 1);
         skeletonAnimation.AnimationState.Data.DefaultMix = 0;

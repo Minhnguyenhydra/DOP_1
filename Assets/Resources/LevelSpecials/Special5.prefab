@@ -56,6 +56,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1014054496321045730, guid: 9ae97e30f94dd3b4cbae677c92f7a3ed, type: 3}
+      propertyPath: initialSkinName
+      value: normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014054496321045730, guid: 9ae97e30f94dd3b4cbae677c92f7a3ed, type: 3}
       propertyPath: skeletonDataAsset
       value: 
       objectReference: {fileID: 11400000, guid: 4719672dbee44ec4b8d231b2e9e016b4, type: 2}
@@ -357,7 +361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4099859428661219950, guid: 9ae97e30f94dd3b4cbae677c92f7a3ed, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5009229905987475421, guid: 9ae97e30f94dd3b4cbae677c92f7a3ed, type: 3}
       propertyPath: m_Mesh
@@ -374,6 +378,10 @@ PrefabInstance:
     - target: {fileID: 6200310253920003820, guid: 9ae97e30f94dd3b4cbae677c92f7a3ed, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6619966209927769513, guid: 9ae97e30f94dd3b4cbae677c92f7a3ed, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7094629342178363209, guid: 9ae97e30f94dd3b4cbae677c92f7a3ed, type: 3}
       propertyPath: m_Materials.Array.data[0]
