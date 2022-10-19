@@ -29,6 +29,7 @@ public class Gameplay : MonoBehaviour
     public Sprite cucgom;
     [SerializeField]private GameObject levelObject;
     bool won = false;
+    bool isPlayingSpecial;
 
     private void Awake() {
         Instance = this;
@@ -47,6 +48,7 @@ public class Gameplay : MonoBehaviour
 
         int count = 0;
         won = false;
+        isPlayingSpecial = false;
 
         while (count < 10) {
             GameObject obj = Resources.Load<GameObject>("Levels/Level" + (level + count + 1));
@@ -68,7 +70,7 @@ public class Gameplay : MonoBehaviour
                 count++;
             }
         }
-        
+
         if (levelObject == null) {
             GameSystem.userdata.level = 0;
             GameSystem.SaveUserDataToLocal();
@@ -77,27 +79,31 @@ public class Gameplay : MonoBehaviour
 
             txtLevel.text = "LEVEL 1";
         }
-        
+
         AudioSystem.Instance.SetBGM(GameSystem.userdata.playBGM);
         AudioSystem.Instance.SetFXSound(GameSystem.userdata.playSound);
 
-        if (!GameSystem.userdata.showRating && GameSystem.userdata.level == 6)
-        {
+        if (!GameSystem.userdata.showRating && GameSystem.userdata.level == 6) {
             popUpRating.SetActive(true);
             GameSystem.userdata.showRating = true;
             GameSystem.SaveUserDataToLocal();
         }
+
+        var findItemLevel = FindObjectOfType<FindItemLevel>();
+
+        for (int i = 0; i < findBoxs.Count; i++) {
+            findBoxs[i].gameObject.SetActive(findItemLevel != null);
+        }
+
+        if (findItemLevel != null) {
+            return;
+        }
+
         var findLevel = FindObjectOfType<FindAndWinLevel>();
 
         if (findLevel != null) return;
 
-        var findItemLevel = FindObjectOfType<FindItemLevel>();
-        if (findItemLevel != null) return;
-
         scanImg.sprite = cucgom;
-        for (int i = 0; i < findBoxs.Count; i++) {
-            findBoxs[i].gameObject.SetActive(false);
-        }
     }
 
     public void Win(LevelManager level, bool showWinPopupImediately = true, bool loopAnimation = true) {
@@ -215,15 +221,10 @@ public class Gameplay : MonoBehaviour
 
     public void Next()
     {
-        if (GetSpecialLevel() > 0)
+        if (GetSpecialLevel() > 0 && !isPlayingSpecial)
         {
-            Destroy(levelObject);
-            closeSpecialLevelButton.SetActive(true);
-            var obj = Resources.Load<GameObject>("LevelSpecials/Special" + GetSpecialLevel());
-            txtLevel.text = "Level " + GameSystem.userdata.level;
-            levelObject = Instantiate(obj);
-            EasyEffect.Disappear(winPopup.gameObject, 1, 0);
-            canvasGameplay.gameObject.SetActive(false);
+            isPlayingSpecial = true;
+            SpawnSpecialLevel();
             return;
         }
 
@@ -234,6 +235,17 @@ public class Gameplay : MonoBehaviour
         }
         GameSystem.SaveUserDataToLocal();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void SpawnSpecialLevel() {
+        Destroy(levelObject);
+        closeSpecialLevelButton.SetActive(true);
+        var obj = Resources.Load<GameObject>("LevelSpecials/Special" + GetSpecialLevel());
+        txtLevel.text = "Level " + GameSystem.userdata.level;
+        levelObject = Instantiate(obj);
+        EasyEffect.Disappear(winPopup.gameObject, 1, 0);
+        canvasGameplay.gameObject.SetActive(false);
+        won = false;
     }
 
     public void LevelUp()

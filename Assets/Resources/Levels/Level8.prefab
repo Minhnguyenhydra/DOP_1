@@ -171,7 +171,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animAfter: {fileID: 9171137612055031662}
   animBefore: {fileID: 1950142532697441881}
-  winAnims: []
+  winAnims:
+  - win1
+  - win2
+  - win3
   loopAnimation: 1
   draw: {fileID: 6723546814152498672}
   checkArea: {fileID: 2956962216398671849}
@@ -349,7 +352,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e8cb36ff47b9d824cb1fb38551848503, type: 2}
+  - {fileID: 2100000, guid: 4a94937b5ead24340801d767fd965e03, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

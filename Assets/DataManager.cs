@@ -75,32 +75,32 @@ public class DataManager : MonoBehaviour
         titles.Add("Use your imagination");
 
         //31
-        titles.Add("Some text");
-        titles.Add("Some text");
-        titles.Add("Some text");
-        titles.Add("Some text");
-        titles.Add("Some text");
+        titles.Add("Find the mysterious person.");
+        titles.Add("Wake up!");
+        titles.Add("Summon the genie.");
+        titles.Add("Save the girl.");
+        titles.Add("Help the boy stay awake.");
 
         //36
-        titles.Add("Some text");
-        titles.Add("Some text");
-        titles.Add("Some text");
-        titles.Add("Some text");
-        titles.Add("Some text");
+        titles.Add("Who is real?.");
+        titles.Add("Help him please her.");
+        titles.Add("Help him.");
+        titles.Add("Find the first full tank.");
+        titles.Add("What is she doing?");
 
         //41
-        titles.Add("Some text");
-        titles.Add("Some text");
-        titles.Add("Some text");
-        titles.Add("Some text");
-        titles.Add("Some text");
+        titles.Add("Unlock My Phone");
+        titles.Add("Help him a singer");
+        titles.Add("Kill the monster");
+        titles.Add("Help her lose weight.");
+        titles.Add("Kill The Vampires.");
 
         //46
-        titles.Add("Some text");
-        titles.Add("Some text");
-        titles.Add("Some text");
-        titles.Add("Some text");
-        titles.Add("Some text");
+        titles.Add("He wants a ghost.");
+        titles.Add("Help listen to the music.");
+        titles.Add("Catch the thief.");
+        titles.Add("Find the letter O.");
+        titles.Add("Find the letter O.");
 
         for (int i = 0; i < titles.Count; i++) {
             int index = i;

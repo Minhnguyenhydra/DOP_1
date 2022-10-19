@@ -50,6 +50,7 @@ MonoBehaviour:
   animAfter: {fileID: 8714489974976474154}
   animBefore: {fileID: 5620967502197033105}
   winAnims: []
+  loopAnimation: 1
   draw: {fileID: 712504392948734828}
 --- !u!1 &5620967502197033104
 GameObject:
@@ -234,7 +235,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f25cc147775d742cdb1db153f2cbadf7, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -286,8 +287,10 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: f25cc147775d742cdb1db153f2cbadf7, type: 2}
+    materialsInsideMask:
+    - {fileID: 0}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: win
@@ -300,6 +303,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5620967500815412117}
     m_Modifications:
+    - target: {fileID: 6391443204089928589, guid: fe8aec0d32ce0440aacc30bb591991f4, type: 3}
+      propertyPath: erSize
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6391443204089928590, guid: fe8aec0d32ce0440aacc30bb591991f4, type: 3}
       propertyPath: m_RootOrder
       value: 2

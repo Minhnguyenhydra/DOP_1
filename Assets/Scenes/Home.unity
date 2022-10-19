@@ -478,8 +478,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -686,7 +686,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -182.61}
+  m_AnchoredPosition: {x: -0.00020176, y: -174.8}
   m_SizeDelta: {x: 218.216, y: 75.491}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &29030099
@@ -856,8 +856,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6206,19 +6206,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ed18f0768033a40937f1e16b4024bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dautich: {fileID: 0}
-  guideObject: {fileID: 0}
   effects:
   - {fileID: 453783611}
   - {fileID: 198783573972310306}
+  findBoxs: []
+  dautich: {fileID: 0}
+  guideObject: {fileID: 0}
   winPopup: {fileID: 81553834}
   findItemDemo: {fileID: 0}
-  findBoxs: []
   txtLevel: {fileID: 0}
-  winSound: {fileID: 0}
+  txtQuestion: {fileID: 0}
   closeSpecialLevelButton: {fileID: 0}
-  scanImg: {fileID: 0}
   popUpRating: {fileID: 0}
+  winSound: {fileID: 0}
+  scanImg: {fileID: 0}
+  canvasGameplay: {fileID: 0}
   cucgom: {fileID: 0}
   levelObject: {fileID: 0}
 --- !u!1 &321643311
@@ -19901,7 +19903,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1009885086
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19919,7 +19921,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.084391, y: -129.1}
+  m_AnchoredPosition: {x: 0.08442, y: -165.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1009885087

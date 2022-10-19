@@ -38,9 +38,7 @@ public class EraseManyTimes : MonoBehaviour
             buttonErase.gameObject.SetActive(false);
             buttonWatchAds.gameObject.SetActive(false);
 
-            LeanTween.delayedCall(2f, () => {
-                Gameplay.Instance.Win(eraseLevels[eraseLevels.Count - 1]);
-            });
+            Gameplay.Instance.Win(eraseLevels[eraseLevels.Count - 1]);
         } else
         {
             currentLevel++;
