@@ -55,4 +55,8 @@ public class EraseManyTimes : MonoBehaviour
     public void Hint() {
 
     }
+
+    public void OnCloseSpecialLevel() {
+        Gameplay.Instance.LevelUp();
+    }
 }

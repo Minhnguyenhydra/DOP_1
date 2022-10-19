@@ -11,18 +11,20 @@ public class Gameplay : MonoBehaviour
 {
     public static Gameplay Instance;
 
+    public List<ParticleSystem> effects;
+    public List<RectTransform> findBoxs;
+
     public GameObject dautich;
     public GameObject guideObject;
-
-    public List<ParticleSystem> effects;
     public UIEffect winPopup;
     public Image findItemDemo;
-    public List<RectTransform> findBoxs;
     public TextMeshProUGUI txtLevel;
-    public AudioClip winSound;
+    public TextMeshProUGUI txtQuestion;
     public GameObject closeSpecialLevelButton;
-    public Image scanImg;
     public GameObject popUpRating;
+    public AudioClip winSound;
+    public Image scanImg;
+    public Canvas canvasGameplay;
 
     public Sprite cucgom;
     [SerializeField]private GameObject levelObject;
@@ -46,22 +48,16 @@ public class Gameplay : MonoBehaviour
         int count = 0;
         won = false;
 
-
         while (count < 10) {
-            GameObject obj = null;
-            //if (GetSpecialLevel() > 0)
-            //{
-            //    closeSpecialLevelButton.SetActive(true);
-            //    obj = Resources.Load<GameObject>("LevelSpecials/Special" + GetSpecialLevel());
-            //    txtLevel.text = "SPECIAL LEVEL " + (GameSystem.userdata.currentSpecialLevel + 1);
-            //}
-            //else
-            //{
-                obj = Resources.Load<GameObject>("Levels/Level" + (level + count + 1));
-                //
-                closeSpecialLevelButton.SetActive(false);
-                txtLevel.text = "LEVEL " + (level + count + 1);
-            //}            
+            GameObject obj = Resources.Load<GameObject>("Levels/Level" + (level + count + 1));
+            closeSpecialLevelButton.SetActive(false);
+            txtLevel.text = "Level " + (level + count + 1);
+
+            txtQuestion.text = "";
+            if (DataManager.Instance.levelInfos.Count > level + count) {
+                LevelInfo info = DataManager.Instance.levelInfos[level + count];
+                txtQuestion.text = info.levelTitle;
+            }
 
             if (obj != null) {
                 levelObject = Instantiate(obj);
@@ -71,7 +67,6 @@ public class Gameplay : MonoBehaviour
             } else {
                 count++;
             }
-            
         }
         
         if (levelObject == null) {
@@ -98,7 +93,11 @@ public class Gameplay : MonoBehaviour
 
         var findItemLevel = FindObjectOfType<FindItemLevel>();
         if (findItemLevel != null) return;
+
         scanImg.sprite = cucgom;
+        for (int i = 0; i < findBoxs.Count; i++) {
+            findBoxs[i].gameObject.SetActive(false);
+        }
     }
 
     public void Win(LevelManager level, bool showWinPopupImediately = true, bool loopAnimation = true) {
@@ -221,9 +220,10 @@ public class Gameplay : MonoBehaviour
             Destroy(levelObject);
             closeSpecialLevelButton.SetActive(true);
             var obj = Resources.Load<GameObject>("LevelSpecials/Special" + GetSpecialLevel());
-            txtLevel.text = "LEVEL " + GameSystem.userdata.level;
+            txtLevel.text = "Level " + GameSystem.userdata.level;
             levelObject = Instantiate(obj);
             EasyEffect.Disappear(winPopup.gameObject, 1, 0);
+            canvasGameplay.gameObject.SetActive(false);
             return;
         }
 
