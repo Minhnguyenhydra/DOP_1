@@ -16,7 +16,6 @@ public class DragAndDropScene : LevelManager
     public AudioClip wrongSFX;
     public AudioClip rightSFX;
     
-    public TextMeshProUGUI markWrong;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,9 +41,7 @@ public class DragAndDropScene : LevelManager
                 {
                     if (audioSource.isPlaying) audioSource.Stop();
                     audioSource.PlayOneShot(wrongSFX);
-                    if (markWrong.gameObject.activeSelf) return;
-                    
-                        markWrong.gameObject.SetActive(true);
+
 
                     
                 }

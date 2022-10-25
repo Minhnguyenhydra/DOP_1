@@ -248,7 +248,8 @@ public class Gameplay : MonoBehaviour
         Destroy(levelObject);
         closeSpecialLevelButton.SetActive(true);
         var obj = Resources.Load<GameObject>("LevelSpecials/Special" + GetSpecialLevel());
-        txtLevel.text = "Level " + GameSystem.userdata.level;
+        txtLevel.gameObject.SetActive(isPlayingSpecial);
+        txtQuestion.gameObject.SetActive(isPlayingSpecial);
         levelObject = Instantiate(obj);
         EasyEffect.Disappear(winPopup.gameObject, 1, 0);
         canvasGameplay.gameObject.SetActive(false);

@@ -223,7 +223,6 @@ MonoBehaviour:
   audioSource: {fileID: 2897516768272951119}
   wrongSFX: {fileID: 8300000, guid: 35d3c234f4fd01e46bebd9b0c462b432, type: 3}
   rightSFX: {fileID: 8300000, guid: fd3580025e0c59742bdf169ef0771362, type: 3}
-  markWrong: {fileID: 0}
 --- !u!82 &2897516768272951119
 AudioSource:
   m_ObjectHideFlags: 0
@@ -444,7 +443,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  draw: {fileID: 0}
   isReturn: 1
+  isErase: 0
+  isDraw: 0
+  mouseCursor: {fileID: 0}
   returnToPos: {fileID: 4930240557200662279}
 --- !u!1 &2897516768782306950
 GameObject:
@@ -570,7 +573,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  draw: {fileID: 0}
   isReturn: 1
+  isErase: 0
+  isDraw: 0
+  mouseCursor: {fileID: 0}
   returnToPos: {fileID: 133902348922585889}
 --- !u!1 &2897516769013522757
 GameObject:
@@ -727,7 +734,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  draw: {fileID: 0}
   isReturn: 1
+  isErase: 0
+  isDraw: 0
+  mouseCursor: {fileID: 0}
   returnToPos: {fileID: 6007356055865363845}
 --- !u!1 &2897516769607921928
 GameObject:

@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 0f52204ee889a4c2999542a82083c82c, type: 2}
-  initialSkinName: 
+  initialSkinName: normal
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -486,6 +486,8 @@ MonoBehaviour:
   drawPoints: []
   isDrawing: 0
   erSize: 10
+  isBig: 0
+  isBigPercents: 0
   spriteMask: {fileID: 3219568449649086795}
 --- !u!61 &3219568449649086839
 BoxCollider2D:
@@ -698,6 +700,8 @@ MonoBehaviour:
   drawPoints: []
   isDrawing: 0
   erSize: 10
+  isBig: 0
+  isBigPercents: 0
   spriteMask: {fileID: 6639106855858926791}
 --- !u!61 &6639106855858926789
 BoxCollider2D:
@@ -910,6 +914,8 @@ MonoBehaviour:
   drawPoints: []
   isDrawing: 0
   erSize: 10
+  isBig: 0
+  isBigPercents: 0
   spriteMask: {fileID: 6639106855891196961}
 --- !u!61 &6639106855891196967
 BoxCollider2D:

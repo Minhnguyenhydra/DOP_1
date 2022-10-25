@@ -51,8 +51,12 @@ MonoBehaviour:
   animAfter: {fileID: 8379373107251517660}
   animBefore: {fileID: 8379373106931623694}
   winAnims: []
+  loopAnimation: 1
   magnify: {fileID: 2269465549614668978}
-  findObject: {fileID: 3055852610390063739}
+  objectFinds:
+  - {fileID: 3055852610390063716}
+  isActive: 1
+  isMultiple: 0
 --- !u!1 &3055852610390063716
 GameObject:
   m_ObjectHideFlags: 0
