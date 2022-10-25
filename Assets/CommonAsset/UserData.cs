@@ -24,6 +24,7 @@ public class UserData
     public bool virate;
     public int currentSpecialLevel;
     public bool showRating = false;
+    public int currentBranchLevel;
 
     public UserData()
     {

@@ -116,6 +116,10 @@ public class Gameplay : MonoBehaviour
         StartCoroutine(IEWin(level.animAfter, level.winAnims, showWinPopupImediately));
     }
 
+
+
+    
+
     IEnumerator IEWin(SkeletonAnimation skeletonAnimation, List<string> anims = null, bool showWinPopupImediately = true, bool loopAnimation = true) {
         skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
         for (int i = 0; i < effects.Count; i++) {
@@ -236,6 +240,9 @@ public class Gameplay : MonoBehaviour
         GameSystem.SaveUserDataToLocal();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+
+
 
     public void SpawnSpecialLevel() {
         Destroy(levelObject);
