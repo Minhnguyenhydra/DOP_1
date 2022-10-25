@@ -164,9 +164,12 @@ MonoBehaviour:
   animBefore: {fileID: 2672474411887262244}
   winAnims:
   - win
+  loopAnimation: 1
   draw: {fileID: 8548387673838391323}
   checkArea: {fileID: 1661819897910555540}
   winAnimationName: 
+  mouseCursor: {fileID: 0}
+  isDraw: 0
   completeButton: {fileID: 7856778082242183279}
 --- !u!1 &2672474411887262245
 GameObject:
@@ -351,7 +354,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e79d9181c2cce754b825c7f7e5319f74, type: 2}
+  - {fileID: 2100000, guid: 1a9f7b75728f4eb4080b8ceb0f648216, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -403,10 +406,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: 1a9f7b75728f4eb4080b8ceb0f648216, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: e79d9181c2cce754b825c7f7e5319f74, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal

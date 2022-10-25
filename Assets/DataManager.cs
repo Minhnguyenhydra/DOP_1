@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum LevelType {
-    Draw, Erase
+    Draw, Erase,Drag 
 }
 
 public class LevelInfo {
@@ -19,7 +19,7 @@ public class DataManager : MonoBehaviour
 {
     public static DataManager Instance;
 
-
+    public Dictionary<int, bool> branchLevels = new Dictionary<int, bool>(); 
     public static List<int> specialLevels = new List<int>() { 2, 7, 12, 17, 22 };
     public List<LevelInfo> levelInfos;
 
@@ -116,6 +116,11 @@ public class DataManager : MonoBehaviour
                     PlayLevel(index);
                 }
             });
+        }
+
+        for(int i = 0; i < 6; i++)
+        {
+            branchLevels.Add(i + 1, false);
         }
     }
 

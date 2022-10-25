@@ -13,10 +13,14 @@ public class PaintController : MonoBehaviour
     public bool isDrawing = false;
     public int erSize = 10;
 
+    public bool isBig;
+    public float isBigPercents;
+
     protected Texture2D m_Texture;
     protected Collider2D drawBoundCollider;
     protected Color[] originalColors;
     protected Color[] m_Colors;
+
 
     bool canDraw = false;
     bool selected;
@@ -72,6 +76,8 @@ public class PaintController : MonoBehaviour
         }
 
         if (Input.GetMouseButton(0)) {
+           
+
             Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             bool inside = drawBoundCollider.OverlapPoint(pos);
 
@@ -157,7 +163,16 @@ public class PaintController : MonoBehaviour
         float percent = count / m_Colors.Length;
         Debug.Log("percent = " + percent);
 
-        return percent > Constants.ERASE_PERCENT_REQUIRE;
+
+        if (isBig)
+        {
+            return percent > isBigPercents;
+        }
+        else
+        {
+            return percent > Constants.ERASE_PERCENT_REQUIRE;
+
+        }
     }
 
     public void ClearDraw() {

@@ -171,7 +171,9 @@ MonoBehaviour:
   animAfter: {fileID: 7576734902496681657}
   animBefore: {fileID: 6905247605832989186}
   winAnims: []
+  loopAnimation: 1
   draw: {fileID: 7576734903892702706}
+  mainCam: {fileID: 0}
 --- !u!1 &7576734902496681655
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,8 +324,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7576734903892702670}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.14, y: -3.35, z: -0.0058392202}
-  m_LocalScale: {x: 4.1680098, y: 3.9879866, z: 1}
+  m_LocalPosition: {x: -0.0167, y: -3.5803, z: -0.0058392202}
+  m_LocalScale: {x: 1.4127698, y: 1.7842699, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6905247607139637510}
@@ -450,6 +452,8 @@ MonoBehaviour:
   drawPoints: []
   isDrawing: 0
   erSize: 10
+  isBig: 0
+  isBigPercents: 0
   spriteMask: {fileID: 7576734903892702671}
 --- !u!61 &7576734903892702707
 BoxCollider2D:
@@ -490,3 +494,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eraser: {fileID: 0}
+  drawCorrect: 0

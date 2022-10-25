@@ -179,6 +179,8 @@ MonoBehaviour:
   draw: {fileID: 6723546814152498672}
   checkArea: {fileID: 2956962216398671849}
   winAnimationName: win2
+  mouseCursor: {fileID: 0}
+  isDraw: 0
 --- !u!1 &2956962216398671851
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,7 +413,7 @@ MonoBehaviour:
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
-  loop: 1
+  loop: 0
   timeScale: 1
 --- !u!1001 &1417345002637063465
 PrefabInstance:

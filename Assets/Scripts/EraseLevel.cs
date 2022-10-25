@@ -1,24 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using Spine.Unity;
 using DarkcupGames;
 
-public class EraseLevel : LevelManager
+public class EraseLevel : LevelManager, IDragHandler, IEndDragHandler
 {
     public PaintToSpriteMaskController draw;
-
+    public Camera mainCam;
     //public SkeletonAnimation skeletonAnimation;
 
     private void Start() {
         EraserShowPosition eraserShowPosition = draw.GetComponent<EraserShowPosition>();
-        if (eraserShowPosition == null) {
+        if (eraserShowPosition == null)
+        {
             eraserShowPosition = draw.gameObject.AddComponent<EraserShowPosition>();
         }
 
         StartCoroutine(IELevel1());
     }
 
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        draw.isDrawing = true;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        draw.isDrawing = false;
+        
+    }
     public IEnumerator IELevel1() {
         while (true)
         {
@@ -75,4 +88,6 @@ public class EraseLevel : LevelManager
     public override Vector3 GetGuidePosition() {
         return draw.transform.position;
     }
+
+    
 }

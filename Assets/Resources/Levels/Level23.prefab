@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 9b31472658ec54157b27826fa8b102fe, type: 2}
-  initialSkinName: item2
+  initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -421,19 +421,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.7403716
+      value: 2.076884
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.6303976
+      value: 1.8702034
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.407
+      value: 1.3093
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8036
+      value: -1.7768
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.z
@@ -476,12 +476,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476779, guid: 468efd58024354af6bd199135e435287, type: 3}
-      propertyPath: erSize
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8146468043246476779, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: isBigPercents
-      value: 0.25
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476791, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_Name

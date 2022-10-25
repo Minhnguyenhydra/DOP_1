@@ -212,8 +212,6 @@ MonoBehaviour:
   draw: {fileID: 0}
   isReturn: 0
   isErase: 0
-  isDraw: 0
-  mouseCursor: {fileID: 0}
   returnToPos: {fileID: 0}
 --- !u!1 &2710660978662670667
 GameObject:
@@ -277,7 +275,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5b65c52e05d76f74db949acb64d893a9, type: 2}
+  - {fileID: 2100000, guid: bd07a3cc47d9a5641812c210eb506aa4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -329,10 +327,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: bd07a3cc47d9a5641812c210eb506aa4, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 5b65c52e05d76f74db949acb64d893a9, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal

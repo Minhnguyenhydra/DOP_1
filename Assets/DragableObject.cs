@@ -7,13 +7,31 @@ using UnityEngine.EventSystems;
 public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
     Camera mainCam;
 
+    public PaintToSpriteMaskController draw;
 
     public bool isReturn;
 
+    public bool isErase;
+
+    public bool isDraw;
+
      bool hasDragged;
+
+    public Sprite mouseCursor;
+
     public Transform returnToPos;
     private void Start() {
 
+        if (isErase)
+        {
+            EraserShowPosition eraserShowPosition = draw.GetComponent<EraserShowPosition>();
+            if (eraserShowPosition == null)
+            {
+                eraserShowPosition = draw.gameObject.AddComponent<EraserShowPosition>();
+            }
+           
+        }
+       
         mainCam = Camera.main;
     }
 
@@ -26,13 +44,21 @@ public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
 
     public void OnDrag(PointerEventData eventData) {
 
-        Vector2 pos = mainCam.ScreenToWorldPoint(eventData.position);
+        Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = pos;
+        if (isErase)
+        {
+            draw.GetComponent<EraserShowPosition>().eraser.gameObject.SetActive(true);
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-    
+        if (isErase)
+        {
+            Debug.Log("End");
+            draw.GetComponent<EraserShowPosition>().eraser.gameObject.SetActive(false);
+        }
         hasDragged = true;
 
     }

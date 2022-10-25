@@ -134,8 +134,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animAfter: {fileID: 5175690850140467716}
   animBefore: {fileID: 5175690849655344598}
+  winAnims: []
+  loopAnimation: 1
   magnify: {fileID: 2250100088123892784}
-  findObject: {fileID: 1869747922293444771}
+  objectFinds:
+  - {fileID: 1869747922293444796}
+  index: 0
+  isMultiple: 0
 --- !u!1 &5175690849655344599
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +324,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f21200c2aeae77e40929e412e897e66d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -371,10 +376,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: f21200c2aeae77e40929e412e897e66d, type: 2}
-    materialsInsideMask:
-    - {fileID: 0}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -393,11 +396,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8224409402519810140, guid: 8b1dc61f161914f8ba00cf292cff4782, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.32
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 8224409402519810140, guid: 8b1dc61f161914f8ba00cf292cff4782, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.98
+      value: -6.77
       objectReference: {fileID: 0}
     - target: {fileID: 8224409402519810140, guid: 8b1dc61f161914f8ba00cf292cff4782, type: 3}
       propertyPath: m_LocalPosition.z

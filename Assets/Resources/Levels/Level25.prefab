@@ -141,7 +141,7 @@ MonoBehaviour:
   magnify: {fileID: 999310381612317468}
   objectFinds:
   - {fileID: 1059693260950091085}
-  isActive: 1
+  index: 0
   isMultiple: 0
 --- !u!1 &5806789031694030836
 GameObject:
@@ -398,11 +398,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8224409402519810140, guid: 8b1dc61f161914f8ba00cf292cff4782, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.95
+      value: -0.32
       objectReference: {fileID: 0}
     - target: {fileID: 8224409402519810140, guid: 8b1dc61f161914f8ba00cf292cff4782, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.32
+      value: 1.98
       objectReference: {fileID: 0}
     - target: {fileID: 8224409402519810140, guid: 8b1dc61f161914f8ba00cf292cff4782, type: 3}
       propertyPath: m_LocalPosition.z

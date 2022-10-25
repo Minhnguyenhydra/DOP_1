@@ -10,14 +10,19 @@ public class DrawLevel : LevelManager
     public PaintToSpriteController draw;
     public Collider2D checkArea;
     public string winAnimationName;
+    public Sprite mouseCursor;
+
+    public bool isDraw;
 
     public virtual void Start() {
+       
         StartCoroutine(IEGameplay());
     }
 
     public IEnumerator IEGameplay() {
         while (true) {
             yield return new WaitUntil(() => {
+              
                 return draw.isDrawing == true;
             });
 
@@ -52,6 +57,8 @@ public class DrawLevel : LevelManager
     }
 
     public override void Win() {
+
+        
         draw.isDrawing = false;
         draw.gameObject.SetActive(false);
 

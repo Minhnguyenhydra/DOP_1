@@ -173,6 +173,7 @@ MonoBehaviour:
   winAnims: []
   loopAnimation: 1
   draw: {fileID: 3833141891871824090}
+  mainCam: {fileID: 0}
 --- !u!1 &3833141891054826399
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,17 +302,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 271245538828956718}
     m_Modifications:
+    - target: {fileID: 6391443204089928589, guid: fe8aec0d32ce0440aacc30bb591991f4, type: 3}
+      propertyPath: isBig
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6391443204089928589, guid: fe8aec0d32ce0440aacc30bb591991f4, type: 3}
+      propertyPath: erSize
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6391443204089928589, guid: fe8aec0d32ce0440aacc30bb591991f4, type: 3}
+      propertyPath: isBigPercents
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6391443204089928590, guid: fe8aec0d32ce0440aacc30bb591991f4, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6391443204089928590, guid: fe8aec0d32ce0440aacc30bb591991f4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.9372163
+      objectReference: {fileID: 0}
+    - target: {fileID: 6391443204089928590, guid: fe8aec0d32ce0440aacc30bb591991f4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.0831137
+      objectReference: {fileID: 0}
+    - target: {fileID: 6391443204089928590, guid: fe8aec0d32ce0440aacc30bb591991f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.178
+      value: -0.2803
       objectReference: {fileID: 0}
     - target: {fileID: 6391443204089928590, guid: fe8aec0d32ce0440aacc30bb591991f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6964
+      value: -0.9284
       objectReference: {fileID: 0}
     - target: {fileID: 6391443204089928590, guid: fe8aec0d32ce0440aacc30bb591991f4, type: 3}
       propertyPath: m_LocalPosition.z

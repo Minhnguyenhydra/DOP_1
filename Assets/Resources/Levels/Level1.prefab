@@ -1,5 +1,97 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1087356607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1087356608}
+  - component: {fileID: 1087356610}
+  - component: {fileID: 1087356609}
+  - component: {fileID: 1087356611}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1087356608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087356607}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5354211005889404020}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1087356610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087356607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  draw: {fileID: 0}
+  isReturn: 0
+  isErase: 0
+  returnToPos: {fileID: 0}
+--- !u!61 &1087356609
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087356607}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.01791823, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.8924904, y: 14}
+  m_EdgeRadius: 0
+--- !u!114 &1087356611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087356607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  draw: {fileID: 1271286180454191358}
+  isReturn: 0
+  isErase: 1
+  returnToPos: {fileID: 0}
 --- !u!1 &5354211005056450417
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,6 +246,7 @@ Transform:
   - {fileID: 5354211005056450429}
   - {fileID: 1271286180454191357}
   - {fileID: 2537159041527664175}
+  - {fileID: 1087356608}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -173,8 +266,8 @@ MonoBehaviour:
   animBefore: {fileID: 5354211005056450416}
   winAnims: []
   loopAnimation: 1
-  guidePosition: {fileID: 2537159041527664175}
   draw: {fileID: 1271286180454191358}
+  mainCam: {fileID: 0}
 --- !u!1 &8518162151577949197
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +361,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ae1ba81003c9249fcac2d4be8f1769cb, type: 2}
+  - {fileID: 2100000, guid: aa3a4d7fe3e27cc48be7db399cc86fe5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -320,10 +413,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: aa3a4d7fe3e27cc48be7db399cc86fe5, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: ae1ba81003c9249fcac2d4be8f1769cb, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -336,6 +427,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5354211005889404020}
     m_Modifications:
+    - target: {fileID: 6391443204089928589, guid: fe8aec0d32ce0440aacc30bb591991f4, type: 3}
+      propertyPath: erSize
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 6391443204089928590, guid: fe8aec0d32ce0440aacc30bb591991f4, type: 3}
       propertyPath: m_RootOrder
       value: 2

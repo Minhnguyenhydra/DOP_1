@@ -172,8 +172,8 @@ MonoBehaviour:
   animBefore: {fileID: 7927105293740925437}
   winAnims: []
   loopAnimation: 1
-  guidePosition: {fileID: 0}
   draw: {fileID: 1123797772625238792}
+  mainCam: {fileID: 0}
 --- !u!1 &7927105293740925436
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,6 +302,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7927105292371608313}
     m_Modifications:
+    - target: {fileID: 6391443204089928589, guid: fe8aec0d32ce0440aacc30bb591991f4, type: 3}
+      propertyPath: erSize
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 6391443204089928590, guid: fe8aec0d32ce0440aacc30bb591991f4, type: 3}
       propertyPath: m_RootOrder
       value: 2
