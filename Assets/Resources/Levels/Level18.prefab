@@ -351,7 +351,7 @@ MonoBehaviour:
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
-  loop: 0
+  loop: 1
   timeScale: 1
 --- !u!1 &7517887491219190969
 GameObject:
@@ -403,7 +403,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animAfter: {fileID: 865473480220655243}
   animBefore: {fileID: 7517887489837553596}
-  winAnims: []
+  winAnims:
+  - win2
   loopAnimation: 1
   draw: {fileID: 6507024034902344797}
   checkArea: {fileID: 6507024034299960844}

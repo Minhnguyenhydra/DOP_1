@@ -176,6 +176,8 @@ MonoBehaviour:
   loopAnimation: 1
   checkers: []
   guidePosition: {fileID: 1847474437368051015}
+  maskAnim: {fileID: 0}
+  isMaskable: 0
 --- !u!1 &2624086401864405262
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,6 +404,10 @@ PrefabInstance:
     - target: {fileID: 819743740263038644, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 819743740263038647, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
+      propertyPath: erSize
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}

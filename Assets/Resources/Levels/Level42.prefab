@@ -93,7 +93,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fd8e917517f04460f821e05f266b88b0, type: 2}
+  - {fileID: 2100000, guid: bb6baaa68368840ff88d6bc02b807f2f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -145,10 +145,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: bb6baaa68368840ff88d6bc02b807f2f, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: fd8e917517f04460f821e05f266b88b0, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -310,7 +308,10 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
+  isPaint: 0
   erSize: 10
+  isBig: 0
+  isBigPercents: 0
   spriteMask: {fileID: 940093081765546204}
 --- !u!61 &940093081765546208
 BoxCollider2D:
@@ -542,9 +543,12 @@ MonoBehaviour:
   animBefore: {fileID: 4321845895016040209}
   winAnims:
   - win1
+  - win2
   loopAnimation: 1
   checkers: []
   guidePosition: {fileID: 5426394747117475600}
+  maskAnim: {fileID: 0}
+  isMaskable: 0
 --- !u!1 &6285326879004979936
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,7 +705,10 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
+  isPaint: 0
   erSize: 10
+  isBig: 0
+  isBigPercents: 0
   spriteMask: {fileID: 6285326879004979941}
 --- !u!61 &6285326879004979943
 BoxCollider2D:
@@ -913,7 +920,10 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
+  isPaint: 0
   erSize: 10
+  isBig: 0
+  isBigPercents: 0
   spriteMask: {fileID: 9045213072637521232}
 --- !u!61 &9045213072637521234
 BoxCollider2D:
@@ -1125,7 +1135,10 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
+  isPaint: 0
   erSize: 10
+  isBig: 0
+  isBigPercents: 0
   spriteMask: {fileID: 9045213072671819190}
 --- !u!61 &9045213072671819184
 BoxCollider2D:

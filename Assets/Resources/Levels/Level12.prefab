@@ -612,7 +612,7 @@ MonoBehaviour:
   drawPoints: []
   isDrawing: 0
   isPaint: 0
-  erSize: 10
+  erSize: 15
   isBig: 0
   isBigPercents: 0
   spriteMask: {fileID: 3219568449649086795}
@@ -827,7 +827,7 @@ MonoBehaviour:
   drawPoints: []
   isDrawing: 0
   isPaint: 0
-  erSize: 10
+  erSize: 15
   isBig: 0
   isBigPercents: 0
   spriteMask: {fileID: 6639106855858926791}
@@ -1042,7 +1042,7 @@ MonoBehaviour:
   drawPoints: []
   isDrawing: 0
   isPaint: 0
-  erSize: 10
+  erSize: 15
   isBig: 0
   isBigPercents: 0
   spriteMask: {fileID: 6639106855891196961}
