@@ -137,8 +137,12 @@ MonoBehaviour:
   winAnims:
   - win1
   - win2
+  loopAnimation: 1
   magnify: {fileID: 999310381612317468}
-  findObject: {fileID: 1059693260950091090}
+  objectFinds:
+  - {fileID: 1059693260950091085}
+  isActive: 1
+  isMultiple: 0
 --- !u!1 &5806789031694030836
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +205,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 6a1221ad23155ff418b204699df40689, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -236,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 0f4b3b61f03a50343a560c6a41ba794f, type: 2}
-  initialSkinName: 
+  initialSkinName: item1
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -253,10 +257,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: 6a1221ad23155ff418b204699df40689, type: 2}
-    materialsInsideMask:
-    - {fileID: 0}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -359,7 +361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 0f4b3b61f03a50343a560c6a41ba794f, type: 2}
-  initialSkinName: normal
+  initialSkinName: item2
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -396,11 +398,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8224409402519810140, guid: 8b1dc61f161914f8ba00cf292cff4782, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.32
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 8224409402519810140, guid: 8b1dc61f161914f8ba00cf292cff4782, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.98
+      value: -7.32
       objectReference: {fileID: 0}
     - target: {fileID: 8224409402519810140, guid: 8b1dc61f161914f8ba00cf292cff4782, type: 3}
       propertyPath: m_LocalPosition.z

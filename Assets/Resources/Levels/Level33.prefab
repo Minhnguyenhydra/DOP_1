@@ -483,7 +483,10 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
-  erSize: 10
+  isPaint: 0
+  erSize: 35
+  isBig: 0
+  isBigPercents: 0
   spriteMask: {fileID: 4710876095466904342}
 --- !u!61 &4710876095466904336
 BoxCollider2D:

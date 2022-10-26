@@ -54,6 +54,7 @@ MonoBehaviour:
   - win_idle
   loopAnimation: 1
   draw: {fileID: 4585878670924478365}
+  mainCam: {fileID: 0}
 --- !u!1 &672714227062356076
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,8 +205,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4585878670924478369}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.33, y: 1.51, z: -0.0058392202}
-  m_LocalScale: {x: 8.353519, y: 7.7489095, z: 1}
+  m_LocalPosition: {x: -1.1103, y: 1.0124, z: -0.0058392202}
+  m_LocalScale: {x: 7.66686, y: 6.1936474, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 672714225679932265}
@@ -331,7 +332,10 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
+  isPaint: 0
   erSize: 10
+  isBig: 0
+  isBigPercents: 0
   spriteMask: {fileID: 4585878670924478368}
 --- !u!61 &4585878670924478364
 BoxCollider2D:
@@ -372,6 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eraser: {fileID: 0}
+  drawCorrect: 0
 --- !u!1 &4585878672211434712
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,7 +439,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4d47568c24f1049bfbd0f51323c64deb, type: 2}
+  - {fileID: 2100000, guid: 0beb44272c1eb4e18b7e871f706128cd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -486,10 +491,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: 0beb44272c1eb4e18b7e871f706128cd, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 4d47568c24f1049bfbd0f51323c64deb, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: win_idle
