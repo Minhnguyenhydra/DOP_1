@@ -66,9 +66,9 @@ public class DrawLevel : LevelManager
         draw.isDrawing = false;
         draw.gameObject.SetActive(false);
 
-        EraserShowPosition erase = draw.GetComponent<EraserShowPosition>();
-        if (erase != null) {
-            erase.eraser.SetActive(false);
+        PencilShowPosition pencil = draw.GetComponent<PencilShowPosition>();
+        if (pencil != null) {
+            pencil.pencil.SetActive(false);
         }
         Gameplay.Instance.Win(this);
     }

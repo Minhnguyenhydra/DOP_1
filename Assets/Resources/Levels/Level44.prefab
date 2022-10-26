@@ -156,7 +156,10 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
-  erSize: 50
+  isPaint: 0
+  erSize: 60
+  isBig: 0
+  isBigPercents: 0
   spriteMask: {fileID: 4386017921783603236}
 --- !u!61 &4386017921783603234
 BoxCollider2D:
@@ -326,10 +329,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: f98a3e1f0f45a49278bd8dbb20508537, type: 2}
-    materialsInsideMask:
-    - {fileID: 0}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -612,6 +613,10 @@ PrefabInstance:
     - target: {fileID: 819743740263038644, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 819743740263038647, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
+      propertyPath: erSize
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}

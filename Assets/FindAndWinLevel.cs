@@ -54,6 +54,7 @@ public class FindAndWinLevel : LevelManager
 
         else
         {
+            Debug.Log("Check multiple");
             int index = 0;
             int checkFalse = objectFinds.Count;
             while(index < objectFinds.Count)

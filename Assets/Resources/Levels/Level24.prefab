@@ -236,7 +236,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2b4a6d8965c8e4f81b49957516475ecd, type: 2}
+  - {fileID: 2100000, guid: 36cf493270ec74fee915066aa4ce496f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -288,8 +288,10 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: 2b4a6d8965c8e4f81b49957516475ecd, type: 2}
+    materialsInsideMask:
+    - {fileID: 2100000, guid: 36cf493270ec74fee915066aa4ce496f, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: win
@@ -451,7 +453,8 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
-  erSize: 10
+  isPaint: 0
+  erSize: 30
   isBig: 0
   isBigPercents: 0
   spriteMask: {fileID: 7576734903892702671}

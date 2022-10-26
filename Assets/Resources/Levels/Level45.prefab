@@ -484,6 +484,7 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
+  isPaint: 0
   erSize: 10
   isBig: 0
   isBigPercents: 0
@@ -698,7 +699,8 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
-  erSize: 10
+  isPaint: 0
+  erSize: 25
   isBig: 0
   isBigPercents: 0
   spriteMask: {fileID: 6068599941982841418}

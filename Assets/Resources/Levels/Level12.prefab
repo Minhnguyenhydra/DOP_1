@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 0f52204ee889a4c2999542a82083c82c, type: 2}
-  initialSkinName: normal
+  initialSkinName: no_item
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -485,6 +485,7 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
+  isPaint: 0
   erSize: 10
   isBig: 0
   isBigPercents: 0
@@ -699,6 +700,7 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
+  isPaint: 0
   erSize: 10
   isBig: 0
   isBigPercents: 0
@@ -913,6 +915,7 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
+  isPaint: 0
   erSize: 10
   isBig: 0
   isBigPercents: 0

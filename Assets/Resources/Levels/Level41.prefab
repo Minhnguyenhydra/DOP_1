@@ -52,6 +52,7 @@ MonoBehaviour:
   winAnims: []
   loopAnimation: 1
   draw: {fileID: 712504392948734828}
+  mainCam: {fileID: 0}
 --- !u!1 &5620967502197033104
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +236,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f25cc147775d742cdb1db153f2cbadf7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -287,10 +288,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: f25cc147775d742cdb1db153f2cbadf7, type: 2}
-    materialsInsideMask:
-    - {fileID: 0}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: win
@@ -305,7 +304,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6391443204089928589, guid: fe8aec0d32ce0440aacc30bb591991f4, type: 3}
       propertyPath: erSize
-      value: 20
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 6391443204089928590, guid: fe8aec0d32ce0440aacc30bb591991f4, type: 3}
       propertyPath: m_RootOrder

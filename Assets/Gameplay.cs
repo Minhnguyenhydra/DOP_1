@@ -26,6 +26,11 @@ public class Gameplay : MonoBehaviour
     public Image scanImg;
     public Canvas canvasGameplay;
 
+    public Sprite eraseObject;
+    public Sprite findObject;
+    public Sprite drawObject;
+
+
     public Sprite cucgom;
     [SerializeField]private GameObject levelObject;
     bool won = false;
@@ -101,12 +106,30 @@ public class Gameplay : MonoBehaviour
 
         var findLevel = FindObjectOfType<FindAndWinLevel>();
 
-        if (findLevel != null) return;
+        if (findLevel != null)
+        {
+            return;
 
-        scanImg.sprite = cucgom;
+        }
+        else
+        {
+            var drawLevel = FindObjectOfType<DrawLevel>();
+
+            if(drawLevel)
+            {
+                scanImg.sprite = drawObject; 
+            }
+            else
+            {
+                scanImg.sprite = cucgom;
+            }
+        }
+
+
+        
     }
 
-    public void Win(LevelManager level, bool showWinPopupImediately = true, bool loopAnimation = true) {
+    public void Win(LevelManager level, bool showWinPopupImediately     = true, bool loopAnimation = true) {
         if (won) return;
         won = true;
 

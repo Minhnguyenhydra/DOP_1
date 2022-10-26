@@ -34,6 +34,7 @@ public class PencilShowPosition : MonoBehaviour
         }
         else
         {
+            pencil.gameObject.SetActive(false);
             Vector2 pos = mainCam.ScreenToWorldPoint(Input.mousePosition);
             pencil.transform.position = pos;
         }
