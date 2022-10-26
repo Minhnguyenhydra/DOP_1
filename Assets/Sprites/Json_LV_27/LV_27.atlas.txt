@@ -1,139 +1,139 @@
 
 LV_27.png
-size: 1796,1044
+size: 2048,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 anh sang choi loa
   rotate: false
-  xy: 709, 322
-  size: 421, 719
+  xy: 674, 50
+  size: 393, 267
   orig: 421, 719
-  offset: 0, 0
+  offset: 1, 449
   index: -1
 bg
-  rotate: false
-  xy: 2, 2
-  size: 705, 1039
+  rotate: true
+  xy: 2, 319
+  size: 703, 1037
   orig: 705, 1039
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 bo xuong
-  rotate: false
-  xy: 1132, 40
-  size: 263, 670
+  rotate: true
+  xy: 2, 55
+  size: 262, 670
   orig: 263, 670
-  offset: 0, 0
+  offset: 1, 0
   index: -1
 body
-  rotate: true
-  xy: 1132, 712
+  rotate: false
+  xy: 1041, 362
   size: 329, 660
   orig: 329, 660
   offset: 0, 0
   index: -1
 body2
-  rotate: false
-  xy: 1539, 95
-  size: 117, 159
+  rotate: true
+  xy: 1069, 18
+  size: 86, 159
   orig: 117, 159
-  offset: 0, 0
+  offset: 31, 0
   index: -1
 canh ph2
   rotate: true
-  xy: 931, 3
-  size: 211, 144
+  xy: 1289, 149
+  size: 211, 143
   orig: 211, 144
-  offset: 0, 0
+  offset: 0, 1
   index: -1
 canh tr2
-  rotate: false
-  xy: 931, 216
-  size: 197, 104
+  rotate: true
+  xy: 1372, 373
+  size: 195, 103
   orig: 197, 104
-  offset: 0, 0
+  offset: 2, 1
   index: -1
 dau
-  rotate: false
-  xy: 1397, 39
-  size: 140, 215
+  rotate: true
+  xy: 1303, 9
+  size: 138, 213
   orig: 140, 215
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 dau`
   rotate: false
-  xy: 1623, 18
-  size: 73, 75
+  xy: 1230, 31
+  size: 71, 73
   orig: 73, 75
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 lm
-  rotate: true
-  xy: 1539, 3
-  size: 90, 40
+  rotate: false
+  xy: 176, 16
+  size: 88, 37
   orig: 90, 40
-  offset: 0, 0
+  offset: 1, 2
   index: -1
 mat 2
-  rotate: false
-  xy: 821, 12
-  size: 52, 26
+  rotate: true
+  xy: 414, 4
+  size: 49, 24
   orig: 52, 26
-  offset: 0, 0
+  offset: 2, 1
   index: -1
 mat nham tr
   rotate: false
-  xy: 735, 9
-  size: 84, 29
+  xy: 331, 26
+  size: 81, 27
   orig: 84, 29
-  offset: 0, 0
+  offset: 2, 1
   index: -1
 mat tr
-  rotate: true
-  xy: 1077, 125
-  size: 89, 43
+  rotate: false
+  xy: 2, 12
+  size: 86, 41
   orig: 89, 43
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 mat troi
   rotate: false
-  xy: 709, 63
-  size: 220, 257
+  xy: 1069, 106
+  size: 218, 254
   orig: 220, 257
-  offset: 0, 0
+  offset: 1, 2
   index: -1
 mieng
-  rotate: false
-  xy: 1698, 190
-  size: 71, 64
+  rotate: true
+  xy: 1434, 304
+  size: 67, 60
   orig: 71, 64
-  offset: 0, 0
+  offset: 2, 2
   index: -1
 mieng2
-  rotate: true
-  xy: 709, 4
-  size: 34, 24
+  rotate: false
+  xy: 331, 2
+  size: 32, 22
   orig: 34, 24
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 rem cua
   rotate: true
-  xy: 1397, 256
-  size: 454, 388
+  xy: 1372, 570
+  size: 452, 386
   orig: 454, 388
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 tai 1
-  rotate: false
-  xy: 1077, 58
-  size: 43, 65
+  rotate: true
+  xy: 266, 10
+  size: 43, 63
   orig: 43, 65
   offset: 0, 0
   index: -1
 tai2
-  rotate: false
-  xy: 1581, 8
-  size: 40, 85
+  rotate: true
+  xy: 90, 14
+  size: 39, 84
   orig: 40, 85
   offset: 0, 0
   index: -1
