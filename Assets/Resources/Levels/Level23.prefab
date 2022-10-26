@@ -269,7 +269,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5b682e8de23b7c2478846681303527e6, type: 2}
+  - {fileID: 2100000, guid: 6905a00b1f7b245668336e1fd7296598, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -321,10 +321,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: 6905a00b1f7b245668336e1fd7296598, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 5b682e8de23b7c2478846681303527e6, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -421,7 +419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.7403716
+      value: 2.0050821
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalScale.y
@@ -429,7 +427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.407
+      value: 0.7459
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.y
@@ -481,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476779, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: isBigPercents
-      value: 0.25
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476791, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_Name

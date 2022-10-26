@@ -1370,6 +1370,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476779, guid: 468efd58024354af6bd199135e435287, type: 3}
+      propertyPath: erSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146468043246476779, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: isBigPercents
       value: 0.25
       objectReference: {fileID: 0}
@@ -1458,6 +1462,10 @@ PrefabInstance:
     - target: {fileID: 8146468043246476779, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: isBig
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146468043246476779, guid: 468efd58024354af6bd199135e435287, type: 3}
+      propertyPath: erSize
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476779, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: isBigPercents

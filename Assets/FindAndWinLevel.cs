@@ -88,6 +88,7 @@ public class FindAndWinLevel : LevelManager
         
 
         if (isWin) {
+            magnify.gameObject.SetActive(false);
             Win();
         }
 
