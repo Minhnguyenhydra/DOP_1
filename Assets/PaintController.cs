@@ -11,6 +11,8 @@ public class PaintController : MonoBehaviour
     public Vector2 lastWorldPos;
     public List<Vector2> drawPoints;
     public bool isDrawing = false;
+    public bool isPaint = false;
+    
     public int erSize = 10;
 
     public bool isBig;

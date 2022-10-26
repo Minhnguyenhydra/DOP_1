@@ -408,7 +408,6 @@ MonoBehaviour:
   draw: {fileID: 6507024034902344797}
   checkArea: {fileID: 6507024034299960844}
   winAnimationName: 
-  mouseCursor: {fileID: 0}
   isDraw: 0
 --- !u!1001 &1488485938196065412
 PrefabInstance:
@@ -475,12 +474,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29f16c57669b945b2ae9740aae8333ea, type: 3}
+--- !u!1 &6507024034902344792 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5685158948989020380, guid: 29f16c57669b945b2ae9740aae8333ea, type: 3}
+  m_PrefabInstance: {fileID: 1488485938196065412}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8188269937024129187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6507024034902344792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac9660cc5a3822748800500483f83cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pencil: {fileID: 0}
+  drawCorrect: 0
 --- !u!114 &6507024034902344797 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5685158948989020377, guid: 29f16c57669b945b2ae9740aae8333ea, type: 3}
   m_PrefabInstance: {fileID: 1488485938196065412}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 6507024034902344792}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c006532cd14e249118fd6f97df2256b0, type: 3}

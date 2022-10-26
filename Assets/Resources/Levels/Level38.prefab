@@ -172,9 +172,11 @@ MonoBehaviour:
   animAfter: {fileID: 3609312431491502280}
   animBefore: {fileID: 6215244377086736895}
   winAnims: []
+  loopAnimation: 1
   draw: {fileID: 5700904436965380894}
   checkArea: {fileID: 7230963379047870543}
   winAnimationName: 
+  isDraw: 0
 --- !u!1 &6215244377086736894
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,6 +474,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29f16c57669b945b2ae9740aae8333ea, type: 3}
+--- !u!1 &5700904436965380891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5685158948989020380, guid: 29f16c57669b945b2ae9740aae8333ea, type: 3}
+  m_PrefabInstance: {fileID: 141884898160589767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4119503518951164792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5700904436965380891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac9660cc5a3822748800500483f83cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pencil: {fileID: 0}
+  drawCorrect: 0
 --- !u!4 &5700904436965380893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5685158948989020378, guid: 29f16c57669b945b2ae9740aae8333ea, type: 3}
@@ -482,7 +503,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5685158948989020377, guid: 29f16c57669b945b2ae9740aae8333ea, type: 3}
   m_PrefabInstance: {fileID: 141884898160589767}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 5700904436965380891}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c006532cd14e249118fd6f97df2256b0, type: 3}

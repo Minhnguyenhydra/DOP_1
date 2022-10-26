@@ -57,6 +57,7 @@ public class EraseLevel : LevelManager, IDragHandler, IEndDragHandler
 
             if (draw.IsDrawFinished())
             {
+                draw.GetComponent<EraserShowPosition>().eraser.gameObject.SetActive(false);
                 Win();
                 break;
             }

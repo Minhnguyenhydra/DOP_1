@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dde1540b422f2074496882163cb44947, type: 2}
+  - {fileID: 2100000, guid: 9ebc4f79b5693f9419d9ffb2c815f5a5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,10 +114,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: 9ebc4f79b5693f9419d9ffb2c815f5a5, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: dde1540b422f2074496882163cb44947, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -299,7 +297,6 @@ MonoBehaviour:
   draw: {fileID: 6596828795259762661}
   checkArea: {fileID: 7642102459945668976}
   winAnimationName: 
-  mouseCursor: {fileID: 1313016331, guid: 853618ebe43bf0a40937e63f8a050737, type: 3}
   isDraw: 0
 --- !u!1 &7642102459945668978
 GameObject:
@@ -485,12 +482,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29f16c57669b945b2ae9740aae8333ea, type: 3}
+--- !u!1 &6596828795259762656 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5685158948989020380, guid: 29f16c57669b945b2ae9740aae8333ea, type: 3}
+  m_PrefabInstance: {fileID: 1542792003309870908}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1156239947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6596828795259762656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac9660cc5a3822748800500483f83cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pencil: {fileID: 0}
+  drawCorrect: 0
 --- !u!114 &6596828795259762661 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5685158948989020377, guid: 29f16c57669b945b2ae9740aae8333ea, type: 3}
   m_PrefabInstance: {fileID: 1542792003309870908}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 6596828795259762656}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c006532cd14e249118fd6f97df2256b0, type: 3}

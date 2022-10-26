@@ -32,8 +32,6 @@ public class EraserShowPosition : MonoBehaviour
         }
         else
         {
-
-
             Vector2 pos = mainCam.ScreenToWorldPoint(Input.mousePosition);
             eraser.transform.position = pos;
         }

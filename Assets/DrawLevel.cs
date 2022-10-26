@@ -10,12 +10,16 @@ public class DrawLevel : LevelManager
     public PaintToSpriteController draw;
     public Collider2D checkArea;
     public string winAnimationName;
-    public Sprite mouseCursor;
 
     public bool isDraw;
 
     public virtual void Start() {
-       
+
+        PencilShowPosition pencilShowPosition = draw.GetComponent<PencilShowPosition>();
+        if(pencilShowPosition == null)
+        {
+            pencilShowPosition = draw.gameObject.AddComponent<PencilShowPosition>();
+        }
         StartCoroutine(IEGameplay());
     }
 

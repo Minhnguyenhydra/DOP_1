@@ -179,7 +179,6 @@ MonoBehaviour:
   draw: {fileID: 6723546814152498672}
   checkArea: {fileID: 2956962216398671849}
   winAnimationName: win2
-  mouseCursor: {fileID: 0}
   isDraw: 0
 --- !u!1 &2956962216398671851
 GameObject:
@@ -354,7 +353,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a94937b5ead24340801d767fd965e03, type: 2}
+  - {fileID: 2100000, guid: e8cb36ff47b9d824cb1fb38551848503, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -406,10 +405,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: e8cb36ff47b9d824cb1fb38551848503, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 4a94937b5ead24340801d767fd965e03, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -485,7 +482,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5685158948989020377, guid: 29f16c57669b945b2ae9740aae8333ea, type: 3}
   m_PrefabInstance: {fileID: 1417345002637063465}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 6723546814152498677}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c006532cd14e249118fd6f97df2256b0, type: 3}
@@ -496,3 +493,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5685158948989020378, guid: 29f16c57669b945b2ae9740aae8333ea, type: 3}
   m_PrefabInstance: {fileID: 1417345002637063465}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6723546814152498677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5685158948989020380, guid: 29f16c57669b945b2ae9740aae8333ea, type: 3}
+  m_PrefabInstance: {fileID: 1417345002637063465}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5412184720815843518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6723546814152498677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac9660cc5a3822748800500483f83cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pencil: {fileID: 0}
+  drawCorrect: 0

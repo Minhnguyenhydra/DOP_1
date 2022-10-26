@@ -31,6 +31,7 @@ public class PaintChecker : MonoBehaviour
 
             if (draw.IsDrawFinished())
             {
+                draw.GetComponent<EraserShowPosition>().eraser.gameObject.SetActive(false);
                 Debug.Log("Draw finished!!");
                 drawFinishEvent?.Invoke();
                 break;
