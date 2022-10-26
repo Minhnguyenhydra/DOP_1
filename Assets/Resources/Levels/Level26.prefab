@@ -199,7 +199,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 15582c5fb6cba8c48826fec6108eb445, type: 2}
+  - {fileID: 2100000, guid: 48757a7a4c1b60f4d84ba7bc0bc2727c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -251,10 +251,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: 48757a7a4c1b60f4d84ba7bc0bc2727c, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 15582c5fb6cba8c48826fec6108eb445, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -492,7 +490,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269096227328085832}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.51, y: 0.7, z: -0.0058392202}
+  m_LocalPosition: {x: 0.77, y: -6.57, z: -0.0058392202}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -590,6 +588,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  draw: {fileID: 0}
+  isReturn: 0
+  isErase: 0
+  isDraw: 0
+  mouseCursor: {fileID: 0}
+  returnToPos: {fileID: 0}
 --- !u!1 &6745573261281812150
 GameObject:
   m_ObjectHideFlags: 0

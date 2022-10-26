@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 9b31472658ec54157b27826fa8b102fe, type: 2}
-  initialSkinName: 
+  initialSkinName: item2
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -397,6 +397,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 819743740263038647, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
+      propertyPath: erSize
+      value: 35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
 --- !u!4 &4327381414402844767 stripped
@@ -417,19 +421,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.6962016
+      value: 1.7403716
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.9657383
+      value: 2.6303976
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5166
+      value: 0.407
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8992
+      value: -0.8036
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.z
@@ -467,6 +471,18 @@ PrefabInstance:
       propertyPath: drawFinishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 791600150511649959}
+    - target: {fileID: 8146468043246476779, guid: 468efd58024354af6bd199135e435287, type: 3}
+      propertyPath: isBig
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146468043246476779, guid: 468efd58024354af6bd199135e435287, type: 3}
+      propertyPath: erSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146468043246476779, guid: 468efd58024354af6bd199135e435287, type: 3}
+      propertyPath: isBigPercents
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476791, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_Name
       value: checker_correct

@@ -69,6 +69,7 @@ public class FindItemLevel : LevelManager {
         }
 
         if (win) {
+            magnify.gameObject.SetActive(false);
             isWin = true;
             LeanTween.delayedCall(2f, () => {
                 Win();

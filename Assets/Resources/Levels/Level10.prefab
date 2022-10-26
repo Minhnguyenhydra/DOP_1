@@ -481,6 +481,18 @@ PrefabInstance:
       propertyPath: drawFinishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: EraseManyPositionInOneLevel, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 8146468043246476779, guid: 468efd58024354af6bd199135e435287, type: 3}
+      propertyPath: isBig
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146468043246476779, guid: 468efd58024354af6bd199135e435287, type: 3}
+      propertyPath: erSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146468043246476779, guid: 468efd58024354af6bd199135e435287, type: 3}
+      propertyPath: isBigPercents
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476791, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_Name
       value: check_correct
