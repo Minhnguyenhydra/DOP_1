@@ -1,6 +1,6 @@
 {
 "skeleton": {
-	"hash": "VJif0mtHmDAOS9cB69/1KCSN05A",
+	"hash": "llcS3xirb3rL5tUXsV2sIvOc2DY",
 	"spine": "3.8.85",
 	"x": -351.29,
 	"y": -372.5,
@@ -308,9 +308,6 @@
 				"matn": { "x": 28.75, "y": 3.62, "rotation": -82.09, "width": 39, "height": 16 },
 				"mat nham 2": { "x": 28.75, "y": 3.62, "rotation": -82.09, "width": 41, "height": 17 }
 			},
-			"matn2": {
-				"matwin": { "x": 5.61, "y": 102.39, "width": 45, "height": 26 }
-			},
 			"miengchono": {
 				"miengchono": { "x": 78.23, "y": 92.14, "width": 17, "height": 17 },
 				"miengchowin": { "x": 82.91, "y": 89.8, "width": 33, "height": 20 }
@@ -461,17 +458,7 @@
 			}
 		}
 	},
-	{
-		"name": "no_item",
-		"attachments": {
-			"matn2": {
-				"matn2": { "x": 5.61, "y": 102.39, "width": 52, "height": 8 }
-			},
-			"sun": {
-				"sun": { "x": -5.64, "y": 87.15, "width": 195, "height": 191 }
-			}
-		}
-	},
+	{ "name": "no_item" },
 	{
 		"name": "normal",
 		"attachments": {
@@ -757,11 +744,6 @@
 			"matn": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"matn2": {
-				"attachment": [
-					{ "name": "matwin" }
 				]
 			},
 			"may 1": {

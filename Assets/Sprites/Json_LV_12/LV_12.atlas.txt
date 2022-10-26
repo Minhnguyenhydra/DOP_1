@@ -111,7 +111,7 @@ duoi
   index: -1
 lm
   rotate: false
-  xy: 357, 34
+  xy: 261, 4
   size: 15, 10
   orig: 17, 12
   offset: 1, 1
@@ -125,35 +125,35 @@ lm2
   index: -1
 longmay
   rotate: false
-  xy: 328, 21
+  xy: 222, 5
   size: 37, 7
   orig: 39, 9
   offset: 1, 1
   index: -1
 mat nham 2
   rotate: false
-  xy: 255, 3
+  xy: 256, 29
   size: 38, 15
   orig: 41, 17
   offset: 2, 1
   index: -1
 mat2
   rotate: false
-  xy: 214, 10
+  xy: 214, 14
   size: 39, 8
   orig: 41, 10
   offset: 1, 1
   index: -1
 matcho
   rotate: false
-  xy: 259, 24
+  xy: 214, 24
   size: 40, 20
   orig: 42, 22
   offset: 1, 1
   index: -1
 matn
   rotate: false
-  xy: 301, 30
+  xy: 278, 2
   size: 37, 14
   orig: 39, 16
   offset: 1, 1
@@ -163,13 +163,6 @@ matn2
   xy: 155, 2
   size: 50, 6
   orig: 52, 8
-  offset: 1, 1
-  index: -1
-matwin
-  rotate: false
-  xy: 214, 20
-  size: 43, 24
-  orig: 45, 26
   offset: 1, 1
   index: -1
 may 1
@@ -188,21 +181,21 @@ may 2
   index: -1
 miengchono
   rotate: false
-  xy: 328, 4
+  xy: 317, 9
   size: 15, 15
   orig: 17, 17
   offset: 1, 1
   index: -1
 miengchowin
   rotate: false
-  xy: 295, 4
+  xy: 296, 26
   size: 31, 18
   orig: 33, 20
   offset: 1, 1
   index: -1
 miengwin
   rotate: false
-  xy: 340, 33
+  xy: 256, 16
   size: 15, 11
   orig: 17, 13
   offset: 1, 1
@@ -222,8 +215,8 @@ mo hoi2
   offset: 1, 1
   index: -1
 mouth2
-  rotate: true
-  xy: 345, 7
+  rotate: false
+  xy: 273, 18
   size: 12, 9
   orig: 14, 11
   offset: 1, 1
@@ -272,7 +265,7 @@ tay2
   index: -1
 te`
   rotate: false
-  xy: 374, 9
+  xy: 334, 9
   size: 46, 35
   orig: 48, 37
   offset: 1, 1
