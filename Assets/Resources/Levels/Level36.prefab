@@ -53,8 +53,12 @@ MonoBehaviour:
   winAnims:
   - win
   - win_idle
+  loopAnimation: 1
   magnify: {fileID: 7888606470815481342}
-  findObject: {fileID: 2759130039481163686}
+  objectFinds:
+  - {fileID: 2759130039481163705}
+  isActive: 1
+  isMultiple: 0
 --- !u!1 &2759130039481163705
 GameObject:
   m_ObjectHideFlags: 0

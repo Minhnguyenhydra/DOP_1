@@ -53,8 +53,12 @@ MonoBehaviour:
   winAnims:
   - win1
   - win2
+  loopAnimation: 1
   magnify: {fileID: 179303635583159772}
-  findObject: {fileID: 3950753090059795910}
+  objectFinds:
+  - {fileID: 3950753090059795929}
+  isActive: 1
+  isMultiple: 0
 --- !u!1 &3950753090059795929
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +205,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ea9b108fec9b9a4784f3cf71fb7873c, type: 2}
+  - {fileID: 2100000, guid: 08cfb0474a4308b41bb855954c173500, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -253,10 +257,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: 08cfb0474a4308b41bb855954c173500, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 9ea9b108fec9b9a4784f3cf71fb7873c, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
