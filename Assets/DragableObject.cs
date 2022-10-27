@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-
+[RequireComponent(typeof(AudioSource))]
 public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
     Camera mainCam;
 
@@ -20,6 +20,8 @@ public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
     public Sprite mouseCursor;
 
     public Transform returnToPos;
+
+
     private void Start() {
 
         if (isErase)
@@ -67,6 +69,7 @@ public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
     {
         if (isReturn && hasDragged)
         {
+            
             if(Vector2.Distance(transform.position, returnToPos.position) > 0.5f)
             {
                 transform.position = Vector3.MoveTowards(transform.position, returnToPos.position, 25f * Time.deltaTime);

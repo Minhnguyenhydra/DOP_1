@@ -13,6 +13,8 @@ public class DragOnScene : LevelManager
     public GameObject _dress;
     public GameObject _shower;
     public GameObject _hairDryer;
+
+ 
     // Start is called before the first frame update
     void Start()
     {

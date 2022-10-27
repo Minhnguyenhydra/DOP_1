@@ -13,7 +13,6 @@ public class Gameplay : MonoBehaviour
 
     public List<ParticleSystem> effects;
     public List<RectTransform> findBoxs;
-
     public GameObject dautich;
     public GameObject guideObject;
     public UIEffect winPopup;
@@ -25,13 +24,16 @@ public class Gameplay : MonoBehaviour
     public AudioClip winSound;
     public Image scanImg;
     public Canvas canvasGameplay;
+    public Button homeButton;
+
 
     public Sprite eraseObject;
     public Sprite findObject;
     public Sprite drawObject;
 
-
-    public Sprite cucgom;
+    public bool isBranchLevel;
+    //[SerializeField] private int branchLevel;
+     public Sprite cucgom;
     [SerializeField]private GameObject levelObject;
     bool won = false;
     bool isPlayingSpecial;
@@ -44,9 +46,21 @@ public class Gameplay : MonoBehaviour
         }
         if (findItemDemo)
             findItemDemo.gameObject.SetActive(false);
+
+
+       
     }
 
+
     private void Start() {
+
+        homeButton.onClick.AddListener(() => { SceneManager.LoadScene("Home"); });
+
+
+    
+        AudioSystem.Instance.SetBGM(GameSystem.userdata.playBGM);
+        AudioSystem.Instance.SetFXSound(GameSystem.userdata.playSound);
+
         dautich.SetActive(false);
         GameSystem.LoadUserData();
         int level = GameSystem.userdata.level;
@@ -54,6 +68,32 @@ public class Gameplay : MonoBehaviour
         int count = 0;
         won = false;
         isPlayingSpecial = false;
+        if (isBranchLevel)
+        {
+         
+            GameObject obj = Resources.Load<GameObject>("LevelBranch/Level" + GameSystem.userdata.branchLevel);
+            Debug.Log(GameSystem.userdata.branchLevel);
+            txtLevel.text = null;
+            txtQuestion.text = null;
+            if (obj != null)
+            {
+                Debug.Log("not null");
+                levelObject = Instantiate(obj);
+                scanImg.gameObject.SetActive(false);
+                var findItem = FindObjectOfType<FindItemLevel>();
+
+                for (int i = 0; i < findBoxs.Count; i++)
+                {
+                    findBoxs[i].gameObject.SetActive(false);
+                }
+                return;
+            }
+            
+            
+
+        }
+
+
 
         while (count < 10) {
             GameObject obj = Resources.Load<GameObject>("Levels/Level" + (level + count + 1));
@@ -85,8 +125,7 @@ public class Gameplay : MonoBehaviour
             txtLevel.text = "LEVEL 1";
         }
 
-        AudioSystem.Instance.SetBGM(GameSystem.userdata.playBGM);
-        AudioSystem.Instance.SetFXSound(GameSystem.userdata.playSound);
+
 
         if (!GameSystem.userdata.showRating && GameSystem.userdata.level == 6) {
             popUpRating.SetActive(true);
@@ -127,6 +166,14 @@ public class Gameplay : MonoBehaviour
 
 
         
+    }
+
+
+    public void LoadBranchLevel()
+    {
+
+
+        SceneManager.LoadScene("BranchLevel");
     }
 
     public void Win(LevelManager level, bool showWinPopupImediately     = true, bool loopAnimation = true) {
@@ -248,6 +295,13 @@ public class Gameplay : MonoBehaviour
 
     public void Next()
     {
+
+        if (isBranchLevel)
+        {
+            SceneManager.LoadScene("Home");
+            isBranchLevel = false;
+            return;
+        }
         if (GetSpecialLevel() > 0 && !isPlayingSpecial)
         {
             isPlayingSpecial = true;

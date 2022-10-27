@@ -12,6 +12,8 @@ public class UserData
     public float diamond;
     public int level;
     public int maxLevel;
+    public int branchLevel;
+
     public float currentXp;
     public float baseXp;
     //public int monsterInTeam =1;
@@ -24,7 +26,6 @@ public class UserData
     public bool virate;
     public int currentSpecialLevel;
     public bool showRating = false;
-    public int currentBranchLevel;
 
     public UserData()
     {
@@ -32,4 +33,6 @@ public class UserData
         monstersAvailable = new List<string>();
         monstersAvailable.Add("Monster");
     }
+
+
 }

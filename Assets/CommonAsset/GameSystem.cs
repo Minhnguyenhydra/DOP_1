@@ -10,7 +10,7 @@ using DarkcupGames;
 public class GameSystem : MonoBehaviour
 {
     public static GameSystem Instance;
-    public static UserData userdata;
+    public static UserData  userdata;
 
     public const string USER_DATA_FILE_NAME = "on7PRwy5XiwWj3z6";
 
@@ -46,6 +46,8 @@ public class GameSystem : MonoBehaviour
             userUpdater.UpdateUI(userdata, userUpdater.gameObject);
         }
     }
+
+   
 
     public void AddGold(long amount)
     {

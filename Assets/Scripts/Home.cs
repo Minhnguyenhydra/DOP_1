@@ -22,6 +22,7 @@ public class Home : MonoBehaviour
     [SerializeField] Transform storySprites;
 
     List<StoryData> storyDatas;
+    public List<StoryData> StoryDatas { get => storyDatas; }
 
     private void Awake() {
         GameSystem.LoadUserData();
@@ -35,22 +36,26 @@ public class Home : MonoBehaviour
 
     public void Init() {
         storyDatas = new List<StoryData>();
-        storyDatas.Add(new StoryData() {
+        storyDatas.Add(new StoryData()
+        {
             imgDemo = "",
             unlockText = "Unlock at level 22",
             unlockPrice = 200,
-            unlocked = true
+            unlocked = GameSystem.userdata.boughtItems.Contains(3.ToString()) || GameSystem.userdata.level >= 23
         });
         storyDatas.Add(new StoryData() {
             imgDemo = "",
             unlockText = "Unlock at level 53",
-            unlockPrice = 500
+            unlockPrice = 500,
+            unlocked = GameSystem.userdata.level >= 52 || GameSystem.userdata.boughtItems.Contains(5.ToString())
         });
-        storyDatas.Add(new StoryData() {
+        storyDatas.Add(new StoryData()
+        {
             imgDemo = "",
             unlockText = "Unlock at level 63",
-            unlockPrice = 600
-        });
+            unlockPrice = 600,
+            unlocked = GameSystem.userdata.level >= 62 || GameSystem.userdata.boughtItems.Contains(6.ToString())
+        }); 
     }
 
     public void NextStory() {
