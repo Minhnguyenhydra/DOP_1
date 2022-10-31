@@ -163,7 +163,7 @@ public class PaintController : MonoBehaviour
         }
 
         float percent = count / m_Colors.Length;
-        Debug.Log("percent = " + percent);
+
 
 
         if (isBig)

@@ -69,7 +69,7 @@ public class FindItemLevel : LevelManager {
         }
 
         if (win) {
-            magnify.gameObject.SetActive(false);
+            LeanTween.scale(magnify.gameObject, new Vector3(0f, 0f, 0f), 1f).setDelay(.5f).setEase(LeanTweenType.easeInCubic);
             isWin = true;
             LeanTween.delayedCall(2f, () => {
                 Win();

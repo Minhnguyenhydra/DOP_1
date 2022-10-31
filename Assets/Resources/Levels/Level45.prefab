@@ -176,6 +176,8 @@ MonoBehaviour:
   loopAnimation: 1
   checkers: []
   guidePosition: {fileID: 6570372882643516543}
+  maskAnim: {fileID: 0}
+  isMaskable: 0
 --- !u!1 &1643145706400600301
 GameObject:
   m_ObjectHideFlags: 0

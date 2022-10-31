@@ -58,7 +58,7 @@ public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
     {
         if (isErase)
         {
-            Debug.Log("End");
+
             draw.GetComponent<EraserShowPosition>().eraser.gameObject.SetActive(false);
         }
         hasDragged = true;

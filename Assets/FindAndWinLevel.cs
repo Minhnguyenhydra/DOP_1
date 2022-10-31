@@ -42,7 +42,7 @@ public class FindAndWinLevel : LevelManager
 
         if (!isMultiple)
         {
-            Debug.Log("Checking");
+
             float distance = Vector2.Distance(objectFinds[0].transform.position, magnify.transform.GetChild(0).position);
 
             if(distance < Constants.FIND_ITEM_RANGE)

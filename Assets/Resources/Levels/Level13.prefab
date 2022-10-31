@@ -271,6 +271,8 @@ MonoBehaviour:
   loopAnimation: 1
   checkers: []
   guidePosition: {fileID: 5980277190182041253}
+  maskAnim: {fileID: 0}
+  isMaskable: 0
 --- !u!1 &5245387750937034522
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +702,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2022a039634a3bf48bfee8da45cdb31e, type: 2}
+  - {fileID: 2100000, guid: 845f14c0c2ae5bb4b9831c9d657b486f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -752,14 +754,12 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: 845f14c0c2ae5bb4b9831c9d657b486f, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 2022a039634a3bf48bfee8da45cdb31e, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
-  loop: 0
+  loop: 1
   timeScale: 1
 --- !u!1001 &6253929555172152698
 PrefabInstance:
@@ -774,7 +774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.834644
+      value: 2.206343
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalScale.y
@@ -782,7 +782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0818
+      value: 0.3941
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.y

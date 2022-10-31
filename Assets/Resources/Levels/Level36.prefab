@@ -84,8 +84,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2759130039481163705}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5604, y: -1.9546, z: -0.0058392202}
-  m_LocalScale: {x: 1.9080412, y: 6.412, z: 1}
+  m_LocalPosition: {x: 1.49, y: -2.13, z: -0.0058392202}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1700530170356545847}
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: a07b83d40d055e940b14da1bf5377433, type: 2}
-  initialSkinName: 
+  initialSkinName: no_item
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -402,7 +402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8224409402519810140, guid: 8b1dc61f161914f8ba00cf292cff4782, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.69
+      value: -6.66
       objectReference: {fileID: 0}
     - target: {fileID: 8224409402519810140, guid: 8b1dc61f161914f8ba00cf292cff4782, type: 3}
       propertyPath: m_LocalPosition.z

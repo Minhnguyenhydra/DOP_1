@@ -13,7 +13,6 @@ public class EraserShowPosition : MonoBehaviour
 
 
     private void Start() {
-        Debug.Log("create eraser");
         mainCam = Camera.main;
         paint = GetComponent<PaintToSpriteMaskController>();
         eraser = ObjectPool.Instance.GetGameObjectFromPool("eraser", new Vector3(999f,999f));
@@ -28,7 +27,7 @@ public class EraserShowPosition : MonoBehaviour
             eraser.gameObject.SetActive(true);
             Vector2 pos = mainCam.ScreenToWorldPoint((Vector2)paint.lastWorldPos);
             eraser.transform.position = paint.lastWorldPos;
-            Debug.Log(pos);
+
         }
         else
         {

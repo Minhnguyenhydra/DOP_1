@@ -47,8 +47,7 @@ public class Gameplay : MonoBehaviour
         if (findItemDemo)
             findItemDemo.gameObject.SetActive(false);
 
-
-       
+        Application.targetFrameRate = 60;
     }
 
 
@@ -172,11 +171,10 @@ public class Gameplay : MonoBehaviour
     public void LoadBranchLevel()
     {
 
-
         SceneManager.LoadScene("BranchLevel");
     }
 
-    public void Win(LevelManager level, bool showWinPopupImediately     = true, bool loopAnimation = true) {
+    public void Win(LevelManager level, bool showWinPopupImediately = true, bool loopAnimation = true) {
         if (won) return;
         won = true;
 
@@ -374,7 +372,7 @@ public class Gameplay : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        LeanTween.move(demo.gameObject, emptyBox.transform.position, 1f).setEaseOutCubic();
+        LeanTween.move(demo.gameObject, emptyBox.transform.position, 1f).setDelay(.5f).setEaseOutCubic();
     }
 
     public void AddGold(int amount) {

@@ -169,7 +169,6 @@ MonoBehaviour:
   checkArea: {fileID: 1661819897910555540}
   winAnimationName: 
   isDraw: 0
-  completeButton: {fileID: 7856778082242183279}
 --- !u!1 &2672474411887262245
 GameObject:
   m_ObjectHideFlags: 0

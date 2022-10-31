@@ -25,11 +25,13 @@ public class EraseManyPositionInOneLevel : LevelManager
             EraserShowPosition eraserShowPosition = checkers[i].GetComponent<EraserShowPosition>();
             if (eraserShowPosition == null) {
                 eraserShowPosition = checkers[i].gameObject.AddComponent<EraserShowPosition>();
+
             }
         }
     }
 
     public override void Win() {
+        Debug.Log("Win");
         for (int i = 0; i < checkers.Length; i++) {
             checkers[i].draw.isDrawing = false;
             checkers[i].gameObject.SetActive(false);

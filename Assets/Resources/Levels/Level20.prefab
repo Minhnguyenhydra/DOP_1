@@ -175,6 +175,8 @@ MonoBehaviour:
   loopAnimation: 1
   checkers: []
   guidePosition: {fileID: 0}
+  maskAnim: {fileID: 0}
+  isMaskable: 0
 --- !u!1 &1195242798465346148
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,10 +752,10 @@ MonoBehaviour:
   eraseLevels:
   - {fileID: 2972625986075263565}
   - {fileID: 8387548653148229737}
-  buttonErase: {fileID: 5338041058477703128}
   buttonWatchAds: {fileID: 6497774545443227646}
   currentLevel: 0
   guidePosition: {fileID: 1862415794306402915}
+  isClickadsable: 0
 --- !u!1 &5192204350054047898
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,6 +810,8 @@ MonoBehaviour:
   loopAnimation: 1
   checkers: []
   guidePosition: {fileID: 0}
+  maskAnim: {fileID: 0}
+  isMaskable: 0
 --- !u!1 &5338041058477703128
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,7 +1311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.3913655
+      value: 1.2352543
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalScale.y
@@ -1315,11 +1319,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9231
+      value: 2.12
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2463
+      value: -1.26
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1375,7 +1379,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476779, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: isBigPercents
-      value: 0.25
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476791, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_Name
