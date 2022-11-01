@@ -32,6 +32,10 @@ public class EraseManyPositionInOneLevel : LevelManager
 
     public override void Win() {
         Debug.Log("Win");
+        if(animAfter.AnimationName != "win")
+        {
+            animAfter.AnimationName = "win";
+        }
         for (int i = 0; i < checkers.Length; i++) {
             checkers[i].draw.isDrawing = false;
             checkers[i].gameObject.SetActive(false);
@@ -39,6 +43,7 @@ public class EraseManyPositionInOneLevel : LevelManager
         if (isMaskable)
         {
             animAfter.gameObject.SetActive(true);
+
             maskAnim.gameObject.SetActive(false);
         }
 

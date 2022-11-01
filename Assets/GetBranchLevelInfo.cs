@@ -22,7 +22,7 @@ public class GetBranchLevelInfo : MonoBehaviour
                 GameSystem.userdata.branchLevel = branchLevels[i].GetComponent<BranchLevelsInfo>().Levels;
                 GameSystem.SaveUserDataToLocal();
 
-                Debug.Log(GameSystem.userdata.branchLevel);
+
             }   
         }
     }
