@@ -2,10 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 [System.Serializable]
 public class UserData
 {
+
+    public long nextDay;
     public string userid;
     public string username;
     public float gold;
@@ -34,6 +36,11 @@ public class UserData
         monstersAvailable.Add("Monster");
     }
 
+    public void Start()
+    {
+
+
+    }
 
    
 

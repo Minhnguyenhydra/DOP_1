@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
+using UnityEngine.UI;
 public enum LevelType {
     Draw, Erase,Drag 
 }
@@ -13,15 +14,23 @@ public class LevelInfo {
     public bool unlocked;
     public LevelType levelType;
     public System.Action btnUse;
+    public GameObject rewardButton;
+    public Sprite normalImage;
+    public Sprite disableImage;
 }
 
 public class DataManager : MonoBehaviour
 {
     public static DataManager Instance;
-
+    public long Ticks;
+    public long nextRewards;
+    public int Day = 0;
     public static List<int> specialLevels = new List<int>() { 2, 7, 12, 17, 22 };
     public List<LevelInfo> levelInfos;
+    public Button claimGiftButton;
 
+    public Sprite normalImage;
+    public Sprite disableImage;
     private void Awake() {
         GameSystem.LoadUserData();
         Instance = this;
@@ -120,10 +129,18 @@ public class DataManager : MonoBehaviour
        
     }
 
+
     public void PlayLevel(int level) {
         GameSystem.userdata.level = level;
         GameSystem.SaveUserDataToLocal();
 
         DarkcupGames.Utils.ChangeScene(Constants.SCENE_GAMEPLAY);
+    }
+
+    public void ClaimGiftExtend(int day)
+    {
+        Day += day;
+        GameSystem.userdata.nextDay = DateTime.Now.AddDays(Day).Ticks;
+        GameSystem.SaveUserDataToLocal();
     }
 }

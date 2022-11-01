@@ -1,0 +1,63 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System;
+using UnityEngine.UI;
+public class ClaimGiftController : MonoBehaviour
+{
+    public List <GameObject> daysReward = new List<GameObject>();
+    int Index = 0;
+    public Button claimButton;
+    public RectTransform destination;
+    public Sprite disableImage;
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameSystem.userdata.nextDay = DateTime.Now.Ticks;
+        }
+    }
+
+    public void CheckExtended()
+    {
+
+        if(DateTime.Now.Ticks > GameSystem.userdata.nextDay)
+        {
+            OnRewards();
+         
+            daysReward[Index].transform.Find("btnBuy").gameObject.SetActive(false);
+            GameObject lightBulb = daysReward[Index].transform.Find("reward").gameObject;
+            LeanTween.scale(lightBulb, new Vector3(1.35f, 1.35f, 1.35f), .5f).setEase(LeanTweenType.easeInCubic).setOnComplete(() =>
+            {
+                LeanTween.move(lightBulb, destination,1f).setEase(LeanTweenType.easeInBack).setOnComplete(() =>
+                {
+
+                    LeanTween.scale(lightBulb, new Vector3(0, 0, 0), 1f).setEase(LeanTweenType.easeInBack).setOnComplete(() =>
+                    {   
+                        if(Index == daysReward.Count - 1)
+                        {
+                            GameSystem.userdata.gold += 100;
+                            claimButton.GetComponent<Image>().sprite = disableImage;
+                            return;
+                        }
+                        GameSystem.userdata.gold += 10;
+                        Index++;
+                    });
+                });
+            });
+            
+        }
+        else
+        {
+            Debug.Log("Not yet");
+        }
+    }
+
+    public void OnRewards()
+    {
+
+        GameSystem.userdata.nextDay = DateTime.Now.AddDays(1).Ticks;
+        Debug.Log("Rewarded");
+    }
+}

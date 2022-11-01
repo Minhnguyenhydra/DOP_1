@@ -27,7 +27,6 @@ public class Gameplay : MonoBehaviour
     public Button homeButton;
     public DrawManager drawManager;
 
-
     public Sprite eraseObject;
     public Sprite findObject;
     public Sprite drawObject;

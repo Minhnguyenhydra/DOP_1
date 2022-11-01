@@ -53,7 +53,6 @@ public class EraseLevel : LevelManager, IDragHandler, IEndDragHandler
                 return Input.GetMouseButtonUp(0);
             });
 
-            Debug.Log("Ease finished");
 
             if (draw.IsDrawFinished())
             {
