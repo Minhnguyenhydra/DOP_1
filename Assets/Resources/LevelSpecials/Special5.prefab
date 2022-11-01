@@ -1085,7 +1085,7 @@ MonoBehaviour:
   - {fileID: 5424741906589381238}
   - {fileID: 1410342090839488}
   - {fileID: 1410340631425645}
-  buttonWatchAds: {fileID: 0}
+  buttonWatchAds: {fileID: 4973991211533904273}
   currentLevel: 0
   guidePosition: {fileID: 0}
   isClickadsable: 1
@@ -2349,5 +2349,10 @@ PrefabInstance:
 --- !u!224 &4973991211533904272 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 617615927888097295, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+  m_PrefabInstance: {fileID: 5590406180485732767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4973991211533904273 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 617615927888097294, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
   m_PrefabInstance: {fileID: 5590406180485732767}
   m_PrefabAsset: {fileID: 0}
