@@ -14,4 +14,9 @@ public class TextGold : MonoBehaviour
     private void Update() {
         txtGold.text = GameSystem.userdata.gold.ToString();
     }
+
+    public void AddGold(int goldAdd)
+    {
+        GameSystem.userdata.gold += goldAdd;
+    }
 }

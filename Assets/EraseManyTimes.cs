@@ -24,9 +24,15 @@ public class EraseManyTimes : MonoBehaviour
     {
         Debug.Log(eraseLevels.Count - 1);
 
-        if (currentLevel < eraseLevels.Count -1 ) {
+        if (currentLevel < eraseLevels.Count -1 )
+        {
             buttonWatchAds.gameObject.SetActive(true);
-        } else {
+            
+            LeanTween.scale(buttonWatchAds, new Vector3(1f, .7f, 1f), .25f).setEase(LeanTweenType.easeOutExpo);
+        }
+            
+            
+        else {
             EasyEffect.Appear(buttonWatchAds, 0f, 1f);
         }
 
@@ -44,7 +50,6 @@ public class EraseManyTimes : MonoBehaviour
             {
                 var go = eraseLevels[currentLevel].transform.Find("check_correct");
                 go.gameObject.SetActive(false);
-                Debug.Log(go.name);
 
                 eraseLevels.UpdateSelected(currentLevel, x => x.gameObject.SetActive(true), x => x.gameObject.SetActive(false));
             }
@@ -77,6 +82,7 @@ public class EraseManyTimes : MonoBehaviour
         {
             eraseLevels[currentLevel].checkers[i].StartChecking();
         }
+        LeanTween.scale(buttonWatchAds, new Vector3(0f,0f, 0f), 0f).setEase(LeanTweenType.easeInBack);
         buttonWatchAds.gameObject.SetActive(false);
     }
 

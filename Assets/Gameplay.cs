@@ -102,7 +102,15 @@ public class Gameplay : MonoBehaviour
             txtQuestion.text = "";
             if (DataManager.Instance.levelInfos.Count > level + count) {
                 LevelInfo info = DataManager.Instance.levelInfos[level + count];
-                txtQuestion.text = info.levelTitle;
+
+                if(GameSystem.userdata.level == 24)
+                {
+                    txtQuestion.text = null;
+                }
+                else
+                {
+                    txtQuestion.text = info.levelTitle;
+                }
             }
 
             if (obj != null) {
@@ -170,7 +178,6 @@ public class Gameplay : MonoBehaviour
 
     public void LoadBranchLevel()
     {
-
         SceneManager.LoadScene("BranchLevel");
     }
 
@@ -184,6 +191,13 @@ public class Gameplay : MonoBehaviour
         StartCoroutine(IEWin(level.animAfter, level.winAnims, showWinPopupImediately));
     }
 
+    public void PayGold()
+    {
+        if(GameSystem.userdata.gold - 50 > 0)
+        {
+
+        }
+    }
 
 
     
@@ -308,6 +322,11 @@ public class Gameplay : MonoBehaviour
         }
 
         GameSystem.userdata.level++;
+        if(GameSystem.userdata.level == 24)
+        {
+            txtQuestion.text = "Check";
+        }
+
         if (GameSystem.userdata.level > GameSystem.userdata.maxLevel)
         {
             GameSystem.userdata.maxLevel = GameSystem.userdata.level;
