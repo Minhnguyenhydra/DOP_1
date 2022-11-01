@@ -1182,6 +1182,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2036e5143c0de01479a81d8516c91493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Ticks: 0
+  nextRewards: 0
+  Day: 0
+  claimGiftButton: {fileID: 0}
+  normalImage: {fileID: 0}
+  disableImage: {fileID: 0}
 --- !u!4 &546272215
 Transform:
   m_ObjectHideFlags: 0

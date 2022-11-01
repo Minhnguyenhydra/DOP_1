@@ -151,7 +151,7 @@ public class Gameplay : MonoBehaviour
         }
         else
         {
-            var drawLevel = FindObjectOfType<DrawLevel>();
+            bool drawLevel = FindObjectOfType<DrawLevel>() && !isPlayingSpecial;
 
             if(drawLevel)
             {

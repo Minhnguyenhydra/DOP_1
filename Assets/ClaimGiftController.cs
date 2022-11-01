@@ -11,9 +11,14 @@ public class ClaimGiftController : MonoBehaviour
     public RectTransform destination;
     public Sprite disableImage;
     // Update is called once per frame
+
+    private void Start()
+    {
+        
+    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             GameSystem.userdata.nextDay = DateTime.Now.Ticks;
         }
@@ -25,7 +30,7 @@ public class ClaimGiftController : MonoBehaviour
         if(DateTime.Now.Ticks > GameSystem.userdata.nextDay)
         {
             OnRewards();
-         
+            claimButton.enabled = true;
             daysReward[Index].transform.Find("btnBuy").gameObject.SetActive(false);
             GameObject lightBulb = daysReward[Index].transform.Find("reward").gameObject;
             LeanTween.scale(lightBulb, new Vector3(1.35f, 1.35f, 1.35f), .5f).setEase(LeanTweenType.easeInCubic).setOnComplete(() =>
@@ -50,7 +55,7 @@ public class ClaimGiftController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not yet");
+            claimButton.GetComponent<Image>().sprite = disableImage;
         }
     }
 
