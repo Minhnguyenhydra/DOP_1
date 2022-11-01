@@ -25,6 +25,7 @@ public class Gameplay : MonoBehaviour
     public Image scanImg;
     public Canvas canvasGameplay;
     public Button homeButton;
+    public DrawManager drawManager;
 
 
     public Sprite eraseObject;
@@ -52,11 +53,9 @@ public class Gameplay : MonoBehaviour
 
 
     private void Start() {
-
         homeButton.onClick.AddListener(() => { SceneManager.LoadScene("Home"); });
+        drawManager.gameObject.SetActive(false);
 
-
-    
         AudioSystem.Instance.SetBGM(GameSystem.userdata.playBGM);
         AudioSystem.Instance.SetFXSound(GameSystem.userdata.playSound);
 
@@ -69,7 +68,6 @@ public class Gameplay : MonoBehaviour
         isPlayingSpecial = false;
         if (isBranchLevel)
         {
-         
             GameObject obj = Resources.Load<GameObject>("LevelBranch/Level" + GameSystem.userdata.branchLevel);
             Debug.Log(GameSystem.userdata.branchLevel);
             txtLevel.text = null;
@@ -87,12 +85,7 @@ public class Gameplay : MonoBehaviour
                 }
                 return;
             }
-            
-            
-
         }
-
-
 
         while (count < 10) {
             GameObject obj = Resources.Load<GameObject>("Levels/Level" + (level + count + 1));
@@ -163,18 +156,15 @@ public class Gameplay : MonoBehaviour
 
             if(drawLevel)
             {
-                scanImg.sprite = drawObject; 
+                scanImg.sprite = drawObject;
+                drawManager.gameObject.SetActive(true);
             }
             else
             {
                 scanImg.sprite = cucgom;
             }
         }
-
-
-        
     }
-
 
     public void LoadBranchLevel()
     {
