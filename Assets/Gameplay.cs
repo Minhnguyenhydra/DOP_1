@@ -47,7 +47,7 @@ public class Gameplay : MonoBehaviour
         if (findItemDemo)
             findItemDemo.gameObject.SetActive(false);
 
-        Application.targetFrameRate = 60;
+        //Application.targetFrameRate = 60;
     }
 
 
@@ -127,6 +127,7 @@ public class Gameplay : MonoBehaviour
 
 
         if (!GameSystem.userdata.showRating && GameSystem.userdata.level == 7) {
+            drawManager.gameObject.SetActive(true);
             popUpRating.SetActive(true);
             GameSystem.userdata.showRating = true;
             GameSystem.SaveUserDataToLocal();
@@ -397,5 +398,10 @@ public class Gameplay : MonoBehaviour
     {
         if (GameSystem.userdata.virate)
             Handheld.Vibrate();
+    }
+
+    public void OnRatingPopupOff()
+    {
+        drawManager.gameObject.SetActive(true);
     }
 }
