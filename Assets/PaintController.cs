@@ -79,26 +79,24 @@ public class PaintController : MonoBehaviour
             return;
         }
 
-        if (Input.GetMouseButton(0)) {
+        if (Input.GetMouseButton(0))
+        {
 
-            if (Time.time > nextUpdate)
+
+            Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            bool inside = drawBoundCollider.OverlapPoint(pos);
+
+            if (inside && currentPaint == null)
             {
-                nextUpdate = Time.time + UPDATE_RATE;
+                currentPaint = this;
+            }
 
-                Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                bool inside = drawBoundCollider.OverlapPoint(pos);
+            if (inside && currentPaint == this)
+            {
+                UpdateTexture(pos);
+                isDrawing = true;
+                return;
 
-                if (inside && currentPaint == null)
-                {
-                    currentPaint = this;
-                }
-
-                if (inside && currentPaint == this)
-                {
-                    UpdateTexture(pos);
-                    isDrawing = true;
-                    return;
-                }
             }
         }
 

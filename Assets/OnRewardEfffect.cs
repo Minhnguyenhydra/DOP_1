@@ -22,7 +22,7 @@ public class OnRewardEfffect : MonoBehaviour
             LeanTween.scale(bongDen, new Vector3(0, 0, 0), .5f).setEase(LeanTweenType.easeInBack).setOnComplete(() =>
             {
                 LeanTween.move(bongDen, firstLocation, 0f).setEase(LeanTweenType.easeInBack);
-                LeanTween.scale(bongDen, new Vector3(1f, 1f, 1f), 0f).setEase(LeanTweenType.easeInBack);
+                LeanTween.scale(bongDen, new Vector3(0.65528f, 0.65528f, 0.65528f), 0f).setEase(LeanTweenType.easeInBack);
                 GameSystem.userdata.gold += 5f;
 
             });
@@ -35,7 +35,7 @@ public class OnRewardEfffect : MonoBehaviour
 
                 LeanTween.scale(bongDen2, new Vector3(0, 0, 0), .5f).setEase(LeanTweenType.easeInBack).setOnComplete(() =>
                 {
-                    LeanTween.scale(bongDen2, new Vector3(1f, 1f, 1f), 0f).setEase(LeanTweenType.easeInBack);
+                    LeanTween.scale(bongDen2, new Vector3(0.65528f, 0.65528f, 0.65528f), 0f).setEase(LeanTweenType.easeInBack);
 
                     LeanTween.move(bongDen2, firstLocation, 0f).setEase(LeanTweenType.easeInBack);
                 });
@@ -50,7 +50,7 @@ public class OnRewardEfffect : MonoBehaviour
                 LeanTween.scale(bongDen3, new Vector3(0, 0, 0), .5f).setEase(LeanTweenType.easeInBack).setOnComplete(() =>
                 {
 
-                    LeanTween.scale(bongDen3, new Vector3(1f, 1f, 1f), 0f).setEase(LeanTweenType.easeInBack);
+                    LeanTween.scale(bongDen3, new Vector3(0.65528f, 0.65528f, 0.65528f), 0f).setEase(LeanTweenType.easeInBack);
 
                     LeanTween.move(bongDen3, firstLocation, 0f).setEase(LeanTweenType.easeInBack);
                 });
