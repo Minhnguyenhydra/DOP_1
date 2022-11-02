@@ -795,10 +795,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5117319077695937001, guid: f738b18bf68478b489dad3f6f273ab34, type: 3}
-      propertyPath: m_SortingOrder
-      value: 32767
-      objectReference: {fileID: 0}
     - target: {fileID: 5117319077763428468, guid: f738b18bf68478b489dad3f6f273ab34, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -851,29 +847,9 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5117319078614492055, guid: f738b18bf68478b489dad3f6f273ab34, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5117319078625535243, guid: f738b18bf68478b489dad3f6f273ab34, type: 3}
-      propertyPath: m_SortingOrder
-      value: 32767
-      objectReference: {fileID: 0}
     - target: {fileID: 5117319078678472465, guid: f738b18bf68478b489dad3f6f273ab34, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5117319078678472467, guid: f738b18bf68478b489dad3f6f273ab34, type: 3}
-      propertyPath: _animationName
-      value: win
-      objectReference: {fileID: 0}
-    - target: {fileID: 5117319078678472467, guid: f738b18bf68478b489dad3f6f273ab34, type: 3}
-      propertyPath: initialSkinName
-      value: item1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5117319078877418134, guid: f738b18bf68478b489dad3f6f273ab34, type: 3}
-      propertyPath: m_SortingOrder
-      value: 32767
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f738b18bf68478b489dad3f6f273ab34, type: 3}
