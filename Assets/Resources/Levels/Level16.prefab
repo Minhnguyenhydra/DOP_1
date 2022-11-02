@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: fe9789a1e7bd2d1478f9e4f55e35b202, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 1d67e1d00bfb3334fbb9ffde5a42670c, type: 2}
   initialSkinName: normal
   initialFlipX: 0
   initialFlipY: 0
@@ -324,7 +324,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8aeae7f86b5a8dd4e9aa7658a57449c3, type: 2}
+  - {fileID: 2100000, guid: f21200c2aeae77e40929e412e897e66d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -358,8 +358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: fe9789a1e7bd2d1478f9e4f55e35b202, type: 2}
-  initialSkinName: 
+  skeletonDataAsset: {fileID: 11400000, guid: 1d67e1d00bfb3334fbb9ffde5a42670c, type: 2}
+  initialSkinName: item2
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -376,10 +376,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: f21200c2aeae77e40929e412e897e66d, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 8aeae7f86b5a8dd4e9aa7658a57449c3, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
