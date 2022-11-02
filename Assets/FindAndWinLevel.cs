@@ -9,6 +9,7 @@ public class FindAndWinLevel : LevelManager
      bool isWin = false;
     public bool isActive = true;
     public bool isMultiple;
+
     public void Start() {
         //Hint();
         //founds = new Dictionary<SpriteRenderer, bool>();
@@ -94,7 +95,7 @@ public class FindAndWinLevel : LevelManager
     }
 
     public override Vector3 GetGuidePosition() {
-       
-       return Vector3.zero;
+
+        return objectFinds[0].transform.position;
     }
 }

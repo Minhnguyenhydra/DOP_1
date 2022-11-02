@@ -205,8 +205,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4585878670924478369}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2925, y: 1.5955, z: -0.0058392202}
-  m_LocalScale: {x: 8.236508, y: 8.015818, z: 1}
+  m_LocalPosition: {x: -1.6199, y: 2.1411, z: -0.0058392202}
+  m_LocalScale: {x: 9.259482, y: 9.720782, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 672714225679932265}
@@ -333,6 +333,7 @@ MonoBehaviour:
   drawPoints: []
   isDrawing: 0
   isPaint: 0
+  UPDATE_RATE: 0.02
   erSize: 10
   isBig: 1
   isBigPercents: 0.3
@@ -495,6 +496,6 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: win_idle
+  _animationName: normal
   loop: 1
   timeScale: 1
