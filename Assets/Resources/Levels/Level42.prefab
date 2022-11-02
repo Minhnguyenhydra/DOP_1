@@ -114,10 +114,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 0
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: 3d2f28f4e7d09704dad7febba0a94a25, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: a342989fc9708d944a7a79f3ce932f8f, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
