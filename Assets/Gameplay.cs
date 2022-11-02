@@ -300,6 +300,7 @@ public class Gameplay : MonoBehaviour
     public void Next()
     {
 
+
         if (isBranchLevel)
         {
             SceneManager.LoadScene("Home");
@@ -308,6 +309,7 @@ public class Gameplay : MonoBehaviour
         }
         if (GetSpecialLevel() > 0 && !isPlayingSpecial)
         {
+
             isPlayingSpecial = true;
             SpawnSpecialLevel();
             return;

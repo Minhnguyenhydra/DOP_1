@@ -273,8 +273,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3783761237667723273}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2136, y: -1.5245, z: -0.0058392202}
-  m_LocalScale: {x: 1.4186697, y: 1.9953709, z: 1}
+  m_LocalPosition: {x: 0.8045, y: -1.8213, z: -0.0058392202}
+  m_LocalScale: {x: 1.8803048, y: 2.227233, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7485727978992315589}
@@ -402,8 +402,8 @@ MonoBehaviour:
   isDrawing: 0
   isPaint: 0
   erSize: 20
-  isBig: 0
-  isBigPercents: 0
+  isBig: 1
+  isBigPercents: 0.25
   spriteMask: {fileID: 3783761237667723282}
 --- !u!114 &3783761237667723287
 MonoBehaviour:
@@ -1799,7 +1799,7 @@ PrefabInstance:
       objectReference: {fileID: 5108357707072805894}
     - target: {fileID: 617615929787850761, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnWatchClick
+      value: OnWatchAdsClick
       objectReference: {fileID: 0}
     - target: {fileID: 6773747115538782579, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
       propertyPath: m_AnchorMax.y

@@ -67,6 +67,10 @@ public class EraseManyTimes : MonoBehaviour
 
     public void OnWatchAdsClick()
     {
+        var obj = FindObjectOfType<AdManager>();
+        obj.WatchAds(2);
+        buttonWatchAds.gameObject.SetActive(false);
+
         var go = eraseLevels[currentLevel].transform.Find("check_correct");
 
         var eraser = go.GetComponent<EraserShowPosition>();
@@ -82,7 +86,6 @@ public class EraseManyTimes : MonoBehaviour
             eraseLevels[currentLevel].checkers[i].StartChecking();
         }
         LeanTween.scale(buttonWatchAds, new Vector3(0f,0f, 0f), 0f).setEase(LeanTweenType.easeInBack);
-        buttonWatchAds.gameObject.SetActive(false);
     }
 
     public void Hint() {
@@ -100,7 +103,6 @@ public class EraseManyTimes : MonoBehaviour
 
     public void OnWatchClick()
     {
-        var obj = FindObjectOfType<AdManager>();
-        obj.WatchAds(2);
+       
     }
 }

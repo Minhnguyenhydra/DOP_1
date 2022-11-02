@@ -4,21 +4,35 @@ using UnityEngine;
 
 public class WatchAdsRewards : MonoBehaviour
 {
-    EraseManyTimes specialLevel;
 
-    // Start is called before the first frame update
-    void Start()
+    public static WatchAdsRewards instance;
+     EraseManyTimes specialLevel;
+    public EraseManyTimes SpecialLevel
     {
-        specialLevel = FindObjectOfType<EraseManyTimes>();
-        Debug.Log(specialLevel.name);
+        set => specialLevel = value;
     }
-
-
+    private void Awake()
+    {
+        instance = this;
+    }
+    // Start is called before the first frame update
 
 
     public void OnAdsWatch()
     {
-        specialLevel.GetComponent<EraseManyTimes>().OnWatchAdsClick();
+        Debug.Log("Yo");
+
+        if(Gameplay.Instance.isPlayingSpecial)
+        {
+            if(specialLevel == null)
+            {
+                specialLevel = FindObjectOfType<EraseManyTimes>();
+                Debug.Log(specialLevel.name);
+            }
+
+            specialLevel.GetComponent<EraseManyTimes>().OnWatchAdsClick();
+
+        }
     }
   
 }
