@@ -6,13 +6,17 @@ using TMPro;
 public class TextGold : MonoBehaviour
 {
     TextMeshProUGUI txtGold;
+    float currentGold;
 
     private void Start() {
         txtGold = GetComponent<TextMeshProUGUI>();
     }
 
     private void Update() {
-        txtGold.text = GameSystem.userdata.gold.ToString();
+        if (currentGold != GameSystem.userdata.gold) {
+            txtGold.text = GameSystem.userdata.gold.ToString();
+            currentGold = GameSystem.userdata.gold;
+        }
     }
 
     public void AddGold(int goldAdd)
