@@ -151,7 +151,6 @@ PlayerSettings:
   m_ColorGamuts: 00000000
   targetPixelDensity: 30
   resolutionScalingMode: 0
-  resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
@@ -733,7 +732,6 @@ PlayerSettings:
   ps4videoRecordingFeaturesUsed: 0
   ps4contentSearchFeaturesUsed: 0
   ps4CompatibilityPS5: 0
-  ps4AllowPS5Detection: 0
   ps4GPU800MHz: 1
   ps4attribEyeToEyeDistanceSettingVR: 0
   ps4IncludedModules: []
@@ -853,11 +851,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: d8b2faf6-d073-4b0d-ab37-b3b2cfbda1d2
+  cloudProjectId: 8a9240b0-0a4f-43e4-8546-6a26dfff93e6
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: OS_Draw Puzzle 18 Plus
-  organizationId: unity_ade635a2dacb28269913
+  organizationId: darkcup-games
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 

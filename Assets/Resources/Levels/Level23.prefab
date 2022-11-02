@@ -271,7 +271,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6905a00b1f7b245668336e1fd7296598, type: 2}
+  - {fileID: 2100000, guid: 5b682e8de23b7c2478846681303527e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 9b31472658ec54157b27826fa8b102fe, type: 2}
-  initialSkinName: no_item
+  initialSkinName: item2
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -323,8 +323,10 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: 6905a00b1f7b245668336e1fd7296598, type: 2}
+    materialsInsideMask:
+    - {fileID: 2100000, guid: 5b682e8de23b7c2478846681303527e6, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -351,7 +353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 819743740263038644, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.1947851
+      value: 0.67285156
       objectReference: {fileID: 0}
     - target: {fileID: 819743740263038644, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
       propertyPath: m_LocalScale.y
@@ -359,7 +361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 819743740263038644, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.626
+      value: -1.5973
       objectReference: {fileID: 0}
     - target: {fileID: 819743740263038644, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -421,19 +423,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.5346243
+      value: 2.0050821
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.3762934
+      value: 2.7848017
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.068
+      value: 0.7459
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.2443
+      value: -1.0013
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476776, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_LocalPosition.z
@@ -481,7 +483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476779, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: isBigPercents
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8146468043246476791, guid: 468efd58024354af6bd199135e435287, type: 3}
       propertyPath: m_Name

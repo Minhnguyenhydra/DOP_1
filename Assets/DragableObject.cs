@@ -69,7 +69,6 @@ public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
     {
         if (isReturn && hasDragged)
         {
-            
             if(Vector2.Distance(transform.position, returnToPos.position) > 0.5f)
             {
                 transform.position = Vector3.MoveTowards(transform.position, returnToPos.position, 25f * Time.deltaTime);
@@ -79,7 +78,6 @@ public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
                     hasDragged = false;
                 }
             }
-
         }
 
     }

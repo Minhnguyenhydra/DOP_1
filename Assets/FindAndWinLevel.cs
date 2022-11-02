@@ -40,16 +40,14 @@ public class FindAndWinLevel : LevelManager
     public void CheckWin() {
         if (isWin) return;
 
-
         if (!isMultiple)
         {
-
             float distance = Vector2.Distance(objectFinds[0].transform.position, magnify.transform.GetChild(0).position);
 
             if(distance < Constants.FIND_ITEM_RANGE)
             {
                 isWin = true;
-                magnify.gameObject.SetActive(false);
+                //magnify.gameObject.SetActive(false);
             }
         }
 
@@ -91,9 +89,9 @@ public class FindAndWinLevel : LevelManager
             Debug.Log("Delay win");
             LeanTween.delayedCall(2f, () =>
             {
+                magnify.gameObject.SetActive(false);
                 Gameplay.Instance.Win(this);
             });
-           
         }
 
     }

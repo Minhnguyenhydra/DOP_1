@@ -20,20 +20,15 @@ public class EraserShowPosition : MonoBehaviour
     }
 
     private void Update() {
-
-
-
         if (paint.isDrawing) {
             eraser.gameObject.SetActive(true);
             Vector2 pos = mainCam.ScreenToWorldPoint((Vector2)paint.lastWorldPos);
             eraser.transform.position = paint.lastWorldPos;
-
         }
         else
         {
             Vector2 pos = mainCam.ScreenToWorldPoint(Input.mousePosition);
             eraser.transform.position = pos;
         }
-        
     }
 }
