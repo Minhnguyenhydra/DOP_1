@@ -185,6 +185,11 @@ public class Gameplay : MonoBehaviour
     }
 
     public IEnumerator IEWin(SkeletonAnimation skeletonAnimation, List<string> anims = null, bool showWinPopupImediately = true, bool loopAnimation = true) {
+        var erasers = GameObject.FindGameObjectsWithTag("Eraser");
+        for (int i = 0; i < erasers.Length; i++) {
+            erasers[i].gameObject.SetActive(false);
+        }
+
         skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
         for (int i = 0; i < effects.Count; i++) {
             effects[i].Play();
