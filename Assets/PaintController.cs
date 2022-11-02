@@ -12,8 +12,7 @@ public class PaintController : MonoBehaviour
     public List<Vector2> drawPoints;
     public bool isDrawing = false;
     public bool isPaint = false;
-    public float UPDATE_RATE = 0.1f;
-    
+   
     public int erSize = 10;
 
     public bool isBig;
@@ -27,7 +26,6 @@ public class PaintController : MonoBehaviour
 
     bool canDraw = false;
     bool selected;
-    float nextUpdate;
 
     public virtual Texture2D GetSourceTexture() {
         var renderer = GetComponent<SpriteRenderer>();
@@ -80,25 +78,17 @@ public class PaintController : MonoBehaviour
         }
 
         if (Input.GetMouseButton(0)) {
+            Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            bool inside = drawBoundCollider.OverlapPoint(pos);
 
-            if (Time.time > nextUpdate)
-            {
-                nextUpdate = Time.time + UPDATE_RATE;
+            if (inside && currentPaint == null) {
+                currentPaint = this;
+            }
 
-                Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                bool inside = drawBoundCollider.OverlapPoint(pos);
-
-                if (inside && currentPaint == null)
-                {
-                    currentPaint = this;
-                }
-
-                if (inside && currentPaint == this)
-                {
-                    UpdateTexture(pos);
-                    isDrawing = true;
-                    return;
-                }
+            if (inside && currentPaint == this) {
+                UpdateTexture(pos);
+                isDrawing = true;
+                return;
             }
         }
 
