@@ -184,18 +184,7 @@ public class Gameplay : MonoBehaviour
         StartCoroutine(IEWin(level.animAfter, level.winAnims, showWinPopupImediately));
     }
 
-    public void PayGold()
-    {
-        if(GameSystem.userdata.gold - 50 > 0)
-        {
-
-        }
-    }
-
-
-    
-
-    IEnumerator IEWin(SkeletonAnimation skeletonAnimation, List<string> anims = null, bool showWinPopupImediately = true, bool loopAnimation = true) {
+    public IEnumerator IEWin(SkeletonAnimation skeletonAnimation, List<string> anims = null, bool showWinPopupImediately = true, bool loopAnimation = true) {
         skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
         for (int i = 0; i < effects.Count; i++) {
             effects[i].Play();

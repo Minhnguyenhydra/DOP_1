@@ -20,18 +20,15 @@ public class EraseManyPositionInOneLevel : LevelManager
             maskAnim.gameObject.SetActive(true);
         }
 
-
         for (int i = 0; i < checkers.Length; i++) {
             EraserShowPosition eraserShowPosition = checkers[i].GetComponent<EraserShowPosition>();
             if (eraserShowPosition == null) {
                 eraserShowPosition = checkers[i].gameObject.AddComponent<EraserShowPosition>();
-
             }
         }
     }
 
     public override void Win() {
-        Debug.Log("Win");
         if(animAfter.AnimationName != "win")
         {
             animAfter.AnimationName = "win";
@@ -43,7 +40,6 @@ public class EraseManyPositionInOneLevel : LevelManager
         if (isMaskable)
         {
             animAfter.gameObject.SetActive(true);
-
             maskAnim.gameObject.SetActive(false);
         }
 
