@@ -20,9 +20,10 @@ public class EraseManyTimes : MonoBehaviour
         buttonWatchAds.gameObject.SetActive(false);
     }
 
+  
     public void FinishDraw()
     {
-        Debug.Log(eraseLevels.Count - 1);
+
 
         if (currentLevel < eraseLevels.Count -1 )
         {
@@ -39,8 +40,6 @@ public class EraseManyTimes : MonoBehaviour
         if (currentLevel >= eraseLevels.Count - 1)
         {
             buttonWatchAds.gameObject.SetActive(false);
-
-         
             Gameplay.Instance.Win(eraseLevels[eraseLevels.Count - 1]);  
         }
         else
@@ -97,5 +96,11 @@ public class EraseManyTimes : MonoBehaviour
     public void OnNoButtonSelected()
     {
         Gameplay.Instance.Next();
+    }
+
+    public void OnWatchClick()
+    {
+        var obj = FindObjectOfType<AdManager>();
+        obj.WatchAds(2);
     }
 }

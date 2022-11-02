@@ -293,7 +293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -51.8, y: -61.4}
+  m_AnchoredPosition: {x: -51.80005, y: -61.399902}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &14615601
@@ -7668,7 +7668,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1110051753}
         m_TargetAssemblyTypeName: ClaimGiftController, Assembly-CSharp
-        m_MethodName: CheckExtended
+        m_MethodName: OnRewards
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19885,7 +19885,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 25bb8907378404a45ae3216638aef027, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3c3b2a7c8456a84c8f2a5d107eb7f78, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -22802,6 +22802,7 @@ MonoBehaviour:
   - {fileID: 1426137066}
   claimButton: {fileID: 340824473}
   destination: {fileID: 14615600}
+  normalImage: {fileID: 21300000, guid: 3cb57c2013358dd41ac28a9ededf5f3f, type: 3}
   disableImage: {fileID: 21300000, guid: cd6bd69cd1621af4a8f390a242868655, type: 3}
 --- !u!4 &1110051754
 Transform:
@@ -23586,6 +23587,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 170761290}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1110051753}
+        m_TargetAssemblyTypeName: ClaimGiftController, Assembly-CSharp
+        m_MethodName: CheckExtended
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
