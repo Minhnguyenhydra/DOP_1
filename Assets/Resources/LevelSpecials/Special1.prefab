@@ -1548,7 +1548,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5f9da7f9116380c41867d10b7b04a05b, type: 2}
+  - {fileID: 2100000, guid: c2223c00a5fc2f9439fdb9a995fa340a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1600,10 +1600,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: c2223c00a5fc2f9439fdb9a995fa340a, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 5f9da7f9116380c41867d10b7b04a05b, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -2353,11 +2351,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -2366,7 +2364,7 @@ PrefabInstance:
     - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 206255006}
+      objectReference: {fileID: 446460330248099311}
     - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -2377,7 +2375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Hide
+      value: OnNoButtonSelected
       objectReference: {fileID: 0}
     - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -2385,7 +2383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DarkcupGames.ShowHideChangeSceneLogic, Assembly-CSharp
+      value: EraseManyTimes, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -2394,10 +2392,10 @@ PrefabInstance:
     - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 8537527897825357604}
+      objectReference: {fileID: 0}
     - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName

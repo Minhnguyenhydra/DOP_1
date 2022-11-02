@@ -73,7 +73,6 @@ public class Gameplay : MonoBehaviour
             txtQuestion.text = null;
             if (obj != null)
             {
-                Debug.Log("not null");
                 levelObject = Instantiate(obj);
                 scanImg.gameObject.SetActive(false);
                 var findItem = FindObjectOfType<FindItemLevel>();
@@ -127,10 +126,11 @@ public class Gameplay : MonoBehaviour
 
 
         if (!GameSystem.userdata.showRating && GameSystem.userdata.level == 5) {
-            drawManager.gameObject.SetActive(false);
+        
             popUpRating.SetActive(true);
             GameSystem.userdata.showRating = true;
             GameSystem.SaveUserDataToLocal();
+
         }
 
         var findItemLevel = FindObjectOfType<FindItemLevel>();
@@ -246,6 +246,13 @@ public class Gameplay : MonoBehaviour
 
         if (showWinPopupImediately) {
             ShowWinPopup();
+        }
+        else
+        {
+            LeanTween.delayedCall(1.5f, () =>
+            {
+                ShowWinPopup();
+            });
         }
     }
 
@@ -389,8 +396,5 @@ public class Gameplay : MonoBehaviour
             Handheld.Vibrate();
     }
 
-    public void OnRatingPopupOff()
-    {
-        drawManager.gameObject.SetActive(true);
-    }
+    
 }

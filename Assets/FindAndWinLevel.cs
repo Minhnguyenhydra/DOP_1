@@ -87,7 +87,7 @@ public class FindAndWinLevel : LevelManager
 
         if (isWin) {
             Debug.Log("Delay win");
-            LeanTween.delayedCall(2f, () =>
+            LeanTween.delayedCall(1.5f, () =>
             {
                 magnify.gameObject.SetActive(false);
                 Gameplay.Instance.Win(this);
@@ -98,6 +98,14 @@ public class FindAndWinLevel : LevelManager
 
     public override Vector3 GetGuidePosition() {
 
-        return objectFinds[0].transform.position;
+        for(int i =0; i < objectFinds.Count; i++)
+        {
+            if (objectFinds[i].activeSelf)
+            {
+                return objectFinds[i].transform.position;
+            }
+        }
+
+        return Vector3.zero;
     }
 }

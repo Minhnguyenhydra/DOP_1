@@ -36,7 +36,12 @@ public class EraseManyTimes : MonoBehaviour
         if (currentLevel >= eraseLevels.Count - 1)
         {
             buttonWatchAds.gameObject.SetActive(false);
-            Gameplay.Instance.Win(eraseLevels[eraseLevels.Count - 1]);
+       
+            
+                Gameplay.Instance.Win(eraseLevels[eraseLevels.Count - 1],false);
+          
+
+            
         }
         else
         {
@@ -68,7 +73,12 @@ public class EraseManyTimes : MonoBehaviour
     public void OnWatchAdsClick()
     {
         var obj = FindObjectOfType<AdManager>();
+        if (obj == null)
+        {
+            Debug.Log("null");
+        }
         obj.WatchAds(2);
+        
         buttonWatchAds.gameObject.SetActive(false);
 
         var go = eraseLevels[currentLevel].transform.Find("check_correct");
@@ -98,11 +108,12 @@ public class EraseManyTimes : MonoBehaviour
 
     public void OnNoButtonSelected()
     {
-        Gameplay.Instance.Next();
+        LeanTween.scale(buttonWatchAds, new Vector3(0, 0, 0), .5f).setEase(LeanTweenType.easeInBack).setOnComplete(() =>
+        {
+            Gameplay.Instance.Next();
+        }
+        );
     }
 
-    public void OnWatchClick()
-    {
-       
-    }
+  
 }

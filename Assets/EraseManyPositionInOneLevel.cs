@@ -42,8 +42,10 @@ public class EraseManyPositionInOneLevel : LevelManager
             animAfter.gameObject.SetActive(true);
             maskAnim.gameObject.SetActive(false);
         }
+      
+            Gameplay.Instance.Win(this,false);
 
-        Gameplay.Instance.Win(this);
+
     }
 
     public void Reset() {

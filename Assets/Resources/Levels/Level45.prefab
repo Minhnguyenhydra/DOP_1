@@ -702,9 +702,9 @@ MonoBehaviour:
   drawPoints: []
   isDrawing: 0
   isPaint: 0
-  erSize: 25
-  isBig: 0
-  isBigPercents: 0
+  erSize: 30
+  isBig: 1
+  isBigPercents: 0.2
   spriteMask: {fileID: 6068599941982841418}
 --- !u!61 &6068599941982841420
 BoxCollider2D:
