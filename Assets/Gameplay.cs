@@ -126,7 +126,7 @@ public class Gameplay : MonoBehaviour
 
 
 
-        if (!GameSystem.userdata.showRating && GameSystem.userdata.level == 6) {
+        if (!GameSystem.userdata.showRating && GameSystem.userdata.level == 7) {
             popUpRating.SetActive(true);
             GameSystem.userdata.showRating = true;
             GameSystem.SaveUserDataToLocal();

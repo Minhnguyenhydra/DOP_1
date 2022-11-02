@@ -43,6 +43,11 @@ namespace DarkcupGames {
         public void PlayScene(string sceneName) {
             SceneManager.LoadScene(sceneName);
         }
+
+        public void AddGold(int amount)
+        {
+            GameSystem.userdata.gold += amount;
+        }
     }
 }
 

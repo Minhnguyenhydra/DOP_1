@@ -28,8 +28,8 @@ public class EraseManyTimes : MonoBehaviour
         if (currentLevel < eraseLevels.Count -1 )
         {
             buttonWatchAds.gameObject.SetActive(true);
-            
-            LeanTween.scale(buttonWatchAds, new Vector3(.65f, .45f, 1f), .5f).setEase(LeanTweenType.easeOutExpo);
+            var go = eraseLevels[currentLevel].transform.Find("check_correct");
+            go.gameObject.SetActive(false);
         }
             
             
@@ -47,8 +47,14 @@ public class EraseManyTimes : MonoBehaviour
             currentLevel++;
             if (isClickadsable)
             {
-                var go = eraseLevels[currentLevel].transform.Find("check_correct");
-                go.gameObject.SetActive(false);
+                
+               
+
+                LeanTween.delayedCall(1f, () =>
+                {
+                    LeanTween.scale(buttonWatchAds, new Vector3(.65f, .45f, 1f), .5f).setEase(LeanTweenType.easeOutExpo);
+
+                });
 
                 eraseLevels.UpdateSelected(currentLevel, x => x.gameObject.SetActive(true), x => x.gameObject.SetActive(false));
             }
