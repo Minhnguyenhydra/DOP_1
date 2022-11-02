@@ -3010,13 +3010,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2068361104}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1404794002}
+        m_TargetAssemblyTypeName: DarkcupGames.ShowHideChangeSceneLogic, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2068361104}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6905,9 +6905,11 @@ MonoBehaviour:
   eraseObject: {fileID: 0}
   findObject: {fileID: 0}
   drawObject: {fileID: 0}
+  drawLevel: 0
   isBranchLevel: 0
   cucgom: {fileID: 0}
   levelObject: {fileID: 0}
+  isPlayingSpecial: 0
 --- !u!1 &321643311
 GameObject:
   m_ObjectHideFlags: 0
@@ -18277,12 +18279,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1404794002}
-        m_TargetAssemblyTypeName: SpinWatchAdController, Assembly-CSharp
-        m_MethodName: OnSpinClick
-        m_Mode: 1
+        m_TargetAssemblyTypeName: DarkcupGames.ShowHideChangeSceneLogic, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2068361104}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -30729,7 +30731,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1404793997
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30806,10 +30808,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1404793996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1522bb8bf5e955045ad6f5e4bc30e0c8, type: 3}
+  m_Script: {fileID: 11500000, guid: a7a5f1f794b4b574cacaf96dfbb906bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  watchAdsToSpinPanel: {fileID: 2068361104}
 --- !u!1 &1405220842
 GameObject:
   m_ObjectHideFlags: 0

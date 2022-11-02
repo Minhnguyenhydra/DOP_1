@@ -735,9 +735,11 @@ MonoBehaviour:
   eraseObject: {fileID: 21300000, guid: a2bf67cc12fae1b409a45324070eddc1, type: 3}
   findObject: {fileID: 21300000, guid: 38c9fecd88204dd409a833b5b4f027bf, type: 3}
   drawObject: {fileID: 21300000, guid: 7b49502f8507fa34496a094cb76acd14, type: 3}
+  drawLevel: 0
   isBranchLevel: 0
   cucgom: {fileID: 21300000, guid: a2bf67cc12fae1b409a45324070eddc1, type: 3}
   levelObject: {fileID: 0}
+  isPlayingSpecial: 0
 --- !u!1 &311862390
 GameObject:
   m_ObjectHideFlags: 0
@@ -1616,7 +1618,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -53.6, y: -56.7}
+  m_AnchoredPosition: {x: -53.599976, y: -56.69995}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &766227120

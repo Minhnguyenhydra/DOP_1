@@ -30,13 +30,13 @@ public class Gameplay : MonoBehaviour
     public Sprite eraseObject;
     public Sprite findObject;
     public Sprite drawObject;
-
+    public bool drawLevel;
     public bool isBranchLevel;
     //[SerializeField] private int branchLevel;
      public Sprite cucgom;
     [SerializeField]private GameObject levelObject;
     bool won = false;
-    bool isPlayingSpecial;
+    public bool isPlayingSpecial;
 
     private void Awake() {
         Instance = this;
@@ -151,7 +151,8 @@ public class Gameplay : MonoBehaviour
         }
         else
         {
-            bool drawLevel = FindObjectOfType<DrawLevel>() && !isPlayingSpecial;
+            drawLevel = FindObjectOfType<DrawLevel>();
+            
 
             if(drawLevel)
             {
@@ -160,6 +161,7 @@ public class Gameplay : MonoBehaviour
             }
             else
             {
+                drawManager.gameObject.SetActive(false);
                 scanImg.sprite = cucgom;
             }
         }
@@ -171,6 +173,7 @@ public class Gameplay : MonoBehaviour
     }
 
     public void Win(LevelManager level, bool showWinPopupImediately = true, bool loopAnimation = true) {
+        drawManager.gameObject.SetActive(false);
         if (won) return;
         won = true;
 
