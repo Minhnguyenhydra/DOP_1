@@ -764,8 +764,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.0000021275628, y: 16}
-  m_SizeDelta: {x: 163.4725, y: 64.9249}
+  m_AnchoredPosition: {x: -0.0000021275628, y: 24.518}
+  m_SizeDelta: {x: 290.1208, y: 88.2694}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &29030099
 MonoBehaviour:
@@ -28943,7 +28943,7 @@ RectTransform:
   m_GameObject: {fileID: 1336780775}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4861, y: 1.4861, z: 1.4861}
+  m_LocalScale: {x: 1, y: 1, z: 1.4861}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 21881539}
@@ -28952,7 +28952,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 132, y: 271}
+  m_AnchoredPosition: {x: 153.37, y: 271}
   m_SizeDelta: {x: 63.2861, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1336780777
@@ -44222,7 +44222,7 @@ RectTransform:
   m_GameObject: {fileID: 1973316751}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0972, y: 1.0972, z: 1.0972}
+  m_LocalScale: {x: 1, y: 1, z: 1.0972}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 34874422}
@@ -44231,8 +44231,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -130, y: 271}
-  m_SizeDelta: {x: 91, y: 91}
+  m_AnchoredPosition: {x: -155.82, y: 271}
+  m_SizeDelta: {x: 73.7173, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1973316753
 MonoBehaviour:
@@ -45385,7 +45385,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -115.099, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2022257062
 MonoBehaviour:
@@ -45416,8 +45416,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4283914071
+  m_fontColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
