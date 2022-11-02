@@ -88,8 +88,12 @@ public class FindAndWinLevel : LevelManager
         
 
         if (isWin) {
-            magnify.gameObject.SetActive(false);
-            Win();
+            Debug.Log("Delay win");
+            LeanTween.delayedCall(1f, () =>
+            {
+                Gameplay.Instance.Win(this);
+            });
+           
         }
 
     }
