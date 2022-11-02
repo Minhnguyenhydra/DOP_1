@@ -85,8 +85,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296177213523858118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0941, y: -2.3049, z: -0.0058392202}
-  m_LocalScale: {x: 2.9638872, y: 2.5162857, z: 1}
+  m_LocalPosition: {x: -0.0941, y: -2.8713, z: -0.0058392202}
+  m_LocalScale: {x: 2.9638872, y: 2.9589002, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7812491134746963136}
@@ -300,7 +300,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997507766820855458}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1098, y: -3.8128, z: -0.0058392202}
+  m_LocalPosition: {x: -0.1098, y: -1.31, z: -0.0058392202}
   m_LocalScale: {x: 2.0339394, y: 1.6768794, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -548,7 +548,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f151c83a5d11393479a182b66d208ccc, type: 2}
+  - {fileID: 2100000, guid: 51577af33ef76674191335c408cecb5d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -669,7 +669,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0316aa17eff48d74a8514b0a2432415c, type: 2}
+  - {fileID: 2100000, guid: e87892d369fc386448c412bda31cfad6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -722,9 +722,9 @@ MonoBehaviour:
   maskInteraction: 1
   maskMaterials:
     materialsMaskDisabled:
-    - {fileID: 2100000, guid: f151c83a5d11393479a182b66d208ccc, type: 2}
+    - {fileID: 2100000, guid: 51577af33ef76674191335c408cecb5d, type: 2}
     materialsInsideMask:
-    - {fileID: 2100000, guid: 0316aa17eff48d74a8514b0a2432415c, type: 2}
+    - {fileID: 2100000, guid: e87892d369fc386448c412bda31cfad6, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -848,7 +848,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f151c83a5d11393479a182b66d208ccc, type: 2}
+  - {fileID: 2100000, guid: e87892d369fc386448c412bda31cfad6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -900,8 +900,10 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: 51577af33ef76674191335c408cecb5d, type: 2}
+    materialsInsideMask:
+    - {fileID: 2100000, guid: e87892d369fc386448c412bda31cfad6, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -969,7 +971,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f151c83a5d11393479a182b66d208ccc, type: 2}
+  - {fileID: 2100000, guid: 51577af33ef76674191335c408cecb5d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1083,7 +1085,7 @@ MonoBehaviour:
   - {fileID: 4458873286589213194}
   - {fileID: 8551373715644452284}
   - {fileID: 8551373714352417297}
-  buttonWatchAds: {fileID: 8393724554691598947}
+  buttonWatchAds: {fileID: 146336618494437605}
   currentLevel: 0
   guidePosition: {fileID: 0}
   isClickadsable: 1
@@ -1205,7 +1207,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f151c83a5d11393479a182b66d208ccc, type: 2}
+  - {fileID: 2100000, guid: e87892d369fc386448c412bda31cfad6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1257,8 +1259,10 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: 51577af33ef76674191335c408cecb5d, type: 2}
+    materialsInsideMask:
+    - {fileID: 2100000, guid: e87892d369fc386448c412bda31cfad6, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -1662,7 +1666,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f151c83a5d11393479a182b66d208ccc, type: 2}
+  - {fileID: 2100000, guid: 51577af33ef76674191335c408cecb5d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2312,15 +2316,35 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3335159185437810721, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335159185437810721, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442429237270374562, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_Spacing
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442429237270374562, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_Padding.m_Bottom
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9201358233311869613}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+--- !u!1 &146336618494437605 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9144930719901368968, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+  m_PrefabInstance: {fileID: 9002333266136099437}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8393724554691598946 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 617615927888097295, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
-  m_PrefabInstance: {fileID: 9002333266136099437}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8393724554691598947 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 617615927888097294, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
   m_PrefabInstance: {fileID: 9002333266136099437}
   m_PrefabAsset: {fileID: 0}

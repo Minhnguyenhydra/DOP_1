@@ -1085,7 +1085,7 @@ MonoBehaviour:
   - {fileID: 5424741906589381238}
   - {fileID: 1410342090839488}
   - {fileID: 1410340631425645}
-  buttonWatchAds: {fileID: 4973991211533904273}
+  buttonWatchAds: {fileID: 3709926800613661463}
   currentLevel: 0
   guidePosition: {fileID: 0}
   isClickadsable: 1
@@ -2320,6 +2320,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnWatchAdsClick
       objectReference: {fileID: 0}
+    - target: {fileID: 3335159185437810721, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335159185437810721, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442429237270374562, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_Spacing
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442429237270374562, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_Padding.m_Bottom
+      value: 135
+      objectReference: {fileID: 0}
     - target: {fileID: 6773747115538782579, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2346,13 +2362,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+--- !u!1 &3709926800613661463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9144930719901368968, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+  m_PrefabInstance: {fileID: 5590406180485732767}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4973991211533904272 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 617615927888097295, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
-  m_PrefabInstance: {fileID: 5590406180485732767}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4973991211533904273 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 617615927888097294, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
   m_PrefabInstance: {fileID: 5590406180485732767}
   m_PrefabAsset: {fileID: 0}

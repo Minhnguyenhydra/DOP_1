@@ -13,9 +13,12 @@ namespace DarkcupGames {
         public int price;
         public CurrencyType currencyType = CurrencyType.Gold;
         public UnityEvent buyComplete;
+
+       
     }
 
     public class ShopSystem : MonoBehaviour {
+        public GameObject noMoneyPopup;
         public List<ShopData> shopDatas;
         public List<UnityEvent> watchAdCompletes;
 
@@ -27,6 +30,7 @@ namespace DarkcupGames {
             switch (data.currencyType) {
                 case CurrencyType.Gold:
                     if (GameSystem.userdata.gold < data.price) {
+                        StartCoroutine(ShowNotEnough());
                         Debug.Log("You have not enough money!!");
                         return;
                     }
@@ -51,5 +55,16 @@ namespace DarkcupGames {
 
             watchAdCompletes[id].Invoke();
         }
+
+        public IEnumerator ShowNotEnough()
+        {
+            EasyEffect.Appear(noMoneyPopup, 0f, 1f);
+
+            yield return new WaitForSeconds(1f);
+
+            EasyEffect.Appear(noMoneyPopup, 1f, 0f);
+        }
     }
+
+    
 }

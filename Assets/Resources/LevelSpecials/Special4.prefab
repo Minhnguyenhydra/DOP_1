@@ -260,7 +260,7 @@ MonoBehaviour:
   - {fileID: 6206626124958170011}
   - {fileID: 2121143904361454637}
   - {fileID: 2121143905687452544}
-  buttonWatchAds: {fileID: 90512462623834017}
+  buttonWatchAds: {fileID: 8591448590593002791}
   currentLevel: 0
   guidePosition: {fileID: 0}
   isClickadsable: 1
@@ -2320,6 +2320,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnWatchAdsClick
       objectReference: {fileID: 0}
+    - target: {fileID: 3335159185437810721, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335159185437810721, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442429237270374562, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_Spacing
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442429237270374562, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_Padding.m_Bottom
+      value: 135
+      objectReference: {fileID: 0}
     - target: {fileID: 6773747115538782579, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2351,8 +2367,8 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 617615927888097295, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
   m_PrefabInstance: {fileID: 708093120093671343}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &90512462623834017 stripped
+--- !u!1 &8591448590593002791 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 617615927888097294, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+  m_CorrespondingSourceObject: {fileID: 9144930719901368968, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
   m_PrefabInstance: {fileID: 708093120093671343}
   m_PrefabAsset: {fileID: 0}

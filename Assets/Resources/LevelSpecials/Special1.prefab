@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 798956834656460655}
   - component: {fileID: 446460330248099311}
+  - component: {fileID: 206255006}
   m_Layer: 0
   m_Name: Special1
   m_TagString: Untagged
@@ -143,6 +144,18 @@ MonoBehaviour:
   currentLevel: 0
   guidePosition: {fileID: 0}
   isClickadsable: 1
+--- !u!114 &206255006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798956834656460654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a5f1f794b4b574cacaf96dfbb906bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1094228300997399894
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,10 +2341,66 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5442429237270374562, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_Spacing
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442429237270374562, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_Padding.m_Bottom
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 206255006}
+    - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
       objectReference: {fileID: 446460330248099311}
+    - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Hide
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnNoButtonSelected
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DarkcupGames.ShowHideChangeSceneLogic, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: EraseManyTimes, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8537527897825357604}
+    - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188923279373554577, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9ce316822501bf47b591ddebe5c0f67, type: 3}
 --- !u!224 &66968995 stripped

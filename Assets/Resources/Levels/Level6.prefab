@@ -113,7 +113,7 @@ Transform:
   m_GameObject: {fileID: 2710660977865295407}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.256, y: -4.7699995, z: -0.0058392202}
-  m_LocalScale: {x: 0.86742, y: 0.86742, z: 0.86742}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 0.86742}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2710660978687952395}
@@ -374,7 +374,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8bc4efbae69a95c4fa587d6a5c0719c1, type: 2}
+  - {fileID: 2100000, guid: bd07a3cc47d9a5641812c210eb506aa4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -424,13 +424,11 @@ MonoBehaviour:
   fixDrawOrder: 0
   addNormals: 0
   calculateTangents: 0
-  maskInteraction: 2
+  maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: bd07a3cc47d9a5641812c210eb506aa4, type: 2}
+    materialsMaskDisabled: []
     materialsInsideMask: []
-    materialsOutsideMask:
-    - {fileID: 2100000, guid: 8bc4efbae69a95c4fa587d6a5c0719c1, type: 2}
+    materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
   loop: 1
@@ -668,8 +666,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: c7cbd0cc7abebcc49b58f9670943dbd1, type: 2}
-  initialSkinName: no_item
+  skeletonDataAsset: {fileID: 11400000, guid: 767234de2450e1743b7a2d3d7d775650, type: 2}
+  initialSkinName: normal
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3

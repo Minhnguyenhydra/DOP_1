@@ -29,7 +29,7 @@ public class EraseManyTimes : MonoBehaviour
         {
             buttonWatchAds.gameObject.SetActive(true);
             
-            LeanTween.scale(buttonWatchAds, new Vector3(1f, .7f, 1f), .25f).setEase(LeanTweenType.easeOutExpo);
+            LeanTween.scale(buttonWatchAds, new Vector3(.65f, .45f, 1f), .5f).setEase(LeanTweenType.easeOutExpo);
         }
             
             

@@ -424,6 +424,10 @@ PrefabInstance:
       propertyPath: mouseCursor
       value: 
       objectReference: {fileID: 2800000, guid: 853618ebe43bf0a40937e63f8a050737, type: 3}
+    - target: {fileID: 5685158948989020377, guid: 29f16c57669b945b2ae9740aae8333ea, type: 3}
+      propertyPath: paintColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5685158948989020378, guid: 29f16c57669b945b2ae9740aae8333ea, type: 3}
       propertyPath: m_RootOrder
       value: 3
