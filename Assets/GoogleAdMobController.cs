@@ -35,7 +35,9 @@ public class GoogleAdMobController : MonoBehaviour {
     public UnityEvent OnAdFailedToLoadEvent;
     public UnityEvent OnAdOpeningEvent;
     public UnityEvent OnAdFailedToShowEvent;
-    public UnityEvent OnUserEarnedRewardEvent;
+
+    //public UnityEvent OnUserEarnedRewardEvent;
+    
     public UnityEvent OnAdClosedEvent;
     public bool showFpsMeter = true;
     //public Text fpsMeter;
@@ -304,7 +306,10 @@ public class GoogleAdMobController : MonoBehaviour {
         };
         rewardedAd.OnUserEarnedReward += (sender, args) => {
             PrintStatus("User earned Reward ad reward: " + args.Amount);
-            OnUserEarnedRewardEvent.Invoke();
+            //OnUserEarnedRewardEvent.Invoke();
+            if (AdManager.Instance) {
+                AdManager.Instance.HandleEarnReward();
+            }
         };
         rewardedAd.OnAdDidRecordImpression += (sender, args) => {
             PrintStatus("Reward ad recorded an impression.");
