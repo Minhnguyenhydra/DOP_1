@@ -43,8 +43,12 @@ public class GoogleAdMobController : MonoBehaviour {
 
     #region UNITY MONOBEHAVIOR METHODS
     private void Awake() {
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+        if (Instance == null) {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else {
+            Destroy(gameObject);
+        }
     }
 
     public void Start() {

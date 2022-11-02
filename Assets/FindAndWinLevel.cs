@@ -72,7 +72,7 @@ public class FindAndWinLevel : LevelManager
 
             foreach (GameObject objectFind in objectFinds)
             {
-                var circle =  magnify.transform.GetChild(0).GetChild(0);
+                var circle = magnify.transform.GetChild(0);
                 if(Vector2.Distance(circle.transform.position,objectFind.transform.position) < Constants.FIND_ITEM_RANGE)
                 {
                     objectFind.gameObject.SetActive(false);

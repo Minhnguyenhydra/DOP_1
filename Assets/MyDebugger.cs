@@ -9,10 +9,6 @@ public class MyDebugger : MonoBehaviour
     public int currentLevel;
     int count = 0;
 
-    private void Start()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -25,10 +21,4 @@ public class MyDebugger : MonoBehaviour
         }
         currentLevel = GameSystem.userdata.level;
     }
-
-
-    //public void UpdateSpriteMask()
-    //{
-    //    spriteMask.sprite = source.sprite;
-    //}
 }
