@@ -213,9 +213,10 @@ MonoBehaviour:
   drawPoints: []
   isDrawing: 0
   isPaint: 0
+  UPDATE_RATE: 0.1
   erSize: 20
-  isBig: 0
-  isBigPercents: 0
+  isBig: 1
+  isBigPercents: 0.2
   spriteMask: {fileID: 1410340883440335}
 --- !u!114 &1410340883440333
 MonoBehaviour:
@@ -333,7 +334,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7f3a1e71e363b484cbb983439ab05359, type: 2}
+  - {fileID: 2100000, guid: 2797ea133ebd6a24c85cf00fda854e47, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -385,10 +386,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: 2797ea133ebd6a24c85cf00fda854e47, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 7f3a1e71e363b484cbb983439ab05359, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -795,9 +794,10 @@ MonoBehaviour:
   drawPoints: []
   isDrawing: 0
   isPaint: 0
+  UPDATE_RATE: 0.1
   erSize: 20
-  isBig: 0
-  isBigPercents: 0
+  isBig: 1
+  isBigPercents: 0.2
   spriteMask: {fileID: 1410341916910189}
 --- !u!114 &1410341916910187
 MonoBehaviour:
@@ -1872,9 +1872,10 @@ MonoBehaviour:
   drawPoints: []
   isDrawing: 0
   isPaint: 0
+  UPDATE_RATE: 0.1
   erSize: 20
-  isBig: 0
-  isBigPercents: 0
+  isBig: 1
+  isBigPercents: 0.2
   spriteMask: {fileID: 8265702081171032737}
 --- !u!114 &8265702081171032740
 MonoBehaviour:
@@ -2143,9 +2144,10 @@ MonoBehaviour:
   drawPoints: []
   isDrawing: 0
   isPaint: 0
+  UPDATE_RATE: 0.1
   erSize: 20
-  isBig: 0
-  isBigPercents: 0
+  isBig: 1
+  isBigPercents: 0.2
   spriteMask: {fileID: 8898633081137874629}
 --- !u!114 &8898633081137874624
 MonoBehaviour:

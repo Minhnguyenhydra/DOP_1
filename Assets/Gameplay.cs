@@ -126,8 +126,8 @@ public class Gameplay : MonoBehaviour
 
 
 
-        if (!GameSystem.userdata.showRating && GameSystem.userdata.level == 7) {
-            drawManager.gameObject.SetActive(true);
+        if (!GameSystem.userdata.showRating && GameSystem.userdata.level == 5) {
+            drawManager.gameObject.SetActive(false);
             popUpRating.SetActive(true);
             GameSystem.userdata.showRating = true;
             GameSystem.SaveUserDataToLocal();
