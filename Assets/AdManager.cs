@@ -8,7 +8,13 @@ public class AdManager : MonoBehaviour
 {
     public List<UnityEvent> adEvents;
 
+    public static AdManager Instance;
+
     int watchAdsId;
+
+    private void Awake() {
+        Instance = this;
+    }
 
     public void HandleEarnReward() {
         //switch (watchAdRewardType) {
