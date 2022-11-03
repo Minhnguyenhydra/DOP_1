@@ -1,0 +1,181 @@
+
+LV_03.png
+size: 1765,1765
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bap tay ph
+  rotate: true
+  xy: 344, 16
+  size: 156, 269
+  orig: 156, 269
+  offset: 0, 0
+  index: -1
+bg
+  rotate: false
+  xy: 2, 723
+  size: 705, 1040
+  orig: 705, 1040
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 709, 774
+  size: 414, 486
+  orig: 414, 486
+  offset: 0, 0
+  index: -1
+chan sau
+  rotate: false
+  xy: 2, 12
+  size: 340, 185
+  orig: 340, 185
+  offset: 0, 0
+  index: -1
+chan trc
+  rotate: true
+  xy: 857, 80
+  size: 334, 339
+  orig: 334, 339
+  offset: 0, 0
+  index: -1
+dau
+  rotate: false
+  xy: 1518, 82
+  size: 171, 184
+  orig: 171, 184
+  offset: 0, 0
+  index: -1
+longmay
+  rotate: false
+  xy: 709, 728
+  size: 108, 44
+  orig: 108, 44
+  offset: 0, 0
+  index: -1
+mat
+  rotate: true
+  xy: 1125, 789
+  size: 108, 52
+  orig: 108, 52
+  offset: 0, 0
+  index: -1
+matnham
+  rotate: true
+  xy: 1636, 1121
+  size: 109, 42
+  orig: 109, 42
+  offset: 0, 0
+  index: -1
+mieng
+  rotate: false
+  xy: 1125, 1233
+  size: 38, 27
+  orig: 38, 27
+  offset: 0, 0
+  index: -1
+pk
+  rotate: false
+  xy: 615, 98
+  size: 175, 74
+  orig: 175, 74
+  offset: 0, 0
+  index: -1
+tap de
+  rotate: true
+  xy: 1442, 268
+  size: 298, 251
+  orig: 298, 251
+  offset: 0, 0
+  index: -1
+tap de -ao'
+  rotate: false
+  xy: 1212, 576
+  size: 238, 321
+  orig: 238, 321
+  offset: 0, 0
+  index: -1
+tap de ao
+  rotate: false
+  xy: 1555, 1232
+  size: 151, 157
+  orig: 151, 157
+  offset: 0, 0
+  index: -1
+tapde2_viensang
+  rotate: true
+  xy: 1452, 568
+  size: 319, 271
+  orig: 319, 271
+  offset: 0, 0
+  index: -1
+tapde_viensang
+  rotate: true
+  xy: 857, 416
+  size: 356, 353
+  orig: 356, 353
+  offset: 0, 0
+  index: -1
+tat
+  rotate: true
+  xy: 506, 174
+  size: 547, 349
+  orig: 547, 349
+  offset: 0, 0
+  index: -1
+tat HL
+  rotate: false
+  xy: 1193, 1391
+  size: 570, 372
+  orig: 570, 372
+  offset: 0, 0
+  index: -1
+tay ao'
+  rotate: true
+  xy: 1198, 63
+  size: 182, 318
+  orig: 182, 318
+  offset: 0, 0
+  index: -1
+tay ph
+  rotate: true
+  xy: 1193, 1232
+  size: 157, 360
+  orig: 157, 360
+  offset: 0, 0
+  index: -1
+tay trai
+  rotate: false
+  xy: 1212, 247
+  size: 228, 327
+  orig: 228, 327
+  offset: 0, 0
+  index: -1
+toc mai
+  rotate: false
+  xy: 1452, 889
+  size: 182, 341
+  orig: 182, 341
+  offset: 0, 0
+  index: -1
+toc sau
+  rotate: false
+  xy: 1125, 899
+  size: 325, 331
+  orig: 325, 331
+  offset: 0, 0
+  index: -1
+vay
+  rotate: false
+  xy: 709, 1262
+  size: 482, 501
+  orig: 482, 501
+  offset: 0, 0
+  index: -1
+vay_viensang
+  rotate: false
+  xy: 2, 199
+  size: 502, 522
+  orig: 502, 522
+  offset: 0, 0
+  index: -1

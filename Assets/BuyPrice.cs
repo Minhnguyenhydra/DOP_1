@@ -9,10 +9,14 @@ public class BuyPrice : MonoBehaviour
     public Button btnUse;
 
     public GameObject notEnoughtMoneyPanel;
+    public GameObject flyingPulb;
+
+    public RectTransform branchLevelLocation;
+    public RectTransform firstLocation;
     // Start is called before the first frame update
     void Start()
     {
-        
+        flyingPulb.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,12 +30,28 @@ public class BuyPrice : MonoBehaviour
         Debug.Log("Clicked");
         if (!GameSystem.userdata.boughtItems.Contains(GameSystem.userdata.branchLevel.ToString()))
         {
+            flyingPulb.gameObject.SetActive(true);
             if(GameSystem.userdata.gold >= 500)
             {
                 GameSystem.userdata.gold -= 500;
-                GameSystem.userdata.boughtItems.Add(GameSystem.userdata.branchLevel.ToString());
-                GameSystem.SaveUserDataToLocal();
-                switchButton();
+
+                LeanTween.move(flyingPulb, branchLevelLocation, 1f).setEase(LeanTweenType.easeInBack).setOnComplete(() =>
+                  {
+
+                      LeanTween.scale(flyingPulb, new Vector3(0, 0, 0), .5f).setEase(LeanTweenType.easeInCubic).setOnComplete(() =>
+                      {
+                          LeanTween.move(flyingPulb, firstLocation, 0f).setEase(LeanTweenType.easeInBack).setOnComplete(() =>
+                          {
+                              LeanTween.scale(flyingPulb, new Vector3(1.2298f, 1.2298f, 1.2298f), 0f).setEase(LeanTweenType.easeOutBack);
+                              flyingPulb.gameObject.SetActive(false);
+                          });
+                          GameSystem.userdata.boughtItems.Add(GameSystem.userdata.branchLevel.ToString());
+                          GameSystem.SaveUserDataToLocal();
+                          switchButton();
+                      });
+                     
+                  });
+                
             }
             else
             {
@@ -52,6 +72,7 @@ public class BuyPrice : MonoBehaviour
 
     public void switchButton()
     {
+      
         btnBuy.gameObject.SetActive(false);
         btnUse.gameObject.SetActive(true);
     }
