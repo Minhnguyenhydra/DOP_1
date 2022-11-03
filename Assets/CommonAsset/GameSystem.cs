@@ -9,6 +9,9 @@ using DarkcupGames;
 
 public class GameSystem : MonoBehaviour
 {
+
+
+
     public static GameSystem Instance;
     public static UserData  userdata;
 
@@ -120,6 +123,7 @@ public class GameSystem : MonoBehaviour
     public void ClickButtonMusic()
     {
         userdata.playBGM = !GameSystem.userdata.playBGM;
+
         AudioSystem.Instance.SetBGM(GameSystem.userdata.playBGM);
         SaveUserDataToLocal();
     }
@@ -134,6 +138,7 @@ public class GameSystem : MonoBehaviour
     public void ClickVirateButton()
     {
         userdata.virate = !userdata.virate;
+        Debug.Log(userdata.virate);
         SaveUserDataToLocal();
     }
     public static void ChangeScene(string sceneName)

@@ -134,6 +134,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Gameplay, Assembly-CSharp
+        m_MethodName: OnRatingPopupOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &190631934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &204545112
 RectTransform:
   m_ObjectHideFlags: 0
@@ -183,7 +195,7 @@ RectTransform:
   m_Children:
   - {fileID: 555484459}
   m_Father: {fileID: 7464312470189982671}
-  m_RootOrder: 9
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -780,7 +792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &486040398
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1141,6 +1153,18 @@ MonoBehaviour:
       - m_Target: {fileID: 773415815}
         m_TargetAssemblyTypeName: RatingPopUp, Assembly-CSharp
         m_MethodName: Dissapear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Gameplay, Assembly-CSharp
+        m_MethodName: OnRatingPopupOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1710,7 +1734,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1794914566
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1725,7 +1749,7 @@ RectTransform:
   m_Children:
   - {fileID: 825669649}
   m_Father: {fileID: 7464312470189982671}
-  m_RootOrder: 10
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2049,7 +2073,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3931097558763244239
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2064,7 +2088,7 @@ RectTransform:
   m_Children:
   - {fileID: 7864910161879845264}
   m_Father: {fileID: 7464312470189982671}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2353,7 +2377,7 @@ GameObject:
   - component: {fileID: 7464312468932938469}
   - component: {fileID: 7464312468932938472}
   m_Layer: 0
-  m_Name: Button Music On
+  m_Name: playBGM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2373,7 +2397,7 @@ RectTransform:
   m_Children:
   - {fileID: 7464312468847295324}
   m_Father: {fileID: 7464312470189982671}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2672,7 +2696,7 @@ GameObject:
   - component: {fileID: 7464312469063830678}
   - component: {fileID: 7464312469063830681}
   m_Layer: 0
-  m_Name: Button Vibrate On
+  m_Name: virate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2692,7 +2716,7 @@ RectTransform:
   m_Children:
   - {fileID: 7464312469974933458}
   m_Father: {fileID: 7464312470189982671}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3133,7 +3157,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7464312470189982671}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3403,7 +3427,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7464312470189982671}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3687,7 +3711,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7464312470189982671}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3803,6 +3827,7 @@ GameObject:
   - component: {fileID: 7464312470189982673}
   - component: {fileID: 7464312470189982672}
   - component: {fileID: 7464312470189982674}
+  - component: {fileID: 1541450260}
   m_Layer: 0
   m_Name: popupSetting
   m_TagString: Untagged
@@ -3824,6 +3849,8 @@ RectTransform:
   m_Children:
   - {fileID: 7464312470736139270}
   - {fileID: 7464312469703028894}
+  - {fileID: 1794914566}
+  - {fileID: 204545112}
   - {fileID: 3931097558763244239}
   - {fileID: 7464312470558978609}
   - {fileID: 7464312468932938468}
@@ -3831,8 +3858,6 @@ RectTransform:
   - {fileID: 7464312470086563140}
   - {fileID: 7464312469464681809}
   - {fileID: 7464312469878815543}
-  - {fileID: 204545112}
-  - {fileID: 1794914566}
   m_Father: {fileID: 7464312469057669771}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3900,6 +3925,18 @@ MonoBehaviour:
   - {fileID: 7464312469464681813}
   - {fileID: 7464312469878815547}
   doEffectOnEnable: 1
+--- !u!114 &1541450260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7464312470189982670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7067eeae06291e4d83271e795c25a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7464312470558978608
 GameObject:
   m_ObjectHideFlags: 0
@@ -3914,7 +3951,7 @@ GameObject:
   - component: {fileID: 7464312470558978610}
   - component: {fileID: 7464312470558978613}
   m_Layer: 0
-  m_Name: Button Sound On
+  m_Name: playSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3934,7 +3971,7 @@ RectTransform:
   m_Children:
   - {fileID: 7464312469338373828}
   m_Father: {fileID: 7464312470189982671}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

@@ -26,11 +26,11 @@ public class BuyPrice : MonoBehaviour
         Debug.Log("Clicked");
         if (!GameSystem.userdata.boughtItems.Contains(GameSystem.userdata.branchLevel.ToString()))
         {
-            if(GameSystem.userdata.gold > 500)
+            if(GameSystem.userdata.gold >= 500)
             {
                 GameSystem.userdata.gold -= 500;
-                GameSystem.SaveUserDataToLocal();
                 GameSystem.userdata.boughtItems.Add(GameSystem.userdata.branchLevel.ToString());
+                GameSystem.SaveUserDataToLocal();
                 switchButton();
             }
             else
@@ -39,12 +39,10 @@ public class BuyPrice : MonoBehaviour
                 StartCoroutine(popUpDissapear());
                 btnBuy.enabled = false;
             }
-            GameSystem.SaveUserDataToLocal();
+
         }
 
     }
-    
-
     public IEnumerator popUpDissapear()
     {
         yield return new WaitForSeconds(.75f);

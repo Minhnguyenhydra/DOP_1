@@ -25,6 +25,9 @@ public class Gameplay : MonoBehaviour
     public Image scanImg;
     public Canvas canvasGameplay;
     public Button homeButton;
+    public Button soundButton;
+    public Button bgmButton;
+    public Button virateButton;
     public DrawManager drawManager;
 
     public Sprite eraseObject;
@@ -126,7 +129,9 @@ public class Gameplay : MonoBehaviour
 
 
         if (!GameSystem.userdata.showRating && GameSystem.userdata.level == 5) {
-        
+            
+
+
             popUpRating.SetActive(true);
             GameSystem.userdata.showRating = true;
             GameSystem.SaveUserDataToLocal();

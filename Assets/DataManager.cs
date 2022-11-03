@@ -28,6 +28,9 @@ public class DataManager : MonoBehaviour
     public static List<int> specialLevels = new List<int>() { 2, 7, 12, 17, 22 };
     public List<LevelInfo> levelInfos;
     public Button claimGiftButton;
+    public Button soundButton;
+    public Button bgmButton;
+    public Button vibrateButton;
 
     public Sprite normalImage;
     public Sprite disableImage;
@@ -128,7 +131,12 @@ public class DataManager : MonoBehaviour
 
        
     }
-
+    private void Start()
+    {
+        vibrateButton.gameObject.SetActive(GameSystem.userdata.virate);
+        soundButton.gameObject.SetActive(GameSystem.userdata.playSound);
+        bgmButton.gameObject.SetActive(GameSystem.userdata.playBGM);
+    }
 
     public void PlayLevel(int level) {
         GameSystem.userdata.level = level;
