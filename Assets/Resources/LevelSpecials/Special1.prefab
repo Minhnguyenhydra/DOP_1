@@ -185,8 +185,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094228300997399894}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5271, y: -5.4197, z: -0.0058392202}
-  m_LocalScale: {x: 1.2713236, y: 1.0617149, z: 1}
+  m_LocalPosition: {x: 0.7541, y: -5.4197, z: -0.0058392202}
+  m_LocalScale: {x: 2.134824, y: 1.0617149, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1094228302412907858}
@@ -313,9 +313,9 @@ MonoBehaviour:
   drawPoints: []
   isDrawing: 0
   isPaint: 0
-  erSize: 20
-  isBig: 0
-  isBigPercents: 0
+  erSize: 30
+  isBig: 1
+  isBigPercents: 0.3
   spriteMask: {fileID: 1094228300997399891}
 --- !u!114 &1094228300997399893
 MonoBehaviour:
@@ -821,8 +821,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094228302128190964}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6734, y: -3.3858, z: -0.0058392202}
-  m_LocalScale: {x: 1.6689423, y: 1.5529728, z: 1}
+  m_LocalPosition: {x: 0.0584, y: -4.0144, z: -0.0058392202}
+  m_LocalScale: {x: 2.6985266, y: 2.0440228, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1094228301189161713}
@@ -950,8 +950,8 @@ MonoBehaviour:
   isDrawing: 0
   isPaint: 0
   erSize: 20
-  isBig: 0
-  isBigPercents: 0
+  isBig: 1
+  isBigPercents: 0.3
   spriteMask: {fileID: 1094228302128190961}
 --- !u!114 &1094228302128190963
 MonoBehaviour:
@@ -1757,8 +1757,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8382381734542078432}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0757, y: -0.5595, z: -0.0058392202}
-  m_LocalScale: {x: 1.8228775, y: 1.6615299, z: 1}
+  m_LocalPosition: {x: -0.1589, y: -0.2432, z: -0.0058392202}
+  m_LocalScale: {x: 2.0060768, y: 1.9085994, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2824892647720871212}
@@ -1886,8 +1886,8 @@ MonoBehaviour:
   isDrawing: 0
   isPaint: 0
   erSize: 20
-  isBig: 0
-  isBigPercents: 0
+  isBig: 1
+  isBigPercents: 0.3
   spriteMask: {fileID: 8382381734542078459}
 --- !u!114 &8382381734542078462
 MonoBehaviour:
@@ -2028,8 +2028,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9052187262266195332}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3949, y: -0.5768, z: -0.0058392202}
-  m_LocalScale: {x: 1.3520885, y: 1.4534295, z: 1}
+  m_LocalPosition: {x: -0.4399, y: -0.4251, z: -0.0058392202}
+  m_LocalScale: {x: 2.0109625, y: 1.571884, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1578622215617610626}
@@ -2157,8 +2157,8 @@ MonoBehaviour:
   isDrawing: 0
   isPaint: 0
   erSize: 20
-  isBig: 0
-  isBigPercents: 0
+  isBig: 1
+  isBigPercents: 0.3
   spriteMask: {fileID: 9052187262266195359}
 --- !u!114 &9052187262266195354
 MonoBehaviour:

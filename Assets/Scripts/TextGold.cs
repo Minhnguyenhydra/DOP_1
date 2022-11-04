@@ -10,6 +10,7 @@ public class TextGold : MonoBehaviour
 
     private void Start() {
         txtGold = GetComponent<TextMeshProUGUI>();
+        txtGold.text = GameSystem.userdata.gold.ToString();
     }
 
     private void Update() {

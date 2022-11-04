@@ -57,6 +57,8 @@ MonoBehaviour:
   - {fileID: 3055852610390063716}
   isActive: 1
   isMultiple: 0
+  isSpeical: 1
+  isImmediately: 1
 --- !u!1 &3055852610390063716
 GameObject:
   m_ObjectHideFlags: 0

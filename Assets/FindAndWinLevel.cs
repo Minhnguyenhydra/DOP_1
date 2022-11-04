@@ -9,7 +9,8 @@ public class FindAndWinLevel : LevelManager
      bool isWin = false;
     public bool isActive = true;
     public bool isMultiple;
-
+    public bool isSpeical;
+    public bool isImmediately;
     public void Start() {
         //Hint();
         //founds = new Dictionary<SpriteRenderer, bool>();
@@ -42,12 +43,25 @@ public class FindAndWinLevel : LevelManager
 
         if (!isMultiple)
         {
-            float distance = Vector2.Distance(objectFinds[0].transform.position, magnify.transform.GetChild(0).position);
-
-            if(distance < Constants.FIND_ITEM_RANGE)
+            if (!isSpeical)
             {
-                isWin = true;
-                //magnify.gameObject.SetActive(false);
+                float distance = Vector2.Distance(objectFinds[0].transform.position, magnify.transform.GetChild(0).position);
+
+                if (distance < Constants.FIND_ITEM_RANGE)
+                {
+                    isWin = true;
+                    //magnify.gameObject.SetActive(false);
+                }
+            }
+            else
+            {
+                float distance = Vector2.Distance(objectFinds[0].transform.position, magnify.transform.GetChild(0).GetChild(0).position);
+
+                if (distance < .1f)
+                {
+                    isWin = true;
+                    //magnify.gameObject.SetActive(false);
+                }
             }
         }
 
@@ -72,8 +86,10 @@ public class FindAndWinLevel : LevelManager
 
             foreach (GameObject objectFind in objectFinds)
             {
+                float range = isSpeical ? .75f : Constants.FIND_ITEM_RANGE;
+
                 var circle = magnify.transform.GetChild(0);
-                if(Vector2.Distance(circle.transform.position,objectFind.transform.position) < Constants.FIND_ITEM_RANGE)
+                if(Vector2.Distance(circle.transform.position,objectFind.transform.position) < range )
                 {
                     objectFind.gameObject.SetActive(false);
 
@@ -86,12 +102,21 @@ public class FindAndWinLevel : LevelManager
         
 
         if (isWin) {
-            Debug.Log("Delay win");
-            LeanTween.delayedCall(1.5f, () =>
+            if (!isImmediately)
+            {
+                Debug.Log("Delay win");
+                LeanTween.delayedCall(1.5f, () =>
+                {
+                    magnify.gameObject.SetActive(false);
+                    Gameplay.Instance.Win(this);
+                });
+            }
+            else
             {
                 magnify.gameObject.SetActive(false);
+
                 Gameplay.Instance.Win(this);
-            });
+            }
         }
 
     }

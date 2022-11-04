@@ -156,7 +156,10 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
+  isPaint: 0
   erSize: 10
+  isBig: 0
+  isBigPercents: 0
   spriteMask: {fileID: 253145407544817475}
 --- !u!61 &253145407544817535
 BoxCollider2D:
@@ -390,6 +393,8 @@ MonoBehaviour:
   loopAnimation: 1
   checkers: []
   guidePosition: {fileID: 2127145701793278694}
+  maskAnim: {fileID: 0}
+  isMaskable: 0
 --- !u!1 &3851417935870670991
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +705,10 @@ MonoBehaviour:
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
+  isPaint: 0
   erSize: 10
+  isBig: 1
+  isBigPercents: 0.25
   spriteMask: {fileID: 8291046206404573737}
 --- !u!61 &8291046206404573743
 BoxCollider2D:

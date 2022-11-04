@@ -27,6 +27,7 @@ public class EraserShowPosition : MonoBehaviour
         }
         else
         {
+            eraser.gameObject.SetActive(false);
             Vector2 pos = mainCam.ScreenToWorldPoint(Input.mousePosition);
             eraser.transform.position = pos;
         }

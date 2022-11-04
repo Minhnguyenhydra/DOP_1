@@ -62,7 +62,7 @@ public class Home : MonoBehaviour
         int nextIndex = storyDatas.GetNextIndex(GameSystem.userdata.currentStory);
         GameSystem.userdata.currentStory = nextIndex;
         GameSystem.SaveUserDataToLocal();
-
+        Init();
         ShowStory(nextIndex);
     }
 
@@ -70,7 +70,7 @@ public class Home : MonoBehaviour
         int previousIndex = storyDatas.GetPreviousIndex(GameSystem.userdata.currentStory);
         GameSystem.userdata.currentStory = previousIndex;
         GameSystem.SaveUserDataToLocal();
-
+        Init();
         ShowStory(previousIndex);
     }
 

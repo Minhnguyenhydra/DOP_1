@@ -36,9 +36,9 @@ public class EraseManyTimes : MonoBehaviour
         if (currentLevel >= eraseLevels.Count - 1)
         {
             buttonWatchAds.gameObject.SetActive(false);
-       
-            
-                Gameplay.Instance.Win(eraseLevels[eraseLevels.Count - 1],false);
+            var eraser = eraseLevels[currentLevel].transform.Find("check_correct").GetComponent<EraserShowPosition>();
+            eraser.gameObject.SetActive(false);
+            Gameplay.Instance.Win(eraseLevels[eraseLevels.Count - 1],false);
           
 
             

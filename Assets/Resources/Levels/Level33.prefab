@@ -54,6 +54,8 @@ MonoBehaviour:
   loopAnimation: 1
   checkers: []
   guidePosition: {fileID: 6959535337501935726}
+  maskAnim: {fileID: 0}
+  isMaskable: 0
 --- !u!1 &512617013895797168
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,7 +359,7 @@ Transform:
   m_GameObject: {fileID: 4710876095466904333}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.2974, y: 0.5914, z: -0.0058392202}
-  m_LocalScale: {x: 1.4255402, y: 1.2229371, z: 1}
+  m_LocalScale: {x: 4.7698574, y: 4.6867843, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 512617013063105205}
@@ -485,8 +487,8 @@ MonoBehaviour:
   isDrawing: 0
   isPaint: 0
   erSize: 35
-  isBig: 0
-  isBigPercents: 0
+  isBig: 1
+  isBigPercents: 0.2
   spriteMask: {fileID: 4710876095466904342}
 --- !u!61 &4710876095466904336
 BoxCollider2D:
