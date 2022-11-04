@@ -133,7 +133,7 @@ public class DataManager : MonoBehaviour
     }
     private void Start()
     {
-        vibrateButton.gameObject.SetActive(!GameSystem.userdata.virate);
+        vibrateButton.gameObject.SetActive(GameSystem.userdata.virate);
         soundButton.gameObject.SetActive(GameSystem.userdata.playSound);
         bgmButton.gameObject.SetActive(GameSystem.userdata.playBGM);
     }

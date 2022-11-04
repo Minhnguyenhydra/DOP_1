@@ -86,7 +86,7 @@ public class FindAndWinLevel : LevelManager
 
             foreach (GameObject objectFind in objectFinds)
             {
-                float range = isSpeical ? .75f : Constants.FIND_ITEM_RANGE;
+                float range = isSpeical ? .3f : Constants.FIND_ITEM_RANGE;
 
                 var circle = magnify.transform.GetChild(0);
                 if(Vector2.Distance(circle.transform.position,objectFind.transform.position) < range )
