@@ -180,16 +180,21 @@ MonoBehaviour:
   - win
   loopAnimation: 0
   win: 0
-  checkPosition:
-  - {fileID: 2897516769013522757}
-  objectToCheck:
-  - {fileID: 2897516768782306950}
-  - {fileID: 2897516768591588765}
-  - {fileID: 2897516769164117492}
-  correctName: BanDo
+  dragObjects:
+  - {fileID: 2897516768782306949}
+  - {fileID: 2897516768591588764}
+  - {fileID: 2897516769164117491}
+  correctPositions:
+  - {fileID: 2897516769013522756}
+  startAnims:
+  - normal
+  - normal_idle
+  correctNames:
+  - BanDo
   audioSource: {fileID: 2897516768272951119}
   wrongSFX: {fileID: 8300000, guid: 35d3c234f4fd01e46bebd9b0c462b432, type: 3}
   rightSFX: {fileID: 8300000, guid: fd3580025e0c59742bdf169ef0771362, type: 3}
+  current: 0
 --- !u!82 &2897516768272951119
 AudioSource:
   m_ObjectHideFlags: 0
@@ -416,6 +421,7 @@ MonoBehaviour:
   isReturn: 1
   isErase: 0
   isDraw: 0
+  isCorrect: 0
 --- !u!82 &3082921840251118197
 AudioSource:
   m_ObjectHideFlags: 0
@@ -642,6 +648,7 @@ MonoBehaviour:
   isReturn: 1
   isErase: 0
   isDraw: 0
+  isCorrect: 0
 --- !u!82 &3004951009141208930
 AudioSource:
   m_ObjectHideFlags: 0
@@ -899,6 +906,7 @@ MonoBehaviour:
   isReturn: 1
   isErase: 0
   isDraw: 0
+  isCorrect: 0
 --- !u!82 &5977082831695464537
 AudioSource:
   m_ObjectHideFlags: 0

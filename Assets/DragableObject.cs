@@ -11,6 +11,7 @@ public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
     public bool isReturn;
     public bool isErase;
     public bool isDraw;
+    public bool isCorrect;
 
     Vector3 startPos;
     Camera mainCam;
