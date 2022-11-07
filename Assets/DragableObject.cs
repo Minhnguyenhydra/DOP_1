@@ -5,22 +5,17 @@ using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(AudioSource))]
 public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
-    Camera mainCam;
 
     public PaintToSpriteMaskController draw;
-
-    public bool isReturn;
-
-    public bool isErase;
-
-    public bool isDraw;
-
-     bool hasDragged;
-
     public Sprite mouseCursor;
 
-    public Transform returnToPos;
+    public bool isReturn;
+    public bool isErase;
+    public bool isDraw;
 
+    Vector3 startPos;
+    Camera mainCam;
+    bool hasDragged;
 
     private void Start() {
 
@@ -31,18 +26,11 @@ public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
             {
                 eraserShowPosition = draw.gameObject.AddComponent<EraserShowPosition>();
             }
-           
         }
        
         mainCam = Camera.main;
+        startPos = transform.position;
     }
-
-    public void OnMouseEnter()
-    {
-
-    }
-
-
 
     public void OnDrag(PointerEventData eventData) {
 
@@ -69,12 +57,12 @@ public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
     {
         if (isReturn && hasDragged)
         {
-            if(Vector2.Distance(transform.position, returnToPos.position) > 0.5f)
+            if(Vector2.Distance(transform.position, startPos) > 0.5f)
             {
-                transform.position = Vector3.MoveTowards(transform.position, returnToPos.position, 25f * Time.deltaTime);
-                if(Vector2.Distance(transform.position, returnToPos.position) < 0.1f)
+                transform.position = Vector3.MoveTowards(transform.position, startPos, 25f * Time.deltaTime);
+                if(Vector2.Distance(transform.position, startPos) < 0.1f)
                 {
-                    transform.position = returnToPos.position;
+                    transform.position = startPos;
                     hasDragged = false;
                 }
             }
