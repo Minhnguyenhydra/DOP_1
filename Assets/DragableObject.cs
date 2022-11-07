@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(AudioSource))]
 public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
-
     public PaintToSpriteMaskController draw;
     public Sprite mouseCursor;
 
@@ -15,6 +14,7 @@ public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
 
     Vector3 startPos;
     Camera mainCam;
+
     bool hasDragged;
 
     private void Start() {
@@ -35,6 +35,7 @@ public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
     public void OnDrag(PointerEventData eventData) {
 
         Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
         transform.position = pos;
         if (isErase)
         {
@@ -50,7 +51,6 @@ public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
             draw.GetComponent<EraserShowPosition>().eraser.gameObject.SetActive(false);
         }
         hasDragged = true;
-
     }
 
     public void Update()
@@ -67,6 +67,5 @@ public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
                 }
             }
         }
-
     }
 }

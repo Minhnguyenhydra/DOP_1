@@ -51,6 +51,7 @@ public class DragAndDropScene : LevelManager
         item.gameObject.SetActive(false);
         if (audioSource.isPlaying) audioSource.Stop();
         Gameplay.Instance.Win(this);
+        //StartCoroutine(Gameplay.Instance.IEWin(animAfter, winAnims, loopAnimation = false));
     }
 
     IEnumerator IELoadNormalAnims()
@@ -73,8 +74,6 @@ public class DragAndDropScene : LevelManager
             EasyEffect.Appear(objectToCheck[i].gameObject, 0f, 1f, speed: 0.2f);
             yield return new WaitForSeconds(0.2f);
         }
-        //animBefore.AnimationName = "normal_idle";
-        //animBefore.loop = true;
     }
 
     public override Vector3 GetGuidePosition() {

@@ -176,7 +176,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animAfter: {fileID: 2897516767836160414}
   animBefore: {fileID: 2897516769607921910}
-  winAnims: []
+  winAnims:
+  - win
   loopAnimation: 0
   win: 0
   checkPosition:

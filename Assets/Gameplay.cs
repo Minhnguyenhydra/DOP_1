@@ -186,7 +186,7 @@ public class Gameplay : MonoBehaviour
         if (level.animBefore != null) {
             level.animBefore.gameObject.SetActive(false);
         }
-        StartCoroutine(IEWin(level.animAfter, level.winAnims, showWinPopupImediately));
+        StartCoroutine(IEWin(level.animAfter, level.winAnims, showWinPopupImediately,level.loopAnimation));
     }
 
     public IEnumerator IEWin(SkeletonAnimation skeletonAnimation, List<string> anims = null, bool showWinPopupImediately = true, bool loopAnimation = true) {
@@ -210,7 +210,8 @@ public class Gameplay : MonoBehaviour
                 Spine.Animation win = skeletonAnimation.Skeleton.Data.FindAnimation(anims[i]);
                 if (win != null)
                 {
-                    skeletonAnimation.AnimationName = anims[i];
+                    skeletonAnimation.AnimationState.SetAnimation(0, anims[i], loopAnimation);
+                    //skeletonAnimation.AnimationName = anims[i];
 
                     yield return new WaitForSeconds(win.Duration);
                 }
@@ -221,7 +222,7 @@ public class Gameplay : MonoBehaviour
             if (win != null)
             {
                 if (loopAnimation) {
-                    skeletonAnimation.AnimationName = "win";
+                    skeletonAnimation.AnimationState.SetAnimation(0, "win", true);
                 } else {
                     skeletonAnimation.AnimationState.SetAnimation(0, "win", false);
                 }
@@ -233,7 +234,7 @@ public class Gameplay : MonoBehaviour
             if (win1 != null)
             {
                 if (loopAnimation) {
-                    skeletonAnimation.AnimationName = "win1";
+                    skeletonAnimation.AnimationState.SetAnimation(0, "win1", true);
                 } else {
                     skeletonAnimation.AnimationState.SetAnimation(0, "win1", false);
                 }
@@ -245,7 +246,7 @@ public class Gameplay : MonoBehaviour
             if (win2 != null)
             {
                 if (loopAnimation) {
-                    skeletonAnimation.AnimationName = "win2";
+                    skeletonAnimation.AnimationState.SetAnimation(0, "win2", true);
                 } else {
                     skeletonAnimation.AnimationState.SetAnimation(0, "win2", false);
                 }
