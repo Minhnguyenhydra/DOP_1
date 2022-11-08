@@ -95,8 +95,9 @@ public class Home : MonoBehaviour
         int nextIndex = storyDatas.GetNextIndex(GameSystem.userdata.currentStory);
         GameSystem.userdata.currentStory = nextIndex;
         GameSystem.SaveUserDataToLocal();
-        //Init();
+        Init();
         ShowStory(nextIndex);
+
     }
 
     public void PreviousStory()
@@ -104,13 +105,14 @@ public class Home : MonoBehaviour
         int previousIndex = storyDatas.GetPreviousIndex(GameSystem.userdata.currentStory);
         GameSystem.userdata.currentStory = previousIndex;
         GameSystem.SaveUserDataToLocal();
-        //Init();
+        Init();
         ShowStory(previousIndex);
     }
 
     public void ShowStory(int index)
     {
         StoryData data = storyDatas[index];
+        GameSystem.userdata.branchLevel = index + 1;
         storyUpdater.UpdateUI(data, storyUpdater.gameObject);
         storySprites.SetEnableChild(index);
     }

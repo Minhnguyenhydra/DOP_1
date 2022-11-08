@@ -28,8 +28,11 @@ public class BuyPrice : MonoBehaviour
     public void buyItem()
     {
         Debug.Log("Clicked");
+        Debug.Log(GameSystem.userdata.branchLevel);
         if (!GameSystem.userdata.boughtItems.Contains(GameSystem.userdata.branchLevel.ToString()))
         {
+
+            Debug.Log("Buy itme");
             flyingPulb.gameObject.SetActive(true);
             if(GameSystem.userdata.gold >= 500)
             {
@@ -55,6 +58,7 @@ public class BuyPrice : MonoBehaviour
             }
             else
             {
+                Debug.Log("Bought");
                 EasyEffect.Appear(notEnoughtMoneyPanel, 0f, 1.4f);
                 StartCoroutine(popUpDissapear());
                 btnBuy.enabled = false;

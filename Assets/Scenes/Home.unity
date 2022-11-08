@@ -30311,7 +30311,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   skeletonDataAsset: {fileID: 11400000, guid: 485a9c0fc100f474b87da878531302a7, type: 2}
-  initialSkinName: normal
+  initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
   startingAnimation: normal
