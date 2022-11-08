@@ -15,7 +15,7 @@ public class UserData
     public int level;
     public int maxLevel;
     public int branchLevel;
-
+    public List<StoryData> storyList;
     public float currentXp;
     public float baseXp;
     //public int monsterInTeam =1;
