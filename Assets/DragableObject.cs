@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Spine.Unity;
 
 [RequireComponent(typeof(AudioSource))]
 public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
     public PaintToSpriteMaskController draw;
     public Sprite mouseCursor;
 
+    public string wrongAnim;
     public bool isReturn;
     public bool isErase;
     public bool isDraw;

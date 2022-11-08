@@ -194,7 +194,9 @@ MonoBehaviour:
   audioSource: {fileID: 2897516768272951119}
   wrongSFX: {fileID: 8300000, guid: 35d3c234f4fd01e46bebd9b0c462b432, type: 3}
   rightSFX: {fileID: 8300000, guid: fd3580025e0c59742bdf169ef0771362, type: 3}
+  isAbleToWrong: 0
   current: 0
+  wrongCount: 0
 --- !u!82 &2897516768272951119
 AudioSource:
   m_ObjectHideFlags: 0
@@ -418,6 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draw: {fileID: 0}
   mouseCursor: {fileID: 0}
+  wrongAnim: 
   isReturn: 1
   isErase: 0
   isDraw: 0
@@ -645,6 +648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draw: {fileID: 0}
   mouseCursor: {fileID: 0}
+  wrongAnim: 
   isReturn: 1
   isErase: 0
   isDraw: 0
@@ -903,6 +907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draw: {fileID: 0}
   mouseCursor: {fileID: 0}
+  wrongAnim: 
   isReturn: 1
   isErase: 0
   isDraw: 0

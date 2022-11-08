@@ -1,98 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &397661729
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 397661730}
-  m_Layer: 0
-  m_Name: smallWoodreturn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &397661730
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 397661729}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.17, y: -3.9499998, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5117319077763428468}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1059145695
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1059145696}
-  m_Layer: 0
-  m_Name: woodReturn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1059145696
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059145695}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.07, y: -4.25, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5117319077763428468}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1498540016
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1498540017}
-  m_Layer: 0
-  m_Name: fireReturn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1498540017
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1498540016}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.42, y: -4.0299997, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5117319077763428468}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5117319077695937004
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +14,7 @@ GameObject:
   - component: {fileID: 5117319077695937003}
   - component: {fileID: 545325350106725513}
   m_Layer: 0
-  m_Name: CuiNho
+  m_Name: smallWood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -219,11 +126,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   draw: {fileID: 0}
+  mouseCursor: {fileID: 0}
+  wrongAnim: 
   isReturn: 1
   isErase: 0
   isDraw: 0
-  mouseCursor: {fileID: 0}
-  returnToPos: {fileID: 397661730}
+  isCorrect: 0
 --- !u!82 &545325350106725513
 AudioSource:
   m_ObjectHideFlags: 0
@@ -329,7 +237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5117319077763428468}
-  - component: {fileID: 5117319077763428469}
+  - component: {fileID: 782623407}
   m_Layer: 0
   m_Name: Level6
   m_TagString: Untagged
@@ -355,13 +263,10 @@ Transform:
   - {fileID: 5117319077695937000}
   - {fileID: 5117319078625535242}
   - {fileID: 5117319078877418133}
-  - {fileID: 1498540017}
-  - {fileID: 1059145696}
-  - {fileID: 397661730}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5117319077763428469
+--- !u!114 &782623407
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -370,20 +275,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 5117319077763428470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e166a6b4a4aeda546980cb1c990451e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 91ab9cba47dbc044ab4648287d76b362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animAfter: {fileID: 5117319078614492054}
   animBefore: {fileID: 5117319078678472467}
-  winAnims: []
-  loopAnimation: 1
+  winAnims:
+  - win
+  loopAnimation: 0
   win: 0
-  firePlace: {fileID: 5117319078454892467}
-  smallWood: {fileID: 5117319077695937004}
-  fire: {fileID: 5117319078625535246}
-  bigWood: {fileID: 5117319078877418137}
-  woodIn: 0
-  isFired: 0
+  dragObjects:
+  - {fileID: 5117319077695937003}
+  - {fileID: 5117319078625535245}
+  - {fileID: 5117319078877418136}
+  correctPositions:
+  - {fileID: 5117319078454892466}
+  - {fileID: 5117319078454892466}
+  - {fileID: 5117319078454892466}
+  startAnims:
+  - normal
+  correctNames:
+  - smallWood
+  - Fire
+  - bigWood
+  tempObject: {fileID: 0}
+  audioSource: {fileID: 8559058965781705136, guid: a0a3bf05c9f0d5a4d87fb2ddd4b02735, type: 3}
+  wrongSFX: {fileID: 8300000, guid: 35d3c234f4fd01e46bebd9b0c462b432, type: 3}
+  rightSFX: {fileID: 8300000, guid: 8cde9fa34beeacd4d9a3263917cb4ee0, type: 3}
+  lose1: {fileID: 0}
+  lose2: {fileID: 0}
+  isAbleToWrong: 0
+  current: 0
+  wrongCount: 0
 --- !u!1 &5117319078454892468
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +318,7 @@ GameObject:
   - component: {fileID: 5117319078454892466}
   - component: {fileID: 5117319078454892467}
   m_Layer: 0
-  m_Name: firePlace
+  m_Name: correctPosition
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -567,7 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 07ab99f54a149c941a058b021554f075, type: 2}
-  initialSkinName: no_item
+  initialSkinName: item3
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -605,7 +528,7 @@ GameObject:
   - component: {fileID: 5117319078625535245}
   - component: {fileID: 1364060591345334468}
   m_Layer: 0
-  m_Name: Lua
+  m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -717,11 +640,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   draw: {fileID: 0}
+  mouseCursor: {fileID: 0}
+  wrongAnim: 
   isReturn: 1
   isErase: 0
   isDraw: 0
-  mouseCursor: {fileID: 0}
-  returnToPos: {fileID: 1498540017}
+  isCorrect: 0
 --- !u!82 &1364060591345334468
 AudioSource:
   m_ObjectHideFlags: 0
@@ -917,7 +841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 07ab99f54a149c941a058b021554f075, type: 2}
-  initialSkinName: item1
+  initialSkinName: normal
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -938,7 +862,7 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: win
+  _animationName: normal
   loop: 1
   timeScale: 1
 --- !u!1 &5117319078877418137
@@ -955,7 +879,7 @@ GameObject:
   - component: {fileID: 5117319078877418136}
   - component: {fileID: 2592878939792255699}
   m_Layer: 0
-  m_Name: CuiLon
+  m_Name: bigWood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1067,11 +991,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   draw: {fileID: 0}
+  mouseCursor: {fileID: 0}
+  wrongAnim: 
   isReturn: 1
   isErase: 0
   isDraw: 0
-  mouseCursor: {fileID: 0}
-  returnToPos: {fileID: 1059145696}
+  isCorrect: 0
 --- !u!82 &2592878939792255699
 AudioSource:
   m_ObjectHideFlags: 0

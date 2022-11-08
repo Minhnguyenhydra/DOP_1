@@ -1,0 +1,139 @@
+
+LV_11.png
+size: 1404,1404
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 102 copy
+  rotate: true
+  xy: 485, 209
+  size: 448, 345
+  orig: 448, 345
+  offset: 0, 0
+  index: -1
+Layer 14
+  rotate: false
+  xy: 949, 112
+  size: 111, 328
+  orig: 111, 328
+  offset: 0, 0
+  index: -1
+Layer 15 copy
+  rotate: false
+  xy: 691, 729
+  size: 369, 673
+  orig: 369, 673
+  offset: 0, 0
+  index: -1
+Layer 15 copy 3
+  rotate: false
+  xy: 1062, 768
+  size: 340, 634
+  orig: 340, 634
+  offset: 0, 0
+  index: -1
+Layer 16
+  rotate: false
+  xy: 2, 36
+  size: 481, 621
+  orig: 481, 621
+  offset: 0, 0
+  index: -1
+Layer 17
+  rotate: false
+  xy: 2, 659
+  size: 687, 743
+  orig: 687, 743
+  offset: 0, 0
+  index: -1
+Layer 20
+  rotate: false
+  xy: 1062, 64
+  size: 335, 66
+  orig: 335, 66
+  offset: 0, 0
+  index: -1
+Layer 21
+  rotate: true
+  xy: 485, 37
+  size: 170, 369
+  orig: 170, 369
+  offset: 0, 0
+  index: -1
+Layer 76 copy
+  rotate: false
+  xy: 856, 118
+  size: 37, 98
+  orig: 37, 98
+  offset: 0, 0
+  index: -1
+Layer 77 copy
+  rotate: false
+  xy: 832, 442
+  size: 198, 285
+  orig: 198, 285
+  offset: 0, 0
+  index: -1
+Layer 78 copy
+  rotate: false
+  xy: 691, 667
+  size: 110, 60
+  orig: 110, 60
+  offset: 0, 0
+  index: -1
+Layer 91 copy
+  rotate: false
+  xy: 1062, 132
+  size: 340, 634
+  orig: 340, 634
+  offset: 0, 0
+  index: -1
+Layer 97 copy
+  rotate: false
+  xy: 1051, 613
+  size: 9, 21
+  orig: 9, 21
+  offset: 0, 0
+  index: -1
+dau
+  rotate: true
+  xy: 832, 218
+  size: 93, 107
+  orig: 93, 107
+  offset: 0, 0
+  index: -1
+longmay
+  rotate: true
+  xy: 1032, 567
+  size: 67, 17
+  orig: 67, 17
+  offset: 0, 0
+  index: -1
+mat
+  rotate: false
+  xy: 2, 14
+  size: 74, 20
+  orig: 74, 20
+  offset: 0, 0
+  index: -1
+mat2
+  rotate: true
+  xy: 1032, 636
+  size: 91, 28
+  orig: 91, 28
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: true
+  xy: 803, 696
+  size: 31, 17
+  orig: 31, 17
+  offset: 0, 0
+  index: -1
+toctruoc
+  rotate: false
+  xy: 832, 313
+  size: 115, 127
+  orig: 115, 127
+  offset: 0, 0
+  index: -1
