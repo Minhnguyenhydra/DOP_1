@@ -133,9 +133,12 @@ public class DataManager : MonoBehaviour
     }
     private void Start()
     {
-        vibrateButton.gameObject.SetActive(GameSystem.userdata.virate);
-        soundButton.gameObject.SetActive(GameSystem.userdata.playSound);
-        bgmButton.gameObject.SetActive(GameSystem.userdata.playBGM);
+        if (vibrateButton)
+            vibrateButton.gameObject.SetActive(GameSystem.userdata.virate);
+        if (soundButton)
+            soundButton.gameObject.SetActive(GameSystem.userdata.playSound);
+        if (bgmButton)
+            bgmButton.gameObject.SetActive(GameSystem.userdata.playBGM);
     }
 
     public void PlayLevel(int level) {
