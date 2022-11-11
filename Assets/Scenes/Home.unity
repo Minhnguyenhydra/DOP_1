@@ -7127,6 +7127,7 @@ MonoBehaviour:
   bgmButton: {fileID: 0}
   virateButton: {fileID: 0}
   drawManager: {fileID: 0}
+  playerLevel: {fileID: 0}
   eraseObject: {fileID: 0}
   findObject: {fileID: 0}
   drawObject: {fileID: 0}
@@ -47959,7 +47960,7 @@ PrefabInstance:
       objectReference: {fileID: 5957115311732469394}
     - target: {fileID: 7464312470189982670, guid: 6783e9d96e1774f4aa7ef353ae57bb4e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7464312470558978610, guid: 6783e9d96e1774f4aa7ef353ae57bb4e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
