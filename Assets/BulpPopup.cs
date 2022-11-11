@@ -39,7 +39,11 @@ public class BulpPopup : MonoBehaviour
         LeanTween.scale(bongDen2, new Vector3(1.3535f, 1.3535f, 1.3535f), 0f).setEase(LeanTweenType.easeInBack);
         LeanTween.scale(bongDen3, new Vector3(1.3535f, 1.3535f, 1.3535f), 0f).setEase(LeanTweenType.easeInBack);
         Debug.Log("Checking");
-        popUpWin.gameObject.SetActive(true);
+        if(popUpWin != null)
+        {
+            popUpWin.gameObject.SetActive(true);
+
+        }
         bongDen.SetActive(true);
         bongDen2.SetActive(true);
         bongDen3.SetActive(true);

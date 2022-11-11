@@ -1,0 +1,202 @@
+
+LV_01.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bangdo
+  rotate: false
+  xy: 394, 398
+  size: 79, 31
+  orig: 79, 31
+  offset: 0, 0
+  index: -1
+bg
+  rotate: false
+  xy: 2, 387
+  size: 351, 558
+  orig: 351, 558
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 2, 184
+  size: 201, 253
+  orig: 201, 253
+  offset: 0, 0
+  index: -1
+chan
+  rotate: true
+  xy: 355, 483
+  size: 81, 233
+  orig: 81, 233
+  offset: 0, 0
+  index: -1
+chan 2
+  rotate: true
+  xy: 559, 669
+  size: 83, 179
+  orig: 83, 179
+  offset: 0, 0
+  index: -1
+dau
+  rotate: true
+  xy: 559, 579
+  size: 88, 122
+  orig: 88, 122
+  offset: 0, 0
+  index: -1
+ghile
+  rotate: true
+  xy: 740, 618
+  size: 153, 174
+  orig: 153, 174
+  offset: 0, 0
+  index: -1
+khay
+  rotate: true
+  xy: 725, 111
+  size: 178, 144
+  orig: 178, 145
+  offset: 0, 0
+  index: -1
+lm2
+  rotate: false
+  xy: 494, 459
+  size: 74, 22
+  orig: 74, 22
+  offset: 0, 0
+  index: -1
+mat nham 2
+  rotate: false
+  xy: 494, 434
+  size: 73, 23
+  orig: 73, 24
+  offset: 0, 0
+  index: -1
+mattr
+  rotate: false
+  xy: 475, 401
+  size: 73, 28
+  orig: 75, 30
+  offset: 1, 1
+  index: -1
+mieng
+  rotate: true
+  xy: 541, 377
+  size: 22, 18
+  orig: 22, 18
+  offset: 0, 0
+  index: -1
+somi
+  rotate: false
+  xy: 355, 566
+  size: 202, 186
+  orig: 202, 186
+  offset: 0, 0
+  index: -1
+tai
+  rotate: false
+  xy: 355, 431
+  size: 137, 50
+  orig: 137, 50
+  offset: 0, 0
+  index: -1
+tap de
+  rotate: true
+  xy: 541, 122
+  size: 167, 182
+  orig: 167, 182
+  offset: 0, 0
+  index: -1
+tay
+  rotate: false
+  xy: 590, 291
+  size: 76, 286
+  orig: 76, 286
+  offset: 0, 0
+  index: -1
+tay 2
+  rotate: false
+  xy: 493, 216
+  size: 46, 183
+  orig: 46, 183
+  offset: 0, 0
+  index: -1
+toc sau
+  rotate: false
+  xy: 257, 184
+  size: 234, 201
+  orig: 234, 201
+  offset: 0, 0
+  index: -1
+toc trc
+  rotate: true
+  xy: 814, 304
+  size: 113, 121
+  orig: 114, 121
+  offset: 0, 0
+  index: -1
+tất da
+  rotate: true
+  xy: 871, 2
+  size: 150, 128
+  orig: 150, 128
+  offset: 0, 0
+  index: -1
+vay'
+  rotate: false
+  xy: 668, 291
+  size: 144, 126
+  orig: 144, 126
+  offset: 0, 0
+  index: -1
+viensang/hl ghi le
+  rotate: true
+  xy: 668, 419
+  size: 158, 179
+  orig: 158, 179
+  offset: 0, 0
+  index: -1
+viensang/khayhl
+  rotate: false
+  xy: 753, 797
+  size: 183, 148
+  orig: 183, 148
+  offset: 0, 0
+  index: -1
+viensang/somi hl
+  rotate: false
+  xy: 355, 754
+  size: 207, 191
+  orig: 207, 191
+  offset: 0, 0
+  index: -1
+viensang/tap de hl
+  rotate: true
+  xy: 564, 773
+  size: 172, 187
+  orig: 172, 187
+  offset: 0, 0
+  index: -1
+viensang/tat
+  rotate: true
+  xy: 849, 461
+  size: 155, 133
+  orig: 155, 133
+  offset: 0, 0
+  index: -1
+viensang/vay' HL
+  rotate: true
+  xy: 871, 154
+  size: 148, 130
+  orig: 149, 130
+  offset: 0, 0
+  index: -1
+vong tay
+  rotate: false
+  xy: 355, 395
+  size: 37, 34
+  orig: 37, 35
+  offset: 0, 1
+  index: -1

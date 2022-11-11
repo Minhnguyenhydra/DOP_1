@@ -128,7 +128,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 81553834, guid: bbe48442d2aa4c74185ff565cf5e9f2c, type: 3}
   m_PrefabInstance: {fileID: 797788685}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797788686}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43d8b4e934d457742a81ad2a6274f19b, type: 3}
@@ -1796,15 +1796,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbe48442d2aa4c74185ff565cf5e9f2c, type: 3}
---- !u!1 &797788686 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 81553829, guid: bbe48442d2aa4c74185ff565cf5e9f2c, type: 3}
-  m_PrefabInstance: {fileID: 797788685}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &835332529 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2835796553139352428, guid: eeadc56796468bf45987e31fa75e8e26, type: 3}
   m_PrefabInstance: {fileID: 2835796552330500829}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &864959905 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 552418319, guid: bbe48442d2aa4c74185ff565cf5e9f2c, type: 3}
+  m_PrefabInstance: {fileID: 797788685}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &874765850
 GameObject:
@@ -1835,7 +1835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e29cdb1b748a224f95131a76921238b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popUpWin: {fileID: 797788686}
+  popUpWin: {fileID: 0}
   bongDen: {fileID: 2835796552330500832}
   bongDen2: {fileID: 2835796552330500831}
   bongDen3: {fileID: 2835796552330500830}
@@ -2688,7 +2688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7650a626a88dbc144a16a82e5c3de9b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noMoneyPopup: {fileID: 0}
+  noMoneyPopup: {fileID: 864959905}
   shopDatas:
   - price: 50
     currencyType: 0
