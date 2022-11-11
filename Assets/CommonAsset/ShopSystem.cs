@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.UI;
 namespace DarkcupGames {
     public enum CurrencyType {
         Gold, Diamond
@@ -21,7 +21,7 @@ namespace DarkcupGames {
         public GameObject noMoneyPopup;
         public List<ShopData> shopDatas;
         public List<UnityEvent> watchAdCompletes;
-
+        public Button paygoldButton;
         public void Buy(int id) {
             if (id >= shopDatas.Count) return;
 
@@ -58,11 +58,24 @@ namespace DarkcupGames {
 
         public IEnumerator ShowNotEnough()
         {
-            EasyEffect.Appear(noMoneyPopup, 0f, 1f);
+            LeanTween.delayedCall(0f, () =>
+             {
+                 EasyEffect.Appear(noMoneyPopup, 0f, 1f);
+             }).setOnComplete(() =>
+             {
+                 paygoldButton.enabled = false;
+             });
+
 
             yield return new WaitForSeconds(1f);
 
-            EasyEffect.Appear(noMoneyPopup, 1f, 0f);
+            LeanTween.delayedCall(0f, () =>
+            {
+                EasyEffect.Appear(noMoneyPopup, 1f, 0f);
+            }).setOnComplete(() =>
+            {
+                paygoldButton.enabled = true;
+            });
         }
     }
 

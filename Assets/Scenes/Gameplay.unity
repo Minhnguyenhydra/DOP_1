@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &5510583 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2835796553260676999, guid: eeadc56796468bf45987e31fa75e8e26, type: 3}
+  m_PrefabInstance: {fileID: 2835796552330500829}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &31809820 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7464312469063830678, guid: 6783e9d96e1774f4aa7ef353ae57bb4e, type: 3}
@@ -695,6 +706,7 @@ MonoBehaviour:
   bgmButton: {fileID: 0}
   virateButton: {fileID: 0}
   drawManager: {fileID: 291542219}
+  playerLevel: {fileID: 0}
   eraseObject: {fileID: 21300000, guid: a2bf67cc12fae1b409a45324070eddc1, type: 3}
   findObject: {fileID: 21300000, guid: 38c9fecd88204dd409a833b5b4f027bf, type: 3}
   drawObject: {fileID: 21300000, guid: 7b49502f8507fa34496a094cb76acd14, type: 3}
@@ -2363,6 +2375,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584531239}
   m_CullTransparentMesh: 1
+--- !u!1001 &1681146220
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 305135811425773648, guid: 7a5d1c1da13292644b929a7dc2e29660, type: 3}
+      propertyPath: m_Name
+      value: Special5
+      objectReference: {fileID: 0}
+    - target: {fileID: 305135811425773649, guid: 7a5d1c1da13292644b929a7dc2e29660, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 305135811425773649, guid: 7a5d1c1da13292644b929a7dc2e29660, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 305135811425773649, guid: 7a5d1c1da13292644b929a7dc2e29660, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 305135811425773649, guid: 7a5d1c1da13292644b929a7dc2e29660, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0058392202
+      objectReference: {fileID: 0}
+    - target: {fileID: 305135811425773649, guid: 7a5d1c1da13292644b929a7dc2e29660, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 305135811425773649, guid: 7a5d1c1da13292644b929a7dc2e29660, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 305135811425773649, guid: 7a5d1c1da13292644b929a7dc2e29660, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 305135811425773649, guid: 7a5d1c1da13292644b929a7dc2e29660, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 305135811425773649, guid: 7a5d1c1da13292644b929a7dc2e29660, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 305135811425773649, guid: 7a5d1c1da13292644b929a7dc2e29660, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 305135811425773649, guid: 7a5d1c1da13292644b929a7dc2e29660, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231755101816258317, guid: 7a5d1c1da13292644b929a7dc2e29660, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6422578603686629842, guid: 7a5d1c1da13292644b929a7dc2e29660, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7a5d1c1da13292644b929a7dc2e29660, type: 3}
 --- !u!1 &1689422221
 GameObject:
   m_ObjectHideFlags: 0
@@ -2668,6 +2745,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  paygoldButton: {fileID: 5510583}
 --- !u!1 &1844785458
 GameObject:
   m_ObjectHideFlags: 0

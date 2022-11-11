@@ -29,7 +29,7 @@ public class Gameplay : MonoBehaviour
     public Button bgmButton;
     public Button virateButton;
     public DrawManager drawManager;
-
+    public Text playerLevel;
     public Sprite eraseObject;
     public Sprite findObject;
     public Sprite drawObject;
