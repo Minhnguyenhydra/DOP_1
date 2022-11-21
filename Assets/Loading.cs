@@ -4,17 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using DarkcupGames;
+using UnityEngine.SceneManagement;
 
 public class Loading : MonoBehaviour
 {
     public Image fillImage;
 
-    private void Start() {
+    private IEnumerator Start() {
+        var load = SceneManager.LoadSceneAsync("Home");
+        load.allowSceneActivation = false;
         LeanTween.value(0f, 1f, 1f).setOnUpdate((float f) => {
             fillImage.fillAmount = f;
-        }).setOnComplete(() => {
-            Utils.ChangeScene("Home");
         });
+        yield return new WaitForSeconds(2f);
+        load.allowSceneActivation = true;
     }
 
 }

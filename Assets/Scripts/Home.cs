@@ -113,6 +113,7 @@ public class Home : MonoBehaviour
     {
         StoryData data = storyDatas[index];
         GameSystem.userdata.branchLevel = index + 1;
+        GameSystem.SaveUserDataToLocal();
         storyUpdater.UpdateUI(data, storyUpdater.gameObject);
         storySprites.SetEnableChild(index);
     }

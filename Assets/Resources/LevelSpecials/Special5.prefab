@@ -84,7 +84,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!82 &1059619472
@@ -614,9 +614,9 @@ MonoBehaviour:
   maskInteraction: 1
   maskMaterials:
     materialsMaskDisabled:
-    - {fileID: 2100000, guid: 0329a1c4c0b79d543be9f6cc504934bd, type: 2}
+    - {fileID: 2100000, guid: c37dc1f847be7694284b3de642c7198f, type: 2}
     materialsInsideMask:
-    - {fileID: 2100000, guid: 2298ae831aae4f74da42033023bfbfed, type: 2}
+    - {fileID: 2100000, guid: b581063647a1a5e49878fa410f5f3ad0, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -737,9 +737,9 @@ MonoBehaviour:
   maskInteraction: 1
   maskMaterials:
     materialsMaskDisabled:
-    - {fileID: 2100000, guid: 0329a1c4c0b79d543be9f6cc504934bd, type: 2}
+    - {fileID: 2100000, guid: c37dc1f847be7694284b3de642c7198f, type: 2}
     materialsInsideMask:
-    - {fileID: 2100000, guid: 2298ae831aae4f74da42033023bfbfed, type: 2}
+    - {fileID: 2100000, guid: b581063647a1a5e49878fa410f5f3ad0, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -1694,9 +1694,9 @@ MonoBehaviour:
   maskInteraction: 1
   maskMaterials:
     materialsMaskDisabled:
-    - {fileID: 2100000, guid: 0329a1c4c0b79d543be9f6cc504934bd, type: 2}
+    - {fileID: 2100000, guid: c37dc1f847be7694284b3de642c7198f, type: 2}
     materialsInsideMask:
-    - {fileID: 2100000, guid: 2298ae831aae4f74da42033023bfbfed, type: 2}
+    - {fileID: 2100000, guid: b581063647a1a5e49878fa410f5f3ad0, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -1764,7 +1764,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c37dc1f847be7694284b3de642c7198f, type: 2}
+  - {fileID: 2100000, guid: b581063647a1a5e49878fa410f5f3ad0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1816,8 +1816,10 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: c37dc1f847be7694284b3de642c7198f, type: 2}
+    materialsInsideMask:
+    - {fileID: 2100000, guid: b581063647a1a5e49878fa410f5f3ad0, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal

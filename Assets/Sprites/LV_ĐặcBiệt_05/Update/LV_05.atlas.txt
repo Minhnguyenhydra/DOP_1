@@ -6,182 +6,182 @@ filter: Linear,Linear
 repeat: none
 ao
   rotate: false
-  xy: 915, 870
+  xy: 917, 636
   size: 102, 133
   orig: 102, 133
   offset: 0, 0
   index: -1
 ao HL
-  rotate: false
-  xy: 850, 353
+  rotate: true
+  xy: 352, 50
   size: 113, 144
   orig: 113, 144
   offset: 0, 0
   index: -1
 ban tay
-  rotate: false
-  xy: 850, 128
+  rotate: true
+  xy: 921, 777
   size: 73, 85
   orig: 73, 85
   offset: 0, 0
   index: -1
 bap tay ph
-  rotate: true
-  xy: 954, 761
+  rotate: false
+  xy: 120, 91
   size: 107, 63
   orig: 112, 63
   offset: 5, 0
   index: -1
 bap tay tr
   rotate: true
-  xy: 786, 667
+  xy: 559, 471
   size: 52, 110
   orig: 52, 110
   offset: 0, 0
   index: -1
 bg
   rotate: false
-  xy: 2, 479
+  xy: 2, 464
   size: 353, 524
   orig: 353, 524
   offset: 0, 0
   index: -1
 body
   rotate: false
-  xy: 786, 841
+  xy: 559, 525
   size: 127, 162
   orig: 127, 162
   offset: 0, 0
   index: -1
 chan sau
-  rotate: true
-  xy: 786, 721
+  rotate: false
+  xy: 850, 201
   size: 118, 166
   orig: 118, 166
   offset: 0, 0
   index: -1
 chan trc
-  rotate: true
-  xy: 357, 507
+  rotate: false
+  xy: 850, 2
   size: 72, 197
   orig: 72, 197
   offset: 0, 0
   index: -1
 dau`
-  rotate: false
-  xy: 954, 693
+  rotate: true
+  xy: 917, 579
   size: 55, 66
   orig: 55, 66
   offset: 0, 0
   index: -1
 lm2
-  rotate: false
-  xy: 404, 492
+  rotate: true
+  xy: 1008, 803
   size: 47, 13
   orig: 47, 13
   offset: 0, 0
   index: -1
 mat nham 2
-  rotate: false
-  xy: 453, 493
+  rotate: true
+  xy: 1003, 592
   size: 42, 12
   orig: 44, 14
   offset: 1, 1
   index: -1
 mat2
-  rotate: false
-  xy: 357, 489
+  rotate: true
+  xy: 985, 589
   size: 45, 16
   orig: 46, 16
   offset: 1, 0
   index: -1
 moi
-  rotate: false
-  xy: 497, 496
+  rotate: true
+  xy: 1008, 786
   size: 15, 9
   orig: 15, 9
   offset: 0, 0
   index: -1
 pk
-  rotate: true
-  xy: 768, 499
+  rotate: false
+  xy: 850, 369
   size: 154, 191
   orig: 154, 191
   offset: 0, 0
   index: -1
 pk HL
   rotate: true
-  xy: 566, 488
+  xy: 357, 522
   size: 165, 200
   orig: 165, 202
   offset: 0, 2
   index: -1
 tay ph
   rotate: true
-  xy: 961, 618
+  xy: 774, 487
   size: 73, 50
   orig: 73, 50
   offset: 0, 0
   index: -1
 tay tr
   rotate: true
-  xy: 352, 107
+  xy: 2, 83
   size: 71, 116
   orig: 71, 117
   offset: 0, 1
   index: -1
 toc mai
-  rotate: true
-  xy: 925, 129
+  rotate: false
+  xy: 688, 487
   size: 84, 73
   orig: 84, 73
   offset: 0, 0
   index: -1
 toc sau
   rotate: true
-  xy: 925, 2
+  xy: 924, 74
   size: 125, 72
   orig: 125, 72
   offset: 0, 0
   index: -1
 toc trc
   rotate: true
-  xy: 850, 215
+  xy: 921, 852
   size: 136, 101
   orig: 136, 101
   offset: 0, 0
   index: -1
 vai
   rotate: false
-  xy: 2, 171
+  xy: 2, 156
   size: 348, 306
   orig: 348, 306
   offset: 0, 0
   index: -1
 vai hl
-  rotate: true
-  xy: 576, 655
-  size: 348, 208
+  rotate: false
+  xy: 357, 689
+  size: 348, 299
   orig: 348, 300
-  offset: 0, 92
+  offset: 0, 0
   index: -1
 vai sau
   rotate: true
-  xy: 352, 180
+  xy: 352, 165
   size: 297, 496
   orig: 297, 497
   offset: 0, 1
   index: -1
 vay'
-  rotate: true
-  xy: 357, 581
+  rotate: false
+  xy: 707, 562
   size: 208, 207
   orig: 208, 207
   offset: 0, 0
   index: -1
 vay' HL
-  rotate: false
-  xy: 357, 791
+  rotate: true
+  xy: 707, 771
   size: 217, 212
   orig: 217, 212
   offset: 0, 0

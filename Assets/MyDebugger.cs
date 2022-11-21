@@ -11,14 +11,14 @@ public class MyDebugger : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //UpdateSpriteMask();
-            //Gameplay.Instance.FoundItem(find);
-            GameSystem.userdata.level += 5;
-            GameSystem.SaveUserDataToLocal();
-            Utils.ReloadScene();
-        }
-        currentLevel = GameSystem.userdata.level;
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    //UpdateSpriteMask();
+        //    //Gameplay.Instance.FoundItem(find);
+        //    GameSystem.userdata.level += 5;
+        //    GameSystem.SaveUserDataToLocal();
+        //    Utils.ReloadScene();
+        //}
+        currentLevel = GameSystem.userdata.branchLevel;
     }
 }
