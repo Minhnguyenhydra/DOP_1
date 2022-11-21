@@ -25,19 +25,19 @@ public class PencilShowPosition : MonoBehaviour
     private void Update()
     {
 
-        if (paint.isDrawing)
-        {
-            pencil.gameObject.SetActive(true);
-            Vector2 pos = mainCam.ScreenToWorldPoint(Input.mousePosition);
-            pencil.transform.position = paint.lastWorldPos;
-            Debug.Log(pos);
-        }
-        else
-        {
-            pencil.gameObject.SetActive(false);
-            Vector2 pos = mainCam.ScreenToWorldPoint(Input.mousePosition);
-            pencil.transform.position = pos;
-        }
+        //if (paint.isDrawing)
+        //{
+        //    pencil.gameObject.SetActive(true);
+        //    Vector2 pos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        //    pencil.transform.position = paint.lastWorldPos;
+        //    Debug.Log(pos);
+        //}
+        //else
+        //{
+        //    pencil.gameObject.SetActive(false);
+        //    Vector2 pos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        //    pencil.transform.position = pos;
+        //}
 
     }
     // Start is called before the first frame update

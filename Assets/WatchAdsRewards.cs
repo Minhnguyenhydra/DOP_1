@@ -31,7 +31,6 @@ public class WatchAdsRewards : MonoBehaviour
             }
 
             specialLevel.GetComponent<EraseManyTimes>().OnWatchAdsClick();
-
         }
     }
   

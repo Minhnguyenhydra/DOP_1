@@ -18,6 +18,7 @@ public class EraseManyTimes : MonoBehaviour
         eraseLevels.UpdateSelected(0, x => x.gameObject.SetActive(true), x => x.gameObject.SetActive(false));
 
         buttonWatchAds.gameObject.SetActive(false);
+        buttonWatchAds.gameObject.transform.localScale = new Vector3(0, 0);
     }
 
   
@@ -53,8 +54,8 @@ public class EraseManyTimes : MonoBehaviour
                 eraseLevels.UpdateSelected(currentLevel, x => x.gameObject.SetActive(true), x => x.gameObject.SetActive(false));
                 LeanTween.delayedCall(.5f, () =>
                 {
-                    LeanTween.scale(buttonWatchAds, new Vector3(.65f, .45f, 1f), .5f).setEase(LeanTweenType.easeOutExpo);
-                    
+                    //LeanTween.scale(buttonWatchAds, new Vector3(.65f, .45f, 1f), .5f).setEase(LeanTweenType.easeOutExpo);
+                    EasyEffect.Appear(buttonWatchAds.gameObject, 0f, 1f);
                 });
 
                 

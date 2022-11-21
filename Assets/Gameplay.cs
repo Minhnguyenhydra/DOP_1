@@ -7,13 +7,12 @@ using UnityEngine.SceneManagement;
 using Spine.Unity;
 using TMPro;
 
-public class Gameplay : MonoBehaviour
-{
+public class Gameplay : MonoBehaviour {
     public static Gameplay Instance;
 
     public List<ParticleSystem> effects;
     public List<RectTransform> findBoxs;
-    public GameObject dautich;
+    public GameObject iconTick;
     public GameObject guideObject;
     public UIEffect winPopup;
     public Image findItemDemo;
@@ -25,20 +24,17 @@ public class Gameplay : MonoBehaviour
     public Image scanImg;
     public Canvas canvasGameplay;
     public Button homeButton;
-    public Button soundButton;
-    public Button bgmButton;
-    public Button virateButton;
     public DrawManager drawManager;
     public Text playerLevel;
     public Sprite eraseObject;
     public Sprite findObject;
     public Sprite drawObject;
-    public bool drawLevel;
     public bool isBranchLevel;
-    //[SerializeField] private int branchLevel;
-     public Sprite cucgom;
-    [SerializeField]private GameObject levelObject;
+    public Sprite cucgom;
+    [SerializeField] private GameObject levelObject;
     bool won = false;
+    bool drawLevel;
+
     public bool isPlayingSpecial;
 
     private void Awake() {
@@ -49,10 +45,8 @@ public class Gameplay : MonoBehaviour
         }
         if (findItemDemo)
             findItemDemo.gameObject.SetActive(false);
-
         //Application.targetFrameRate = 60;
     }
-
 
     private void Start() {
         homeButton.onClick.AddListener(() => { SceneManager.LoadScene("Home"); });
@@ -61,27 +55,24 @@ public class Gameplay : MonoBehaviour
         AudioSystem.Instance.SetBGM(GameSystem.userdata.playBGM);
         AudioSystem.Instance.SetFXSound(GameSystem.userdata.playSound);
 
-        dautich.SetActive(false);
+        iconTick.SetActive(false);
         GameSystem.LoadUserData();
         int level = GameSystem.userdata.level;
 
         int count = 0;
         won = false;
         isPlayingSpecial = false;
-        if (isBranchLevel)
-        {
+        if (isBranchLevel) {
             GameObject obj = Resources.Load<GameObject>("LevelBranch/Level" + GameSystem.userdata.branchLevel);
             Debug.Log(GameSystem.userdata.branchLevel);
             txtLevel.text = null;
             txtQuestion.text = null;
-            if (obj != null)
-            {
+            if (obj != null) {
                 levelObject = Instantiate(obj);
                 scanImg.gameObject.SetActive(false);
                 var findItem = FindObjectOfType<FindItemLevel>();
 
-                for (int i = 0; i < findBoxs.Count; i++)
-                {
+                for (int i = 0; i < findBoxs.Count; i++) {
                     findBoxs[i].gameObject.SetActive(false);
                 }
                 return;
@@ -97,12 +88,9 @@ public class Gameplay : MonoBehaviour
             if (DataManager.Instance.levelInfos.Count > level + count) {
                 LevelInfo info = DataManager.Instance.levelInfos[level + count];
 
-                if(GameSystem.userdata.level == 24)
-                {
+                if (GameSystem.userdata.level == 24) {
                     txtQuestion.text = null;
-                }
-                else
-                {
+                } else {
                     txtQuestion.text = info.levelTitle;
                 }
             }
@@ -120,26 +108,16 @@ public class Gameplay : MonoBehaviour
         if (levelObject == null) {
             GameSystem.userdata.level = 0;
             GameSystem.SaveUserDataToLocal();
-
             levelObject = Resources.Load<GameObject>("Levels/Level1");
-
             txtLevel.text = "LEVEL 1";
         }
-
-
-
         if (!GameSystem.userdata.showRating && GameSystem.userdata.level == 5) {
-            
-
-
             popUpRating.SetActive(true);
             GameSystem.userdata.showRating = true;
             GameSystem.SaveUserDataToLocal();
-
         }
 
         var findItemLevel = FindObjectOfType<FindItemLevel>();
-
         for (int i = 0; i < findBoxs.Count; i++) {
             findBoxs[i].gameObject.SetActive(findItemLevel != null);
         }
@@ -149,32 +127,21 @@ public class Gameplay : MonoBehaviour
         }
 
         var findLevel = FindObjectOfType<FindAndWinLevel>();
-
-        if (findLevel != null)
-        {
+        if (findLevel != null) {
             return;
-
-        }
-        else
-        {
+        } else {
             drawLevel = FindObjectOfType<DrawLevel>();
-            
-
-            if(drawLevel)
-            {
+            if (drawLevel) {
                 scanImg.sprite = drawObject;
                 drawManager.gameObject.SetActive(true);
-            }
-            else
-            {
+            } else {
                 drawManager.gameObject.SetActive(false);
                 scanImg.sprite = cucgom;
             }
         }
     }
 
-    public void LoadBranchLevel()
-    {
+    public void LoadBranchLevel() {
         SceneManager.LoadScene("BranchLevel");
     }
 
@@ -186,7 +153,7 @@ public class Gameplay : MonoBehaviour
         if (level.animBefore != null) {
             level.animBefore.gameObject.SetActive(false);
         }
-        StartCoroutine(IEWin(level.animAfter, level.winAnims, showWinPopupImediately,level.loopAnimation));
+        StartCoroutine(IEWin(level.animAfter, level.winAnims, showWinPopupImediately, level.loopAnimation));
     }
 
     public IEnumerator IEWin(SkeletonAnimation skeletonAnimation, List<string> anims = null, bool showWinPopupImediately = true, bool loopAnimation = true) {
@@ -199,28 +166,23 @@ public class Gameplay : MonoBehaviour
         for (int i = 0; i < effects.Count; i++) {
             effects[i].Play();
         }
-        EasyEffect.Appear(dautich, 0f, 1f, 0.15f);
+        EasyEffect.Appear(iconTick, 0f, 1f, 0.15f);
         AudioSystem.Instance.PlaySound(winSound, 1);
         skeletonAnimation.AnimationState.Data.DefaultMix = 0;
 
-        if (anims != null && anims.Count > 0)
-        {
-            for (int i = 0; i < anims.Count; i++)
-            {
+        if (anims != null && anims.Count > 0) {
+            for (int i = 0; i < anims.Count; i++) {
                 Spine.Animation win = skeletonAnimation.Skeleton.Data.FindAnimation(anims[i]);
-                if (win != null)
-                {
+                if (win != null) {
                     skeletonAnimation.AnimationState.SetAnimation(0, anims[i], loopAnimation);
                     //skeletonAnimation.AnimationName = anims[i];
 
                     yield return new WaitForSeconds(win.Duration);
                 }
             }
-        } else
-        {
+        } else {
             Spine.Animation win = skeletonAnimation.Skeleton.Data.FindAnimation("win");
-            if (win != null)
-            {
+            if (win != null) {
                 if (loopAnimation) {
                     skeletonAnimation.AnimationState.SetAnimation(0, "win", true);
                 } else {
@@ -231,8 +193,7 @@ public class Gameplay : MonoBehaviour
             }
 
             Spine.Animation win1 = skeletonAnimation.Skeleton.Data.FindAnimation("win1");
-            if (win1 != null)
-            {
+            if (win1 != null) {
                 if (loopAnimation) {
                     skeletonAnimation.AnimationState.SetAnimation(0, "win1", true);
                 } else {
@@ -243,8 +204,7 @@ public class Gameplay : MonoBehaviour
             }
 
             Spine.Animation win2 = skeletonAnimation.Skeleton.Data.FindAnimation("win2");
-            if (win2 != null)
-            {
+            if (win2 != null) {
                 if (loopAnimation) {
                     skeletonAnimation.AnimationState.SetAnimation(0, "win2", true);
                 } else {
@@ -257,11 +217,8 @@ public class Gameplay : MonoBehaviour
 
         if (showWinPopupImediately) {
             ShowWinPopup();
-        }
-        else
-        {
-            LeanTween.delayedCall(1.5f, () =>
-            {
+        } else {
+            LeanTween.delayedCall(1.5f, () => {
                 ShowWinPopup();
             });
         }
@@ -292,53 +249,38 @@ public class Gameplay : MonoBehaviour
         });
     }
 
-    public int GetSpecialLevel()
-    {
+    public int GetSpecialLevel() {
         var userLevel = GameSystem.userdata.level;
-        for (int i = 0; i < DataManager.specialLevels.Count; i++)
-        {
-            if (userLevel == DataManager.specialLevels[i])
-            {
-                return i+1;
+        for (int i = 0; i < DataManager.specialLevels.Count; i++) {
+            if (userLevel == DataManager.specialLevels[i]) {
+                return i + 1;
             }
         }
         return -1;
     }
 
-    public void Next()
-    {
-
-
-        if (isBranchLevel)
-        {
+    public void Next() {
+        if (isBranchLevel) {
             SceneManager.LoadScene("Home");
             isBranchLevel = false;
             return;
         }
-        if (GetSpecialLevel() > 0 && !isPlayingSpecial)
-        {
+        if (GetSpecialLevel() > 0 && !isPlayingSpecial) {
 
             isPlayingSpecial = true;
             SpawnSpecialLevel();
             return;
         }
-
         GameSystem.userdata.level++;
-        if(GameSystem.userdata.level == 24)
-        {
+        if (GameSystem.userdata.level == 24) {
             txtQuestion.text = "Check";
         }
-
-        if (GameSystem.userdata.level > GameSystem.userdata.maxLevel)
-        {
+        if (GameSystem.userdata.level > GameSystem.userdata.maxLevel) {
             GameSystem.userdata.maxLevel = GameSystem.userdata.level;
         }
         GameSystem.SaveUserDataToLocal();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
-
-
 
     public void SpawnSpecialLevel() {
         Destroy(levelObject);
@@ -352,14 +294,11 @@ public class Gameplay : MonoBehaviour
         won = false;
     }
 
-    public void LevelUp()
-    {
+    public void LevelUp() {
         closeSpecialLevelButton.SetActive(false);
         GameSystem.userdata.level++;
         GameSystem.SaveUserDataToLocal();
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
         //Destroy(levelObject);
         //var obj = Resources.Load<GameObject>("Levels/Level" + GameSystem.userdata.level);
         //txtLevel.text = "LEVEL " + GameSystem.userdata.level;
@@ -401,11 +340,8 @@ public class Gameplay : MonoBehaviour
         GameSystem.SaveUserDataToLocal();
     }
 
-    public void Virate()
-    {
+    public void Virate() {
         if (GameSystem.userdata.virate)
             Handheld.Vibrate();
     }
-
-    
 }

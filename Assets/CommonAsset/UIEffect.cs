@@ -14,6 +14,8 @@ namespace DarkcupGames {
         }
 
         public void DoEffect() {
+            if (!gameObject) return;
+
             gameObject.SetActive(true);
 
             for (int i = 0; i < elements.Count; i++) {
