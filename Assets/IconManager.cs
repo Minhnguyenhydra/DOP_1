@@ -15,10 +15,9 @@ public class IconManager : MonoBehaviour
     public Sprite sprFind;
     GameObject kinhlup;
     GameObject pencil;
-    private IEnumerator Start() {
+    private void Start() {
         rect = GetComponent<RectTransform>();
         GetComponent<Image>().enabled = false;
-        yield return new WaitForEndOfFrame();
         Init();
     }
 
@@ -78,6 +77,9 @@ public class IconManager : MonoBehaviour
 
         if (Gameplay.Instance.GameplayType == GameplayType.Find) {
             icon.gameObject.SetActive(Input.GetMouseButton(0) == false);
+            if (kinhlup == null) {
+                Debug.Log("aaaa");
+            }
             kinhlup.transform.GetChild(0).gameObject.SetActive(Input.GetMouseButton(0));
 
             Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

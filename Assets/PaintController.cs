@@ -12,9 +12,8 @@ public class PaintController : MonoBehaviour
     public List<Vector2> drawPoints;
     public bool isDrawing = false;
     public bool isPaint = false;
-   
-    public int erSize = 10;
 
+    public int erSize = 10;
     public bool isBig;
     public float isBigPercents;
 

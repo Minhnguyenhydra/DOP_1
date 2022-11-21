@@ -49,10 +49,7 @@ public class Gameplay : MonoBehaviour {
         }
         if (findItemDemo)
             findItemDemo.gameObject.SetActive(false);
-        //Application.targetFrameRate = 60;
-    }
 
-    private void Start() {
         homeButton.onClick.AddListener(() => { SceneManager.LoadScene("Home"); });
         drawManager.gameObject.SetActive(false);
 
@@ -127,6 +124,12 @@ public class Gameplay : MonoBehaviour {
 
         if (findItemLevel != null || FindObjectOfType<FindAndWinLevel>() != null) {
             GameplayType = GameplayType.Find;
+            if (PlayerPrefs.GetInt("tutorial_find", 0) == 0) {
+                PlayerPrefs.SetInt("tutorial_find", 1);
+                LeanTween.delayedCall(2f, () => {
+                    Hint();
+                });
+            }
             return;
         }
 
@@ -135,10 +138,22 @@ public class Gameplay : MonoBehaviour {
             scanImg.sprite = drawObject;
             drawManager.gameObject.SetActive(true);
             GameplayType = GameplayType.Draw;
+            if (PlayerPrefs.GetInt("tutorial_draw", 0) == 0) {
+                PlayerPrefs.SetInt("tutorial_draw", 1);
+                LeanTween.delayedCall(2f, () => {
+                    Hint();
+                });
+            }
         } else {
             drawManager.gameObject.SetActive(false);
             scanImg.sprite = cucgom;
             GameplayType = GameplayType.Erase;
+            if (PlayerPrefs.GetInt("tutorial_erase", 0) == 0) {
+                PlayerPrefs.SetInt("tutorial_erase", 1);
+                LeanTween.delayedCall(2f, () => {
+                    Hint();
+                });
+            }
         }
     }
 
