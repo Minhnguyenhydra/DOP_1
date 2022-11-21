@@ -6,12 +6,12 @@ using Spine.Unity;
 
 [RequireComponent(typeof(AudioSource))]
 public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
-    public PaintToSpriteMaskController draw;
+    //public PaintToSpriteMaskController draw;
     public Sprite mouseCursor;
 
     public string wrongAnim;
     public bool isReturn;
-    public bool isErase;
+    //public bool isErase;
     public bool isDraw;
     public bool isCorrect;
 
@@ -22,14 +22,14 @@ public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
 
     private void Start() {
 
-        if (isErase)
-        {
-            EraserShowPosition eraserShowPosition = draw.GetComponent<EraserShowPosition>();
-            if (eraserShowPosition == null)
-            {
-                eraserShowPosition = draw.gameObject.AddComponent<EraserShowPosition>();
-            }
-        }
+        //if (isErase)
+        //{
+        //    EraserShowPosition eraserShowPosition = draw.GetComponent<EraserShowPosition>();
+        //    if (eraserShowPosition == null)
+        //    {
+        //        eraserShowPosition = draw.gameObject.AddComponent<EraserShowPosition>();
+        //    }
+        //}
        
         mainCam = Camera.main;
         startPos = transform.position;
@@ -40,19 +40,18 @@ public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
         Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         transform.position = pos;
-        if (isErase)
-        {
-            draw.GetComponent<EraserShowPosition>().eraser.gameObject.SetActive(true);
-        }
+        //if (isErase)
+        //{
+        //    draw.GetComponent<EraserShowPosition>().eraser.gameObject.SetActive(true);
+        //}
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (isErase)
-        {
-
-            draw.GetComponent<EraserShowPosition>().eraser.gameObject.SetActive(false);
-        }
+        //if (isErase)
+        //{
+        //    draw.GetComponent<EraserShowPosition>().eraser.gameObject.SetActive(false);
+        //}
         hasDragged = true;
     }
 

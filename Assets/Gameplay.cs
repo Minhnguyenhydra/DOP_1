@@ -7,8 +7,12 @@ using UnityEngine.SceneManagement;
 using Spine.Unity;
 using TMPro;
 
+public enum GameplayType { Erase, Draw, Find }
+
 public class Gameplay : MonoBehaviour {
     public static Gameplay Instance;
+
+    public GameplayType GameplayType { get; private set; }
 
     public List<ParticleSystem> effects;
     public List<RectTransform> findBoxs;
@@ -58,7 +62,6 @@ public class Gameplay : MonoBehaviour {
         iconTick.SetActive(false);
         GameSystem.LoadUserData();
         int level = GameSystem.userdata.level;
-
         int count = 0;
         won = false;
         isPlayingSpecial = false;
@@ -122,22 +125,20 @@ public class Gameplay : MonoBehaviour {
             findBoxs[i].gameObject.SetActive(findItemLevel != null);
         }
 
-        if (findItemLevel != null) {
+        if (findItemLevel != null || FindObjectOfType<FindAndWinLevel>() != null) {
+            GameplayType = GameplayType.Find;
             return;
         }
 
-        var findLevel = FindObjectOfType<FindAndWinLevel>();
-        if (findLevel != null) {
-            return;
+        drawLevel = FindObjectOfType<DrawLevel>();
+        if (drawLevel) {
+            scanImg.sprite = drawObject;
+            drawManager.gameObject.SetActive(true);
+            GameplayType = GameplayType.Draw;
         } else {
-            drawLevel = FindObjectOfType<DrawLevel>();
-            if (drawLevel) {
-                scanImg.sprite = drawObject;
-                drawManager.gameObject.SetActive(true);
-            } else {
-                drawManager.gameObject.SetActive(false);
-                scanImg.sprite = cucgom;
-            }
+            drawManager.gameObject.SetActive(false);
+            scanImg.sprite = cucgom;
+            GameplayType = GameplayType.Erase;
         }
     }
 
@@ -292,6 +293,11 @@ public class Gameplay : MonoBehaviour {
         EasyEffect.Disappear(winPopup.gameObject, 1, 0);
         canvasGameplay.gameObject.SetActive(false);
         won = false;
+        GameplayType = GameplayType.Erase;
+        var iconManager = FindObjectOfType<IconManager>();
+        if (iconManager) {
+            iconManager.Init();
+        }
     }
 
     public void LevelUp() {

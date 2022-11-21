@@ -374,17 +374,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8224409402519810143}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draw: {fileID: 0}
-  isReturn: 0
-  isErase: 0
-  isDraw: 0
   mouseCursor: {fileID: 0}
-  returnToPos: {fileID: 0}
+  wrongAnim: 
+  isReturn: 0
+  isDraw: 0
+  isCorrect: 0
 --- !u!82 &6560073131197153245
 AudioSource:
   m_ObjectHideFlags: 0

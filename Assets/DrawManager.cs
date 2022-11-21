@@ -21,7 +21,6 @@ public class DrawManager : MonoBehaviour
     {
         cam = Camera.main;
         drawPoints.Clear();
-
         currentStroke = -1;
     }
 

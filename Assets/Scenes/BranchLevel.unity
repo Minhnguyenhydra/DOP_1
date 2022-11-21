@@ -574,7 +574,7 @@ MonoBehaviour:
   findBoxs:
   - {fileID: 835332529}
   - {fileID: 1885504690}
-  dautich: {fileID: 1522728515}
+  iconTick: {fileID: 1522728515}
   guideObject: {fileID: 305061132}
   winPopup: {fileID: 6020511}
   findItemDemo: {fileID: 748702241}
@@ -586,14 +586,11 @@ MonoBehaviour:
   scanImg: {fileID: 722823980}
   canvasGameplay: {fileID: 1209224692}
   homeButton: {fileID: 1027370514}
-  soundButton: {fileID: 722909436}
-  bgmButton: {fileID: 722909435}
-  virateButton: {fileID: 722909434}
   drawManager: {fileID: 77383574}
+  playerLevel: {fileID: 0}
   eraseObject: {fileID: 21300000, guid: a2bf67cc12fae1b409a45324070eddc1, type: 3}
   findObject: {fileID: 21300000, guid: 38c9fecd88204dd409a833b5b4f027bf, type: 3}
   drawObject: {fileID: 21300000, guid: 7b49502f8507fa34496a094cb76acd14, type: 3}
-  drawLevel: 0
   isBranchLevel: 1
   cucgom: {fileID: 21300000, guid: a2bf67cc12fae1b409a45324070eddc1, type: 3}
   levelObject: {fileID: 0}
@@ -2560,7 +2557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -2722,6 +2718,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  paygoldButton: {fileID: 0}
 --- !u!1 &1870923278
 GameObject:
   m_ObjectHideFlags: 0

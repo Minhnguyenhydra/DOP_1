@@ -55,7 +55,7 @@ public class EraseManyTimes : MonoBehaviour
                 LeanTween.delayedCall(.5f, () =>
                 {
                     //LeanTween.scale(buttonWatchAds, new Vector3(.65f, .45f, 1f), .5f).setEase(LeanTweenType.easeOutExpo);
-                    EasyEffect.Appear(buttonWatchAds.gameObject, 0f, 1f);
+                    EasyEffect.Appear(buttonWatchAds.gameObject, 0f, 1f, speed: 0.2f);
                 });
 
                 
