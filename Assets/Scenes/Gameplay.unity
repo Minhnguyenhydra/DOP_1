@@ -4478,7 +4478,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: -3
+  m_SortingOrder: -2
   m_TargetDisplay: 0
 --- !u!224 &1209224693
 RectTransform:
@@ -4511,6 +4511,8 @@ RectTransform:
   - {fileID: 4596357189702039610}
   - {fileID: 6783582354869627161}
   - {fileID: 805132227}
+  - {fileID: 1217326425}
+  - {fileID: 1286018910}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4563,8 +4565,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7464312469442605682}
-  m_RootOrder: 6
+  m_Father: {fileID: 1209224693}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -4712,8 +4714,8 @@ RectTransform:
   - {fileID: 2835796553617284359}
   - {fileID: 2835796553738752178}
   - {fileID: 2835796552618690573}
-  m_Father: {fileID: 7464312469442605682}
-  m_RootOrder: 7
+  m_Father: {fileID: 1209224693}
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -6697,7 +6699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 1, b: 0.41259122, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -8858,8 +8860,6 @@ RectTransform:
   - {fileID: 7464312470515124652}
   - {fileID: 7464312470575250230}
   - {fileID: 938400695}
-  - {fileID: 1217326425}
-  - {fileID: 1286018910}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8887,7 +8887,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -3
   m_TargetDisplay: 0
 --- !u!114 &7464312469442605685
 MonoBehaviour:
