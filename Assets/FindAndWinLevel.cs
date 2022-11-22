@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Spine.Unity;
 public class FindAndWinLevel : LevelManager
 {
     public GameObject magnify;
@@ -9,6 +9,7 @@ public class FindAndWinLevel : LevelManager
     public bool isMultiple;
     public bool isSpeical;
     public bool isImmediately;
+    public SkeletonAnimation maskAnim;
 
     bool isWin = false;
 
@@ -22,6 +23,10 @@ public class FindAndWinLevel : LevelManager
     }
 
     public override void Win() {
+        if (maskAnim != null) {
+            maskAnim.gameObject.SetActive(false);
+            animAfter.gameObject.SetActive(true);
+        }
         Gameplay.Instance.Win(this);
     }
 
@@ -94,13 +99,13 @@ public class FindAndWinLevel : LevelManager
                 LeanTween.delayedCall(1.5f, () =>
                 {
                     magnify.gameObject.SetActive(false);
-                    Gameplay.Instance.Win(this);
+                    Win();
                 });
             }
             else
             {
                 magnify.gameObject.SetActive(false);
-                Gameplay.Instance.Win(this);
+                Win();
             }
         }
     }

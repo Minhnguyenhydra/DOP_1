@@ -58,7 +58,9 @@ public class DrawLevel : LevelManager
     public override void Win() {
         draw.isDrawing = false;
         draw.gameObject.SetActive(false);
-
+        for (int i = 0; i < tutorialDots.Count; i++) {
+            tutorialDots[i].gameObject.SetActive(false);
+        }
         PencilShowPosition pencil = draw.GetComponent<PencilShowPosition>();
         if (pencil != null) {
             pencil.pencil.SetActive(false);
