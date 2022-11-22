@@ -13,4 +13,6 @@ public static class Constants
     public const int MAX_LEVEL = 50;
 
     public const string SCENE_GAMEPLAY = "Gameplay";
+
+    public const int TUTORIAL_LEVEL = 5;
 }

@@ -6,18 +6,11 @@ public class FindAndWinLevel : LevelManager
 {
     public GameObject magnify;
     public List<GameObject> objectFinds = new List<GameObject>();
-     bool isWin = false;
-    public bool isActive = true;
     public bool isMultiple;
     public bool isSpeical;
     public bool isImmediately;
-    public void Start() {
-        //Hint();
-        //founds = new Dictionary<SpriteRenderer, bool>();
-        //for (int i = 0; i < findObjects.Count; i++) {
-        //    founds.Add(findObjects[i], false);
-        //}
-    }
+
+    bool isWin = false;
 
     public override void Hint() {
         StartCoroutine(IEHint());
@@ -30,8 +23,6 @@ public class FindAndWinLevel : LevelManager
 
     public override void Win() {
         Gameplay.Instance.Win(this);
-        //skeletonAnimation.AnimationName = "win";
-        //skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
     }
 
     private void Update() {
@@ -43,6 +34,9 @@ public class FindAndWinLevel : LevelManager
 
         if (!isMultiple)
         {
+            if (magnify == null) {
+                Debug.LogError("aaaa");
+            }
             if (!isSpeical)
             {
                 float distance = Vector2.Distance(objectFinds[0].transform.position, magnify.transform.GetChild(0).position);
@@ -50,7 +44,6 @@ public class FindAndWinLevel : LevelManager
                 if (distance < Constants.FIND_ITEM_RANGE)
                 {
                     isWin = true;
-                    //magnify.gameObject.SetActive(false);
                 }
             }
             else
@@ -60,11 +53,9 @@ public class FindAndWinLevel : LevelManager
                 if (distance < .1f)
                 {
                     isWin = true;
-                    //magnify.gameObject.SetActive(false);
                 }
             }
         }
-
         else
         {
             int index = 0;
@@ -73,12 +64,10 @@ public class FindAndWinLevel : LevelManager
             {
                 if (objectFinds[index].activeSelf)
                 {
-                    isActive = true;
                     checkFalse = objectFinds.Count;
                 }
                 else
                 {
-                    isActive = false;
                     checkFalse--;
                 }
                 index++;
@@ -98,9 +87,6 @@ public class FindAndWinLevel : LevelManager
             isWin = checkFalse == 0;
         }
 
-        
-        
-
         if (isWin) {
             if (!isImmediately)
             {
@@ -114,11 +100,9 @@ public class FindAndWinLevel : LevelManager
             else
             {
                 magnify.gameObject.SetActive(false);
-
                 Gameplay.Instance.Win(this);
             }
         }
-
     }
 
     public override Vector3 GetGuidePosition() {

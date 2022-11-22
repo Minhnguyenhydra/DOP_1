@@ -52,7 +52,7 @@ MonoBehaviour:
   winAnims:
   - win
   - win_idle
-  loopAnimation: 1
+  loopAnimation: 0
   draw: {fileID: 4585878670924478365}
   mainCam: {fileID: 0}
 --- !u!1 &672714227062356076

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1998341265828224234}
-  - component: {fileID: 1998341265828224212}
+  - component: {fileID: 3521530071415698519}
   m_Layer: 0
   m_Name: Level49
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1998341265828224212
+--- !u!114 &3521530071415698519
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1998341265828224235}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd74fb4ca2125d48a9cb3f8f180bb59, type: 3}
+  m_Script: {fileID: 11500000, guid: f0e16235285017748be6efc6388d46e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animAfter: {fileID: 8379373107251517660}
@@ -53,9 +53,7 @@ MonoBehaviour:
   winAnims: []
   loopAnimation: 1
   magnify: {fileID: 2269465549614668978}
-  objectFinds:
-  - {fileID: 3055852610390063716}
-  isActive: 1
+  objectFinds: []
   isMultiple: 0
   isSpeical: 1
   isImmediately: 1
@@ -140,7 +138,7 @@ SpriteRenderer:
   m_Size: {x: 0.84, y: 0.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!1 &8379373106931623695
@@ -326,7 +324,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b2f9bcca8cc73644eba085ca6912c785, type: 2}
+  - {fileID: 2100000, guid: 6ba36cc538bf2400a9b22a867b9837ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -378,8 +376,10 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: b2f9bcca8cc73644eba085ca6912c785, type: 2}
+    materialsInsideMask:
+    - {fileID: 2100000, guid: 6ba36cc538bf2400a9b22a867b9837ab, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal

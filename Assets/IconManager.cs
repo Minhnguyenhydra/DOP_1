@@ -69,21 +69,27 @@ public class IconManager : MonoBehaviour
         }
 
         if (Gameplay.Instance.GameplayType == GameplayType.Draw) {
-            icon.gameObject.SetActive(Input.GetMouseButton(0) == false);
-            pencil.gameObject.SetActive(Input.GetMouseButton(0));
-            Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            pencil.transform.position = pos;
+            if (inside && Input.GetMouseButton(0)) {
+                icon.gameObject.SetActive(false);
+                pencil.gameObject.SetActive(true);
+                Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                pencil.transform.position = pos;
+            } else {
+                icon.gameObject.SetActive(true);
+                pencil.gameObject.SetActive(false);
+            }
         }
 
         if (Gameplay.Instance.GameplayType == GameplayType.Find) {
-            icon.gameObject.SetActive(Input.GetMouseButton(0) == false);
-            if (kinhlup == null) {
-                Debug.Log("aaaa");
+            if (inside && Input.GetMouseButton(0)) {
+                icon.gameObject.SetActive(false);
+                kinhlup.transform.GetChild(0).gameObject.SetActive(true);
+                Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                kinhlup.transform.position = pos;
+            } else {
+                icon.gameObject.SetActive(true);
+                kinhlup.transform.GetChild(0).gameObject.SetActive(false);
             }
-            kinhlup.transform.GetChild(0).gameObject.SetActive(Input.GetMouseButton(0));
-
-            Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            kinhlup.transform.position = pos;
         }
     }
 }

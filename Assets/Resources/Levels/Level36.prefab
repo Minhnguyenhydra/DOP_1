@@ -81,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 0.84, y: 0.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!1 &1700530170356545846
@@ -138,13 +138,15 @@ MonoBehaviour:
   winAnims:
   - win
   - win_idle
-  loopAnimation: 1
+  loopAnimation: 0
   magnify: {fileID: 7888606470815481342}
   objectFinds:
   - {fileID: 2759130039481163705}
   - {fileID: 63527731}
   isActive: 1
   isMultiple: 1
+  isSpeical: 0
+  isImmediately: 0
 --- !u!1 &2759130039481163705
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,7 +228,7 @@ SpriteRenderer:
   m_Size: {x: 0.84, y: 0.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!1 &8677157289526672640

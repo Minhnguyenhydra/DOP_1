@@ -28,6 +28,7 @@ public class Gameplay : MonoBehaviour {
     public Image scanImg;
     public Canvas canvasGameplay;
     public Button homeButton;
+    public Button settingButton;
     public DrawManager drawManager;
     public Text playerLevel;
     public Sprite eraseObject;
@@ -191,8 +192,6 @@ public class Gameplay : MonoBehaviour {
                 Spine.Animation win = skeletonAnimation.Skeleton.Data.FindAnimation(anims[i]);
                 if (win != null) {
                     skeletonAnimation.AnimationState.SetAnimation(0, anims[i], loopAnimation);
-                    //skeletonAnimation.AnimationName = anims[i];
-
                     yield return new WaitForSeconds(win.Duration);
                 }
             }
@@ -245,6 +244,12 @@ public class Gameplay : MonoBehaviour {
     }
 
     public void Hint() {
+        var draw = FindObjectOfType<DrawLevel>();
+        if (draw != null) {
+            draw.Hint();
+            return;
+        }
+
         var manyTimes = FindObjectOfType<EraseManyTimes>();
         if (manyTimes != null) {
             GuidePosition(manyTimes.guidePosition.position);
@@ -288,9 +293,6 @@ public class Gameplay : MonoBehaviour {
             return;
         }
         GameSystem.userdata.level++;
-        if (GameSystem.userdata.level == 24) {
-            txtQuestion.text = "Check";
-        }
         if (GameSystem.userdata.level > GameSystem.userdata.maxLevel) {
             GameSystem.userdata.maxLevel = GameSystem.userdata.level;
         }

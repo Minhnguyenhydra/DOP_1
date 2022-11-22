@@ -81,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 0.84, y: 0.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!1 &2891791297807300147
@@ -138,12 +138,14 @@ MonoBehaviour:
   - win
   - win2
   - win2
-  loopAnimation: 1
+  loopAnimation: 0
   magnify: {fileID: 2250100088123892784}
   objectFinds:
   - {fileID: 1869747922293444796}
   isActive: 1
   isMultiple: 0
+  isSpeical: 0
+  isImmediately: 0
 --- !u!1 &5175690849655344599
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +329,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f21200c2aeae77e40929e412e897e66d, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -379,8 +381,10 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: f21200c2aeae77e40929e412e897e66d, type: 2}
+    materialsInsideMask:
+    - {fileID: 0}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
