@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DarkcupGames;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class IconManager : MonoBehaviour
 {
@@ -15,9 +16,16 @@ public class IconManager : MonoBehaviour
     public Sprite sprFind;
     GameObject kinhlup;
     GameObject pencil;
+
     private void Start() {
         rect = GetComponent<RectTransform>();
         GetComponent<Image>().enabled = false;
+        if (SceneManager.GetActiveScene().name != Constants.SCENE_GAMEPLAY) {
+            gameObject.SetActive(false);
+            if (iconMove) iconMove.gameObject.SetActive(false);
+            if (icon) icon.gameObject.SetActive(false);
+            return;
+        }
         Init();
     }
 

@@ -13,8 +13,6 @@ namespace DarkcupGames {
         public int price;
         public CurrencyType currencyType = CurrencyType.Gold;
         public UnityEvent buyComplete;
-
-       
     }
 
     public class ShopSystem : MonoBehaviour {
@@ -58,26 +56,12 @@ namespace DarkcupGames {
 
         public IEnumerator ShowNotEnough()
         {
-            LeanTween.delayedCall(0f, () =>
-             {
-                 EasyEffect.Appear(noMoneyPopup, 0f, 1f);
-             }).setOnComplete(() =>
-             {
-                 paygoldButton.enabled = false;
-             });
-
-
+            EasyEffect.Appear(noMoneyPopup, 0f, 1f);
+            paygoldButton.enabled = false;
             yield return new WaitForSeconds(1f);
 
-            LeanTween.delayedCall(0f, () =>
-            {
-                EasyEffect.Appear(noMoneyPopup, 1f, 0f);
-            }).setOnComplete(() =>
-            {
-                paygoldButton.enabled = true;
-            });
+            EasyEffect.Appear(noMoneyPopup, 1f, 0f);
+            paygoldButton.enabled = true;
         }
     }
-
-    
 }
