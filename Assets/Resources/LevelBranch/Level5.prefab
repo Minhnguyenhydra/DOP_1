@@ -279,13 +279,14 @@ MonoBehaviour:
   - menDress
   - flower
   correctAnims:
-  - 
-  - 
-  - 
+  - item1
+  - item6
+  - item5
   audioSource: {fileID: 8559058965781705136}
   wrongSFX: {fileID: 8300000, guid: 35d3c234f4fd01e46bebd9b0c462b432, type: 3}
   rightSFX: {fileID: 8300000, guid: 8cde9fa34beeacd4d9a3263917cb4ee0, type: 3}
   current: 0
+  changeSkin: 1
 --- !u!82 &8559058965781705136
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1162,7 +1163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8559058967303589798
 Transform:
   m_ObjectHideFlags: 0
@@ -1206,7 +1207,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bd5404e2a9ed8174e9a37d9f41e1477c, type: 2}
+  - {fileID: 2100000, guid: b34dde07a4922cb4aaaa9d1bf7e824e1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1241,7 +1242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: fa131d0e700a53b489246194c12624b8, type: 2}
-  initialSkinName: normal
+  initialSkinName: item5
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -1256,10 +1257,12 @@ MonoBehaviour:
   fixDrawOrder: 0
   addNormals: 0
   calculateTangents: 0
-  maskInteraction: 0
+  maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: bd5404e2a9ed8174e9a37d9f41e1477c, type: 2}
+    materialsInsideMask:
+    - {fileID: 2100000, guid: b34dde07a4922cb4aaaa9d1bf7e824e1, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal

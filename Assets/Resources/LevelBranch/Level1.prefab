@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9a76ff4ad7504464c993c69873764161, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 27d6c48e9d77fa04a9d627668ffacf39, type: 2}
+  skeletonDataAsset: {fileID: 0}
   initialSkinName: item2
   initialFlipX: 0
   initialFlipY: 0
@@ -183,7 +183,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9a76ff4ad7504464c993c69873764161, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -212,12 +212,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512040292369710541}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 27d6c48e9d77fa04a9d627668ffacf39, type: 2}
+  skeletonDataAsset: {fileID: 0}
   initialSkinName: item4
   initialFlipX: 0
   initialFlipY: 0
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 27d6c48e9d77fa04a9d627668ffacf39, type: 2}
-  initialSkinName: 
+  initialSkinName: normal
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -393,7 +393,7 @@ MonoBehaviour:
     - {fileID: 2100000, guid: 53bccf98cd5c70c40a3b26fd8d5e1b2f, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: normal_idle
+  _animationName: win
   loop: 1
   timeScale: 1
 --- !u!1 &5213541731799242293
@@ -697,11 +697,14 @@ MonoBehaviour:
   - DongHo
   - Hoa
   correctAnims:
-  - item4
+  - no_item
+  - item2
+  - item3
   audioSource: {fileID: 5213541732252622055}
   wrongSFX: {fileID: 8300000, guid: 35d3c234f4fd01e46bebd9b0c462b432, type: 3}
   rightSFX: {fileID: 8300000, guid: fd3580025e0c59742bdf169ef0771362, type: 3}
   current: 0
+  changeSkin: 1
 --- !u!82 &5213541732252622055
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1378,7 +1381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 27d6c48e9d77fa04a9d627668ffacf39, type: 2}
-  initialSkinName: item3
+  initialSkinName: item1
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -1497,7 +1500,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9a76ff4ad7504464c993c69873764161, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1526,12 +1529,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5961433140561509626}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 27d6c48e9d77fa04a9d627668ffacf39, type: 2}
+  skeletonDataAsset: {fileID: 0}
   initialSkinName: item4
   initialFlipX: 0
   initialFlipY: 0

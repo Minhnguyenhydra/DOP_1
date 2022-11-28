@@ -22,6 +22,7 @@ public class DragAndDropLevel : LevelManager
     Dictionary<SpriteRenderer, bool> founds;
 
     public int current = 0;
+    public bool changeSkin = false;
     
     public virtual void Start()
     {
@@ -77,7 +78,15 @@ public class DragAndDropLevel : LevelManager
 
     public virtual void ShowCorrectAnim(int currentAnim) {
         if (current < correctAnims.Count) {
-            animBefore.AnimationName = correctAnims[current];
+            if (changeSkin) {
+                //change skin
+                animBefore.Skeleton.SetSkin(correctAnims[current]);
+                animBefore.Skeleton.SetSlotsToSetupPose();
+                animBefore.LateUpdate();
+            } else {
+                //change anim
+                animBefore.AnimationName = correctAnims[current];
+            }
         } else {
             Debug.LogError($"Not enough anim to change in {gameObject.name}");
         }
@@ -96,7 +105,7 @@ public class DragAndDropLevel : LevelManager
             if (anim != null) {
                 animBefore.AnimationState.SetAnimation(0, startAnims[i], i == startAnims.Count - 1);
             } else {
-                Debug.LogError($"not found animation named {startAnims[i]} in skeleton {gameObject.name}");
+                Debug.LogError($"not found animation named {startAnims[i]} in skeleton {animBefore.gameObject.name}");
             }
             yield return new WaitForSeconds(anim.Duration);
         }
