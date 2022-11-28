@@ -5,20 +5,17 @@ using DarkcupGames;
 
 public class MyDebugger : MonoBehaviour
 {
-    public SpriteRenderer find;
-    public int currentLevel;
+    public ChooseCorrectItemLevel choose;
+
     int count = 0;
 
     public void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    //UpdateSpriteMask();
-        //    //Gameplay.Instance.FoundItem(find);
-        //    GameSystem.userdata.level += 5;
-        //    GameSystem.SaveUserDataToLocal();
-        //    Utils.ReloadScene();
-        //}
-        currentLevel = GameSystem.userdata.branchLevel;
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            choose.ShowAnim(count);
+            count++;
+            if (count == 3) count = 0;
+        }
+
     }
 }

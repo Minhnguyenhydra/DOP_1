@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: fa131d0e700a53b489246194c12624b8, type: 2}
-  initialSkinName: normal
+  initialSkinName: item4
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -278,6 +278,10 @@ MonoBehaviour:
   - girlDress
   - menDress
   - flower
+  correctAnims:
+  - 
+  - 
+  - 
   audioSource: {fileID: 8559058965781705136}
   wrongSFX: {fileID: 8300000, guid: 35d3c234f4fd01e46bebd9b0c462b432, type: 3}
   rightSFX: {fileID: 8300000, guid: 8cde9fa34beeacd4d9a3263917cb4ee0, type: 3}
@@ -503,10 +507,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draw: {fileID: 0}
   mouseCursor: {fileID: 0}
+  wrongAnim: 
   isReturn: 1
-  isErase: 0
   isDraw: 0
   isCorrect: 0
 --- !u!82 &1051850981104513281
@@ -730,10 +733,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draw: {fileID: 0}
   mouseCursor: {fileID: 0}
+  wrongAnim: 
   isReturn: 1
-  isErase: 0
   isDraw: 0
   isCorrect: 0
 --- !u!82 &8486736455505389266
@@ -957,10 +959,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draw: {fileID: 0}
   mouseCursor: {fileID: 0}
+  wrongAnim: 
   isReturn: 1
-  isErase: 0
   isDraw: 0
   isCorrect: 0
 --- !u!82 &7216456120269694422
@@ -1161,7 +1162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8559058967303589798
 Transform:
   m_ObjectHideFlags: 0

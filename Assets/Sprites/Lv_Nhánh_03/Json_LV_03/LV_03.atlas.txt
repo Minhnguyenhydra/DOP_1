@@ -1,349 +1,377 @@
 
 LV_03.png
-size: 2600,732
+size: 2708,732
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Folder 1
   rotate: true
-  xy: 2, 13
+  xy: 2, 14
   size: 716, 881
   orig: 716, 881
   offset: 0, 0
   index: -1
 bang keo
-  rotate: true
-  xy: 1897, 351
+  rotate: false
+  xy: 1363, 66
   size: 54, 38
   orig: 54, 38
   offset: 0, 0
   index: -1
 bap chanp1
   rotate: true
-  xy: 2479, 375
+  xy: 2465, 356
   size: 161, 118
   orig: 161, 118
   offset: 0, 0
   index: -1
 bap tay
   rotate: false
-  xy: 2060, 183
+  xy: 2433, 69
   size: 70, 167
   orig: 70, 167
   offset: 0, 0
   index: -1
 bap tay tra6
-  rotate: true
-  xy: 1937, 352
+  rotate: false
+  xy: 2630, 97
   size: 53, 140
   orig: 53, 140
   offset: 0, 0
   index: -1
 bap tay tran6
-  rotate: false
-  xy: 1311, 153
+  rotate: true
+  xy: 2392, 14
   size: 53, 139
   orig: 53, 139
   offset: 0, 0
   index: -1
 baptayp1
-  rotate: true
-  xy: 2440, 55
+  rotate: false
+  xy: 2569, 95
   size: 59, 142
   orig: 59, 142
   offset: 0, 0
   index: -1
 baptayp2
   rotate: true
-  xy: 2297, 26
+  xy: 2045, 11
   size: 88, 141
   orig: 88, 141
   offset: 0, 0
   index: -1
 baptayt1
   rotate: false
-  xy: 2060, 40
+  xy: 2505, 100
   size: 62, 141
   orig: 62, 141
   offset: 0, 0
   index: -1
 baptayt2
   rotate: true
-  xy: 2272, 564
+  xy: 1141, 19
   size: 85, 220
   orig: 85, 220
   offset: 0, 0
   index: -1
 bdy2
-  rotate: false
-  xy: 1143, 267
+  rotate: true
+  xy: 1461, 566
   size: 164, 462
   orig: 164, 462
   offset: 0, 0
   index: -1
 body
-  rotate: false
-  xy: 2059, 445
+  rotate: true
+  xy: 2256, 519
   size: 211, 284
   orig: 211, 284
   offset: 0, 0
   index: -1
 body1
   rotate: true
-  xy: 885, 4
+  xy: 885, 5
   size: 147, 254
   orig: 147, 254
   offset: 0, 0
   index: -1
 body6
-  rotate: false
-  xy: 1627, 344
+  rotate: true
+  xy: 1461, 390
   size: 174, 385
   orig: 174, 385
   offset: 0, 0
   index: -1
 bui ban
   rotate: false
-  xy: 2475, 116
+  xy: 2223, 211
   size: 113, 161
   orig: 113, 161
   offset: 0, 0
   index: -1
 cangtayp1
   rotate: false
-  xy: 1141, 6
+  xy: 2119, 396
   size: 120, 145
   orig: 120, 145
   offset: 0, 0
   index: -1
 cangtayt1
   rotate: true
-  xy: 2297, 121
+  xy: 1882, 9
   size: 90, 161
   orig: 90, 161
   offset: 0, 0
   index: -1
 chan
   rotate: false
-  xy: 1263, 8
+  xy: 2241, 374
   size: 222, 143
   orig: 222, 143
   offset: 0, 0
   index: -1
 chan p1
-  rotate: false
-  xy: 1897, 407
+  rotate: true
+  xy: 1479, 210
   size: 84, 322
   orig: 84, 322
   offset: 0, 0
   index: -1
 chan trc
-  rotate: false
-  xy: 1402, 158
+  rotate: true
+  xy: 1479, 2
   size: 206, 134
   orig: 206, 134
   offset: 0, 0
   index: -1
 chanp2
-  rotate: false
-  xy: 1983, 417
+  rotate: true
+  xy: 1143, 106
   size: 74, 312
   orig: 74, 312
   offset: 0, 0
   index: -1
 chant1
-  rotate: false
-  xy: 1758, 8
+  rotate: true
+  xy: 1143, 182
   size: 111, 334
   orig: 111, 334
   offset: 0, 0
   index: -1
 chant2
   rotate: true
-  xy: 2272, 651
+  xy: 1845, 308
   size: 78, 282
   orig: 78, 282
   offset: 0, 0
   index: -1
 cotayp2
-  rotate: false
-  xy: 1143, 153
+  rotate: true
+  xy: 2585, 360
   size: 166, 112
   orig: 166, 112
   offset: 0, 0
   index: -1
 dau
   rotate: true
-  xy: 2476, 279
+  xy: 2223, 115
   size: 94, 116
   orig: 94, 116
   offset: 0, 0
   index: -1
 dau1
   rotate: true
-  xy: 2345, 240
+  xy: 2456, 243
   size: 111, 128
   orig: 111, 128
   offset: 0, 0
   index: -1
 dau2
   rotate: false
-  xy: 1610, 158
+  xy: 2338, 238
   size: 116, 134
   orig: 116, 134
   offset: 0, 0
   index: -1
 ghe
   rotate: false
-  xy: 885, 153
+  xy: 885, 154
   size: 256, 576
   orig: 256, 576
   offset: 0, 0
   index: -1
 lm1
   rotate: false
-  xy: 1953, 2
+  xy: 1848, 552
   size: 60, 12
   orig: 60, 12
   offset: 0, 0
   index: -1
 longmay1
   rotate: false
-  xy: 2059, 428
+  xy: 1141, 2
   size: 77, 15
   orig: 77, 15
   offset: 0, 0
   index: -1
 longmay2
-  rotate: false
-  xy: 1871, 2
+  rotate: true
+  xy: 2685, 157
   size: 80, 12
   orig: 80, 12
   offset: 0, 0
   index: -1
 mat1
-  rotate: true
-  xy: 1728, 164
+  rotate: false
+  xy: 1220, 2
   size: 64, 15
   orig: 64, 15
   offset: 0, 0
   index: -1
 mat2
   rotate: true
-  xy: 1728, 230
+  xy: 1457, 106
   size: 74, 20
   orig: 74, 20
   offset: 0, 0
   index: -1
 matn
   rotate: false
-  xy: 2, 2
+  xy: 2, 3
   size: 52, 9
   orig: 52, 9
   offset: 0, 0
   index: -1
+may say toc
+  rotate: false
+  xy: 1615, 8
+  size: 152, 200
+  orig: 152, 200
+  offset: 0, 0
+  index: -1
 mieng
   rotate: false
-  xy: 75, 5
+  xy: 2321, 107
   size: 13, 6
   orig: 13, 6
   offset: 0, 0
   index: -1
 mieng2
   rotate: true
-  xy: 1728, 306
+  xy: 2392, 69
   size: 36, 23
   orig: 36, 23
   offset: 0, 0
   index: -1
 mouth1
   rotate: false
-  xy: 56, 4
+  xy: 2542, 519
   size: 17, 7
   orig: 17, 7
   offset: 0, 0
   index: -1
 tay
-  rotate: true
-  xy: 2132, 213
+  rotate: false
+  xy: 1769, 3
   size: 111, 205
   orig: 111, 205
   offset: 0, 0
   index: -1
 tay 2
-  rotate: false
-  xy: 1803, 347
+  rotate: true
+  xy: 1461, 296
   size: 92, 382
   orig: 92, 382
   offset: 0, 0
   index: -1
 tcsau2
-  rotate: false
-  xy: 1871, 16
+  rotate: true
+  xy: 1925, 543
   size: 187, 329
   orig: 187, 329
   offset: 0, 0
   index: -1
 thung`
   rotate: false
-  xy: 1309, 294
+  xy: 1143, 295
   size: 316, 435
   orig: 316, 435
   offset: 0, 0
   index: -1
 toc
   rotate: true
-  xy: 2494, 538
+  xy: 2223, 2
   size: 111, 96
   orig: 111, 96
   offset: 0, 0
   index: -1
 toc 1
-  rotate: false
-  xy: 1366, 153
+  rotate: true
+  xy: 2533, 59
   size: 34, 139
   orig: 34, 139
   offset: 0, 0
   index: -1
 toc roi'
   rotate: false
-  xy: 2132, 9
+  xy: 2542, 528
   size: 163, 202
   orig: 163, 202
   offset: 0, 0
   index: -1
 toc sau
-  rotate: true
-  xy: 2345, 353
+  rotate: false
+  xy: 2341, 107
   size: 90, 129
   orig: 90, 129
   offset: 0, 0
   index: -1
 tocsau1
   rotate: true
-  xy: 1487, 3
+  xy: 1848, 388
   size: 153, 269
   orig: 153, 269
   offset: 0, 0
   index: -1
 toct1
-  rotate: true
-  xy: 2272, 445
+  rotate: false
+  xy: 1882, 101
   size: 117, 205
   orig: 117, 205
   offset: 0, 0
   index: -1
 toct2
-  rotate: true
-  xy: 2138, 326
+  rotate: false
+  xy: 2001, 101
   size: 117, 205
   orig: 117, 205
   offset: 0, 0
   index: -1
 troi'
   rotate: false
-  xy: 1627, 300
+  xy: 1803, 252
   size: 77, 42
   orig: 77, 42
+  offset: 0, 0
+  index: -1
+voi hoa sen
+  rotate: false
+  xy: 2120, 106
+  size: 101, 200
+  orig: 101, 200
+  offset: 0, 0
+  index: -1
+water
+  rotate: false
+  xy: 2321, 2
+  size: 69, 103
+  orig: 69, 103
+  offset: 0, 0
+  index: -1
+wind
+  rotate: false
+  xy: 2586, 239
+  size: 119, 119
+  orig: 119, 119
   offset: 0, 0
   index: -1

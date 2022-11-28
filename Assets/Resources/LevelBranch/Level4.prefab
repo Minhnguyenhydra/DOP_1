@@ -29,129 +29,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8635966027428601289}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8635966026514293187
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8635966026514293184}
-  - component: {fileID: 8635966026514293191}
-  - component: {fileID: 8635966026514293190}
-  - component: {fileID: 8635966026514293185}
-  m_Layer: 0
-  m_Name: Dog
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8635966026514293184
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8635966026514293187}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.55, y: -8.4832, z: 0.047633074}
-  m_LocalScale: {x: 0.91161, y: 0.91161, z: 0.91161}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8635966027428601289}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8635966026514293191
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8635966026514293187}
-  m_Mesh: {fileID: 0}
---- !u!23 &8635966026514293190
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8635966026514293187}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9de23182a803c714290ec645ba3fcbf0, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -1
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8635966026514293185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8635966026514293187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 3e7c2b34a8f424a448f11f8acc98ecf3, type: 2}
-  initialSkinName: item2
-  initialFlipX: 0
-  initialFlipY: 0
-  updateWhenInvisible: 3
-  separatorSlotNames: []
-  zSpacing: 0
-  useClipping: 1
-  immutableTriangles: 0
-  pmaVertexColors: 1
-  clearStateOnDisable: 0
-  tintBlack: 0
-  singleSubmesh: 0
-  fixDrawOrder: 0
-  addNormals: 0
-  calculateTangents: 0
-  maskInteraction: 0
-  maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
-    materialsOutsideMask: []
-  disableRenderingOnOverride: 1
-  _animationName: lose2
-  loop: 1
-  timeScale: 1
 --- !u!1 &8635966026541830327
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +93,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9de23182a803c714290ec645ba3fcbf0, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -248,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 3e7c2b34a8f424a448f11f8acc98ecf3, type: 2}
+  skeletonDataAsset: {fileID: 0}
   initialSkinName: item1
   initialFlipX: 0
   initialFlipY: 0
@@ -468,11 +347,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draw: {fileID: 0}
   mouseCursor: {fileID: 0}
   wrongAnim: lose1
   isReturn: 1
-  isErase: 0
   isDraw: 0
   isCorrect: 0
 --- !u!61 &8635966027023483083
@@ -510,8 +387,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8635966027428601289}
-  - component: {fileID: 440490027}
   - component: {fileID: 717970394}
+  - component: {fileID: 1807200955660072293}
   m_Layer: 0
   m_Name: Level4
   m_TagString: Untagged
@@ -536,40 +413,11 @@ Transform:
   - {fileID: 8635966027692220364}
   - {fileID: 8635966027549112807}
   - {fileID: 8635966027023483127}
-  - {fileID: 8635966026514293184}
   - {fileID: 8635966027778166339}
   - {fileID: 8635966026432364255}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &440490027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8635966027428601291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee6dcfb4dfaa5b946ae774b2a6234158, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animAfter: {fileID: 8635966027778166348}
-  animBefore: {fileID: 8635966028238180935}
-  winAnims: []
-  loopAnimation: 1
-  correctPos: {fileID: 8635966026432364255}
-  dragObjects:
-  - {fileID: 8635966027692220354}
-  - {fileID: 8635966027549112805}
-  - {fileID: 8635966027023483125}
-  wrongAnims:
-  - {fileID: 8635966026541830325}
-  - {fileID: 8635966026514293185}
-  correctName: Smoke
-  wrongSFX: {fileID: 8300000, guid: 35d3c234f4fd01e46bebd9b0c462b432, type: 3}
-  rightSFX: {fileID: 8300000, guid: fd3580025e0c59742bdf169ef0771362, type: 3}
-  isShowed: 0
 --- !u!82 &717970394
 AudioSource:
   m_ObjectHideFlags: 0
@@ -666,6 +514,40 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1807200955660072293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8635966027428601291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 651aea60f2ce65e408437a8f5f3503c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animAfter: {fileID: 8635966027778166348}
+  animBefore: {fileID: 8635966028238180935}
+  winAnims:
+  - win
+  loopAnimation: 1
+  win: 0
+  dragObjects:
+  - {fileID: 8635966027692220354}
+  - {fileID: 8635966027549112805}
+  - {fileID: 8635966027023483125}
+  correctPositions:
+  - {fileID: 8635966026432364255}
+  - {fileID: 8635966026432364255}
+  - {fileID: 8635966026432364255}
+  startAnims:
+  - idle
+  correctName: Smoke
+  correctAnims:
+  - action_dog
+  - action_BinhXit
+  - action_quaBong_1
+  current: 0
 --- !u!1 &8635966027549112806
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,11 +743,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draw: {fileID: 0}
   mouseCursor: {fileID: 0}
   wrongAnim: 
   isReturn: 1
-  isErase: 0
   isDraw: 0
   isCorrect: 0
 --- !u!61 &8635966027549112827
@@ -1089,11 +969,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draw: {fileID: 0}
   mouseCursor: {fileID: 0}
   wrongAnim: lose1
   isReturn: 1
-  isErase: 0
   isDraw: 0
   isCorrect: 0
 --- !u!61 &8635966027692220352
@@ -1140,7 +1018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8635966027778166339
 Transform:
   m_ObjectHideFlags: 0
@@ -1154,7 +1032,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8635966027428601289}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8635966027778166338
 MeshFilter:
@@ -1219,7 +1097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 3e7c2b34a8f424a448f11f8acc98ecf3, type: 2}
-  initialSkinName: item3
+  initialSkinName: normal
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -1240,7 +1118,7 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: lose3
+  _animationName: idle
   loop: 1
   timeScale: 1
 --- !u!1 &8635966028238180929
@@ -1361,6 +1239,6 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: normal
+  _animationName: idle
   loop: 1
   timeScale: 1

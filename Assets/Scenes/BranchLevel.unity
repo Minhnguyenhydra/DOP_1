@@ -586,6 +586,7 @@ MonoBehaviour:
   scanImg: {fileID: 722823980}
   canvasGameplay: {fileID: 1209224692}
   homeButton: {fileID: 1027370514}
+  settingButton: {fileID: 0}
   drawManager: {fileID: 77383574}
   playerLevel: {fileID: 0}
   eraseObject: {fileID: 21300000, guid: a2bf67cc12fae1b409a45324070eddc1, type: 3}
@@ -1683,6 +1684,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 333085762, guid: bbe48442d2aa4c74185ff565cf5e9f2c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fe827f99e549e3e4fb86814f539d3473, type: 3}
     - target: {fileID: 1360966349, guid: bbe48442d2aa4c74185ff565cf5e9f2c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5

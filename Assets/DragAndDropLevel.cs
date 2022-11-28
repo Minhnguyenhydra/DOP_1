@@ -13,6 +13,7 @@ public class DragAndDropLevel : LevelManager
 
     public List<string> startAnims;
     public List<string> correctNames;
+    public List<string> correctAnims;
 
     public AudioSource audioSource;
     public AudioClip wrongSFX;
@@ -22,7 +23,7 @@ public class DragAndDropLevel : LevelManager
 
     public int current = 0;
     
-    void Start()
+    public virtual void Start()
     {
         current = 0;
         founds = new Dictionary<SpriteRenderer, bool>();
@@ -50,6 +51,7 @@ public class DragAndDropLevel : LevelManager
                     });
                     dragObj.isCorrect = true;
                     dragObj.enabled = false;
+                    ShowCorrectAnim(current);
                     current++;
                 }
                 else
@@ -73,6 +75,14 @@ public class DragAndDropLevel : LevelManager
         }
     }
 
+    public virtual void ShowCorrectAnim(int currentAnim) {
+        if (current < correctAnims.Count) {
+            animBefore.AnimationName = correctAnims[current];
+        } else {
+            Debug.LogError($"Not enough anim to change in {gameObject.name}");
+        }
+    }
+
     IEnumerator IELoadNormalAnims()
     {
         for (int i = 0; i < dragObjects.Count; i++) {
@@ -85,6 +95,8 @@ public class DragAndDropLevel : LevelManager
             anim = animBefore.Skeleton.Data.FindAnimation(startAnims[i]);
             if (anim != null) {
                 animBefore.AnimationState.SetAnimation(0, startAnims[i], i == startAnims.Count - 1);
+            } else {
+                Debug.LogError($"not found animation named {startAnims[i]} in skeleton {gameObject.name}");
             }
             yield return new WaitForSeconds(anim.Duration);
         }

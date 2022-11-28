@@ -118,7 +118,7 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: normal
+  _animationName: idle
   loop: 1
   timeScale: 1
 --- !u!1 &3815726223248887105
@@ -188,17 +188,19 @@ MonoBehaviour:
   - {fileID: 3815726223466880613}
   - {fileID: 3815726224813425928}
   startAnims:
-  - normal
+  - idle
   correctNames:
   - VoiSen
   - MayLaToc
   - Vay
+  correctAnims:
+  - action_voiSen
+  - action_SayToc
+  - action_Vay
   audioSource: {fileID: 3815726223248887106}
   wrongSFX: {fileID: 8300000, guid: 35d3c234f4fd01e46bebd9b0c462b432, type: 3}
   rightSFX: {fileID: 8300000, guid: 8cde9fa34beeacd4d9a3263917cb4ee0, type: 3}
-  isAbleToWrong: 0
   current: 0
-  wrongCount: 0
 --- !u!82 &3815726223248887106
 AudioSource:
   m_ObjectHideFlags: 0
@@ -478,11 +480,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draw: {fileID: 0}
   mouseCursor: {fileID: 0}
   wrongAnim: 
   isReturn: 1
-  isErase: 0
   isDraw: 0
   isCorrect: 0
 --- !u!61 &3815726223524687108
@@ -669,7 +669,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bf18632bb9db48c499c33dcc08b23b99, type: 2}
+  - {fileID: 2100000, guid: a677cc9a687760b4180254bdcbae7cc6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -704,7 +704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 68979e56b2e69e647b4a612844e8d9bb, type: 2}
-  initialSkinName: item4
+  initialSkinName: normal
   initialFlipX: 0
   initialFlipY: 0
   updateWhenInvisible: 3
@@ -719,13 +719,15 @@ MonoBehaviour:
   fixDrawOrder: 0
   addNormals: 0
   calculateTangents: 0
-  maskInteraction: 0
+  maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: bf18632bb9db48c499c33dcc08b23b99, type: 2}
+    materialsInsideMask:
+    - {fileID: 2100000, guid: a677cc9a687760b4180254bdcbae7cc6, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: normal
+  _animationName: win
   loop: 1
   timeScale: 1
 --- !u!1 &3815726224710383753
@@ -827,11 +829,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draw: {fileID: 0}
   mouseCursor: {fileID: 0}
   wrongAnim: 
   isReturn: 1
-  isErase: 0
   isDraw: 0
   isCorrect: 0
 --- !u!61 &3815726224710384501
@@ -1139,11 +1139,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draw: {fileID: 0}
   mouseCursor: {fileID: 0}
   wrongAnim: 
   isReturn: 1
-  isErase: 0
   isDraw: 0
   isCorrect: 0
 --- !u!61 &3815726224850329933
