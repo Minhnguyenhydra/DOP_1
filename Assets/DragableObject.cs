@@ -59,15 +59,15 @@ public class DragableObject : MonoBehaviour, IDragHandler, IEndDragHandler{
     {
         if (isReturn && hasDragged)
         {
-            if(Vector2.Distance(transform.position, startPos) > 0.5f)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, startPos, 25f * Time.deltaTime);
-                if(Vector2.Distance(transform.position, startPos) < 0.1f)
-                {
-                    transform.position = startPos;
-                    hasDragged = false;
-                }
+            transform.position = Vector3.MoveTowards(transform.position, startPos, 25f * Time.deltaTime);
+            if (Vector2.Distance(transform.position, startPos) < 0.5f) {
+                transform.position = startPos;
+                hasDragged = false;
             }
+            //if(Vector2.Distance(transform.position, startPos) > 0.5f)
+            //{
+
+            //}
         }
     }
 }

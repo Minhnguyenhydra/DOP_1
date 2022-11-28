@@ -304,6 +304,7 @@ MonoBehaviour:
   wrongSFX: {fileID: 8300000, guid: 35d3c234f4fd01e46bebd9b0c462b432, type: 3}
   rightSFX: {fileID: 8300000, guid: 8cde9fa34beeacd4d9a3263917cb4ee0, type: 3}
   current: 0
+  changeSkin: 0
 --- !u!1 &5117319078454892468
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +451,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 95b35a82b5cf47249bf314dc82aa25ee, type: 2}
+  - {fileID: 2100000, guid: 104e54b605e6d9e49ac3f8efd6427457, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -500,10 +501,12 @@ MonoBehaviour:
   fixDrawOrder: 0
   addNormals: 0
   calculateTangents: 0
-  maskInteraction: 0
+  maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: 95b35a82b5cf47249bf314dc82aa25ee, type: 2}
+    materialsInsideMask:
+    - {fileID: 2100000, guid: 104e54b605e6d9e49ac3f8efd6427457, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: action_wood2

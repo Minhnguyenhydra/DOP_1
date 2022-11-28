@@ -1062,7 +1062,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9de23182a803c714290ec645ba3fcbf0, type: 2}
+  - {fileID: 2100000, guid: 35e6e46d5e743db4da9593897c781fee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1112,10 +1112,12 @@ MonoBehaviour:
   fixDrawOrder: 0
   addNormals: 0
   calculateTangents: 0
-  maskInteraction: 0
+  maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: 9de23182a803c714290ec645ba3fcbf0, type: 2}
+    materialsInsideMask:
+    - {fileID: 2100000, guid: 35e6e46d5e743db4da9593897c781fee, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: idle
