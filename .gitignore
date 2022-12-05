@@ -80,3 +80,12 @@ Assets/Firebase/Plugins/x86_64/FirebaseCppApp-8_7_0.so.meta
 Assets/JsonDotNet
 Assets/JsonDotNet
 *.psd
+Assets/Firebase/Plugins/x86_64/FirebaseCppAnalytics.bundle
+Assets/Firebase/Plugins/x86_64/FirebaseCppAnalytics.dll
+Assets/Firebase/Plugins/x86_64/FirebaseCppAnalytics.so
+Assets/Firebase/Plugins/x86_64/FirebaseCppApp-10_1_1.bundle
+Assets/Firebase/Plugins/x86_64/FirebaseCppApp-10_1_1.dll
+Assets/Firebase/Plugins/x86_64/FirebaseCppApp-10_1_1.so
+Assets/Firebase/Plugins/x86_64/FirebaseCppRemoteConfig.bundle
+Assets/Firebase/Plugins/x86_64/FirebaseCppRemoteConfig.dll
+Assets/Firebase/Plugins/x86_64/FirebaseCppRemoteConfig.so

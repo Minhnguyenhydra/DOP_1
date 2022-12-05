@@ -73,12 +73,14 @@ public class EraseManyTimes : MonoBehaviour
 
     public void OnWatchAdsClick()
     {
-        var obj = FindObjectOfType<AdManager>();
-        if (obj == null)
-        {
-            Debug.Log("null");
-        }
-        obj.WatchAds(2);
+        //var obj = FindObjectOfType<AdManager>();
+        //if (obj == null)
+        //{
+        //    Debug.Log("null");
+        //}
+        //obj.WatchAds(2);
+
+        Debug.LogError("========= watch video ads");
         
         buttonWatchAds.gameObject.SetActive(false);
 
