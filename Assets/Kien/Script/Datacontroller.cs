@@ -15,11 +15,12 @@ public class SaveData
 {
     public bool offmusic, offsound, offvibra, removeAds, rated, showTut;
     public int currentLevel, session, hightestLevel, countVideoForRemoveAds;
-    public int totalCoin, totalGem;
+    public int currentDailyGift;
+    public bool canTakeDailyGift;
 
     public DateTime oldDay = System.DateTime.Now;
 
-
+    public List<bool> passSpecial = new List<bool>();
 
 }
 [System.Serializable]
@@ -44,6 +45,7 @@ public class GetMoreGame
 }
 public class Datacontroller : MonoBehaviour
 {
+    public int maxSpecialLevel = 5;
     public bool testLevel;
     public bool debug;
     public bool anUI;
@@ -127,9 +129,22 @@ public class Datacontroller : MonoBehaviour
         //  LoadSaveMoreGame(PlayerPrefs.GetString(DataParam.SAVEMOREGAME));
         DataParam.beginShowInter = DataParam.lastShowInter = System.DateTime.Now;
 
+        if(saveData.session == 0)
+        {
+            saveData.oldDay = System.DateTime.Now;
+            saveData.canTakeDailyGift = true;
+        }
 
         saveData.session++;
-
+        Debug.LogError(saveData.oldDay.Date + ":" + System.DateTime.Now.Date);
+        if(saveData.oldDay.Date != System.DateTime.Now.Date)
+        {
+            saveData.canTakeDailyGift = true;
+            if(saveData.currentLevel == 7)
+            {
+                saveData.currentLevel = 0;
+            }
+        }
     }
 
     void Start()
@@ -146,6 +161,17 @@ public class Datacontroller : MonoBehaviour
         //{
         //    Debug.LogError("zooooooooooo tessstttttt lissttttttt");
         //}
+        CreateSpecialLevelInfo();
+    }
+    void CreateSpecialLevelInfo()
+    {
+        for(int i = saveData.passSpecial.Count; i < maxSpecialLevel; i ++)
+        {
+            bool _pass = new bool();
+            saveData.passSpecial.Add(_pass);
+        }
+
+
     }
     IEnumerator WaitForRequest(WWW www)
     {

@@ -10,9 +10,11 @@ using UnityEngine.Events;
 
 public enum GameplayType { Erase, Draw, Find }
 
-public class Gameplay : MonoBehaviour {
+public class Gameplay : MonoBehaviour
+{
     public static Gameplay Instance;
-
+    [SerializeField] GameObject btnCheat, btnSpecialLevel;
+    [SerializeField] GameObject[] animSpecialBtn;
     public GameplayType GameplayType { get; private set; }
 
     public List<ParticleSystem> effects;
@@ -43,10 +45,15 @@ public class Gameplay : MonoBehaviour {
 
     public bool isPlayingSpecial;
 
-    private void Awake() {
+    private void Awake()
+    {
+        currentSpecialLevel = -1;
+        btnCheat.SetActive(Datacontroller.instance.testLevel);
+
         Instance = this;
 
-        for (int i = 0; i < effects.Count; i++) {
+        for (int i = 0; i < effects.Count; i++)
+        {
             effects[i].Stop();
         }
         if (findItemDemo)
@@ -64,71 +71,129 @@ public class Gameplay : MonoBehaviour {
         int count = 0;
         won = false;
         isPlayingSpecial = false;
-        if (isBranchLevel) {
+        if (isBranchLevel)
+        {
             GameObject obj = Resources.Load<GameObject>("LevelBranch/Level" + GameSystem.userdata.branchLevel);
             Debug.Log(GameSystem.userdata.branchLevel);
             txtLevel.text = null;
             txtQuestion.text = null;
-            if (obj != null) {
+            if (obj != null)
+            {
                 levelObject = Instantiate(obj);
                 scanImg.gameObject.SetActive(false);
                 var findItem = FindObjectOfType<FindItemLevel>();
 
-                for (int i = 0; i < findBoxs.Count; i++) {
+                for (int i = 0; i < findBoxs.Count; i++)
+                {
                     findBoxs[i].gameObject.SetActive(false);
                 }
                 return;
             }
         }
 
-        while (count < 10) {
+        while (count < 10)
+        {
             GameObject obj = Resources.Load<GameObject>("Levels/Level" + (level + count + 1));
             closeSpecialLevelButton.SetActive(false);
             txtLevel.text = "Level " + (level + count + 1);
 
+            Debug.LogError("======= level:" + level + ":" + count);
+            // lv 3 -> spe 1
+            // lv 8 -> sp 2
+            // lv 13 -> sp 3
+            // lv 18 -> sp 4
+            // lv 23 -> sp 5
+
+            if (level == 2)
+            {
+                currentSpecialLevel = 1;
+            }    
+            else if(level == 7)
+            {
+                currentSpecialLevel = 2;
+            }    
+            else if(level == 12)
+            {
+                currentSpecialLevel = 3;
+            }    
+            else if(level == 17)
+            {
+                currentSpecialLevel = 4;
+            }    
+            else if(level == 22)
+            {
+                currentSpecialLevel = 5;
+            }
+            for(int i = 0; i < animSpecialBtn.Length; i ++)
+            {
+                animSpecialBtn[i].SetActive(false);
+            }
+            if (currentSpecialLevel != -1)
+            {
+                btnSpecialLevel.SetActive(!Datacontroller.instance.saveData.passSpecial[currentSpecialLevel - 1]);
+                animSpecialBtn[currentSpecialLevel - 1].SetActive(true);
+            }
+            else
+            {
+                btnSpecialLevel.SetActive(false);
+            }    
+
             txtQuestion.text = "";
-            if (DataManager.Instance.levelInfos.Count > level + count) {
+            if (DataManager.Instance.levelInfos.Count > level + count)
+            {
                 LevelInfo info = DataManager.Instance.levelInfos[level + count];
 
-                if (GameSystem.userdata.level == 24) {
+                if (GameSystem.userdata.level == 24)
+                {
                     txtQuestion.text = null;
-                } else {
+                }
+                else
+                {
                     txtQuestion.text = info.levelTitle;
                 }
             }
 
-            if (obj != null) {
+            if (obj != null)
+            {
                 levelObject = Instantiate(obj);
                 GameSystem.userdata.level = level + count;
                 GameSystem.SaveUserDataToLocal();
                 break;
-            } else {
+            }
+            else
+            {
                 count++;
             }
         }
 
-        if (levelObject == null) {
+        if (levelObject == null)
+        {
             GameSystem.userdata.level = 0;
             GameSystem.SaveUserDataToLocal();
             levelObject = Resources.Load<GameObject>("Levels/Level1");
             txtLevel.text = "LEVEL 1";
         }
-        if (!GameSystem.userdata.showRating && GameSystem.userdata.level == 5) {
+        if (!GameSystem.userdata.showRating && GameSystem.userdata.level == 5)
+        {
             popUpRating.SetActive(true);
             GameSystem.userdata.showRating = true;
             GameSystem.SaveUserDataToLocal();
         }
 
         var findItemLevel = FindObjectOfType<FindItemLevel>();
-        for (int i = 0; i < findBoxs.Count; i++) {
+        for (int i = 0; i < findBoxs.Count; i++)
+        {
             findBoxs[i].gameObject.SetActive(findItemLevel != null);
         }
 
-        if (findItemLevel != null || FindObjectOfType<FindAndWinLevel>() != null) {
+        if (findItemLevel != null || FindObjectOfType<FindAndWinLevel>() != null)
+        {
             GameplayType = GameplayType.Find;
-            if (PlayerPrefs.GetInt("tutorial_find", 0) == 0) {
+            if (PlayerPrefs.GetInt("tutorial_find", 0) == 0)
+            {
                 PlayerPrefs.SetInt("tutorial_find", 1);
-                LeanTween.delayedCall(2f, () => {
+                LeanTween.delayedCall(2f, () =>
+                {
                     Hint();
                 });
             }
@@ -136,72 +201,94 @@ public class Gameplay : MonoBehaviour {
         }
 
         drawLevel = FindObjectOfType<DrawLevel>();
-        if (drawLevel) {
+        if (drawLevel)
+        {
             scanImg.sprite = drawObject;
             drawManager.gameObject.SetActive(true);
             GameplayType = GameplayType.Draw;
-            if (PlayerPrefs.GetInt("tutorial_draw", 0) == 0) {
+            if (PlayerPrefs.GetInt("tutorial_draw", 0) == 0)
+            {
                 PlayerPrefs.SetInt("tutorial_draw", 1);
-                LeanTween.delayedCall(2f, () => {
+                LeanTween.delayedCall(2f, () =>
+                {
                     Hint();
                 });
             }
-        } else {
+        }
+        else
+        {
             drawManager.gameObject.SetActive(false);
             scanImg.sprite = cucgom;
             GameplayType = GameplayType.Erase;
-            if (PlayerPrefs.GetInt("tutorial_erase", 0) == 0) {
+            if (PlayerPrefs.GetInt("tutorial_erase", 0) == 0)
+            {
                 PlayerPrefs.SetInt("tutorial_erase", 1);
-                LeanTween.delayedCall(2f, () => {
+                LeanTween.delayedCall(2f, () =>
+                {
                     Hint();
                 });
             }
         }
     }
 
-    public void LoadBranchLevel() {
+    public void LoadBranchLevel()
+    {
         SceneManager.LoadScene("BranchLevel");
     }
 
-    public void Win(LevelManager level, bool showWinPopupImediately = true, bool loopAnimation = true) {
+    public void Win(LevelManager level, bool showWinPopupImediately = true, bool loopAnimation = true)
+    {
         drawManager.gameObject.SetActive(false);
         if (won) return;
         won = true;
 
-        if (level.animBefore != null) {
+        if (level.animBefore != null)
+        {
             level.animBefore.gameObject.SetActive(false);
         }
         StartCoroutine(IEWin(level.animAfter, level.winAnims, showWinPopupImediately, level.loopAnimation));
     }
 
-    public IEnumerator IEWin(SkeletonAnimation skeletonAnimation, List<string> anims = null, bool showWinPopupImediately = true, bool loopAnimation = true) {
+    public IEnumerator IEWin(SkeletonAnimation skeletonAnimation, List<string> anims = null, bool showWinPopupImediately = true, bool loopAnimation = true)
+    {
         var erasers = GameObject.FindGameObjectsWithTag("Eraser");
-        for (int i = 0; i < erasers.Length; i++) {
+        for (int i = 0; i < erasers.Length; i++)
+        {
             erasers[i].gameObject.SetActive(false);
         }
 
         skeletonAnimation.maskInteraction = SpriteMaskInteraction.None;
-        for (int i = 0; i < effects.Count; i++) {
+        for (int i = 0; i < effects.Count; i++)
+        {
             effects[i].Play();
         }
         EasyEffect.Appear(iconTick, 0f, 1f, 0.15f);
         AudioSystem.Instance.PlaySound(winSound, 1);
         skeletonAnimation.AnimationState.Data.DefaultMix = 0;
 
-        if (anims != null && anims.Count > 0) {
-            for (int i = 0; i < anims.Count; i++) {
+        if (anims != null && anims.Count > 0)
+        {
+            for (int i = 0; i < anims.Count; i++)
+            {
                 Spine.Animation win = skeletonAnimation.Skeleton.Data.FindAnimation(anims[i]);
-                if (win != null) {
+                if (win != null)
+                {
                     skeletonAnimation.AnimationState.SetAnimation(0, anims[i], loopAnimation);
                     yield return new WaitForSeconds(win.Duration);
                 }
             }
-        } else {
+        }
+        else
+        {
             Spine.Animation win = skeletonAnimation.Skeleton.Data.FindAnimation("win");
-            if (win != null) {
-                if (loopAnimation) {
+            if (win != null)
+            {
+                if (loopAnimation)
+                {
                     skeletonAnimation.AnimationState.SetAnimation(0, "win", true);
-                } else {
+                }
+                else
+                {
                     skeletonAnimation.AnimationState.SetAnimation(0, "win", false);
                 }
 
@@ -209,10 +296,14 @@ public class Gameplay : MonoBehaviour {
             }
 
             Spine.Animation win1 = skeletonAnimation.Skeleton.Data.FindAnimation("win1");
-            if (win1 != null) {
-                if (loopAnimation) {
+            if (win1 != null)
+            {
+                if (loopAnimation)
+                {
                     skeletonAnimation.AnimationState.SetAnimation(0, "win1", true);
-                } else {
+                }
+                else
+                {
                     skeletonAnimation.AnimationState.SetAnimation(0, "win1", false);
                 }
 
@@ -220,10 +311,14 @@ public class Gameplay : MonoBehaviour {
             }
 
             Spine.Animation win2 = skeletonAnimation.Skeleton.Data.FindAnimation("win2");
-            if (win2 != null) {
-                if (loopAnimation) {
+            if (win2 != null)
+            {
+                if (loopAnimation)
+                {
                     skeletonAnimation.AnimationState.SetAnimation(0, "win2", true);
-                } else {
+                }
+                else
+                {
                     skeletonAnimation.AnimationState.SetAnimation(0, "win2", false);
                 }
                 yield return new WaitForSeconds(win2.Duration);
@@ -231,82 +326,108 @@ public class Gameplay : MonoBehaviour {
         }
         yield return new WaitForSeconds(1f);
 
-        if (showWinPopupImediately) {
+        if (showWinPopupImediately)
+        {
             ShowWinPopup();
-        } else {
-            LeanTween.delayedCall(1.5f, () => {
+        }
+        else
+        {
+            LeanTween.delayedCall(1.5f, () =>
+            {
                 ShowWinPopup();
             });
         }
     }
 
-    public void ShowWinPopup() {
+    public void ShowWinPopup()
+    {
         winPopup.DoEffect();
     }
 
-    public void Hint() {
+    public void Hint()
+    {
         var draw = FindObjectOfType<DrawLevel>();
-        if (draw != null) {
+        if (draw != null)
+        {
             draw.Hint();
+            Debug.LogError("======== draw level");
             return;
         }
 
         var manyTimes = FindObjectOfType<EraseManyTimes>();
-        if (manyTimes != null) {
-            GuidePosition(manyTimes.guidePosition.position);
+        if (manyTimes != null)
+        {
+         //   GuidePosition(manyTimes.guidePosition.position);
+            Debug.LogError("======== earse level level");
             return;
         }
 
         var level = FindObjectOfType<LevelManager>();
-        if (level != null) {
+        if (level != null)
+        {
             GuidePosition(level.GetGuidePosition());
+            Debug.LogError("======== level ??????");
         }
     }
 
-    public void GuidePosition(Vector2 pos) {
+    public void GuidePosition(Vector2 pos)
+    {
         guideObject.SetActive(true);
         guideObject.transform.position = new Vector2(0, 0);
-        LeanTween.move(guideObject, pos, 1f).setEaseOutCubic().setOnComplete(() => {
+        LeanTween.move(guideObject, pos, 1f).setEaseOutCubic().setOnComplete(() =>
+        {
             guideObject.SetActive(false);
         });
     }
 
-    public int GetSpecialLevel() {
-        var userLevel = GameSystem.userdata.level;
-     //   Debug.LogError("======= user level:" + userLevel);
-        for (int i = 0; i < DataManager.specialLevels.Count; i++) {
-            if (userLevel == DataManager.specialLevels[i]) {
-                return i + 1;
-            }
-        }
-        return -1;
-    }
+    //public int GetSpecialLevel() {
+    //    var userLevel = GameSystem.userdata.level;
+    // //   Debug.LogError("======= user level:" + userLevel);
+    //    for (int i = 0; i < DataManager.specialLevels.Count; i++) {
+    //        if (userLevel == DataManager.specialLevels[i]) {
+    //            return i + 1;
+    //        }
+    //    }
+    //    return -1;
+    //}
 
-    public void Next() {
-        if (isBranchLevel) {
+    public void Next()
+    {
+        if (isBranchLevel)
+        {
             SceneManager.LoadScene("Home");
             isBranchLevel = false;
             return;
         }
-        if (GetSpecialLevel() > 0 && !isPlayingSpecial) {
+        //if (GetSpecialLevel() > 0 && !isPlayingSpecial) {
 
-            isPlayingSpecial = true;
-            SpawnSpecialLevel();
-            return;
+        //    isPlayingSpecial = true;
+        //    SpawnSpecialLevel();
+        //    return;
+        //}
+        if (!isPlayingSpecial)
+        {
+            GameSystem.userdata.level++;
+            Debug.LogError("======= user level:" + GameSystem.userdata.level);
+            if (GameSystem.userdata.level > GameSystem.userdata.maxLevel)
+            {
+                GameSystem.userdata.maxLevel = GameSystem.userdata.level;
+            }
+            GameSystem.SaveUserDataToLocal();
         }
-        GameSystem.userdata.level++;
-        Debug.LogError("======= user level:" + GameSystem.userdata.level);
-        if (GameSystem.userdata.level > GameSystem.userdata.maxLevel) {
-            GameSystem.userdata.maxLevel = GameSystem.userdata.level;
-        }
-        GameSystem.SaveUserDataToLocal();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
-    public void SpawnSpecialLevel() {
+    public void BtnShowSpecialLevel()
+    {
+        SpawnSpecialLevel();
+    }
+    int currentSpecialLevel = 0;
+    public void SpawnSpecialLevel()
+    {
+        isPlayingSpecial = true;
         Destroy(levelObject);
         closeSpecialLevelButton.SetActive(true);
-        var obj = Resources.Load<GameObject>("LevelSpecials/Special" + GetSpecialLevel());
+        var obj = Resources.Load<GameObject>("LevelSpecials/Special" + /*GetSpecialLevel()*/currentSpecialLevel);
         txtLevel.gameObject.SetActive(isPlayingSpecial);
         txtQuestion.gameObject.SetActive(isPlayingSpecial);
         levelObject = Instantiate(obj);
@@ -315,12 +436,18 @@ public class Gameplay : MonoBehaviour {
         won = false;
         GameplayType = GameplayType.Erase;
         var iconManager = FindObjectOfType<IconManager>();
-        if (iconManager) {
+        if (iconManager)
+        {
             iconManager.Init();
         }
+
+        Datacontroller.instance.saveData.passSpecial[currentSpecialLevel - 1] = true;
+
+        btnSpecialLevel.SetActive(false);
     }
 
-    public void LevelUp() {
+    public void LevelUp()
+    {
         closeSpecialLevelButton.SetActive(false);
         GameSystem.userdata.level++;
         GameSystem.SaveUserDataToLocal();
@@ -332,12 +459,15 @@ public class Gameplay : MonoBehaviour {
         //EasyEffect.Disappear(winPopup.gameObject, 1, 0);
     }
 
-    public void FoundItem(SpriteRenderer renderer) {
+    public void FoundItem(SpriteRenderer renderer)
+    {
         Transform emptyBox = null;
 
-        for (int i = 0; i < findBoxs.Count; i++) {
+        for (int i = 0; i < findBoxs.Count; i++)
+        {
             Transform box = findBoxs[i].transform;
-            if (box.childCount == 0) {
+            if (box.childCount == 0)
+            {
                 emptyBox = box;
                 break;
             }
@@ -346,7 +476,8 @@ public class Gameplay : MonoBehaviour {
         StartCoroutine(IEFoundItem(renderer, emptyBox));
     }
 
-    IEnumerator IEFoundItem(SpriteRenderer renderer, Transform emptyBox) {
+    IEnumerator IEFoundItem(SpriteRenderer renderer, Transform emptyBox)
+    {
         var demo = Instantiate(findItemDemo);
 
         demo.transform.position = Camera.main.WorldToScreenPoint(renderer.transform.position);
@@ -361,11 +492,13 @@ public class Gameplay : MonoBehaviour {
         LeanTween.move(demo.gameObject, emptyBox.transform.position, 1f).setDelay(.5f).setEaseOutCubic();
     }
 
-    public void AddGold(int amount) {
+    public void AddGold(int amount)
+    {
         GameSystem.userdata.gold += amount;
         GameSystem.SaveUserDataToLocal();
     }
-    public void Virate() {
+    public void Virate()
+    {
         if (GameSystem.userdata.virate)
             Handheld.Vibrate();
     }

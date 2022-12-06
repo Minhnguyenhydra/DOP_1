@@ -10,8 +10,6 @@ using DarkcupGames;
 public class GameSystem : MonoBehaviour
 {
 
-
-
     public static GameSystem Instance;
     public static UserData  userdata;
 
@@ -25,6 +23,7 @@ public class GameSystem : MonoBehaviour
 
     void Awake()
     {
+
         Instance = this;
         LoadUserData();
     }
@@ -48,6 +47,9 @@ public class GameSystem : MonoBehaviour
             }
             userUpdater.UpdateUI(userdata, userUpdater.gameObject);
         }
+
+        AudioSystem.Instance.SetBGM(GameSystem.userdata.playBGM);
+        AudioSystem.Instance.SetFXSound(GameSystem.userdata.playSound);
     }
 
    
@@ -125,6 +127,7 @@ public class GameSystem : MonoBehaviour
         userdata.playBGM = !GameSystem.userdata.playBGM;
 
         AudioSystem.Instance.SetBGM(GameSystem.userdata.playBGM);
+        DataManager.Instance.DisplaySetting();
         SaveUserDataToLocal();
     }
 
@@ -132,6 +135,7 @@ public class GameSystem : MonoBehaviour
     {
         userdata.playSound = !GameSystem.userdata.playSound;
         AudioSystem.Instance.SetFXSound(GameSystem.userdata.playSound);
+        DataManager.Instance.DisplaySetting();
         SaveUserDataToLocal();
     }
 
@@ -139,6 +143,7 @@ public class GameSystem : MonoBehaviour
     {
         userdata.virate = !userdata.virate;
         Debug.Log(userdata.virate);
+        DataManager.Instance.DisplaySetting();
         SaveUserDataToLocal();
     }
     public static void ChangeScene(string sceneName)

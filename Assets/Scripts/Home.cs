@@ -5,7 +5,8 @@ using TMPro;
 using Spine.Unity;
 using DarkcupGames;
 
-public class StoryData {
+public class StoryData
+{
     public string imgDemo;
     public int unlockPrice;
     public bool unlocked;
@@ -24,8 +25,12 @@ public class Home : MonoBehaviour
     List<StoryData> storyDatas;
     public List<StoryData> StoryDatas { get => storyDatas; }
 
+    [SerializeField] GameObject btnCheat;
+
     private void Awake()
     {
+        btnCheat.SetActive(Datacontroller.instance.testLevel);
+
         GameSystem.LoadUserData();
         txtLevel.text = (GameSystem.userdata.level + 1) + "/" + Constants.MAX_LEVEL;
     }

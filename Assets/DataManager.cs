@@ -32,6 +32,8 @@ public class DataManager : MonoBehaviour
     public Button bgmButton;
     public Button vibrateButton;
 
+    public Sprite[] sounds, musics, vibrates;
+
     public Sprite normalImage;
     public Sprite disableImage;
     private void Awake() {
@@ -133,14 +135,22 @@ public class DataManager : MonoBehaviour
     }
     private void Start()
     {
-        if (vibrateButton)
-            vibrateButton.gameObject.SetActive(GameSystem.userdata.virate);
-        if (soundButton)
-            soundButton.gameObject.SetActive(GameSystem.userdata.playSound);
-        if (bgmButton)
-            bgmButton.gameObject.SetActive(GameSystem.userdata.playBGM);
+        //if (vibrateButton)
+        //    vibrateButton.gameObject.SetActive(GameSystem.userdata.virate);
+        //if (soundButton)
+        //    soundButton.gameObject.SetActive(GameSystem.userdata.playSound);
+        //if (bgmButton)
+        //    bgmButton.gameObject.SetActive(GameSystem.userdata.playBGM);
+        DisplaySetting();
     }
+    public void DisplaySetting()
+    {
+        vibrateButton.image.sprite = GameSystem.userdata.virate ? vibrates[1] : vibrates[0];
+        soundButton.image.sprite = GameSystem.userdata.playSound ? sounds[1] : sounds[0];
+        bgmButton.image.sprite = GameSystem.userdata.playBGM ? musics[1] : musics[0];
 
+        Debug.LogError("====== start:" + bgmButton.image.sprite);
+    }
     public void PlayLevel(int level) {
         GameSystem.userdata.level = level;
         GameSystem.SaveUserDataToLocal();

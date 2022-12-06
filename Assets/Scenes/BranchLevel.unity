@@ -312,6 +312,11 @@ MonoBehaviour:
   txtGold: {fileID: 0}
   txtDiamond: {fileID: 0}
   userUpdater: {fileID: 0}
+--- !u!1 &85093833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1693068655, guid: 59d364849ec44544b97b19ac5b65d436, type: 3}
+  m_PrefabInstance: {fileID: 85093830}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &245941162 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8754687361980527556, guid: eeadc56796468bf45987e31fa75e8e26, type: 3}
@@ -568,6 +573,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ed18f0768033a40937f1e16b4024bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  btnCheat: {fileID: 85093833}
+  btnSpecialLevel: {fileID: 0}
+  animSpecialBtn: []
   effects:
   - {fileID: 453783611}
   - {fileID: 198783573972310306}
@@ -1079,6 +1087,15 @@ MonoBehaviour:
   soundButton: {fileID: 722909436}
   bgmButton: {fileID: 722909435}
   vibrateButton: {fileID: 722909434}
+  sounds:
+  - {fileID: 21300000, guid: 468a4549c0f0be44fa7103071cc90426, type: 3}
+  - {fileID: 21300000, guid: f3bbf866af6e0ad4dbdbca3045e0d387, type: 3}
+  musics:
+  - {fileID: 21300000, guid: aa06b4a85dfc7f345958516279bd79bd, type: 3}
+  - {fileID: 21300000, guid: 961dd859a5fb5e84bbcc6c950d0c9b3e, type: 3}
+  vibrates:
+  - {fileID: 21300000, guid: dcd63621eebc74f4a80fb5c8f755c104, type: 3}
+  - {fileID: 21300000, guid: 79c5f04a96ea2394a873f1f8cf383b0e, type: 3}
   normalImage: {fileID: 0}
   disableImage: {fileID: 0}
 --- !u!4 &546272215
@@ -1286,6 +1303,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 204545111, guid: 6783e9d96e1774f4aa7ef353ae57bb4e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 385087617, guid: 6783e9d96e1774f4aa7ef353ae57bb4e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1306,10 +1327,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d395cb31a38a740419ff1edd97f60617, type: 3}
+    - target: {fileID: 1794914565, guid: 6783e9d96e1774f4aa7ef353ae57bb4e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1990774224, guid: 6783e9d96e1774f4aa7ef353ae57bb4e, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d395cb31a38a740419ff1edd97f60617, type: 3}
+    - target: {fileID: 606516900517858977, guid: 6783e9d96e1774f4aa7ef353ae57bb4e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7464312468932938469, guid: 6783e9d96e1774f4aa7ef353ae57bb4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7464312468932938469, guid: 6783e9d96e1774f4aa7ef353ae57bb4e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1407,12 +1440,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7464312469063830678, guid: 6783e9d96e1774f4aa7ef353ae57bb4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7464312469063830678, guid: 6783e9d96e1774f4aa7ef353ae57bb4e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 85093832}
     - target: {fileID: 7464312470189982670, guid: 6783e9d96e1774f4aa7ef353ae57bb4e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7464312470558978610, guid: 6783e9d96e1774f4aa7ef353ae57bb4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7464312470558978610, guid: 6783e9d96e1774f4aa7ef353ae57bb4e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
