@@ -22,7 +22,7 @@ namespace DarkcupGames {
         public Button paygoldButton;
         public void Buy(int id) {
             if (id >= shopDatas.Count) return;
-
+            Debug.LogError("============ id buy:" + id);
             ShopData data = shopDatas[id];
 
             switch (data.currencyType) {

@@ -11,7 +11,8 @@ namespace DarkcupGames
         public RectTransform finishLocation;
         public float spinSpeed = 500f;
         public float angle = 1f;
-
+        [SerializeField]
+        LuckySpin myLuckySpin;
         private void Start()
         {
             enabled = false;
@@ -35,7 +36,7 @@ namespace DarkcupGames
                     GameSystem.userdata.gold += 5;
 
                 });
-                
+                myLuckySpin.spinTime = 1;
                 enabled = false;
                 return;
             }

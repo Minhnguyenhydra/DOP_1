@@ -6,6 +6,7 @@ using DarkcupGames;
 using UnityEngine.SceneManagement;
 using Spine.Unity;
 using TMPro;
+using UnityEngine.Events;
 
 public enum GameplayType { Erase, Draw, Find }
 
@@ -272,6 +273,7 @@ public class Gameplay : MonoBehaviour {
 
     public int GetSpecialLevel() {
         var userLevel = GameSystem.userdata.level;
+     //   Debug.LogError("======= user level:" + userLevel);
         for (int i = 0; i < DataManager.specialLevels.Count; i++) {
             if (userLevel == DataManager.specialLevels[i]) {
                 return i + 1;
@@ -293,6 +295,7 @@ public class Gameplay : MonoBehaviour {
             return;
         }
         GameSystem.userdata.level++;
+        Debug.LogError("======= user level:" + GameSystem.userdata.level);
         if (GameSystem.userdata.level > GameSystem.userdata.maxLevel) {
             GameSystem.userdata.maxLevel = GameSystem.userdata.level;
         }
@@ -362,7 +365,6 @@ public class Gameplay : MonoBehaviour {
         GameSystem.userdata.gold += amount;
         GameSystem.SaveUserDataToLocal();
     }
-
     public void Virate() {
         if (GameSystem.userdata.virate)
             Handheld.Vibrate();
