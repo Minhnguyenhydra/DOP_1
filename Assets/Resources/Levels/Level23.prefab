@@ -520,8 +520,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 819743740263038647, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
+      propertyPath: isBig
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 819743740263038647, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
       propertyPath: erSize
       value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 819743740263038647, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
+      propertyPath: isBigPercents
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}

@@ -122,14 +122,20 @@ public class DragAndDropLevel : LevelManager
         if (current >= correctNames.Count) {
             return correctPositions[0].transform.position;
         }
+ 
         return correctPositions[current].transform.position;
     }
+    int dragObjNeed;
     public  Vector3 GetDragPos()
     {
-        if (current >= correctNames.Count)
+        dragObjNeed = 0;
+        for (int i = 0; i < dragObjects.Count; i++)
         {
-            return dragObjects[0].transform.position;
+            if(dragObjects[i].name == correctNames[current])
+            {
+                dragObjNeed = i;
+            }    
         }
-        return dragObjects[current].transform.position;
+        return dragObjects[dragObjNeed].transform.position;
     }
 }

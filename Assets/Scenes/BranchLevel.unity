@@ -627,6 +627,7 @@ MonoBehaviour:
   isBranchLevel: 1
   cucgom: {fileID: 21300000, guid: a2bf67cc12fae1b409a45324070eddc1, type: 3}
   levelObject: {fileID: 0}
+  won: 0
   isPlayingSpecial: 0
   eraseSpecialLevel: {fileID: 0}
   animHint: {fileID: 0}
@@ -2798,7 +2799,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  paygoldButton: {fileID: 0}
+  paygoldButton: {fileID: 2835796552330500833}
 --- !u!1 &1870923278
 GameObject:
   m_ObjectHideFlags: 0
@@ -3232,6 +3233,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -173
       objectReference: {fileID: 0}
+    - target: {fileID: 2835796554244848760, guid: eeadc56796468bf45987e31fa75e8e26, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2835796554244848763, guid: eeadc56796468bf45987e31fa75e8e26, type: 3}
       propertyPath: m_SizeDelta.x
       value: 308.8003
@@ -3277,3 +3282,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1431128022, guid: eeadc56796468bf45987e31fa75e8e26, type: 3}
   m_PrefabInstance: {fileID: 2835796552330500829}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2835796552330500833 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2835796553260676999, guid: eeadc56796468bf45987e31fa75e8e26, type: 3}
+  m_PrefabInstance: {fileID: 2835796552330500829}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

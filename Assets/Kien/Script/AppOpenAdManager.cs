@@ -48,6 +48,8 @@ public class AppOpenAdManager
 
     public void LoadAd()
     {
+        if (Datacontroller.instance.anAds)
+            return;
         // if (IAP_AD_REMOVED)
         //     return;
 
@@ -113,6 +115,8 @@ public class AppOpenAdManager
     public void ShowAdIfAvailable()
     {
         Debug.LogError("======available:" + IsAdAvailable + ":" + isShowingAd + ":" + ad + ":" + (System.DateTime.UtcNow - loadTime).TotalHours);
+        if (Datacontroller.instance.anAds)
+            return;
         if (!IsAdAvailable || isShowingAd || Datacontroller.instance.saveData.removeAds)
         {
             return;

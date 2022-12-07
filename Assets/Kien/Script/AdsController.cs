@@ -189,7 +189,7 @@ public class AdsController : MonoBehaviour
             bannerId = bannerIdAndroid;
             interId = interIdAndroid;
             videoId = videoIdAndroid;
-          //  openAdsId = openAdsAndroid;
+            //  openAdsId = openAdsAndroid;
 #elif UNITY_IOS
                 appIdTemp = appIdIOS;
                 bannerId = bannerIdIOS;
@@ -206,7 +206,9 @@ public class AdsController : MonoBehaviour
             //    Debug.LogError("=====zooooooo day init mobile ads");
             //});
 
-         //   LoadOpenAd();
+            //   LoadOpenAd();
+            if (Datacontroller.instance.anAds)
+                return;
             Init();
         }
     }
@@ -546,6 +548,15 @@ public class AdsController : MonoBehaviour
 
     public void ShowVideo(/*Action _ac, *//*string name*/)
     {
+        if (_dataController.anAds)
+        {
+            if (AdManager.Instance)
+            {
+                AdManager.Instance.HandleEarnReward();
+            }
+            return;
+        }
+
         if (/*IronSource.Agent.isRewardedVideoAvailable()*/MaxSdk.IsRewardedAdReady(videoId))
         {
             //acreward = _ac;

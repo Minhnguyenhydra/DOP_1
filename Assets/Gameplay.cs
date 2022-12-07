@@ -41,7 +41,7 @@ public class Gameplay : MonoBehaviour
     public Sprite cucgom;
     [SerializeField] private GameObject levelObject;
     public bool won = false;
-    bool drawLevel, eraseLevel;
+    bool drawLevel, eraseLevel, eraseManyPositionInOneLevel;
 
     public bool isPlayingSpecial;
 
@@ -75,8 +75,8 @@ public class Gameplay : MonoBehaviour
         {
             GameObject obj = Resources.Load<GameObject>("LevelBranch/Level" + GameSystem.userdata.branchLevel);
             Debug.Log(GameSystem.userdata.branchLevel);
-            txtLevel.text = null;
-            txtQuestion.text = null;
+            txtLevel.text = "Level " + GameSystem.userdata.branchLevel;
+            txtQuestion.text = "Make a Choice";
             if (obj != null)
             {
                 levelObject = Instantiate(obj);
@@ -218,6 +218,8 @@ public class Gameplay : MonoBehaviour
         else
         {
             eraseLevel = FindObjectOfType<EraseLevel>();
+            eraseManyPositionInOneLevel =  FindObjectOfType<EraseManyPositionInOneLevel>();
+            eraseSpecialLevel = FindObjectOfType<EraseManyTimes>();
             drawManager.gameObject.SetActive(false);
             scanImg.sprite = cucgom;
 
@@ -359,7 +361,7 @@ public class Gameplay : MonoBehaviour
         }
 
         //  var manyTimes = FindObjectOfType<EraseManyTimes>();
-        if (/*manyTimes*/eraseSpecialLevel != null)
+        if (/*manyTimes*/eraseSpecialLevel != null/* && isPlayingSpecial*/)
         {
             //   GuidePosition(manyTimes.guidePosition.position);
             animHint.transform.position = /*manyTimes*/eraseSpecialLevel.GetGuidePosition();
@@ -376,15 +378,20 @@ public class Gameplay : MonoBehaviour
             if (GameplayType == GameplayType.Erase)
             {
                 //  GuidePosition(level.GetGuidePosition());
-                if (eraseLevel)
+                if (eraseLevel || eraseManyPositionInOneLevel)
                 {
                     animHint.transform.position = level.GetGuidePosition();
                     animHint.gameObject.SetActive(true);
                 }
                 else
                 {
+
+
                     levelDragAndDrop = level.GetComponent<DragAndDropLevel>();
-                    GuidePosition(level.GetGuidePosition(), true);
+                    if (levelDragAndDrop != null)
+                        GuidePosition(level.GetGuidePosition(), true);
+                    else
+                        GuidePosition(level.GetGuidePosition());
                 }
             }
             else
