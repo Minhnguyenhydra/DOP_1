@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3906d1e0482b4cd4688ba611217c60df, type: 2}
+  - {fileID: 2100000, guid: f29f13652c7695d4382bef5c5030b282, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,8 +114,10 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled: []
-    materialsInsideMask: []
+    materialsMaskDisabled:
+    - {fileID: 2100000, guid: 3906d1e0482b4cd4688ba611217c60df, type: 2}
+    materialsInsideMask:
+    - {fileID: 2100000, guid: f29f13652c7695d4382bef5c5030b282, type: 2}
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -203,7 +205,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &6507024034299960844
@@ -426,6 +428,7 @@ MonoBehaviour:
   animAfter: {fileID: 865473480220655243}
   animBefore: {fileID: 7517887489837553596}
   winAnims:
+  - win1
   - win2
   loopAnimation: 1
   draw: {fileID: 6507024034902344797}

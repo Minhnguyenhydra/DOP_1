@@ -95,12 +95,32 @@ public class FindAndWinLevel : LevelManager
         if (isWin) {
             if (!isImmediately)
             {
-                Debug.Log("Delay win");
-                LeanTween.delayedCall(1.5f, () =>
+                if (objectFinds[0].transform.childCount > 0)
                 {
-                    magnify.gameObject.SetActive(false);
-                    Win();
-                });
+                    GameObject chilOf = objectFinds[0].transform.GetChild(0).gameObject;
+                    if (chilOf != null)
+                    {
+                        magnify.gameObject.SetActive(false);
+                        chilOf.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.None;
+                        chilOf.transform.LeanMove(objectFinds[1].transform.position, 1f).setEase(LeanTweenType.linear).setOnComplete(() =>
+                        {
+                            Win();
+                            chilOf.SetActive(false);
+                        });
+
+                        Debug.Log("win");
+                    }
+                }
+                else
+                {
+
+                    LeanTween.delayedCall(1.5f, () =>
+                    {
+                        magnify.gameObject.SetActive(false);
+                        Win();
+                    });
+                    Debug.Log("Delay win");
+                }
             }
             else
             {

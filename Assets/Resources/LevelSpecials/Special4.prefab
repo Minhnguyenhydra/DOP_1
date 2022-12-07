@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1315240152080866347
 Transform:
   m_ObjectHideFlags: 0
@@ -590,6 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6497545547ba4f839b9eb76822949ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPaint: {fileID: 0}
   paintColor: {r: 1, g: 1, b: 1, a: 1}
   lastPos: {x: 0, y: 0}
   lastWorldPos: {x: 0, y: 0}
@@ -1018,7 +1019,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 3f8b35a7c6ffad54cb6d8b7e951288b5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1070,10 +1071,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: 3f8b35a7c6ffad54cb6d8b7e951288b5, type: 2}
-    materialsInsideMask:
-    - {fileID: 0}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -1230,6 +1229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6497545547ba4f839b9eb76822949ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPaint: {fileID: 0}
   paintColor: {r: 1, g: 1, b: 1, a: 1}
   lastPos: {x: 0, y: 0}
   lastWorldPos: {x: 0, y: 0}
@@ -1501,6 +1501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6497545547ba4f839b9eb76822949ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPaint: {fileID: 0}
   paintColor: {r: 1, g: 1, b: 1, a: 1}
   lastPos: {x: 0, y: 0}
   lastWorldPos: {x: 0, y: 0}

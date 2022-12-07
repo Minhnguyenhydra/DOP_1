@@ -207,6 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6497545547ba4f839b9eb76822949ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPaint: {fileID: 0}
   paintColor: {r: 1, g: 1, b: 1, a: 1}
   lastPos: {x: 0, y: 0}
   lastWorldPos: {x: 0, y: 0}
@@ -422,6 +423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6497545547ba4f839b9eb76822949ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPaint: {fileID: 0}
   paintColor: {r: 1, g: 1, b: 1, a: 1}
   lastPos: {x: 0, y: 0}
   lastWorldPos: {x: 0, y: 0}
@@ -1359,6 +1361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6497545547ba4f839b9eb76822949ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPaint: {fileID: 0}
   paintColor: {r: 1, g: 1, b: 1, a: 1}
   lastPos: {x: 0, y: 0}
   lastWorldPos: {x: 0, y: 0}
@@ -1616,7 +1619,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8756105716864306618
 Transform:
   m_ObjectHideFlags: 0

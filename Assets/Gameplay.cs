@@ -19,7 +19,7 @@ public class Gameplay : MonoBehaviour
 
     public List<ParticleSystem> effects;
     public List<RectTransform> findBoxs;
-    public GameObject iconTick;
+    public GameObject iconTick,panelAfterWin;
     public GameObject guideObject;
     public UIEffect winPopup;
     public Image findItemDemo;
@@ -130,6 +130,10 @@ public class Gameplay : MonoBehaviour
             }
             if (currentSpecialLevel != -1)
             {
+                if(currentSpecialLevel == 1 && Datacontroller.instance.saveData.passSpecial[currentSpecialLevel - 1] == false)
+                {
+                    btnSpecialLevel.transform.GetChild(2).gameObject.SetActive(true);
+                }    
                 btnSpecialLevel.SetActive(!Datacontroller.instance.saveData.passSpecial[currentSpecialLevel - 1]);
                 animSpecialBtn[currentSpecialLevel - 1].SetActive(true);
             }
@@ -170,7 +174,9 @@ public class Gameplay : MonoBehaviour
         {
             GameSystem.userdata.level = 0;
             GameSystem.SaveUserDataToLocal();
-            levelObject = Resources.Load<GameObject>("Levels/Level1");
+
+            GameObject obj = Resources.Load<GameObject>("Levels/Level1");
+            levelObject = Instantiate(obj);
             txtLevel.text = "LEVEL 1";
         }
         if (!GameSystem.userdata.showRating && GameSystem.userdata.level == 5)
@@ -192,7 +198,7 @@ public class Gameplay : MonoBehaviour
             if (PlayerPrefs.GetInt("tutorial_find", 0) == 0)
             {
                 PlayerPrefs.SetInt("tutorial_find", 1);
-                LeanTween.delayedCall(2f, () =>
+                LeanTween.delayedCall(1f, () =>
                 {
                     Hint();
                 });
@@ -209,7 +215,7 @@ public class Gameplay : MonoBehaviour
             if (PlayerPrefs.GetInt("tutorial_draw", 0) == 0)
             {
                 PlayerPrefs.SetInt("tutorial_draw", 1);
-                LeanTween.delayedCall(2f, () =>
+                LeanTween.delayedCall(1f, () =>
                 {
                     Hint();
                 });
@@ -228,12 +234,13 @@ public class Gameplay : MonoBehaviour
             if (PlayerPrefs.GetInt("tutorial_erase", 0) == 0)
             {
                 PlayerPrefs.SetInt("tutorial_erase", 1);
-                LeanTween.delayedCall(2f, () =>
+                LeanTween.delayedCall(1f, () =>
                 {
                     Hint();
                 });
             }
         }
+        panelAfterWin.SetActive(false);
     }
 
     public void LoadBranchLevel()
@@ -243,6 +250,7 @@ public class Gameplay : MonoBehaviour
 
     public void Win(LevelManager level, bool showWinPopupImediately = true, bool loopAnimation = true)
     {
+        panelAfterWin.SetActive(true);
         drawManager.gameObject.SetActive(false);
         if (won) return;
         won = true;
@@ -342,6 +350,7 @@ public class Gameplay : MonoBehaviour
                 ShowWinPopup();
             });
         }
+        //panelAfterWin.SetActive(false);
     }
 
     public void ShowWinPopup()

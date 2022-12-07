@@ -26,18 +26,24 @@ public class PaintController : MonoBehaviour
     bool canDraw = false;
     bool selected;
 
+    SpriteRenderer renderer;
+
     public virtual Texture2D GetSourceTexture() {
         var renderer = GetComponent<SpriteRenderer>();
+        Debug.LogError("======= get texture ");
         if (renderer != null) {
             return renderer.sprite.texture;
         }
         return null;
+
+
     }
 
     public virtual void ApplyTexture(Texture2D texture2D) {
-        var renderer = GetComponent<SpriteRenderer>();
+     //   var renderer = GetComponent<SpriteRenderer>();
         if (renderer != null) {
             renderer.sprite = Sprite.Create(m_Texture, renderer.sprite.rect, new Vector2(0.5f, 0.5f));
+            Debug.LogError("======= apply texture ");
         }
     }
 
