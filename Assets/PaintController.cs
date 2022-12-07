@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PaintController : MonoBehaviour
 {
-    public static PaintController currentPaint = null;
+    public /*static*/ PaintController currentPaint = null;
 
     public Color paintColor = Color.clear;
     public Vector2Int lastPos;
@@ -68,6 +68,7 @@ public class PaintController : MonoBehaviour
 
     void Update() {
         if (Input.GetMouseButtonDown(0)) {
+            Gameplay.Instance.animHint.gameObject.SetActive(false);
             canDraw = true;
         }
         

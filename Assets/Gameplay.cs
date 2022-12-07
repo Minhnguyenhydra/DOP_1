@@ -40,8 +40,8 @@ public class Gameplay : MonoBehaviour
     public bool isBranchLevel;
     public Sprite cucgom;
     [SerializeField] private GameObject levelObject;
-    bool won = false;
-    bool drawLevel;
+    public bool won = false;
+    bool drawLevel, eraseLevel;
 
     public bool isPlayingSpecial;
 
@@ -107,24 +107,24 @@ public class Gameplay : MonoBehaviour
             if (level == 2)
             {
                 currentSpecialLevel = 1;
-            }    
-            else if(level == 7)
+            }
+            else if (level == 7)
             {
                 currentSpecialLevel = 2;
-            }    
-            else if(level == 12)
+            }
+            else if (level == 12)
             {
                 currentSpecialLevel = 3;
-            }    
-            else if(level == 17)
+            }
+            else if (level == 17)
             {
                 currentSpecialLevel = 4;
-            }    
-            else if(level == 22)
+            }
+            else if (level == 22)
             {
                 currentSpecialLevel = 5;
             }
-            for(int i = 0; i < animSpecialBtn.Length; i ++)
+            for (int i = 0; i < animSpecialBtn.Length; i++)
             {
                 animSpecialBtn[i].SetActive(false);
             }
@@ -136,7 +136,7 @@ public class Gameplay : MonoBehaviour
             else
             {
                 btnSpecialLevel.SetActive(false);
-            }    
+            }
 
             txtQuestion.text = "";
             if (DataManager.Instance.levelInfos.Count > level + count)
@@ -217,9 +217,12 @@ public class Gameplay : MonoBehaviour
         }
         else
         {
+            eraseLevel = FindObjectOfType<EraseLevel>();
             drawManager.gameObject.SetActive(false);
             scanImg.sprite = cucgom;
+
             GameplayType = GameplayType.Erase;
+
             if (PlayerPrefs.GetInt("tutorial_erase", 0) == 0)
             {
                 PlayerPrefs.SetInt("tutorial_erase", 1);
@@ -341,7 +344,8 @@ public class Gameplay : MonoBehaviour
 
     public void ShowWinPopup()
     {
-        winPopup.DoEffect();
+        if (winPopup != null)
+            winPopup.DoEffect();
     }
 
     public void Hint()
@@ -354,26 +358,58 @@ public class Gameplay : MonoBehaviour
             return;
         }
 
-        var manyTimes = FindObjectOfType<EraseManyTimes>();
-        if (manyTimes != null)
+        //  var manyTimes = FindObjectOfType<EraseManyTimes>();
+        if (/*manyTimes*/eraseSpecialLevel != null)
         {
-         //   GuidePosition(manyTimes.guidePosition.position);
+            //   GuidePosition(manyTimes.guidePosition.position);
+            animHint.transform.position = /*manyTimes*/eraseSpecialLevel.GetGuidePosition();
+            animHint.gameObject.SetActive(true);
             Debug.LogError("======== earse level level");
             return;
         }
 
         var level = FindObjectOfType<LevelManager>();
+        Debug.LogError("type gameplay:" + GameplayType);
         if (level != null)
         {
-            GuidePosition(level.GetGuidePosition());
+
+            if (GameplayType == GameplayType.Erase)
+            {
+                //  GuidePosition(level.GetGuidePosition());
+                if (eraseLevel)
+                {
+                    animHint.transform.position = level.GetGuidePosition();
+                    animHint.gameObject.SetActive(true);
+                }
+                else
+                {
+                    levelDragAndDrop = level.GetComponent<DragAndDropLevel>();
+                    GuidePosition(level.GetGuidePosition(), true);
+                }
+            }
+            else
+            {
+                GuidePosition(level.GetGuidePosition());
+                Debug.LogError("======== hint pos:" + level.GetGuidePosition());
+            }
             Debug.LogError("======== level ??????");
         }
     }
 
-    public void GuidePosition(Vector2 pos)
+    public EraseManyTimes eraseSpecialLevel;
+    DragAndDropLevel levelDragAndDrop;
+    public Animator animHint;
+    public void GuidePosition(Vector2 pos, bool branchPos = false)
     {
         guideObject.SetActive(true);
-        guideObject.transform.position = new Vector2(0, 0);
+        if (!branchPos)
+        {
+            guideObject.transform.position = new Vector3(0, -3f);
+        }
+        else
+        {
+            guideObject.transform.position = levelDragAndDrop.GetDragPos();
+        }
         LeanTween.move(guideObject, pos, 1f).setEaseOutCubic().setOnComplete(() =>
         {
             guideObject.SetActive(false);
@@ -424,15 +460,20 @@ public class Gameplay : MonoBehaviour
     int currentSpecialLevel = 0;
     public void SpawnSpecialLevel()
     {
+        eraseSpecialLevel = null;
         isPlayingSpecial = true;
         Destroy(levelObject);
-        closeSpecialLevelButton.SetActive(true);
+        // closeSpecialLevelButton.SetActive(true);
         var obj = Resources.Load<GameObject>("LevelSpecials/Special" + /*GetSpecialLevel()*/currentSpecialLevel);
-        txtLevel.gameObject.SetActive(isPlayingSpecial);
-        txtQuestion.gameObject.SetActive(isPlayingSpecial);
+        drawManager.gameObject.SetActive(false);
+        //txtLevel.gameObject.SetActive(isPlayingSpecial);
+        //txtQuestion.gameObject.SetActive(isPlayingSpecial);
+        txtLevel.text = "Level " + currentSpecialLevel;
+        txtQuestion.text = "Erase Clothes";
         levelObject = Instantiate(obj);
+        eraseSpecialLevel = levelObject.GetComponent<EraseManyTimes>();
         EasyEffect.Disappear(winPopup.gameObject, 1, 0);
-        canvasGameplay.gameObject.SetActive(false);
+        // canvasGameplay.gameObject.SetActive(false);
         won = false;
         GameplayType = GameplayType.Erase;
         var iconManager = FindObjectOfType<IconManager>();

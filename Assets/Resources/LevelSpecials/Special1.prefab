@@ -146,7 +146,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7437663218e8c534db6a321cdbfef157, type: 2}
+  - {fileID: 2100000, guid: 831f9b8348ec7b949b6ae1847f1f4119, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -198,10 +198,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: 831f9b8348ec7b949b6ae1847f1f4119, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 7437663218e8c534db6a321cdbfef157, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -1123,7 +1121,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7437663218e8c534db6a321cdbfef157, type: 2}
+  - {fileID: 2100000, guid: 831f9b8348ec7b949b6ae1847f1f4119, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1175,10 +1173,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: 831f9b8348ec7b949b6ae1847f1f4119, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 7437663218e8c534db6a321cdbfef157, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal
@@ -1302,7 +1298,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7437663218e8c534db6a321cdbfef157, type: 2}
+  - {fileID: 2100000, guid: 831f9b8348ec7b949b6ae1847f1f4119, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1354,10 +1350,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: 831f9b8348ec7b949b6ae1847f1f4119, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 7437663218e8c534db6a321cdbfef157, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal

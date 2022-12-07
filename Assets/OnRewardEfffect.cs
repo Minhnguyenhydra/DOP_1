@@ -58,4 +58,8 @@ public class OnRewardEfffect : MonoBehaviour
             });
         });
     }
+    public void RewardWatchAdsSpecialLevel()
+    {
+        Gameplay.Instance.eraseSpecialLevel.RewardSpecialLevel();
+    }    
 }

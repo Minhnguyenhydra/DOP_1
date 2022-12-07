@@ -117,6 +117,7 @@ public class FindAndWinLevel : LevelManager
             if (objectFinds[i].activeSelf)
             {
                 return objectFinds[i].transform.position;
+                break;
             }
         }
 

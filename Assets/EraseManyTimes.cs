@@ -21,7 +21,11 @@ public class EraseManyTimes : MonoBehaviour
         buttonWatchAds.gameObject.transform.localScale = new Vector3(0, 0);
     }
 
-  
+    public Vector3 GetGuidePosition()
+    {
+        return eraseLevels[currentLevel].transform.GetChild(2).position;
+    }
+
     public void FinishDraw()
     {
         if (currentLevel < eraseLevels.Count -1 )
@@ -73,23 +77,25 @@ public class EraseManyTimes : MonoBehaviour
 
     public void OnWatchAdsClick()
     {
-        //var obj = FindObjectOfType<AdManager>();
-        //if (obj == null)
-        //{
-        //    Debug.Log("null");
-        //}
-        //obj.WatchAds(2);
-
+        var obj = FindObjectOfType<AdManager>();
+        if (obj == null)
+        {
+            Debug.Log("null");
+        }
+        obj.WatchAds(2);
+    }
+    public void RewardSpecialLevel()
+    {
         Debug.LogError("========= watch video ads");
-        
+
         buttonWatchAds.gameObject.SetActive(false);
 
         var go = eraseLevels[currentLevel].transform.Find("check_correct");
 
         var eraser = go.GetComponent<EraserShowPosition>();
-        if(eraser == null)
+        if (eraser == null)
         {
-        go.gameObject.AddComponent<EraserShowPosition>();
+            go.gameObject.AddComponent<EraserShowPosition>();
 
         }
         go.gameObject.SetActive(true);
@@ -98,9 +104,8 @@ public class EraseManyTimes : MonoBehaviour
         {
             eraseLevels[currentLevel].checkers[i].StartChecking();
         }
-        LeanTween.scale(buttonWatchAds, new Vector3(0f,0f, 0f), 0f).setEase(LeanTweenType.easeInBack);
-    }
-
+        LeanTween.scale(buttonWatchAds, new Vector3(0f, 0f, 0f), 0f).setEase(LeanTweenType.easeInBack);
+    }    
     public void Hint() {
 
     }

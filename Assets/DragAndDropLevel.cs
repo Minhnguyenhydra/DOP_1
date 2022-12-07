@@ -47,9 +47,10 @@ public class DragAndDropLevel : LevelManager
             {
                 if (dragObj.name == correctNames[current])
                 {
-                    LeanTween.move(dragObj.gameObject, correctPositions[current].transform.position, 1f).setOnComplete(() => {
-                        dragObj.gameObject.SetActive(false);
-                    });
+                    //LeanTween.move(dragObj.gameObject, correctPositions[current].transform.position, 1f).setOnComplete(() => {
+                    //    dragObj.gameObject.SetActive(false);
+                    //});
+                    dragObj.gameObject.SetActive(false);
                     dragObj.isCorrect = true;
                     dragObj.enabled = false;
                     ShowCorrectAnim(current);
@@ -122,5 +123,13 @@ public class DragAndDropLevel : LevelManager
             return correctPositions[0].transform.position;
         }
         return correctPositions[current].transform.position;
+    }
+    public  Vector3 GetDragPos()
+    {
+        if (current >= correctNames.Count)
+        {
+            return dragObjects[0].transform.position;
+        }
+        return dragObjects[current].transform.position;
     }
 }

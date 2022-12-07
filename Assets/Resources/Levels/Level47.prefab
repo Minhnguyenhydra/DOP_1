@@ -359,8 +359,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4322474415408641503}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5979, y: -1.2732, z: -0.0058392202}
-  m_LocalScale: {x: 4.5147514, y: 4.9555264, z: 1}
+  m_LocalPosition: {x: 0.813, y: 0.139, z: -0.0058392202}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 940449441659885847}
@@ -481,6 +481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6497545547ba4f839b9eb76822949ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPaint: {fileID: 0}
   paintColor: {r: 1, g: 1, b: 1, a: 1}
   lastPos: {x: 0, y: 0}
   lastWorldPos: {x: 0, y: 0}
@@ -488,8 +489,8 @@ MonoBehaviour:
   isDrawing: 0
   isPaint: 0
   erSize: 10
-  isBig: 0
-  isBigPercents: 0
+  isBig: 1
+  isBigPercents: 0.25
   spriteMask: {fileID: 4322474415408641502}
 --- !u!61 &4322474415408641506
 BoxCollider2D:
@@ -573,9 +574,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5435967228493674671}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4494, y: -0.7496, z: -0.0058392202}
-  m_LocalScale: {x: 2.0164995, y: 5.7516184, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.317, y: -1.033, z: -0.0058392202}
+  m_LocalScale: {x: 5, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 940449441659885847}
@@ -696,13 +697,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6497545547ba4f839b9eb76822949ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPaint: {fileID: 0}
   paintColor: {r: 1, g: 1, b: 1, a: 1}
   lastPos: {x: 0, y: 0}
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
   isPaint: 0
-  erSize: 50
+  erSize: 10
   isBig: 0
   isBigPercents: 0
   spriteMask: {fileID: 5435967228493674676}

@@ -11,7 +11,8 @@ public class EraseManyPositionInOneLevel : LevelManager
 
     public bool isMaskable;
 
-    private void Start() {
+    private void Start()
+    {
         checkers = GetComponentsInChildren<PaintChecker>();
 
         if (isMaskable)
@@ -20,35 +21,64 @@ public class EraseManyPositionInOneLevel : LevelManager
             maskAnim.gameObject.SetActive(true);
         }
 
-        for (int i = 0; i < checkers.Length; i++) {
+        for (int i = 0; i < checkers.Length; i++)
+        {
             EraserShowPosition eraserShowPosition = checkers[i].GetComponent<EraserShowPosition>();
-            if (eraserShowPosition == null) {
+            if (eraserShowPosition == null)
+            {
                 eraserShowPosition = checkers[i].gameObject.AddComponent<EraserShowPosition>();
             }
         }
     }
+    bool canWin;
+    public override void Win()
+    {
+        Debug.LogError("============== co day ");
+        canWin = true;
 
-    public override void Win() {
-        if(animAfter.AnimationName != "win")
+        for(int i = 0; i < checkers.Length; i ++)
         {
-            animAfter.AnimationName = "win";
-        }
-        for (int i = 0; i < checkers.Length; i++) {
-            checkers[i].draw.isDrawing = false;
-            checkers[i].gameObject.SetActive(false);
-        }
-        if (isMaskable)
+            if(checkers[i].gameObject.name == "checker_wrong")
+            {
+                Debug.LogError("============== co day ");
+                if (checkers[i].draw.IsDrawFinished())
+                {
+                    canWin = false;
+                    Debug.LogError("============== co day ");
+                    break;
+                }    
+            }    
+        }    
+
+        if (canWin)
         {
-            animAfter.gameObject.SetActive(true);
-            maskAnim.gameObject.SetActive(false);
+
+            if (animAfter.AnimationName != "win")
+            {
+                animAfter.AnimationName = "win";
+            }
+            for (int i = 0; i < checkers.Length; i++)
+            {
+                checkers[i].draw.isDrawing = false;
+                checkers[i].gameObject.SetActive(false);
+            }
+            if (isMaskable)
+            {
+                animAfter.gameObject.SetActive(true);
+                maskAnim.gameObject.SetActive(false);
+            }
+
+            Gameplay.Instance.Win(this, false);
+
         }
-      
-            Gameplay.Instance.Win(this,false);
-
-
+        else
+        {
+            Reset();
+        }
     }
 
-    public void Reset() {
+    public void Reset()
+    {
         for (int i = 0; i < checkers.Length; i++)
         {
             checkers[i].draw.ClearDraw();
@@ -57,7 +87,8 @@ public class EraseManyPositionInOneLevel : LevelManager
         Gameplay.Instance.Virate();
     }
 
-    public override Vector3 GetGuidePosition() {
+    public override Vector3 GetGuidePosition()
+    {
         return guidePosition.transform.position;
     }
 }

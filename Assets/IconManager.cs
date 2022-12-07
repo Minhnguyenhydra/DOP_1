@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class IconManager : MonoBehaviour
 {
+    public static IconManager instance;
     RectTransform rect;
     public Image iconMove;
     public Image icon;
@@ -18,6 +19,7 @@ public class IconManager : MonoBehaviour
     GameObject pencil;
 
     private void Start() {
+        instance = this;
         rect = GetComponent<RectTransform>();
         GetComponent<Image>().enabled = false;
         if (SceneManager.GetActiveScene().name != Constants.SCENE_GAMEPLAY) {
