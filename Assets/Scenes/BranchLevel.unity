@@ -500,6 +500,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1693068655, guid: 59d364849ec44544b97b19ac5b65d436, type: 3}
   m_PrefabInstance: {fileID: 85093830}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &220894495 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6851428052772260837, guid: eeadc56796468bf45987e31fa75e8e26, type: 3}
+  m_PrefabInstance: {fileID: 2835796552330500829}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &245941162 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8754687361980527556, guid: eeadc56796468bf45987e31fa75e8e26, type: 3}
@@ -833,6 +838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ed18f0768033a40937f1e16b4024bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  twoBtnBot: {fileID: 220894495}
   btnCheat: {fileID: 85093833}
   btnSpecialLevel: {fileID: 0}
   animSpecialBtn: []

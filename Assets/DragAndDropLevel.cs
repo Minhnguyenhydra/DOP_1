@@ -66,7 +66,7 @@ public class DragAndDropLevel : LevelManager
 
         if (current == correctNames.Count) {
             win = true;
-
+            Gameplay.Instance.twoBtnBot.SetActive(false);
             LeanTween.delayedCall(2f, () => {
                 if (audioSource.isPlaying) audioSource.Stop();
                 for (int i = 0; i < dragObjects.Count; i++) {
@@ -95,6 +95,7 @@ public class DragAndDropLevel : LevelManager
 
     IEnumerator IELoadNormalAnims()
     {
+        Gameplay.Instance.twoBtnBot.SetActive(false);
         for (int i = 0; i < dragObjects.Count; i++) {
             dragObjects[i].transform.localScale = Vector2.zero;
         }
@@ -116,6 +117,8 @@ public class DragAndDropLevel : LevelManager
             EasyEffect.Appear(dragObjects[i].gameObject, 0f, 1f, speed: 0.2f);
             yield return new WaitForSeconds(0.2f);
         }
+        Debug.LogError("============= display all object drag");
+        Gameplay.Instance.twoBtnBot.SetActive(true);
     }
 
     public override Vector3 GetGuidePosition() {

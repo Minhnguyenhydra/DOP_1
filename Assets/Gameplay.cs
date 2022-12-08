@@ -12,6 +12,7 @@ public enum GameplayType { Erase, Draw, Find }
 
 public class Gameplay : MonoBehaviour
 {
+    public GameObject twoBtnBot;
     public static Gameplay Instance;
     [SerializeField] GameObject btnCheat, btnSpecialLevel;
     [SerializeField] GameObject[] animSpecialBtn;

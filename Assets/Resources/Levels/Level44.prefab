@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4386017921783603263}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2074, y: -4.2209, z: -0.0058392202}
-  m_LocalScale: {x: 1.9066333, y: 0.60370785, z: 1}
+  m_LocalPosition: {x: 0.2074, y: -4.35, z: -0.0058392202}
+  m_LocalScale: {x: 2, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8836922989962658183}
@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6497545547ba4f839b9eb76822949ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPaint: {fileID: 0}
   paintColor: {r: 1, g: 1, b: 1, a: 1}
   lastPos: {x: 0, y: 0}
   lastWorldPos: {x: 0, y: 0}
@@ -360,7 +361,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6310970206271894106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.07, y: -4.34, z: 0}
+  m_LocalPosition: {x: 0.07, y: -4.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -422,6 +423,8 @@ MonoBehaviour:
   loopAnimation: 1
   checkers: []
   guidePosition: {fileID: 4090795576581704622}
+  maskAnim: {fileID: 0}
+  isMaskable: 0
 --- !u!1 &8836922991340364418
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +555,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 819743740263038603, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
       propertyPath: m_Name
-      value: check_wrong
+      value: checker_wrong
       objectReference: {fileID: 0}
     - target: {fileID: 819743740263038640, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
       propertyPath: drawFinishEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -568,11 +571,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 819743740263038644, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.1677479
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 819743740263038644, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.5472746
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 819743740263038644, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -615,8 +618,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 819743740263038647, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
+      propertyPath: isBig
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 819743740263038647, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
       propertyPath: erSize
-      value: 60
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 819743740263038647, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}
+      propertyPath: isBigPercents
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d22e2ee03bed4f71a4873846ad426c9, type: 3}

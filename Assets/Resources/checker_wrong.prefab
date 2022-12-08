@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 819743740263038640}
   - component: {fileID: 8716603336152469156}
   m_Layer: 0
-  m_Name: check_wrong
+  m_Name: checker_wrong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,12 +151,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6497545547ba4f839b9eb76822949ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPaint: {fileID: 0}
   paintColor: {r: 1, g: 1, b: 1, a: 1}
   lastPos: {x: 0, y: 0}
   lastWorldPos: {x: 0, y: 0}
   drawPoints: []
   isDrawing: 0
+  isPaint: 0
   erSize: 10
+  isBig: 0
+  isBigPercents: 0
   spriteMask: {fileID: 819743740263038602}
 --- !u!114 &819743740263038640
 MonoBehaviour:

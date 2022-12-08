@@ -51,23 +51,37 @@ public class BulpPopup : MonoBehaviour
 
         LeanTween.move(bongDen2, middlePlace, .5f).setEase(LeanTweenType.easeInQuad).setOnComplete(() =>
         {
-            LeanTween.move(bongDen2, finishedPlace, 1f).setEase(LeanTweenType.easeInQuad);
+            LeanTween.move(bongDen2, finishedPlace, 1f).setEase(LeanTweenType.easeInQuad).setOnComplete(() => {
+                bongDen2.SetActive(false);
+                bongDen2.transform.position = firstLocation.position;
+                bongDen2.transform.localScale = Vector2.one;
+            });
         });
 
         LeanTween.move(bongDen3, middlePlace2, .5f).setEase(LeanTweenType.easeInQuad).setOnComplete(() =>
         {
-            LeanTween.move(bongDen3, finishedPlace, 1f).setEase(LeanTweenType.easeInQuad);
+            LeanTween.move(bongDen3, finishedPlace, 1f).setEase(LeanTweenType.easeInQuad).setOnComplete(() => {
+                bongDen3.SetActive(false);
+                bongDen3.transform.position = firstLocation.position;
+                bongDen3.transform.localScale = Vector2.one;
+            });
         });
 
-        LeanTween.move(bongDen, finishedPlace, 1.5f).setEase(LeanTweenType.easeInQuad);
+        LeanTween.move(bongDen, finishedPlace, 1f).setEase(LeanTweenType.easeInQuad).setOnComplete(() => {
+            GameSystem.userdata.gold += 10;
+            GameSystem.SaveUserDataToLocal();
+            bongDen.SetActive(false);
+            bongDen.transform.position = firstLocation.position;
+            bongDen.transform.localScale = Vector2.one;
+        });
 
-        StartCoroutine(GoldsAdd());
+      //  StartCoroutine(GoldsAdd());
 
     }
 
     public IEnumerator GoldsAdd()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.2f);
         LeanTween.scale(bongDen, new Vector3(0f, 0f, 0f), .5f).setEase(LeanTweenType.easeInBack).setOnComplete(() => 
         {
             GameSystem.userdata.gold += 10;

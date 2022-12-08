@@ -16,15 +16,15 @@ public class OnRewardEfffect : MonoBehaviour
     public void OnRewards()
     {
         Debug.Log("Calling");
-        LeanTween.move(bongDen, finishPlace, 1.5f).setOnComplete(() =>
+        LeanTween.move(bongDen, finishPlace, 1f).setOnComplete(() =>
         {
-
+            GameSystem.userdata.gold += 10f;
+            GameSystem.SaveUserDataToLocal();
             LeanTween.scale(bongDen, new Vector3(0, 0, 0), .5f).setEase(LeanTweenType.easeInBack).setOnComplete(() =>
             {
                 LeanTween.move(bongDen, firstLocation, 0f).setEase(LeanTweenType.easeInBack);
                 LeanTween.scale(bongDen, new Vector3(0.65528f, 0.65528f, 0.65528f), 0f).setEase(LeanTweenType.easeInBack);
-                GameSystem.userdata.gold += 10f;
-                GameSystem.SaveUserDataToLocal();
+
             });
         });
 
