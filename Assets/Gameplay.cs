@@ -19,8 +19,9 @@ public class Gameplay : MonoBehaviour
 
     public List<ParticleSystem> effects;
     public List<RectTransform> findBoxs;
-    public GameObject iconTick,panelAfterWin;
+    public GameObject iconTick, panelAfterWin;
     public GameObject guideObject;
+    public RewardFirstTime rewardFirstTime;
     public UIEffect winPopup;
     public Image findItemDemo;
     public TextMeshProUGUI txtLevel;
@@ -44,10 +45,11 @@ public class Gameplay : MonoBehaviour
     bool drawLevel, eraseLevel, eraseManyPositionInOneLevel;
 
     public bool isPlayingSpecial;
+    GameObject obj;
 
     private void Awake()
     {
-        currentSpecialLevel = -1;
+        // currentSpecialLevel = -1;
         btnCheat.SetActive(Datacontroller.instance.testLevel);
 
         Instance = this;
@@ -68,12 +70,12 @@ public class Gameplay : MonoBehaviour
         iconTick.SetActive(false);
         GameSystem.LoadUserData();
         int level = GameSystem.userdata.level;
-        int count = 0;
+        //  int count = 0;
         won = false;
         isPlayingSpecial = false;
         if (isBranchLevel)
         {
-            GameObject obj = Resources.Load<GameObject>("LevelBranch/Level" + GameSystem.userdata.branchLevel);
+            obj = Resources.Load<GameObject>("LevelBranch/Level" + GameSystem.userdata.branchLevel);
             Debug.Log(GameSystem.userdata.branchLevel);
             txtLevel.text = "Level " + GameSystem.userdata.branchLevel;
             txtQuestion.text = "Make a Choice";
@@ -91,84 +93,95 @@ public class Gameplay : MonoBehaviour
             }
         }
 
-        while (count < 10)
+        //while (count < 10)
+        //{
+        obj = Resources.Load<GameObject>("Levels/Level" + (level /*+ count*/ + 1));
+        closeSpecialLevelButton.SetActive(false);
+        txtLevel.text = "Level " + (level /*+ count*/ + 1);
+
+        Debug.LogError("======= level:" + level /*+ ":" + count*/);
+        // lv 3 -> spe 1
+        // lv 8 -> sp 2
+        // lv 13 -> sp 3
+        // lv 18 -> sp 4
+        // lv 23 -> sp 5
+
+        if (level == 2 && Datacontroller.instance.saveData.passSpecial[0] == 0)
         {
-            GameObject obj = Resources.Load<GameObject>("Levels/Level" + (level + count + 1));
-            closeSpecialLevelButton.SetActive(false);
-            txtLevel.text = "Level " + (level + count + 1);
+            Datacontroller.instance.saveData.passSpecial[0] = 1;
 
-            Debug.LogError("======= level:" + level + ":" + count);
-            // lv 3 -> spe 1
-            // lv 8 -> sp 2
-            // lv 13 -> sp 3
-            // lv 18 -> sp 4
-            // lv 23 -> sp 5
+        }
+        else if (level == 7 && Datacontroller.instance.saveData.passSpecial[1] == 0)
+        {
+            Datacontroller.instance.saveData.passSpecial[1] = 1;
+        }
+        else if (level == 12 && Datacontroller.instance.saveData.passSpecial[2] == 0)
+        {
+            Datacontroller.instance.saveData.passSpecial[2] = 1;
+        }
+        else if (level == 17 && Datacontroller.instance.saveData.passSpecial[3] == 0)
+        {
+            Datacontroller.instance.saveData.passSpecial[3] = 1;
+        }
+        else if (level == 22 && Datacontroller.instance.saveData.passSpecial[4] == 0)
+        {
+            Datacontroller.instance.saveData.passSpecial[4] = 1;
+        }
 
-            if (level == 2)
+        for (int i = 0; i < Datacontroller.instance.saveData.passSpecial.Count; i++)
+        {
+            if (Datacontroller.instance.saveData.passSpecial[i] == 1)
             {
-                currentSpecialLevel = 1;
-            }
-            else if (level == 7)
-            {
-                currentSpecialLevel = 2;
-            }
-            else if (level == 12)
-            {
-                currentSpecialLevel = 3;
-            }
-            else if (level == 17)
-            {
-                currentSpecialLevel = 4;
-            }
-            else if (level == 22)
-            {
-                currentSpecialLevel = 5;
-            }
-            for (int i = 0; i < animSpecialBtn.Length; i++)
-            {
-                animSpecialBtn[i].SetActive(false);
-            }
-            if (currentSpecialLevel != -1)
-            {
-                if(currentSpecialLevel == 1 && Datacontroller.instance.saveData.passSpecial[currentSpecialLevel - 1] == false)
-                {
-                    btnSpecialLevel.transform.GetChild(2).gameObject.SetActive(true);
-                }    
-                btnSpecialLevel.SetActive(!Datacontroller.instance.saveData.passSpecial[currentSpecialLevel - 1]);
-                animSpecialBtn[currentSpecialLevel - 1].SetActive(true);
-            }
-            else
-            {
-                btnSpecialLevel.SetActive(false);
-            }
-
-            txtQuestion.text = "";
-            if (DataManager.Instance.levelInfos.Count > level + count)
-            {
-                LevelInfo info = DataManager.Instance.levelInfos[level + count];
-
-                if (GameSystem.userdata.level == 24)
-                {
-                    txtQuestion.text = null;
-                }
-                else
-                {
-                    txtQuestion.text = info.levelTitle;
-                }
-            }
-
-            if (obj != null)
-            {
-                levelObject = Instantiate(obj);
-                GameSystem.userdata.level = level + count;
-                GameSystem.SaveUserDataToLocal();
+                Datacontroller.instance.saveData.newSpecialActive = true;
                 break;
             }
+        }
+        Debug.LogError("============" + Datacontroller.instance.saveData.newSpecialActive);
+        for (int i = 0; i < animSpecialBtn.Length; i++)
+        {
+            animSpecialBtn[i].SetActive(false);
+        }
+        if (Datacontroller.instance.saveData.levelSpecial < Datacontroller.instance.maxSpecialLevel)
+        {
+            if (Datacontroller.instance.saveData.levelSpecial == 0)
+            {
+                btnSpecialLevel.transform.GetChild(2).gameObject.SetActive(true);
+            }
+            animSpecialBtn[Datacontroller.instance.saveData.levelSpecial].SetActive(true);
+            btnSpecialLevel.SetActive(Datacontroller.instance.saveData.newSpecialActive);
+        }
+        else
+        {
+            btnSpecialLevel.SetActive(false);
+        }
+
+        txtQuestion.text = "";
+        if (DataManager.Instance.levelInfos.Count > level /*+ count*/)
+        {
+            LevelInfo info = DataManager.Instance.levelInfos[level /*+ count*/];
+
+            if (GameSystem.userdata.level == 24)
+            {
+                txtQuestion.text = null;
+            }
             else
             {
-                count++;
+                txtQuestion.text = info.levelTitle;
             }
         }
+
+        if (obj != null)
+        {
+            levelObject = Instantiate(obj);
+            GameSystem.userdata.level = level /*+ count*/;
+            GameSystem.SaveUserDataToLocal();
+            //break;
+        }
+        //else
+        //{
+        //    count++;
+        //}
+        // }
 
         if (levelObject == null)
         {
@@ -224,7 +237,7 @@ public class Gameplay : MonoBehaviour
         else
         {
             eraseLevel = FindObjectOfType<EraseLevel>();
-            eraseManyPositionInOneLevel =  FindObjectOfType<EraseManyPositionInOneLevel>();
+            eraseManyPositionInOneLevel = FindObjectOfType<EraseManyPositionInOneLevel>();
             eraseSpecialLevel = FindObjectOfType<EraseManyTimes>();
             drawManager.gameObject.SetActive(false);
             scanImg.sprite = cucgom;
@@ -357,6 +370,52 @@ public class Gameplay : MonoBehaviour
     {
         if (winPopup != null)
             winPopup.DoEffect();
+
+        if (isBranchLevel)
+        {
+            if (!Datacontroller.instance.saveData.firstTimeLevelBranch[GameSystem.userdata.branchLevel - 1])
+            {
+                rewardFirstTime.gameObject.SetActive(true);
+                Debug.LogError("========== nhan thuong branch");
+                Datacontroller.instance.saveData.firstTimeLevelBranch[GameSystem.userdata.branchLevel - 1] = true;
+            }
+            else
+            {
+                rewardFirstTime.gameObject.SetActive(false);
+                Debug.LogError("========== ko nhan thuong branch");
+            }
+        }
+        else
+        {
+            if (isPlayingSpecial)
+            {
+                if (!Datacontroller.instance.saveData.firstTimeLevelSpecial[Datacontroller.instance.saveData.levelSpecial - 1])
+                {
+                    rewardFirstTime.gameObject.SetActive(true);
+                    Debug.LogError("========== nhan thuong special");
+                    Datacontroller.instance.saveData.firstTimeLevelSpecial[Datacontroller.instance.saveData.levelSpecial - 1] = true;
+                }
+                else
+                {
+                    rewardFirstTime.gameObject.SetActive(false);
+                    Debug.LogError("========== ko nhan thuong special");
+                }
+            }
+            else
+            {
+                if (!Datacontroller.instance.saveData.firstTimeLevelNormal[GameSystem.userdata.level])
+                {
+                    rewardFirstTime.gameObject.SetActive(true);
+                    Debug.LogError("========== nhan thuong normal");
+                    Datacontroller.instance.saveData.firstTimeLevelNormal[GameSystem.userdata.level] = true;
+                }
+                else
+                {
+                    rewardFirstTime.gameObject.SetActive(false);
+                    Debug.LogError("========== ko nhan thuong normal");
+                }
+            }
+        }
     }
 
     public void Hint()
@@ -473,18 +532,18 @@ public class Gameplay : MonoBehaviour
     {
         SpawnSpecialLevel();
     }
-    int currentSpecialLevel = 0;
+    // int currentSpecialLevel = 0;
     public void SpawnSpecialLevel()
     {
         eraseSpecialLevel = null;
         isPlayingSpecial = true;
         Destroy(levelObject);
         // closeSpecialLevelButton.SetActive(true);
-        var obj = Resources.Load<GameObject>("LevelSpecials/Special" + /*GetSpecialLevel()*/currentSpecialLevel);
+        var obj = Resources.Load<GameObject>("LevelSpecials/Special" + /*GetSpecialLevel()*//*currentSpecialLevel*/(Datacontroller.instance.saveData.levelSpecial + 1));
         drawManager.gameObject.SetActive(false);
         //txtLevel.gameObject.SetActive(isPlayingSpecial);
         //txtQuestion.gameObject.SetActive(isPlayingSpecial);
-        txtLevel.text = "Level " + currentSpecialLevel;
+        txtLevel.text = "Level " + (Datacontroller.instance.saveData.levelSpecial + 1);
         txtQuestion.text = "Erase Clothes";
         levelObject = Instantiate(obj);
         eraseSpecialLevel = levelObject.GetComponent<EraseManyTimes>();
@@ -498,9 +557,19 @@ public class Gameplay : MonoBehaviour
             iconManager.Init();
         }
 
-        Datacontroller.instance.saveData.passSpecial[currentSpecialLevel - 1] = true;
+        Datacontroller.instance.saveData.passSpecial[Datacontroller.instance.saveData.levelSpecial] = 2;
 
         btnSpecialLevel.SetActive(false);
+
+        if (Datacontroller.instance.saveData.levelSpecial == 0)
+        {
+            LeanTween.delayedCall(1f, () =>
+            {
+                Hint();
+            });
+        }
+        Datacontroller.instance.saveData.levelSpecial++;
+        Datacontroller.instance.saveData.newSpecialActive = false;
     }
 
     public void LevelUp()

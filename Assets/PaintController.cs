@@ -74,7 +74,7 @@ public class PaintController : MonoBehaviour
 
     void Update() {
         if (Input.GetMouseButtonDown(0)) {
-            Gameplay.Instance.animHint.gameObject.SetActive(false);
+
             canDraw = true;
         }
         
@@ -88,6 +88,7 @@ public class PaintController : MonoBehaviour
             bool inside = drawBoundCollider.OverlapPoint(pos);
 
             if (inside && currentPaint == null) {
+                Gameplay.Instance.animHint.gameObject.SetActive(false);
                 currentPaint = this;
             }
 

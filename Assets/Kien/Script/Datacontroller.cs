@@ -14,13 +14,16 @@ using static SaveData;
 public class SaveData
 {
     public bool offmusic, offsound, offvibra, removeAds, rated, showTut;
-    public int currentLevel, session, hightestLevel, countVideoForRemoveAds;
+    public int currentLevel, session, levelSpecial, countVideoForRemoveAds;
     public int currentDailyGift;
-    public bool canTakeDailyGift;
+    public bool canTakeDailyGift, newSpecialActive;
 
     public DateTime oldDay = System.DateTime.Now;
 
-    public List<bool> passSpecial = new List<bool>();
+    public List<int> passSpecial = new List<int>();
+    public List<bool> firstTimeLevelNormal = new List<bool>();
+    public List<bool> firstTimeLevelSpecial = new List<bool>();
+    public List<bool> firstTimeLevelBranch = new List<bool>();
 
 }
 [System.Serializable]
@@ -46,6 +49,8 @@ public class GetMoreGame
 public class Datacontroller : MonoBehaviour
 {
     public int maxSpecialLevel = 5;
+    public int maxNormalLevel = 49;
+    public int maxBranchLevel = 6;
     public bool testLevel;
     public bool debug;
     public bool anUI;
@@ -70,7 +75,7 @@ public class Datacontroller : MonoBehaviour
         saveData.removeAds = true;
         AdsController.instance.HideBanner();
     }
-   
+
     private void Awake()
     {
         if (instance == null)
@@ -117,7 +122,7 @@ public class Datacontroller : MonoBehaviour
         }
 
     }
-  
+
     void LoadData(string value)
     {
         saveData = new SaveData();
@@ -129,7 +134,7 @@ public class Datacontroller : MonoBehaviour
         //  LoadSaveMoreGame(PlayerPrefs.GetString(DataParam.SAVEMOREGAME));
         DataParam.beginShowInter = DataParam.lastShowInter = System.DateTime.Now;
 
-        if(saveData.session == 0)
+        if (saveData.session == 0)
         {
             saveData.oldDay = System.DateTime.Now;
             saveData.canTakeDailyGift = true;
@@ -137,10 +142,10 @@ public class Datacontroller : MonoBehaviour
 
         saveData.session++;
         Debug.LogError(saveData.oldDay.Date + ":" + System.DateTime.Now.Date);
-        if(saveData.oldDay.Date != System.DateTime.Now.Date)
+        if (saveData.oldDay.Date != System.DateTime.Now.Date)
         {
             saveData.canTakeDailyGift = true;
-            if(saveData.currentLevel == 7)
+            if (saveData.currentLevel == 7)
             {
                 saveData.currentLevel = 0;
             }
@@ -165,12 +170,26 @@ public class Datacontroller : MonoBehaviour
     }
     void CreateSpecialLevelInfo()
     {
-        for(int i = saveData.passSpecial.Count; i < maxSpecialLevel; i ++)
+        for (int i = saveData.passSpecial.Count; i < maxSpecialLevel; i++)
         {
-            bool _pass = new bool();
+            int _pass = new int();
             saveData.passSpecial.Add(_pass);
         }
-
+        for (int i = saveData.firstTimeLevelSpecial.Count; i < maxSpecialLevel; i++)
+        {
+            bool _fistTime = new bool();
+            saveData.firstTimeLevelSpecial.Add(_fistTime);
+        }
+        for (int i = saveData.firstTimeLevelNormal.Count; i < maxNormalLevel; i++)
+        {
+            bool _fistTime = new bool();
+            saveData.firstTimeLevelNormal.Add(_fistTime);
+        }
+        for (int i = saveData.firstTimeLevelBranch.Count; i < maxBranchLevel; i++)
+        {
+            bool _fistTime = new bool();
+            saveData.firstTimeLevelBranch.Add(_fistTime);
+        }
 
     }
     IEnumerator WaitForRequest(WWW www)
@@ -209,7 +228,7 @@ public class Datacontroller : MonoBehaviour
         }
         else
         {
-           // DataParam.wwwLevel = www.downloadHandler.text;
+            // DataParam.wwwLevel = www.downloadHandler.text;
             Debug.LogError("=====WWW Level!: " + www.downloadHandler.text);
         }
 
