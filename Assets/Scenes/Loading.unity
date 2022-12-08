@@ -153,8 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpecialLevel: 5
+  maxNormalLevel: 49
+  maxBranchLevel: 6
   testLevel: 1
-  debug: 1
+  debug: 0
   anUI: 0
   anAds: 1
   testIAP: 0

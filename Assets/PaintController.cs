@@ -28,6 +28,7 @@ public class PaintController : MonoBehaviour
 
     SpriteRenderer renderer;
 
+    GameObject animHint;
     public virtual Texture2D GetSourceTexture() {
         var renderer = GetComponent<SpriteRenderer>();
         Debug.LogError("======= get texture ");
@@ -53,6 +54,8 @@ public class PaintController : MonoBehaviour
 
     public virtual void Start() {
         Init();
+
+        animHint = Gameplay.Instance.animHint.gameObject ;
     }
 
     public void Init() {
@@ -88,13 +91,14 @@ public class PaintController : MonoBehaviour
             bool inside = drawBoundCollider.OverlapPoint(pos);
 
             if (inside && currentPaint == null) {
-                Gameplay.Instance.animHint.gameObject.SetActive(false);
+
                 currentPaint = this;
             }
 
             if (inside && currentPaint == this) {
                 UpdateTexture(pos);
                 isDrawing = true;
+                animHint.SetActive(false);
                 return;
             }
         }

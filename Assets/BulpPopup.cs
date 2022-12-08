@@ -70,7 +70,8 @@ public class BulpPopup : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         LeanTween.scale(bongDen, new Vector3(0f, 0f, 0f), .5f).setEase(LeanTweenType.easeInBack).setOnComplete(() => 
         {
-            GameSystem.userdata.gold += 5;
+            GameSystem.userdata.gold += 10;
+            GameSystem.SaveUserDataToLocal();
             LeanTween.move(bongDen, firstLocation, 0f).setEase(LeanTweenType.easeInQuad);
 
         });

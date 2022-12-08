@@ -34,6 +34,7 @@ namespace DarkcupGames
                 {
                     LeanTween.scale(nearest, new Vector3(0f, 0f, 0f), .5f).setEase(LeanTweenType.easeInBack);
                     GameSystem.userdata.gold += 5;
+                    GameSystem.SaveUserDataToLocal();
 
                 });
                 myLuckySpin.spinTime = 1;

@@ -12,12 +12,12 @@ public class RewardFirstTime : MonoBehaviour
     void Start()
     {
         bongDen.SetActive(true);
-        LeanTween.move(bongDen, finishedPlace, 1.5f).setEase(LeanTweenType.easeInQuad).setOnComplete(() =>
+        LeanTween.move(bongDen, finishedPlace, 1f).setEase(LeanTweenType.easeInOutQuad).setOnComplete(() =>
         {
             bongDen.SetActive(false);
             GameSystem.userdata.gold += 5;
-        }); ;
+            GameSystem.SaveUserDataToLocal();
+        }).setDelay(0.5f);
     }
-
 
 }

@@ -23,8 +23,8 @@ public class OnRewardEfffect : MonoBehaviour
             {
                 LeanTween.move(bongDen, firstLocation, 0f).setEase(LeanTweenType.easeInBack);
                 LeanTween.scale(bongDen, new Vector3(0.65528f, 0.65528f, 0.65528f), 0f).setEase(LeanTweenType.easeInBack);
-                GameSystem.userdata.gold += 5f;
-
+                GameSystem.userdata.gold += 10f;
+                GameSystem.SaveUserDataToLocal();
             });
         });
 

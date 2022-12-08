@@ -177,7 +177,7 @@ MonoBehaviour:
   animAfter: {fileID: 2897516767836160414}
   animBefore: {fileID: 2897516769607921910}
   winAnims:
-  - win
+  - win2
   loopAnimation: 0
   win: 0
   dragObjects:
@@ -191,12 +191,13 @@ MonoBehaviour:
   - normal_idle
   correctNames:
   - BanDo
+  correctAnims:
+  - win
   audioSource: {fileID: 2897516768272951119}
   wrongSFX: {fileID: 8300000, guid: 35d3c234f4fd01e46bebd9b0c462b432, type: 3}
   rightSFX: {fileID: 8300000, guid: fd3580025e0c59742bdf169ef0771362, type: 3}
-  isAbleToWrong: 0
   current: 0
-  wrongCount: 0
+  changeSkin: 0
 --- !u!82 &2897516768272951119
 AudioSource:
   m_ObjectHideFlags: 0
@@ -418,11 +419,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draw: {fileID: 0}
   mouseCursor: {fileID: 0}
   wrongAnim: 
   isReturn: 1
-  isErase: 0
   isDraw: 0
   isCorrect: 0
 --- !u!82 &3082921840251118197
@@ -646,11 +645,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draw: {fileID: 0}
   mouseCursor: {fileID: 0}
   wrongAnim: 
   isReturn: 1
-  isErase: 0
   isDraw: 0
   isCorrect: 0
 --- !u!82 &3004951009141208930
@@ -905,11 +902,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1df6402113f3e41b571507feadd1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draw: {fileID: 0}
   mouseCursor: {fileID: 0}
   wrongAnim: 
   isReturn: 1
-  isErase: 0
   isDraw: 0
   isCorrect: 0
 --- !u!82 &5977082831695464537
