@@ -37,8 +37,9 @@ public class Home : MonoBehaviour
 
     private void Start()
     {
+        index = GameSystem.userdata.branchLevel;
         Init();
-        ShowStory(0);
+        ShowStory(index);
     }
 
     public void Init()
@@ -51,7 +52,7 @@ public class Home : MonoBehaviour
             imgDemo = "",
             unlockText = "Unlock at level 22",
             unlockPrice = 200,
-            unlocked = GameSystem.userdata.boughtItems.Contains(1.ToString()) || GameSystem.userdata.level >= 23
+            unlocked = GameSystem.userdata.boughtItems.Contains(0.ToString()) || GameSystem.userdata.level >= 23
         }); ;
         storyDatas.Add(new StoryData()
         {
@@ -59,21 +60,21 @@ public class Home : MonoBehaviour
             imgDemo = "",
             unlockText = "Unlock at level 22",
             unlockPrice = 200,
-            unlocked = GameSystem.userdata.boughtItems.Contains(2.ToString()) || GameSystem.userdata.level >= 23
+            unlocked = GameSystem.userdata.boughtItems.Contains(1.ToString()) || GameSystem.userdata.level >= 23
         }); storyDatas.Add(new StoryData()
         {
             storyName = "3",
             imgDemo = "",
             unlockText = "Unlock at level 22",
             unlockPrice = 200,
-            unlocked = GameSystem.userdata.boughtItems.Contains(3.ToString()) || GameSystem.userdata.level >= 23
+            unlocked = GameSystem.userdata.boughtItems.Contains(2.ToString()) || GameSystem.userdata.level >= 23
         }); storyDatas.Add(new StoryData()
         {
             storyName = "4",
             imgDemo = "",
             unlockText = "Unlock at level 22",
             unlockPrice = 200,
-            unlocked = GameSystem.userdata.boughtItems.Contains(4.ToString()) || GameSystem.userdata.level >= 23
+            unlocked = GameSystem.userdata.boughtItems.Contains(3.ToString()) || GameSystem.userdata.level >= 23
         });
         storyDatas.Add(new StoryData()
         {
@@ -81,7 +82,7 @@ public class Home : MonoBehaviour
             imgDemo = "",
             unlockText = "Unlock at level 53",
             unlockPrice = 500,
-            unlocked = GameSystem.userdata.level >= 52 || GameSystem.userdata.boughtItems.Contains(5.ToString())
+            unlocked = GameSystem.userdata.level >= 52 || GameSystem.userdata.boughtItems.Contains(4.ToString())
         });
         storyDatas.Add(new StoryData()
         {
@@ -89,38 +90,50 @@ public class Home : MonoBehaviour
             imgDemo = "",
             unlockText = "Unlock at level 63",
             unlockPrice = 600,
-            unlocked = GameSystem.userdata.level >= 62 || GameSystem.userdata.boughtItems.Contains(6.ToString())
+            unlocked = GameSystem.userdata.level >= 62 || GameSystem.userdata.boughtItems.Contains(5.ToString())
         });
 
         GameSystem.userdata.storyList = storyDatas;
     }
-
+    int index;
     public void NextStory()
     {
-        int nextIndex = storyDatas.GetNextIndex(GameSystem.userdata.currentStory);
-        GameSystem.userdata.currentStory = nextIndex;
-        GameSystem.SaveUserDataToLocal();
+        index++;
+        if (index >= Datacontroller.instance.maxBranchLevel) {
+            index = 0;
+        }
+
+       // int nextIndex = storyDatas.GetNextIndex(GameSystem.userdata.branchLevel);
+       // GameSystem.userdata.currentStory = nextIndex;
+       // GameSystem.SaveUserDataToLocal();
         Init();
-        ShowStory(nextIndex);
+        ShowStory(index);
 
     }
 
     public void PreviousStory()
     {
-        int previousIndex = storyDatas.GetPreviousIndex(GameSystem.userdata.currentStory);
-        GameSystem.userdata.currentStory = previousIndex;
-        GameSystem.SaveUserDataToLocal();
+        index--;
+        if (index < 0)
+        {
+            index = Datacontroller.instance.maxBranchLevel - 1;
+        }
+        // int previousIndex = storyDatas.GetPreviousIndex(GameSystem.userdata.branchLevel);
+        // GameSystem.userdata.currentStory = previousIndex;
+        // GameSystem.SaveUserDataToLocal();
         Init();
-        ShowStory(previousIndex);
+        ShowStory(index);
     }
 
     public void ShowStory(int index)
     {
+
         StoryData data = storyDatas[index];
-        GameSystem.userdata.branchLevel = index + 1;
+        GameSystem.userdata.branchLevel = index /*+ 1*/;
         GameSystem.SaveUserDataToLocal();
         storyUpdater.UpdateUI(data, storyUpdater.gameObject);
         storySprites.SetEnableChild(index);
+        Debug.LogError(GameSystem.userdata.branchLevel);
     }
 
     public void Show(GameObject obj)

@@ -78,20 +78,20 @@ namespace DarkcupGames {
             chanels[CHANEL_AMOUNT - 1].clip = buttonSound;
             chanels[CHANEL_AMOUNT - 1].Play();
         }
-
+        AudioSource fadeIn;
         public void FadeBackgroundSong(AudioClip clip) {
-            backgroundChanel = backgroundChanel == 0 ? 1 : 0;
-            AudioSource fadeOut = backgroundChanel == 0 ? chanelBgSong : chanelBgSong2;
-            AudioSource fadeIn = backgroundChanel == 1 ? chanelBgSong : chanelBgSong2;
+          //  backgroundChanel = backgroundChanel == 0 ? 1 : 0;
+          //  AudioSource fadeOut = backgroundChanel == 0 ? chanelBgSong : chanelBgSong2;
+            fadeIn =/* backgroundChanel == 1 ?*/ chanelBgSong/* : chanelBgSong2*/;
 
             fadeIn.clip = clip;
             fadeIn.Play();
 
-            LeanTween.value(1f, 0f, FADE_BACKGROUND_SONG_TIME).setOnUpdate((float f) => {
-                fadeOut.volume = f;
-            }).setOnComplete(() => {
-                fadeOut.Stop();
-            });
+            //LeanTween.value(1f, 0f, FADE_BACKGROUND_SONG_TIME).setOnUpdate((float f) => {
+            //    fadeOut.volume = f;
+            //}).setOnComplete(() => {
+            //    fadeOut.Stop();
+            //});
 
             LeanTween.value(0f, 1f, FADE_BACKGROUND_SONG_TIME).setOnUpdate((float f) => {
                 fadeIn.volume = f;

@@ -76,9 +76,9 @@ public class Gameplay : MonoBehaviour
         isPlayingSpecial = false;
         if (isBranchLevel)
         {
-            obj = Resources.Load<GameObject>("LevelBranch/Level" + GameSystem.userdata.branchLevel);
+            obj = Resources.Load<GameObject>("LevelBranch/Level" + (GameSystem.userdata.branchLevel+1));
             Debug.Log(GameSystem.userdata.branchLevel);
-            txtLevel.text = "Level " + GameSystem.userdata.branchLevel;
+            txtLevel.text = "Story - Chapter " + (GameSystem.userdata.branchLevel+1);
             txtQuestion.text = "Make a Choice";
             if (obj != null)
             {
@@ -374,11 +374,11 @@ public class Gameplay : MonoBehaviour
 
         if (isBranchLevel)
         {
-            if (!Datacontroller.instance.saveData.firstTimeLevelBranch[GameSystem.userdata.branchLevel - 1])
+            if (!Datacontroller.instance.saveData.firstTimeLevelBranch[GameSystem.userdata.branchLevel])
             {
                 rewardFirstTime.gameObject.SetActive(true);
                 Debug.LogError("========== nhan thuong branch");
-                Datacontroller.instance.saveData.firstTimeLevelBranch[GameSystem.userdata.branchLevel - 1] = true;
+                Datacontroller.instance.saveData.firstTimeLevelBranch[GameSystem.userdata.branchLevel] = true;
             }
             else
             {
@@ -544,7 +544,7 @@ public class Gameplay : MonoBehaviour
         drawManager.gameObject.SetActive(false);
         //txtLevel.gameObject.SetActive(isPlayingSpecial);
         //txtQuestion.gameObject.SetActive(isPlayingSpecial);
-        txtLevel.text = "Level " + (Datacontroller.instance.saveData.levelSpecial + 1);
+        txtLevel.text = "Special " + (Datacontroller.instance.saveData.levelSpecial + 1);
         txtQuestion.text = "Erase Clothes";
         levelObject = Instantiate(obj);
         eraseSpecialLevel = levelObject.GetComponent<EraseManyTimes>();
