@@ -428,9 +428,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d87cb467db596144a86d1b351466d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID1_ANDROID: 
-  ID2_ANDROID: 
-  ID3_ANDROID: 
+  ID1_ANDROID: ca-app-pub-3940256099942544/3419835294
+  ID2_ANDROID: ca-app-pub-3940256099942544/3419835294
+  ID3_ANDROID: ca-app-pub-3940256099942544/3419835294
   ID1_IOS: 
   ID2_IOS: 
   ID3_IOS: 

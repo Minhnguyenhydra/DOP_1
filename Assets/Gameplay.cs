@@ -15,12 +15,12 @@ public class Gameplay : MonoBehaviour
     public GameObject twoBtnBot;
     public static Gameplay Instance;
     [SerializeField] GameObject btnCheat, btnSpecialLevel;
-    [SerializeField] GameObject[] animSpecialBtn;
+    [SerializeField] GameObject[] animSpecialBtn,animSpecialPanel;
     public GameplayType GameplayType { get; private set; }
 
     public List<ParticleSystem> effects;
     public List<RectTransform> findBoxs;
-    public GameObject iconTick, panelAfterWin;
+    public GameObject iconTick, panelAfterWin,sepcialWarningPanel;
     public GameObject guideObject;
     public RewardFirstTime rewardFirstTime;
     public UIEffect winPopup;
@@ -90,6 +90,9 @@ public class Gameplay : MonoBehaviour
                 {
                     findBoxs[i].gameObject.SetActive(false);
                 }
+
+                EventController.PLAY_LEVEL_STORY(GameSystem.userdata.branchLevel + 1);
+
                 return;
             }
         }
@@ -141,15 +144,20 @@ public class Gameplay : MonoBehaviour
         for (int i = 0; i < animSpecialBtn.Length; i++)
         {
             animSpecialBtn[i].SetActive(false);
+            animSpecialPanel[i].SetActive(false);
         }
         if (Datacontroller.instance.saveData.levelSpecial < Datacontroller.instance.maxSpecialLevel)
         {
             if (Datacontroller.instance.saveData.levelSpecial == 0)
             {
+                sepcialWarningPanel.SetActive(Datacontroller.instance.saveData.newSpecialActive);
                 btnSpecialLevel.transform.GetChild(2).gameObject.SetActive(true);
             }
             animSpecialBtn[Datacontroller.instance.saveData.levelSpecial].SetActive(true);
+            animSpecialPanel[Datacontroller.instance.saveData.levelSpecial].SetActive(true);
+
             btnSpecialLevel.SetActive(Datacontroller.instance.saveData.newSpecialActive);
+
         }
         else
         {
@@ -176,6 +184,8 @@ public class Gameplay : MonoBehaviour
             levelObject = Instantiate(obj);
             GameSystem.userdata.level = level /*+ count*/;
             GameSystem.SaveUserDataToLocal();
+
+            EventController.PLAY_LEVEL_NORMAL(level + 1);
             //break;
         }
         //else
@@ -385,6 +395,7 @@ public class Gameplay : MonoBehaviour
                 rewardFirstTime.gameObject.SetActive(false);
                 Debug.LogError("========== ko nhan thuong branch");
             }
+            EventController.WIN_LEVEL_SPECIAL(GameSystem.userdata.branchLevel + 1);
         }
         else
         {
@@ -401,6 +412,8 @@ public class Gameplay : MonoBehaviour
                     rewardFirstTime.gameObject.SetActive(false);
                     Debug.LogError("========== ko nhan thuong special");
                 }
+
+                EventController.WIN_LEVEL_SPECIAL(Datacontroller.instance.saveData.levelSpecial - 1);
             }
             else
             {
@@ -415,6 +428,8 @@ public class Gameplay : MonoBehaviour
                     rewardFirstTime.gameObject.SetActive(false);
                     Debug.LogError("========== ko nhan thuong normal");
                 }
+
+                EventController.WIN_LEVEL_SPECIAL(GameSystem.userdata.level + 1);
             }
         }
     }
@@ -509,6 +524,7 @@ public class Gameplay : MonoBehaviour
         {
             SceneManager.LoadScene("Home");
             isBranchLevel = false;
+            Datacontroller.instance.ShowInter();
             return;
         }
         //if (GetSpecialLevel() > 0 && !isPlayingSpecial) {
@@ -528,6 +544,11 @@ public class Gameplay : MonoBehaviour
             GameSystem.SaveUserDataToLocal();
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Datacontroller.instance.ShowInter();
+    }
+    public void BtnCloseWarningSpecialPanel()
+    {
+        sepcialWarningPanel.SetActive(false);
     }
     public void BtnShowSpecialLevel()
     {
@@ -536,6 +557,7 @@ public class Gameplay : MonoBehaviour
     // int currentSpecialLevel = 0;
     public void SpawnSpecialLevel()
     {
+        sepcialWarningPanel.SetActive(false);
         eraseSpecialLevel = null;
         isPlayingSpecial = true;
         Destroy(levelObject);
@@ -557,6 +579,8 @@ public class Gameplay : MonoBehaviour
         {
             iconManager.Init();
         }
+
+        EventController.PLAY_LEVEL_SPECIAL(Datacontroller.instance.saveData.levelSpecial + 1);
 
         Datacontroller.instance.saveData.passSpecial[Datacontroller.instance.saveData.levelSpecial] = 2;
 

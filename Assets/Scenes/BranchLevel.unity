@@ -842,6 +842,7 @@ MonoBehaviour:
   btnCheat: {fileID: 85093833}
   btnSpecialLevel: {fileID: 0}
   animSpecialBtn: []
+  animSpecialPanel: []
   effects:
   - {fileID: 453783611}
   - {fileID: 198783573972310306}
@@ -850,6 +851,7 @@ MonoBehaviour:
   - {fileID: 1885504690}
   iconTick: {fileID: 1522728515}
   panelAfterWin: {fileID: 8081988135380583031}
+  sepcialWarningPanel: {fileID: 0}
   guideObject: {fileID: 305061132}
   rewardFirstTime: {fileID: 1203227784}
   winPopup: {fileID: 726737831}
@@ -2209,6 +2211,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 85093832}
+    - target: {fileID: 7464312469703028893, guid: 6783e9d96e1774f4aa7ef353ae57bb4e, type: 3}
+      propertyPath: m_Name
+      value: ButtonCloseSetting
+      objectReference: {fileID: 0}
     - target: {fileID: 7464312470128308565, guid: 6783e9d96e1774f4aa7ef353ae57bb4e, type: 3}
       propertyPath: m_SizeDelta.x
       value: 168
@@ -2750,7 +2756,7 @@ GameObject:
   - component: {fileID: 1012348492}
   - component: {fileID: 1012348489}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonRewardVideoWin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4946,7 +4952,7 @@ GameObject:
   - component: {fileID: 2123626717}
   - component: {fileID: 1344541663}
   m_Layer: 5
-  m_Name: Button Next
+  m_Name: ButtonNextWin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

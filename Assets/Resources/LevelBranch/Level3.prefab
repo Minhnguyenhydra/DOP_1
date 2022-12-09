@@ -184,7 +184,7 @@ MonoBehaviour:
   - {fileID: 3815726224850329923}
   - {fileID: 3815726223524687130}
   correctPositions:
-  - {fileID: 3815726224813425928}
+  - {fileID: 3815726223466880613}
   - {fileID: 3815726223466880613}
   - {fileID: 3815726224813425928}
   startAnims:
@@ -201,6 +201,7 @@ MonoBehaviour:
   wrongSFX: {fileID: 8300000, guid: 35d3c234f4fd01e46bebd9b0c462b432, type: 3}
   rightSFX: {fileID: 8300000, guid: 8cde9fa34beeacd4d9a3263917cb4ee0, type: 3}
   current: 0
+  changeSkin: 0
 --- !u!82 &3815726223248887106
 AudioSource:
   m_ObjectHideFlags: 0
@@ -669,7 +670,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a677cc9a687760b4180254bdcbae7cc6, type: 2}
+  - {fileID: 2100000, guid: bf18632bb9db48c499c33dcc08b23b99, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -721,10 +722,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: bf18632bb9db48c499c33dcc08b23b99, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: a677cc9a687760b4180254bdcbae7cc6, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: win

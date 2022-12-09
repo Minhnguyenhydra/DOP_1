@@ -2326,7 +2326,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2024892212}
         m_TargetAssemblyTypeName: DarkcupGames.CheatManager, Assembly-CSharp
-        m_MethodName: AddGold
+        m_MethodName: AddCoins
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

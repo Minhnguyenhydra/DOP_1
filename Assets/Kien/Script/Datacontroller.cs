@@ -16,7 +16,7 @@ public class SaveData
     public bool offmusic, offsound, offvibra, removeAds, rated, showTut;
     public int currentLevel, session, levelSpecial, countVideoForRemoveAds;
     public int currentDailyGift;
-    public bool canTakeDailyGift, newSpecialActive;
+    public bool canTakeDailyGift, newSpecialActive,showWaringStoryUnlock;
 
     public DateTime oldDay = System.DateTime.Now;
 
@@ -145,9 +145,9 @@ public class Datacontroller : MonoBehaviour
         if (saveData.oldDay.Date != System.DateTime.Now.Date)
         {
             saveData.canTakeDailyGift = true;
-            if (saveData.currentLevel == 7)
+            if (saveData.currentDailyGift == 7)
             {
-                saveData.currentLevel = 0;
+                saveData.currentDailyGift = 0;
             }
         }
     }

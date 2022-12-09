@@ -225,6 +225,11 @@ public class AdsController : MonoBehaviour
     string appIdTemp;
     public void Init()
     {
+        if (testAdAppOpen)
+        {
+            MaxSdk.SetTestDeviceAdvertisingIdentifiers(testDeviceIds.ToArray());
+
+        }
 
         MaxSdk.SetSdkKey(appIdTemp);
         MaxSdk.SetUserId("USER_ID");
@@ -473,8 +478,9 @@ public class AdsController : MonoBehaviour
     {
         Debug.LogError("====load banner success ");
         bannerOK = true;
+        ShowBanner();
         //HideBanner();
-         //ShowBanner();
+        //ShowBanner();
     }
     private void BannerAdLoadedEventFalse(string s, int i)
     {

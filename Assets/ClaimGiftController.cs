@@ -14,6 +14,7 @@ public class ClaimGiftController : MonoBehaviour
     public Sprite normalImage;
     public Sprite disableImage;
     [SerializeField] GameObject dailyPanel;
+    public int[] rewardClaim;
     // Update is called once per frame
 
     public void BtnShowDailyGift()
@@ -106,12 +107,12 @@ public class ClaimGiftController : MonoBehaviour
 
                 LeanTween.scale(lightBulb, new Vector3(0, 0, 0), 1f).setEase(LeanTweenType.easeInBack).setOnComplete(() =>
                 {
-                    if (Datacontroller.instance.saveData.currentDailyGift == daysReward.Count - 1)
-                    {
-                        Reward(100);
-                        return;
-                    }
-                    Reward(10);
+                    //if (Datacontroller.instance.saveData.currentDailyGift == daysReward.Count - 1)
+                    //{
+                    //    Reward(170);
+                    //    return;
+                    //}
+                    Reward(rewardClaim[Datacontroller.instance.saveData.currentDailyGift]);
                 });
             });
         });

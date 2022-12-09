@@ -57,6 +57,8 @@ public class EventController : MonoBehaviour
         //    new Parameter(FirebaseAnalytics.ParameterLevelName, sceneName));
 
         //first_open = Datacontroller.instance.saveData.session == 1 ? true : false;
+
+        first_open = Datacontroller.instance.saveData.session == 1 ? true : false;
     }
     //private IEnumerator GetIDToken()
     //{
@@ -169,7 +171,7 @@ public class EventController : MonoBehaviour
     }
 
     static string nameTempParam;
-    public static void PLAY_LEVEL_DELETE_EVENT(int value)
+    public static void PLAY_LEVEL_SPECIAL(int value)
     {
         if (fireBaseInitDone)
         {
@@ -187,10 +189,10 @@ public class EventController : MonoBehaviour
             }
 
             // Parameter param = new Parameter("play_level_para", "play_level_" + nameTempParam + value);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("play_level_delete_event_" + nameTempParam + value/*, param*/);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("play_level_special_" + nameTempParam + value/*, param*/);
         }
     }
-    public static void PLAY_LEVEL_EVENT(int value)
+    public static void PLAY_LEVEL_NORMAL(int value)
     {
         if (fireBaseInitDone)
         {
@@ -208,10 +210,10 @@ public class EventController : MonoBehaviour
             }
 
            // Parameter param = new Parameter("play_level_para", "play_level_" + nameTempParam + value);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("play_level_event_" + nameTempParam + value/*, param*/);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("play_level_normal_" + nameTempParam + value/*, param*/);
         }
     }
-    public static void PLAY_LEVEL_EVENT_CHALLANGE(int value)
+    public static void PLAY_LEVEL_STORY(int value)
     {
         if (fireBaseInitDone)
         {
@@ -229,7 +231,7 @@ public class EventController : MonoBehaviour
             }
 
          //   Parameter param = new Parameter("play_level_para", "play_challange_" + nameTempParam + value/* + "_" + age*/);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("play_level_event_challenge_" + nameTempParam + value/*, param*/);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("play_level_story_" + nameTempParam + value/*, param*/);
         }
     }
     public static void PLAY_EVENT_DAY(int value)
@@ -256,7 +258,7 @@ public class EventController : MonoBehaviour
         }
         Debug.LogError("==== week:" + value);
     }
-    public static void WIN_LEVEL_EVENT(int value)
+    public static void WIN_LEVEL_NORMAL(int value)
     {
         if (fireBaseInitDone)
         {
@@ -273,11 +275,11 @@ public class EventController : MonoBehaviour
                 nameTempParam = "";
             }
          //   Parameter param = new Parameter("win_level_para", "win_level_" + nameTempParam + value /*+ "_" + age*/);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("win_level_event_" + nameTempParam + value/*, param*/);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("win_level_normal_" + nameTempParam + value/*, param*/);
         }
       //  AF_LEVEL_ACHIEVED();
     }
-    public static void WIN_LEVEL_EVENT_CHALLENGE(int value)
+    public static void WIN_LEVEL_SPECIAL(int value)
     {
         if (fireBaseInitDone)
         {
@@ -294,53 +296,32 @@ public class EventController : MonoBehaviour
                 nameTempParam = "";
             }
           //  Parameter param = new Parameter("win_level_para", "win_challange_" + nameTempParam + value /*+ "_" + age*/);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("win_level_event_challenge_" + nameTempParam + value/*, param*/);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("win_level_special_" + nameTempParam + value/*, param*/);
+        }
+        //  AF_LEVEL_ACHIEVED();
+    }
+    public static void WIN_LEVEL_STORY(int value)
+    {
+        if (fireBaseInitDone)
+        {
+            if (value < 10)
+            {
+                nameTempParam = "00";
+            }
+            else if (value >= 10 && value < 100)
+            {
+                nameTempParam = "0";
+            }
+            else
+            {
+                nameTempParam = "";
+            }
+            //  Parameter param = new Parameter("win_level_para", "win_challange_" + nameTempParam + value /*+ "_" + age*/);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("win_level_story_" + nameTempParam + value/*, param*/);
         }
         //  AF_LEVEL_ACHIEVED();
     }
 
-    public static void LOSE_LEVEL_EVENT(int value)
-    {
-        if (fireBaseInitDone)
-        {
-            if (value < 10)
-            {
-                nameTempParam = "00";
-            }
-            else if (value >= 10 && value < 100)
-            {
-                nameTempParam = "0";
-            }
-            else
-            {
-                nameTempParam = "";
-            }
-
-       //     Parameter param = new Parameter("lose_level_para", "lose_level_" + nameTempParam + value /*+ "_" + age*/);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("lose_level_event_" + nameTempParam + value/*, param*/);
-        }
-    }
-    public static void LOSE_LEVEL_EVENT_CHALLENGE(int value)
-    {
-        if (fireBaseInitDone)
-        {
-            if (value < 10)
-            {
-                nameTempParam = "00";
-            }
-            else if (value >= 10 && value < 100)
-            {
-                nameTempParam = "0";
-            }
-            else
-            {
-                nameTempParam = "";
-            }
-
-         //   Parameter param = new Parameter("lose_level_para", "lose_challange_" + nameTempParam + value /*+ "_" + age*/);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("lose_level_event_challenge_" + nameTempParam + value/*, param*/);
-        }
-    }
 
     public static void REMOVE_ADS(int value)
     {
@@ -370,51 +351,30 @@ public class EventController : MonoBehaviour
             return;
         if (fireBaseInitDone)
         {
-            Parameter param = new Parameter("flow_first_open_para", value);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("flow_first_open", param);
+         //   Parameter param = new Parameter("flow_first_open_para", value);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("flow_first_open_" + value/*, param*/);
         }
+        Debug.LogError("======= first open click:" + value);
     }
     public static void GAME_PLAY(string value)//chua
     {
         if (fireBaseInitDone)
         {
-            Parameter param = new Parameter("game_play_para", value);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("game_play", param);
+          //  Parameter param = new Parameter("game_play_para", value);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("game_play_" + value/*, param*/);
         }
+        Debug.LogError("======= gameplay click:" + value);
     }
     public static void MAIN_CLICK(string value)//chua
     {
         if (fireBaseInitDone)
         {
-            Parameter param = new Parameter("main_para", value);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("main_click", param);
+            //Parameter param = new Parameter("main_para", value);
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("main_click_" + value/*, param*/);
         }
+        Debug.LogError("======= main click:" + value);
     }
-    public static void SHOP_EVENT(int value)
-    {
-        if (fireBaseInitDone)
-        {
-            Parameter param = new Parameter("skin_para","skin_" + value);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("shop_event", param);
-        }
-        Debug.LogError("skin_" + value);
-    }
-    public static void ARENA_EVENT_CARD(int value)
-    {
-        if (fireBaseInitDone)
-        {
-            Parameter param = new Parameter("card_para","card_" + value);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("arena_event", param);
-        }
-    }
-    public static void ARENA_EVENT_ARENA(string value)
-    {
-        if (fireBaseInitDone)
-        {
-            Parameter param = new Parameter("arena_level_para", "arena_level_" + value);
-            Firebase.Analytics.FirebaseAnalytics.LogEvent("arena_event", param);
-        }
-    }
+
     public static void SHOW_INTER_APPFLYER(int value)
     {
         System.Collections.Generic.Dictionary<string, string> paramEvent = new

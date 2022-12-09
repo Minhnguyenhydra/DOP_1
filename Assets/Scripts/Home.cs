@@ -27,6 +27,10 @@ public class Home : MonoBehaviour
 
     [SerializeField] GameObject btnCheat;
 
+    public GameObject storyWarning;
+
+
+
     private void Awake()
     {
         btnCheat.SetActive(Datacontroller.instance.testLevel);
@@ -38,6 +42,20 @@ public class Home : MonoBehaviour
     private void Start()
     {
         index = GameSystem.userdata.branchLevel;
+
+        if(!Datacontroller.instance.saveData.showWaringStoryUnlock)
+        {
+            if (GameSystem.userdata.gold >= 500)
+            {
+                Datacontroller.instance.saveData.showWaringStoryUnlock = true;
+                if (!GameSystem.userdata.boughtItems.Contains("0"))
+                {
+                    storyWarning.SetActive(true);
+                    index = 0;
+                }
+            }
+        }    
+
         Init();
         ShowStory(index);
     }
