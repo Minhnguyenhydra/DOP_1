@@ -155,13 +155,13 @@ MonoBehaviour:
   maxSpecialLevel: 5
   maxNormalLevel: 49
   maxBranchLevel: 6
-  testLevel: 1
+  testLevel: 0
   debug: 0
   anUI: 0
-  anAds: 1
+  anAds: 0
   testIAP: 0
   isHack: 0
-  devAndroid: 
+  devAndroid: UAVHtuYSgwSPXxXQVDGA65
   devkeyIos: 
   urlLevelAndroid: 
   urlLevelIOS: 
@@ -197,6 +197,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4405976200006927252, guid: b21e7cfb6e3b74beb86e2b533904e395, type: 3}
+      propertyPath: devKey
+      value: UAVHtuYSgwSPXxXQVDGA65
+      objectReference: {fileID: 0}
     - target: {fileID: 6207133488976360133, guid: b21e7cfb6e3b74beb86e2b533904e395, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -428,9 +432,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d87cb467db596144a86d1b351466d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID1_ANDROID: ca-app-pub-3940256099942544/3419835294
-  ID2_ANDROID: ca-app-pub-3940256099942544/3419835294
-  ID3_ANDROID: ca-app-pub-3940256099942544/3419835294
+  ID1_ANDROID: ca-app-pub-8301791769525290/7303161019
+  ID2_ANDROID: ca-app-pub-8301791769525290/7303161019
+  ID3_ANDROID: ca-app-pub-8301791769525290/7303161019
   ID1_IOS: 
   ID2_IOS: 
   ID3_IOS: 
@@ -1057,11 +1061,11 @@ MonoBehaviour:
   testAdAppOpen: 0
   testDeviceIds:
   - 4951A7DB84ED112E617FA1FD119D627E
-  appId: 
+  appId: M4GLwqezVT2WDo75OWFGOV873pVg6-3S3Kpz8Rxe_-9CnHI9oXPB2TI5LpnRnqvr8hpH8kw7i4KTMcc891KCad
   appIdIOS: 
-  bannerIdAndroid: 
-  interIdAndroid: 
-  videoIdAndroid: 
+  bannerIdAndroid: cef2803547e036b1
+  interIdAndroid: f421e69f700f836a
+  videoIdAndroid: 36c471489a2b569a
   nativeAdsAndroid: 
   bannerIdIOS: 
   interIdIOS: 

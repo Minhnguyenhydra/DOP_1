@@ -114,7 +114,8 @@ public class AppOpenAdManager
 
     public void ShowAdIfAvailable()
     {
-        Debug.LogError("======available:" + IsAdAvailable + ":" + isShowingAd + ":" + ad + ":" + (System.DateTime.UtcNow - loadTime).TotalHours);
+#if !UNITY_EDITOR
+           Debug.LogError("======available:" + IsAdAvailable + ":" + isShowingAd + ":" + ad + ":" + (System.DateTime.UtcNow - loadTime).TotalHours);
         if (Datacontroller.instance.anAds)
             return;
         if (!IsAdAvailable || isShowingAd || Datacontroller.instance.saveData.removeAds)
@@ -133,6 +134,8 @@ public class AppOpenAdManager
      //   AdsController.instance.HideBanner();
 
         Debug.LogError("===== show open ads");
+#endif
+
     }
 
     private void HandleAdDidDismissFullScreenContent(object sender, EventArgs args)

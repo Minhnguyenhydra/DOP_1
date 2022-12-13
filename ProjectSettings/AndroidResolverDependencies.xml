@@ -4,7 +4,7 @@
     <package>androidx.lifecycle:lifecycle-process:2.4.1</package>
     <package>androidx.recyclerview:recyclerview:1.2.1</package>
     <package>com.android.installreferrer:installreferrer:2.1</package>
-    <package>com.applovin.mediation:bytedance-adapter:4.8.0.9.0</package>
+    <package>com.applovin.mediation:bytedance-adapter:4.8.1.0.0</package>
     <package>com.applovin.mediation:chartboost-adapter:9.1.1.1</package>
     <package>com.applovin.mediation:facebook-adapter:[6.12.0.1]</package>
     <package>com.applovin.mediation:fyber-adapter:8.2.1.0</package>
@@ -37,7 +37,7 @@
   </files>
   <settings>
     <setting name="androidAbis" value="arm64-v8a,armeabi-v7a" />
-    <setting name="bundleId" value="com.Gaia.OS_DrawPuzzle18Plus" />
+    <setting name="bundleId" value="com.fc.ga.DOP.love.story" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />
     <setting name="gradlePropertiesTemplateEnabled" value="True" />

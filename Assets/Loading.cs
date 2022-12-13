@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class Loading : MonoBehaviour
 {
     public Image fillImage;
-
+    static bool showOpenAds;
     private IEnumerator Start() {
         var load = SceneManager.LoadSceneAsync("Home");
         load.allowSceneActivation = false;
@@ -18,6 +18,11 @@ public class Loading : MonoBehaviour
         });
         yield return new WaitForSeconds(2f);
         load.allowSceneActivation = true;
+        if(!showOpenAds)
+        {
+            AppOpenAdManager.Instance.ShowAdIfAvailable();
+            showOpenAds = true;
+        }
     }
 
 }

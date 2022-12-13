@@ -838,6 +838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ed18f0768033a40937f1e16b4024bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  btnNextWin: {fileID: 2123626688}
   twoBtnBot: {fileID: 220894495}
   btnCheat: {fileID: 85093833}
   btnSpecialLevel: {fileID: 0}

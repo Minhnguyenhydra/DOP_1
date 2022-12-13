@@ -35,7 +35,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-process:2.4.1' // Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml:17
     implementation 'androidx.recyclerview:recyclerview:1.2.1' // Assets/MaxSdk/Mediation/Mintegral/Editor/Dependencies.xml:9
     implementation 'com.android.installreferrer:installreferrer:2.1' // Assets/AppsFlyer/Editor/AppsFlyerDependencies.xml:10
-    implementation 'com.applovin.mediation:bytedance-adapter:4.8.0.9.0' // Assets/MaxSdk/Mediation/ByteDance/Editor/Dependencies.xml:8
+    implementation 'com.applovin.mediation:bytedance-adapter:4.8.1.0.0' // Assets/MaxSdk/Mediation/ByteDance/Editor/Dependencies.xml:8
     implementation 'com.applovin.mediation:chartboost-adapter:9.1.1.1' // Assets/MaxSdk/Mediation/Chartboost/Editor/Dependencies.xml:4
     implementation 'com.applovin.mediation:facebook-adapter:[6.12.0.1]' // Assets/MaxSdk/Mediation/Facebook/Editor/Dependencies.xml:8
     implementation 'com.applovin.mediation:fyber-adapter:8.2.1.0' // Assets/MaxSdk/Mediation/Fyber/Editor/Dependencies.xml:4

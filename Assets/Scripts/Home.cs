@@ -27,7 +27,7 @@ public class Home : MonoBehaviour
 
     [SerializeField] GameObject btnCheat;
 
-    public GameObject storyWarning;
+    public GameObject storyWarning, iconWarningDaily, iconWarningLuckySpin;
 
 
 
@@ -43,7 +43,7 @@ public class Home : MonoBehaviour
     {
         index = GameSystem.userdata.branchLevel;
 
-        if(!Datacontroller.instance.saveData.showWaringStoryUnlock)
+        if (!Datacontroller.instance.saveData.showWaringStoryUnlock)
         {
             if (GameSystem.userdata.gold >= 500)
             {
@@ -54,10 +54,13 @@ public class Home : MonoBehaviour
                     index = 0;
                 }
             }
-        }    
+        }
 
         Init();
         ShowStory(index);
+
+        iconWarningLuckySpin.SetActive(true);
+        iconWarningDaily.SetActive(Datacontroller.instance.saveData.canTakeDailyGift);
     }
 
     public void Init()
@@ -117,13 +120,14 @@ public class Home : MonoBehaviour
     public void NextStory()
     {
         index++;
-        if (index >= Datacontroller.instance.maxBranchLevel) {
+        if (index >= Datacontroller.instance.maxBranchLevel)
+        {
             index = 0;
         }
 
-       // int nextIndex = storyDatas.GetNextIndex(GameSystem.userdata.branchLevel);
-       // GameSystem.userdata.currentStory = nextIndex;
-       // GameSystem.SaveUserDataToLocal();
+        // int nextIndex = storyDatas.GetNextIndex(GameSystem.userdata.branchLevel);
+        // GameSystem.userdata.currentStory = nextIndex;
+        // GameSystem.SaveUserDataToLocal();
         Init();
         ShowStory(index);
 

@@ -12,15 +12,16 @@ public enum GameplayType { Erase, Draw, Find }
 
 public class Gameplay : MonoBehaviour
 {
+    public Button btnNextWin;
     public GameObject twoBtnBot;
     public static Gameplay Instance;
     [SerializeField] GameObject btnCheat, btnSpecialLevel;
-    [SerializeField] GameObject[] animSpecialBtn,animSpecialPanel;
+    [SerializeField] GameObject[] animSpecialBtn, animSpecialPanel;
     public GameplayType GameplayType { get; private set; }
 
     public List<ParticleSystem> effects;
     public List<RectTransform> findBoxs;
-    public GameObject iconTick, panelAfterWin,sepcialWarningPanel;
+    public GameObject iconTick, panelAfterWin, sepcialWarningPanel;
     public GameObject guideObject;
     public RewardFirstTime rewardFirstTime;
     public UIEffect winPopup;
@@ -76,9 +77,9 @@ public class Gameplay : MonoBehaviour
         isPlayingSpecial = false;
         if (isBranchLevel)
         {
-            obj = Resources.Load<GameObject>("LevelBranch/Level" + (GameSystem.userdata.branchLevel+1));
+            obj = Resources.Load<GameObject>("LevelBranch/Level" + (GameSystem.userdata.branchLevel + 1));
             Debug.Log(GameSystem.userdata.branchLevel);
-            txtLevel.text = "Story - Chapter " + (GameSystem.userdata.branchLevel+1);
+            txtLevel.text = "Story - Chapter " + (GameSystem.userdata.branchLevel + 1);
             txtQuestion.text = "Make a Choice";
             if (obj != null)
             {
@@ -110,24 +111,23 @@ public class Gameplay : MonoBehaviour
         // lv 18 -> sp 4
         // lv 23 -> sp 5
 
-        if (level == 2 && Datacontroller.instance.saveData.passSpecial[0] == 0)
+        if (level == 7 && Datacontroller.instance.saveData.passSpecial[0] == 0)
         {
             Datacontroller.instance.saveData.passSpecial[0] = 1;
-
         }
-        else if (level == 7 && Datacontroller.instance.saveData.passSpecial[1] == 0)
+        else if (level == 12 && Datacontroller.instance.saveData.passSpecial[1] == 0)
         {
             Datacontroller.instance.saveData.passSpecial[1] = 1;
         }
-        else if (level == 12 && Datacontroller.instance.saveData.passSpecial[2] == 0)
+        else if (level == 17 && Datacontroller.instance.saveData.passSpecial[2] == 0)
         {
             Datacontroller.instance.saveData.passSpecial[2] = 1;
         }
-        else if (level == 17 && Datacontroller.instance.saveData.passSpecial[3] == 0)
+        else if (level == 22 && Datacontroller.instance.saveData.passSpecial[3] == 0)
         {
             Datacontroller.instance.saveData.passSpecial[3] = 1;
         }
-        else if (level == 22 && Datacontroller.instance.saveData.passSpecial[4] == 0)
+        else if (level == 27 && Datacontroller.instance.saveData.passSpecial[4] == 0)
         {
             Datacontroller.instance.saveData.passSpecial[4] = 1;
         }
@@ -376,12 +376,24 @@ public class Gameplay : MonoBehaviour
         }
         //panelAfterWin.SetActive(false);
     }
-
+    IEnumerator delayDisplayBtnNext()
+    {
+        yield return new WaitForSeconds(2.2f);
+        colorBtn = btnNextWin.image.color;
+        colorBtn.a = 1;
+        btnNextWin.interactable = true;
+        btnNextWin.image.color = colorBtn;
+    }
+    Color colorBtn;
     public void ShowWinPopup()
     {
+        colorBtn = btnNextWin.image.color;
+        colorBtn.a = 0;
+        btnNextWin.interactable = false;
+        btnNextWin.image.color = colorBtn;
         if (winPopup != null)
             winPopup.DoEffect();
-
+        StartCoroutine(delayDisplayBtnNext());
         if (isBranchLevel)
         {
             if (!Datacontroller.instance.saveData.firstTimeLevelBranch[GameSystem.userdata.branchLevel])
