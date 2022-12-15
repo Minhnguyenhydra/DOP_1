@@ -169,7 +169,7 @@ public class Gameplay : MonoBehaviour
         {
             LevelInfo info = DataManager.Instance.levelInfos[level /*+ count*/];
 
-            if (GameSystem.userdata.level == 24)
+            if (GameSystem.userdata.level == 3)
             {
                 txtQuestion.text = null;
             }
