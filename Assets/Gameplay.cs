@@ -12,6 +12,11 @@ public enum GameplayType { Erase, Draw, Find }
 
 public class Gameplay : MonoBehaviour
 {
+    [SerializeField] Image[] uiAns;
+    [SerializeField] TextMeshProUGUI[] textAns;
+    [SerializeField] Text[] textNormalAns;
+    [SerializeField] SkeletonGraphic[] skeletongraphicAns;
+
     public Button btnNextWin;
     public GameObject twoBtnBot;
     public static Gameplay Instance;
@@ -49,8 +54,37 @@ public class Gameplay : MonoBehaviour
     public bool isPlayingSpecial;
     GameObject obj;
 
+    Color anUI;
+    void CheckAn()
+    {
+
+        if (Datacontroller.instance.anUI)
+        {
+            anUI = Color.white;
+            anUI.a = 0;
+            for (int i = 0; i < uiAns.Length; i ++)
+            {
+                uiAns[i].color = anUI;
+            }    
+            for(int i = 0; i < textAns.Length; i ++)
+            {
+                textAns[i].color = anUI;
+            }
+            for (int i = 0; i < textNormalAns.Length; i++)
+            {
+                textNormalAns[i].color = anUI;
+            }
+            for (int i = 0; i < skeletongraphicAns.Length; i++)
+            {
+                skeletongraphicAns[i].color = anUI;
+            }
+        }
+    }
+
     private void Awake()
     {
+
+        CheckAn();
         // currentSpecialLevel = -1;
         btnCheat.SetActive(Datacontroller.instance.testLevel);
 
@@ -265,6 +299,7 @@ public class Gameplay : MonoBehaviour
             }
         }
         panelAfterWin.SetActive(false);
+
     }
 
     public void LoadBranchLevel()

@@ -333,18 +333,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 307852592}
-        m_TargetAssemblyTypeName: Gameplay, Assembly-CSharp
-        m_MethodName: OnRatingPopupOff
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!224 &63767355
 RectTransform:
   m_ObjectHideFlags: 0
@@ -657,24 +645,32 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1693068656, guid: 59d364849ec44544b97b19ac5b65d436, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1693068656, guid: 59d364849ec44544b97b19ac5b65d436, type: 3}
       propertyPath: m_AnchorMin.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1693068656, guid: 59d364849ec44544b97b19ac5b65d436, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1693068656, guid: 59d364849ec44544b97b19ac5b65d436, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 70
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1693068656, guid: 59d364849ec44544b97b19ac5b65d436, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 70
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1693068656, guid: 59d364849ec44544b97b19ac5b65d436, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -80
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 1693068656, guid: 59d364849ec44544b97b19ac5b65d436, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -376
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1844785459, guid: 59d364849ec44544b97b19ac5b65d436, type: 3}
       propertyPath: m_RootOrder
@@ -2359,6 +2355,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ed18f0768033a40937f1e16b4024bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiAns:
+  - {fileID: 7464312470515124655}
+  - {fileID: 7464312469537093493}
+  - {fileID: 835332530}
+  - {fileID: 1885504691}
+  - {fileID: 1813008072}
+  - {fileID: 1632683411}
+  - {fileID: 286876497}
+  - {fileID: 1552559124}
+  - {fileID: 1217326427}
+  - {fileID: 1286018912}
+  - {fileID: 2835796553617284357}
+  - {fileID: 2835796553738752172}
+  - {fileID: 2835796552618690575}
+  - {fileID: 796700395}
+  textAns:
+  - {fileID: 7464312469321439040}
+  - {fileID: 316057689}
+  - {fileID: 1388835743}
+  - {fileID: 240520747}
+  textNormalAns:
+  - {fileID: 2013478823}
+  skeletongraphicAns:
+  - {fileID: 1055583574}
+  - {fileID: 955263526}
+  - {fileID: 1600847895}
+  - {fileID: 87163120}
+  - {fileID: 766740430}
   btnNextWin: {fileID: 5957115310372035676}
   twoBtnBot: {fileID: 813175749}
   btnCheat: {fileID: 85093833}
@@ -3559,19 +3583,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 84925310}
         m_TargetAssemblyTypeName: RatingPopUp, Assembly-CSharp
-        m_MethodName: Dissapear
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 307852592}
-        m_TargetAssemblyTypeName: Gameplay, Assembly-CSharp
-        m_MethodName: OnRatingPopupOff
+        m_MethodName: BtnRateUs
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3820,6 +3832,7 @@ MonoBehaviour:
   Ticks: 0
   nextRewards: 0
   Day: 0
+  levelInfos: []
   claimGiftButton: {fileID: 0}
   soundButton: {fileID: 7464312470207269579}
   bgmButton: {fileID: 7464312469554655772}

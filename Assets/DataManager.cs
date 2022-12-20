@@ -52,11 +52,11 @@ public class DataManager : MonoBehaviour
         titles.Add("Make the farmer happy");//2
         titles.Add("Surprise gift.");//3
         titles.Add("Where is the gold?");//4
-        titles.Add("Find the costume.");//5
+        titles.Add("Finish the costume");//5
         titles.Add("Save the girl.");//6
         titles.Add("Help him.");//7
         titles.Add("He wants a ghost.");//8
-        titles.Add("Help listen to the music.");//9
+        titles.Add("Help Her fix the airpod");//9
         titles.Add("Catch the thief.");//10
         titles.Add("Help the witch transform");//11
         titles.Add("Help him lift the weight");//12
