@@ -15,7 +15,7 @@ public class AppsFlyerObjectScript : MonoBehaviour, IAppsFlyerConversionData
     public bool isDebug;
     public bool getConversionData;
     //******************************//
-    public void Init()
+    public void Start()
     {
         appID = Datacontroller.instance.appIDIos;
 #if UNITY_ANDROID
@@ -23,7 +23,7 @@ public class AppsFlyerObjectScript : MonoBehaviour, IAppsFlyerConversionData
 #else
         devKey = Datacontroller.instance.devkeyIos;
 #endif
-     //   Debug.LogError(devKey);
+        Debug.LogError(devKey);
         // These fields are set from the editor so do not modify!
         //******************************//
         AppsFlyer.setIsDebug(isDebug);
@@ -31,6 +31,8 @@ public class AppsFlyerObjectScript : MonoBehaviour, IAppsFlyerConversionData
         //******************************//
 
         AppsFlyer.startSDK();
+
+       
     }
 
 
