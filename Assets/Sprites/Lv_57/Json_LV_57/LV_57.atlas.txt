@@ -1,0 +1,69 @@
+
+LV_57.png
+size: 2152,716
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+banhmi
+  rotate: false
+  xy: 1761, 283
+  size: 389, 428
+  orig: 389, 428
+  offset: 0, 0
+  index: -1
+bg
+  rotate: true
+  xy: 2, 2
+  size: 709, 883
+  orig: 709, 883
+  offset: 0, 0
+  index: -1
+cachua
+  rotate: false
+  xy: 1236, 44
+  size: 121, 159
+  orig: 121, 159
+  offset: 0, 0
+  index: -1
+daonia
+  rotate: false
+  xy: 1394, 227
+  size: 365, 484
+  orig: 365, 484
+  offset: 0, 0
+  index: -1
+egg
+  rotate: false
+  xy: 1761, 38
+  size: 231, 243
+  orig: 231, 243
+  offset: 0, 0
+  index: -1
+la
+  rotate: false
+  xy: 1359, 77
+  size: 241, 126
+  orig: 241, 126
+  offset: 0, 0
+  index: -1
+plate
+  rotate: true
+  xy: 887, 205
+  size: 506, 505
+  orig: 506, 505
+  offset: 0, 0
+  index: -1
+than
+  rotate: false
+  xy: 887, 16
+  size: 103, 187
+  orig: 103, 187
+  offset: 0, 0
+  index: -1
+xx
+  rotate: false
+  xy: 992, 19
+  size: 242, 184
+  orig: 242, 184
+  offset: 0, 0
+  index: -1

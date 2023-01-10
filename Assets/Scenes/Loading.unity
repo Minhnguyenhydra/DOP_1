@@ -153,10 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpecialLevel: 5
-  maxNormalLevel: 49
+  maxNormalLevel: 60
   maxBranchLevel: 6
-  testLevel: 0
-  debug: 0
+  testLevel: 1
+  debug: 1
   anUI: 0
   anAds: 0
   testIAP: 0
@@ -1321,7 +1321,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

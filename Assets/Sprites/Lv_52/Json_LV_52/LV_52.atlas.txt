@@ -1,0 +1,237 @@
+
+LV_52.png
+size: 1360,716
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bg
+  rotate: true
+  xy: 2, 5
+  size: 709, 883
+  orig: 709, 883
+  offset: 0, 0
+  index: -1
+bone
+  rotate: false
+  xy: 1146, 543
+  size: 197, 171
+  orig: 197, 171
+  offset: 0, 0
+  index: -1
+chan2
+  rotate: true
+  xy: 1281, 111
+  size: 35, 72
+  orig: 35, 72
+  offset: 0, 0
+  index: -1
+chancuu
+  rotate: true
+  xy: 1306, 336
+  size: 205, 48
+  orig: 205, 48
+  offset: 0, 0
+  index: -1
+chanl1
+  rotate: false
+  xy: 1298, 148
+  size: 40, 70
+  orig: 40, 70
+  offset: 0, 0
+  index: -1
+chanl3
+  rotate: true
+  xy: 1235, 49
+  size: 29, 45
+  orig: 29, 45
+  offset: 0, 0
+  index: -1
+chanl4
+  rotate: true
+  xy: 1147, 36
+  size: 42, 86
+  orig: 42, 86
+  offset: 0, 0
+  index: -1
+dammay
+  rotate: false
+  xy: 887, 539
+  size: 257, 175
+  orig: 257, 175
+  offset: 0, 0
+  index: -1
+daucuu
+  rotate: true
+  xy: 1050, 171
+  size: 168, 113
+  orig: 168, 113
+  offset: 0, 0
+  index: -1
+daug
+  rotate: false
+  xy: 1165, 155
+  size: 131, 118
+  orig: 131, 118
+  offset: 0, 0
+  index: -1
+daul
+  rotate: false
+  xy: 1162, 401
+  size: 142, 140
+  orig: 142, 140
+  offset: 0, 0
+  index: -1
+daum
+  rotate: false
+  xy: 1165, 275
+  size: 135, 124
+  orig: 135, 124
+  offset: 0, 0
+  index: -1
+duoi
+  rotate: true
+  xy: 1282, 47
+  size: 31, 35
+  orig: 31, 35
+  offset: 0, 0
+  index: -1
+duoil
+  rotate: false
+  xy: 1025, 2
+  size: 44, 34
+  orig: 44, 34
+  offset: 0, 0
+  index: -1
+duoim
+  rotate: false
+  xy: 1147, 80
+  size: 132, 73
+  orig: 132, 73
+  offset: 0, 0
+  index: -1
+lml
+  rotate: true
+  xy: 1340, 148
+  size: 70, 17
+  orig: 70, 17
+  offset: 0, 0
+  index: -1
+lng
+  rotate: false
+  xy: 887, 2
+  size: 46, 9
+  orig: 46, 9
+  offset: 0, 0
+  index: -1
+matg
+  rotate: true
+  xy: 1345, 623
+  size: 47, 11
+  orig: 47, 11
+  offset: 0, 0
+  index: -1
+matl
+  rotate: true
+  xy: 1025, 38
+  size: 71, 12
+  orig: 71, 12
+  offset: 0, 0
+  index: -1
+mieng
+  rotate: true
+  xy: 1345, 672
+  size: 42, 13
+  orig: 42, 13
+  offset: 0, 0
+  index: -1
+mom
+  rotate: false
+  xy: 1298, 220
+  size: 60, 48
+  orig: 60, 48
+  offset: 0, 0
+  index: -1
+mouthl
+  rotate: true
+  xy: 1302, 270
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+muig
+  rotate: true
+  xy: 1319, 56
+  size: 22, 17
+  orig: 22, 17
+  offset: 0, 0
+  index: -1
+tai1
+  rotate: false
+  xy: 1236, 12
+  size: 35, 35
+  orig: 35, 35
+  offset: 0, 0
+  index: -1
+tai2
+  rotate: false
+  xy: 1207, 6
+  size: 27, 28
+  orig: 27, 28
+  offset: 0, 0
+  index: -1
+tail1
+  rotate: true
+  xy: 1147, 2
+  size: 32, 58
+  orig: 32, 58
+  offset: 0, 0
+  index: -1
+tail2
+  rotate: true
+  xy: 1281, 80
+  size: 29, 56
+  orig: 29, 56
+  offset: 0, 0
+  index: -1
+tay sau
+  rotate: false
+  xy: 1071, 5
+  size: 74, 31
+  orig: 74, 31
+  offset: 0, 0
+  index: -1
+taypg
+  rotate: true
+  xy: 887, 13
+  size: 96, 136
+  orig: 96, 136
+  offset: 0, 0
+  index: -1
+taytg
+  rotate: false
+  xy: 1050, 38
+  size: 95, 131
+  orig: 95, 131
+  offset: 0, 0
+  index: -1
+than
+  rotate: false
+  xy: 887, 308
+  size: 153, 229
+  orig: 153, 229
+  offset: 0, 0
+  index: -1
+thanl
+  rotate: true
+  xy: 887, 111
+  size: 195, 161
+  orig: 195, 161
+  offset: 0, 0
+  index: -1
+thanm
+  rotate: true
+  xy: 1042, 341
+  size: 196, 118
+  orig: 196, 118
+  offset: 0, 0
+  index: -1

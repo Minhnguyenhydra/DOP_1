@@ -1,0 +1,118 @@
+
+LV_53.png
+size: 1488,716
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ban
+  rotate: true
+  xy: 1123, 350
+  size: 364, 362
+  orig: 364, 362
+  offset: 0, 0
+  index: -1
+baptay
+  rotate: false
+  xy: 1326, 202
+  size: 63, 146
+  orig: 63, 146
+  offset: 0, 0
+  index: -1
+bg
+  rotate: true
+  xy: 2, 5
+  size: 709, 883
+  orig: 709, 883
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 887, 47
+  size: 140, 278
+  orig: 140, 278
+  offset: 0, 0
+  index: -1
+chan1
+  rotate: true
+  xy: 1029, 52
+  size: 273, 237
+  orig: 273, 237
+  offset: 0, 0
+  index: -1
+chan2
+  rotate: true
+  xy: 1029, 52
+  size: 273, 237
+  orig: 273, 237
+  offset: 0, 0
+  index: -1
+dau
+  rotate: false
+  xy: 1392, 33
+  size: 68, 92
+  orig: 68, 92
+  offset: 0, 0
+  index: -1
+ghe
+  rotate: false
+  xy: 887, 327
+  size: 234, 387
+  orig: 234, 387
+  offset: 0, 0
+  index: -1
+latop2
+  rotate: true
+  xy: 1268, 8
+  size: 166, 122
+  orig: 166, 122
+  offset: 0, 0
+  index: -1
+lm
+  rotate: true
+  xy: 904, 9
+  size: 17, 14
+  orig: 17, 14
+  offset: 0, 0
+  index: -1
+manhinh
+  rotate: true
+  xy: 1392, 127
+  size: 94, 88
+  orig: 94, 88
+  offset: 0, 0
+  index: -1
+mat Copy
+  rotate: true
+  xy: 887, 9
+  size: 17, 15
+  orig: 17, 15
+  offset: 0, 0
+  index: -1
+mouthbuon
+  rotate: false
+  xy: 887, 2
+  size: 11, 5
+  orig: 11, 5
+  offset: 0, 0
+  index: -1
+mouthcuoi
+  rotate: false
+  xy: 887, 28
+  size: 16, 17
+  orig: 16, 17
+  offset: 0, 0
+  index: -1
+tay
+  rotate: true
+  xy: 1268, 176
+  size: 172, 56
+  orig: 172, 56
+  offset: 0, 0
+  index: -1
+toc
+  rotate: true
+  xy: 1391, 223
+  size: 125, 88
+  orig: 125, 88
+  offset: 0, 0
+  index: -1

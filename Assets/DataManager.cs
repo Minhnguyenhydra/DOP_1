@@ -97,7 +97,17 @@ public class DataManager : MonoBehaviour
         titles.Add("Make her happy");//47
         titles.Add("Make it cool!");//48
         titles.Add("Find the letter O.");//49
-        titles.Add("Find the letter O.");//50
+        titles.Add("Erase the excess.");//50
+        titles.Add("You will be surprised.");//51
+        titles.Add("Find the sheep.");//52
+        titles.Add("Help her get contact with friends.");//53
+        titles.Add("Save the Cat.");//54
+        titles.Add("Find the good girl.");//55
+        titles.Add("Feed the lizard.");//56
+        titles.Add("Find an omelet");//57
+        titles.Add("Find the thief");//58
+        titles.Add("Help the bus to drive through.");//59
+        titles.Add("Someone's Looking");//60
 
         for (int i = 0; i < titles.Count; i++) {
             int index = i;

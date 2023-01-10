@@ -1,0 +1,146 @@
+
+LV_56.png
+size: 1736,728
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bg
+  rotate: true
+  xy: 2, 17
+  size: 709, 883
+  orig: 709, 883
+  offset: 0, 0
+  index: -1
+chan1
+  rotate: false
+  xy: 1318, 444
+  size: 111, 95
+  orig: 111, 95
+  offset: 0, 0
+  index: -1
+hoi
+  rotate: false
+  xy: 887, 22
+  size: 285, 328
+  orig: 285, 328
+  offset: 0, 0
+  index: -1
+luoi
+  rotate: false
+  xy: 1502, 136
+  size: 198, 33
+  orig: 198, 33
+  offset: 0, 0
+  index: -1
+mat troi
+  rotate: false
+  xy: 1502, 235
+  size: 172, 165
+  orig: 172, 165
+  offset: 0, 0
+  index: -1
+mat1
+  rotate: false
+  xy: 1607, 22
+  size: 85, 112
+  orig: 85, 112
+  offset: 0, 0
+  index: -1
+mat2
+  rotate: false
+  xy: 1607, 22
+  size: 85, 112
+  orig: 85, 112
+  offset: 0, 0
+  index: -1
+may
+  rotate: false
+  xy: 887, 352
+  size: 429, 187
+  orig: 429, 187
+  offset: 0, 0
+  index: -1
+mayn
+  rotate: false
+  xy: 887, 541
+  size: 542, 185
+  orig: 542, 185
+  offset: 0, 0
+  index: -1
+mieng
+  rotate: true
+  xy: 1676, 260
+  size: 140, 58
+  orig: 140, 58
+  offset: 0, 0
+  index: -1
+mieng thijt
+  rotate: true
+  xy: 1174, 55
+  size: 295, 140
+  orig: 295, 140
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: false
+  xy: 1174, 28
+  size: 139, 25
+  orig: 139, 25
+  offset: 0, 0
+  index: -1
+nhietke
+  rotate: false
+  xy: 1316, 41
+  size: 93, 309
+  orig: 93, 309
+  offset: 0, 0
+  index: -1
+nhietke2
+  rotate: false
+  xy: 1411, 100
+  size: 89, 300
+  orig: 89, 300
+  offset: 0, 0
+  index: -1
+ruo2
+  rotate: true
+  xy: 1318, 403
+  size: 39, 54
+  orig: 39, 54
+  offset: 0, 0
+  index: -1
+ruoi3
+  rotate: false
+  xy: 1374, 408
+  size: 33, 34
+  orig: 33, 34
+  offset: 0, 0
+  index: -1
+tay1
+  rotate: true
+  xy: 1411, 2
+  size: 96, 105
+  orig: 96, 105
+  offset: 0, 0
+  index: -1
+tay2
+  rotate: false
+  xy: 1518, 21
+  size: 87, 113
+  orig: 87, 113
+  offset: 0, 0
+  index: -1
+than
+  rotate: false
+  xy: 1431, 402
+  size: 284, 324
+  orig: 284, 324
+  offset: 0, 0
+  index: -1
+vachdo
+  rotate: true
+  xy: 1502, 171
+  size: 62, 210
+  orig: 62, 210
+  offset: 0, 0
+  index: -1
