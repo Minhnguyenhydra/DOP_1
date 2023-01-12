@@ -16,6 +16,7 @@ public class StoryData
 
 public class Home : MonoBehaviour
 {
+    public static Home instance;
     public TextMeshProUGUI txtLevel;
 
     [SerializeField] List<SkeletonGraphic> skeletonGraphics;
@@ -29,7 +30,9 @@ public class Home : MonoBehaviour
 
     public GameObject storyWarning, iconWarningDaily, iconWarningLuckySpin;
 
-
+    [SerializeField] ClaimGiftController claimGift;
+    [SerializeField] ShowHideChangeSceneLogic luckySpine;
+    [SerializeField] GameObject popupluckSpin;
 
     private void Awake()
     {
@@ -38,29 +41,73 @@ public class Home : MonoBehaviour
         GameSystem.LoadUserData();
         txtLevel.text = (GameSystem.userdata.level + 1) + "/" + Constants.MAX_LEVEL;
     }
-
+    static bool showDailyQuest = false;
+    static bool showLuckySpin = false;
     private void Start()
     {
+        instance = this;
         index = GameSystem.userdata.branchLevel;
+        iconWarningLuckySpin.SetActive(true);
+        iconWarningDaily.SetActive(Datacontroller.instance.saveData.canTakeDailyGift);
 
-        if (!Datacontroller.instance.saveData.showWaringStoryUnlock)
+        if (!showDailyQuest)
         {
-            if (GameSystem.userdata.gold >= 500)
+            if (Datacontroller.instance.saveData.canTakeDailyGift)
             {
-                Datacontroller.instance.saveData.showWaringStoryUnlock = true;
-                if (!GameSystem.userdata.boughtItems.Contains("0"))
+                claimGift.BtnShowDailyGift();
+            }
+            else
+            {
+                if (!showLuckySpin)
                 {
-                    storyWarning.SetActive(true);
-                    index = 0;
+                    showLuckySpin = true;
+                    luckySpine.Show(popupluckSpin);
+                    iconWarningLuckySpin.SetActive(false);
+                }
+                else
+                {
+                    if (!Datacontroller.instance.saveData.showWaringStoryUnlock)
+                    {
+                        if (GameSystem.userdata.gold >= 500)
+                        {
+                            Datacontroller.instance.saveData.showWaringStoryUnlock = true;
+                            if (!GameSystem.userdata.boughtItems.Contains("0"))
+                            {
+                                storyWarning.SetActive(true);
+                                index = 0;
+                            }
+                        }
+                    }
+                }
+            }
+            showDailyQuest = true;
+        }
+        else
+        {
+            if (!showLuckySpin)
+            {
+                showLuckySpin = true;
+                luckySpine.Show(popupluckSpin);
+                iconWarningLuckySpin.SetActive(false);
+            }
+            else
+            {
+                if (!Datacontroller.instance.saveData.showWaringStoryUnlock)
+                {
+                    if (GameSystem.userdata.gold >= 500)
+                    {
+                        Datacontroller.instance.saveData.showWaringStoryUnlock = true;
+                        if (!GameSystem.userdata.boughtItems.Contains("0"))
+                        {
+                            storyWarning.SetActive(true);
+                            index = 0;
+                        }
+                    }
                 }
             }
         }
-
         Init();
         ShowStory(index);
-
-        iconWarningLuckySpin.SetActive(true);
-        iconWarningDaily.SetActive(Datacontroller.instance.saveData.canTakeDailyGift);
     }
 
     public void Init()
