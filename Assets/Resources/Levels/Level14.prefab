@@ -81,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 0.84, y: 0.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!1 &4152875490129710136
@@ -407,7 +407,7 @@ SpriteRenderer:
   m_Size: {x: 0.84, y: 0.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!1 &6220581573655889934
@@ -460,6 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd74fb4ca2125d48a9cb3f8f180bb59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexTxtQuest: 13
   animAfter: {fileID: 4152875490129710137}
   animBefore: {fileID: 4152875490584392683}
   winAnims: []
@@ -469,10 +470,10 @@ MonoBehaviour:
   - {fileID: 7458217111883902593}
   - {fileID: 458773852}
   - {fileID: 5546707831063886447}
-  isActive: 1
   isMultiple: 1
   isSpeical: 0
   isImmediately: 0
+  maskAnim: {fileID: 0}
 --- !u!1 &7458217111883902593
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,7 +555,7 @@ SpriteRenderer:
   m_Size: {x: 0.84, y: 0.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!1001 &6279739810329061515

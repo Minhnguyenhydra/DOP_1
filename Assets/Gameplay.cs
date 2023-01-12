@@ -201,16 +201,18 @@ public class Gameplay : MonoBehaviour
         txtQuestion.text = "";
         if (DataManager.Instance.levelInfos.Count > level /*+ count*/)
         {
-            LevelInfo info = DataManager.Instance.levelInfos[level /*+ count*/];
+            LevelManager levelManagerTemp = obj.GetComponent<LevelManager>();
+            LevelInfo info = DataManager.Instance.levelInfos[levelManagerTemp.indexTxtQuest/*level*/ /*+ count*/];
 
-            if (GameSystem.userdata.level == 3)
-            {
-                txtQuestion.text = null;
-            }
-            else
-            {
-                txtQuestion.text = info.levelTitle;
-            }
+            //if (GameSystem.userdata.level == 3)
+            //{
+            //    txtQuestion.text = null;
+            //}
+            //else
+            //{
+            //    txtQuestion.text = info.levelTitle;
+            //}
+            txtQuestion.text = info.levelTitle;
         }
 
         if (obj != null)

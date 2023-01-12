@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd74fb4ca2125d48a9cb3f8f180bb59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexTxtQuest: 35
   animAfter: {fileID: 8677157289526672641}
   animBefore: {fileID: 8677157289607774931}
   winAnims:
@@ -143,10 +144,10 @@ MonoBehaviour:
   objectFinds:
   - {fileID: 2759130039481163705}
   - {fileID: 63527731}
-  isActive: 1
   isMultiple: 1
   isSpeical: 0
   isImmediately: 0
+  maskAnim: {fileID: 0}
 --- !u!1 &2759130039481163705
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +294,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8cc73ee1bede8ad42ae72a6ac5c0771c, type: 2}
+  - {fileID: 2100000, guid: 4a1a49da258600e4385a04337ba4c309, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -345,10 +346,8 @@ MonoBehaviour:
   calculateTangents: 0
   maskInteraction: 1
   maskMaterials:
-    materialsMaskDisabled:
-    - {fileID: 2100000, guid: 4a1a49da258600e4385a04337ba4c309, type: 2}
-    materialsInsideMask:
-    - {fileID: 2100000, guid: 8cc73ee1bede8ad42ae72a6ac5c0771c, type: 2}
+    materialsMaskDisabled: []
+    materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
   _animationName: normal

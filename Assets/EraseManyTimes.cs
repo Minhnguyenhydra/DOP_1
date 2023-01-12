@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DarkcupGames;
 
-public class EraseManyTimes : MonoBehaviour
+public class EraseManyTimes : LevelManager
 {
     public List<EraseManyPositionInOneLevel> eraseLevels;
 

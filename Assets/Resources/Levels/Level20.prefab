@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6002da30e54c3304abacc948cb2461d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexTxtQuest: 0
   animAfter: {fileID: 1348091568248896099}
   animBefore: {fileID: 4474005577056915907}
   winAnims:
@@ -749,6 +750,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b94cd48a66664c3a92a0ac1068c0750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexTxtQuest: 19
+  animAfter: {fileID: 0}
+  animBefore: {fileID: 0}
+  winAnims: []
+  loopAnimation: 1
   eraseLevels:
   - {fileID: 2972625986075263565}
   - {fileID: 8387548653148229737}
@@ -803,6 +809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6002da30e54c3304abacc948cb2461d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexTxtQuest: 0
   animAfter: {fileID: 2684578093224966337}
   animBefore: {fileID: 2334609343010694342}
   winAnims:

@@ -50,13 +50,13 @@ public class DataManager : MonoBehaviour
         //1
         titles.Add("What is the girl looking at?");//1
         titles.Add("Make the farmer happy");//2
-        titles.Add("Surprise gift.");//3
-        titles.Add("Where is the gold?");//4
-        titles.Add("Finish the costume");//5
-        titles.Add("Save the girl.");//6
-        titles.Add("Help him.");//7
-        titles.Add("He wants a ghost.");//8
-        titles.Add("Help Her fix the airpod");//9
+        titles.Add("Unlock My Phone");//3
+        titles.Add("Erase the excess.");//4
+        titles.Add("Help her get contact with friends.");//5
+        titles.Add("Save the Cat.");//6
+        titles.Add("Find the good girl.");//7
+        titles.Add("Feed the lizard.");//8
+        titles.Add("Someone's Looking");//9
         titles.Add("Catch the thief.");//10
         titles.Add("Help the witch transform");//11
         titles.Add("Help him lift the weight");//12
@@ -88,7 +88,7 @@ public class DataManager : MonoBehaviour
         titles.Add("Help them relax...");//38
         titles.Add("Find the first full tank.");//39
         titles.Add("What is she doing?");//40
-        titles.Add("Unlock My Phone");//41
+        titles.Add("You will be surprised.");//41
         titles.Add("Help him a singer");//42
         titles.Add("Kill the monster");//43
         titles.Add("Help her lose weight.");//44
@@ -97,17 +97,21 @@ public class DataManager : MonoBehaviour
         titles.Add("Make her happy");//47
         titles.Add("Make it cool!");//48
         titles.Add("Find the letter O.");//49
-        titles.Add("Erase the excess.");//50
-        titles.Add("You will be surprised.");//51
-        titles.Add("Find the sheep.");//52
-        titles.Add("Help her get contact with friends.");//53
-        titles.Add("Save the Cat.");//54
-        titles.Add("Find the good girl.");//55
-        titles.Add("Feed the lizard.");//56
-        titles.Add("Find an omelet");//57
-        titles.Add("Find the thief");//58
-        titles.Add("Help the bus to drive through.");//59
-        titles.Add("Someone's Looking");//60
+        titles.Add("Find the sheep.");//50
+        titles.Add("Find an omelet");//51
+        titles.Add("Find the thief");//52
+        titles.Add("Help the bus to drive through.");//53
+        titles.Add("Surprise gift.");//54
+        titles.Add("");//55
+        titles.Add("Finish the costume");//56
+        titles.Add("Save the girl.");//57
+        titles.Add("Help him.");//58
+        titles.Add("He wants a ghost.");//59
+        titles.Add("Help Her fix the airpod");//60
+
+
+
+
 
         for (int i = 0; i < titles.Count; i++) {
             int index = i;

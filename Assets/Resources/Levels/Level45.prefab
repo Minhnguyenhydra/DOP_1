@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6002da30e54c3304abacc948cb2461d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexTxtQuest: 44
   animAfter: {fileID: 2646730707199102038}
   animBefore: {fileID: 1318065757223676141}
   winAnims: []

@@ -7,6 +7,7 @@ using Spine.Unity;
 
 public class LevelManager : MonoBehaviour
 {
+    public int indexTxtQuest;
     public SkeletonAnimation animAfter;
     public SkeletonAnimation animBefore;
     public List<string> winAnims;
