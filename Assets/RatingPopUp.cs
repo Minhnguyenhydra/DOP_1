@@ -37,6 +37,6 @@ public class RatingPopUp : MonoBehaviour
         {
             Application.OpenURL("https://play.google.com/store/apps/details?id=" + Application.identifier);
         }
-        Dissapear();
+      //  Dissapear();
     }
 }

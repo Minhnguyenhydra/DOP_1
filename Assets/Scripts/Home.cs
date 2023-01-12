@@ -39,7 +39,10 @@ public class Home : MonoBehaviour
         btnCheat.SetActive(Datacontroller.instance.testLevel);
 
         GameSystem.LoadUserData();
-        txtLevel.text = (GameSystem.userdata.level + 1) + "/" + Constants.MAX_LEVEL;
+
+
+
+        txtLevel.text = GameSystem.userdata.level + "/" + Datacontroller.instance.maxNormalLevel;
     }
     static bool showDailyQuest = false;
     static bool showLuckySpin = false;

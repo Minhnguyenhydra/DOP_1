@@ -140,6 +140,7 @@ public class EventController : MonoBehaviour
             Debug.LogError("======= fetch complete:" + Firebase.RemoteConfig.FirebaseRemoteConfig.GetInstance(app).GetValue(remoteDefault[0].key).StringValue);
         }
         DataParam.timeDelayShowAds = float.Parse(Firebase.RemoteConfig.FirebaseRemoteConfig.GetInstance(app).GetValue(remoteDefault[0].key).StringValue);
+        DataParam.levelCanShowAds = int.Parse(Firebase.RemoteConfig.FirebaseRemoteConfig.GetInstance(app).GetValue(remoteDefault[1].key).StringValue);
         Debug.LogError("============ time delay show ads:" + DataParam.timeDelayShowAds);
         //    DataParam.loadUIDone = true;
     }

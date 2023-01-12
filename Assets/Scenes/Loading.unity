@@ -155,8 +155,8 @@ MonoBehaviour:
   maxSpecialLevel: 5
   maxNormalLevel: 60
   maxBranchLevel: 6
-  testLevel: 1
-  debug: 1
+  testLevel: 0
+  debug: 0
   anUI: 0
   anAds: 0
   testIAP: 0
@@ -763,7 +763,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   remoteDefault:
   - key: timedelayshowinter
-    value: 30
+    value: 35
+  - key: levelcanshowads
+    value: 3
 --- !u!4 &1073902385
 Transform:
   m_ObjectHideFlags: 0

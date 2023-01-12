@@ -134,6 +134,9 @@ public class Gameplay : MonoBehaviour
 
         //while (count < 10)
         //{
+
+
+
         obj = Resources.Load<GameObject>("Levels/Level" + (level /*+ count*/ + 1));
         closeSpecialLevelButton.SetActive(false);
         txtLevel.text = "Level " + (level /*+ count*/ + 1);
@@ -232,12 +235,32 @@ public class Gameplay : MonoBehaviour
 
         if (levelObject == null)
         {
-            GameSystem.userdata.level = 0;
+            int levelRandom = Random.Range(0, Datacontroller.instance.maxNormalLevel);
+            GameSystem.userdata.level = Datacontroller.instance.maxNormalLevel;
             GameSystem.SaveUserDataToLocal();
 
-            GameObject obj = Resources.Load<GameObject>("Levels/Level1");
+            GameObject obj = Resources.Load<GameObject>("Levels/Level" + (levelRandom+1));
             levelObject = Instantiate(obj);
-            txtLevel.text = "LEVEL 1";
+
+            if(countLevelLoop == 0)
+            {
+                countLevelLoop = GameSystem.userdata.level;
+            }    
+
+            txtLevel.text = "LEVEL " + (countLevelLoop + 1);
+
+            LevelManager levelManagerTemp = obj.GetComponent<LevelManager>();
+            LevelInfo info = DataManager.Instance.levelInfos[levelManagerTemp.indexTxtQuest/*level*/ /*+ count*/];
+
+            //if (GameSystem.userdata.level == 3)
+            //{
+            //    txtQuestion.text = null;
+            //}
+            //else
+            //{
+            //    txtQuestion.text = info.levelTitle;
+            //}
+            txtQuestion.text = info.levelTitle;
         }
         if (!GameSystem.userdata.showRating && GameSystem.userdata.level == 5)
         {
@@ -303,7 +326,12 @@ public class Gameplay : MonoBehaviour
         panelAfterWin.SetActive(false);
 
     }
-
+    static int countLevelLoop;
+    [SerializeField] GameObject pausePopup,settingPopUp;
+    public bool PopUpShow()
+    {
+        return settingPopUp.activeSelf || popUpRating.activeSelf || sepcialWarningPanel.activeSelf;
+    }    
     public void LoadBranchLevel()
     {
         SceneManager.LoadScene("BranchLevel");
@@ -466,19 +494,26 @@ public class Gameplay : MonoBehaviour
             }
             else
             {
-                if (!Datacontroller.instance.saveData.firstTimeLevelNormal[GameSystem.userdata.level])
+                try
                 {
-                    rewardFirstTime.gameObject.SetActive(true);
-                    Debug.LogError("========== nhan thuong normal");
-                    Datacontroller.instance.saveData.firstTimeLevelNormal[GameSystem.userdata.level] = true;
+                    if (!Datacontroller.instance.saveData.firstTimeLevelNormal[GameSystem.userdata.level])
+                    {
+                        rewardFirstTime.gameObject.SetActive(true);
+                        Debug.LogError("========== nhan thuong normal");
+                        Datacontroller.instance.saveData.firstTimeLevelNormal[GameSystem.userdata.level] = true;
+                    }
+                    else
+                    {
+                        rewardFirstTime.gameObject.SetActive(false);
+                        Debug.LogError("========== ko nhan thuong normal");
+                    }
+                    EventController.WIN_LEVEL_SPECIAL(GameSystem.userdata.level + 1);
                 }
-                else
+                catch
                 {
                     rewardFirstTime.gameObject.SetActive(false);
-                    Debug.LogError("========== ko nhan thuong normal");
                 }
-
-                EventController.WIN_LEVEL_SPECIAL(GameSystem.userdata.level + 1);
+ 
             }
         }
     }
@@ -586,14 +621,28 @@ public class Gameplay : MonoBehaviour
         {
             GameSystem.userdata.level++;
             Debug.LogError("======= user level:" + GameSystem.userdata.level);
-            if (GameSystem.userdata.level > GameSystem.userdata.maxLevel)
+            if (GameSystem.userdata.level >= /*GameSystem.userdata.maxLevel*/Datacontroller.instance.maxNormalLevel)
             {
-                GameSystem.userdata.maxLevel = GameSystem.userdata.level;
+                //   GameSystem.userdata.maxLevel = GameSystem.userdata.level;
+                GameSystem.userdata.level = Datacontroller.instance.maxNormalLevel;
+                if (countLevelLoop < GameSystem.userdata.level)
+                {
+                    countLevelLoop = GameSystem.userdata.level;
+                    Debug.LogError("set count loop level");
+                }
+                else
+                {
+                    countLevelLoop++;
+                }    
             }
             GameSystem.SaveUserDataToLocal();
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Datacontroller.instance.ShowInter();
+        if (GameSystem.userdata.level >= DataParam.levelCanShowAds)
+        {
+            Datacontroller.instance.ShowInter();
+            Debug.LogError("=== show inter : " + GameSystem.userdata.level);
+        }
     }
     public void BtnCloseWarningSpecialPanel()
     {

@@ -2431,6 +2431,8 @@ MonoBehaviour:
   levelObject: {fileID: 0}
   won: 0
   isPlayingSpecial: 0
+  pausePopup: {fileID: 1450006549}
+  settingPopUp: {fileID: 7464312470575250231}
   eraseSpecialLevel: {fileID: 0}
   animHint: {fileID: 1521001635}
 --- !u!1 &311862390
@@ -3588,6 +3590,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2076569489}
+        m_TargetAssemblyTypeName: DarkcupGames.ShowHideChangeSceneLogic, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 938400692}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -12035,9 +12049,29 @@ PrefabInstance:
       value: BtnCloseSpecialPopUp
       objectReference: {fileID: 0}
     - target: {fileID: 4706124940501243125, guid: 1162f23a7aa90ff4b80d4a9ca3a76557, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4706124940501243125, guid: 1162f23a7aa90ff4b80d4a9ca3a76557, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 307852592}
+      objectReference: {fileID: 2076569489}
+    - target: {fileID: 4706124940501243125, guid: 1162f23a7aa90ff4b80d4a9ca3a76557, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Hide
+      objectReference: {fileID: 0}
+    - target: {fileID: 4706124940501243125, guid: 1162f23a7aa90ff4b80d4a9ca3a76557, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DarkcupGames.ShowHideChangeSceneLogic, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4706124940501243125, guid: 1162f23a7aa90ff4b80d4a9ca3a76557, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 641017391}
+    - target: {fileID: 4706124940501243125, guid: 1162f23a7aa90ff4b80d4a9ca3a76557, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4706124941190054379, guid: 1162f23a7aa90ff4b80d4a9ca3a76557, type: 3}
       propertyPath: m_Name
       value: ButtonSpecialInPopUp

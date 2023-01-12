@@ -358,12 +358,12 @@ public class Datacontroller : MonoBehaviour
             return;
 
         DataParam.lastShowInter = System.DateTime.Now;
-        //if ((DataParam.lastShowInter - DataParam.beginShowInter).TotalSeconds > DataParam.timeDelayShowAds)
-        //{
+        if ((DataParam.lastShowInter - DataParam.beginShowInter).TotalSeconds > DataParam.timeDelayShowAds)
+        {
             if (AdsController.instance != null)
                 AdsController.instance.ShowInter();
             EventController.AF_INTERS_AD_ELIGIBLE();
-        //}
+        }
         //#endif
     }
 }

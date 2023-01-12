@@ -52,7 +52,7 @@ public class DataManager : MonoBehaviour
         titles.Add("Make the farmer happy");//2
         titles.Add("Unlock My Phone");//3
         titles.Add("Erase the excess.");//4
-        titles.Add("Help her get contact with friends.");//5
+        titles.Add("Help him get contact with friends.");//5
         titles.Add("Save the Cat.");//6
         titles.Add("Find the good girl.");//7
         titles.Add("Feed the lizard.");//8
@@ -120,7 +120,7 @@ public class DataManager : MonoBehaviour
                 levelId = i,
                 levelIdDisplay = i + 1,
                 levelTitle = titles[i],
-                unlocked = i < GameSystem.userdata.maxLevel || i == 0,
+                unlocked = i < Datacontroller.instance.maxNormalLevel || i == 0,
                 btnUse = () => {
                     PlayLevel(index);
                 }
