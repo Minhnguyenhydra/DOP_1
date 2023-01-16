@@ -29,16 +29,24 @@ public class PaintChecker : MonoBehaviour
                 return Input.GetMouseButtonUp(0);
             });
 
-            if (draw.IsDrawFinished())
+            if (!Gameplay.Instance.PopUpShow())
             {
-                draw.GetComponent<EraserShowPosition>().eraser.gameObject.SetActive(false);
-                drawFinishEvent?.Invoke();
-                break;
+                if (draw.IsDrawFinished())
+                {
+                    draw.GetComponent<EraserShowPosition>().eraser.gameObject.SetActive(false);
+                    drawFinishEvent?.Invoke();
+                    break;
+                }
+                else
+                {
+                    draw.ClearDraw();
+                }
             }
             else
             {
+                draw.GetComponent<EraserShowPosition>().eraser.gameObject.SetActive(false);
                 draw.ClearDraw();
-            }
+            }    
         }
 
         yield return new WaitForSeconds(2f);

@@ -37,15 +37,20 @@ public class FindItemLevel : LevelManager {
     }
 
     private void Update() {
-        for (int i = 0; i < findObjects.Count; i++) {
-            float distance = Vector2.Distance(findObjects[i].transform.position, magnify.transform.GetChild(0).position);
+        if (!Gameplay.Instance.PopUpShow())
+        {
+            for (int i = 0; i < findObjects.Count; i++)
+            {
+                float distance = Vector2.Distance(findObjects[i].transform.position, magnify.transform.GetChild(0).position);
 
-            if (distance < Constants.FIND_MANY_ITEM_FLY_TO_BOX_RANGE) {
-                Found(findObjects[i]);
+                if (distance < Constants.FIND_MANY_ITEM_FLY_TO_BOX_RANGE)
+                {
+                    Found(findObjects[i]);
+                }
             }
-        }
 
-        CheckWin();
+            CheckWin();
+        }
     }
 
     public virtual void Found(SpriteRenderer spriteRenderer) {

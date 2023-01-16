@@ -452,10 +452,14 @@ public class Gameplay : MonoBehaviour
     Color colorBtn;
     public void ShowWinPopup()
     {
-        colorBtn = btnNextWin.image.color;
-        colorBtn.a = 0;
-        btnNextWin.interactable = false;
-        btnNextWin.image.color = colorBtn;
+
+        if (btnNextWin != null)
+        {
+            colorBtn = btnNextWin.image.color;
+            colorBtn.a = 0;
+            btnNextWin.interactable = false;
+            btnNextWin.image.color = colorBtn;
+        }
         if (winPopup != null)
             winPopup.DoEffect();
         StartCoroutine(delayDisplayBtnNext());

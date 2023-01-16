@@ -52,19 +52,26 @@ public class EraseLevel : LevelManager, IDragHandler, IEndDragHandler
             yield return new WaitUntil(() => {
                 return Input.GetMouseButtonUp(0);
             });
-
-
-            if (draw.IsDrawFinished())
+            if (!Gameplay.Instance.PopUpShow())
             {
-                draw.GetComponent<EraserShowPosition>().eraser.gameObject.SetActive(false);
-                Win();
-                break;
+
+                if (draw.IsDrawFinished())
+                {
+                    draw.GetComponent<EraserShowPosition>().eraser.gameObject.SetActive(false);
+                    Win();
+                    break;
+                }
+                else
+                {
+                    draw.ClearDraw();
+                    Gameplay.Instance.Virate();
+                }
             }
             else
             {
+                draw.GetComponent<EraserShowPosition>().eraser.gameObject.SetActive(false);
                 draw.ClearDraw();
-                Gameplay.Instance.Virate();
-            }
+            }    
         }
 
         yield return new WaitForSeconds(2f);

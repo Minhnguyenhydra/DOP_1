@@ -67,6 +67,10 @@ public class DrawLevel : LevelManager
                     Gameplay.Instance.Virate();
                 }
             }
+            else
+            {
+                draw.ClearDraw();
+            }    
         }
     }
 
