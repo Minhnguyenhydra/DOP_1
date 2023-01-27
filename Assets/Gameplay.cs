@@ -62,11 +62,11 @@ public class Gameplay : MonoBehaviour
         {
             anUI = Color.white;
             anUI.a = 0;
-            for (int i = 0; i < uiAns.Length; i ++)
+            for (int i = 0; i < uiAns.Length; i++)
             {
                 uiAns[i].color = anUI;
-            }    
-            for(int i = 0; i < textAns.Length; i ++)
+            }
+            for (int i = 0; i < textAns.Length; i++)
             {
                 textAns[i].color = anUI;
             }
@@ -232,22 +232,24 @@ public class Gameplay : MonoBehaviour
         //    count++;
         //}
         // }
-
-        if (levelObject == null)
+        else
         {
+
             int levelRandom = Random.Range(0, Datacontroller.instance.maxNormalLevel);
             GameSystem.userdata.level = Datacontroller.instance.maxNormalLevel;
             GameSystem.SaveUserDataToLocal();
 
-            GameObject obj = Resources.Load<GameObject>("Levels/Level" + (levelRandom+1));
+            GameObject obj = Resources.Load<GameObject>("Levels/Level" + (levelRandom + 1));
             levelObject = Instantiate(obj);
 
-            if(countLevelLoop == 0)
+            if (countLevelLoop == 0)
             {
                 countLevelLoop = GameSystem.userdata.level;
-            }    
+            }
 
             txtLevel.text = "LEVEL " + (countLevelLoop + 1);
+
+            //   EventController.PLAY_LEVEL_NORMAL(countLevelLoop + 1);
 
             LevelManager levelManagerTemp = obj.GetComponent<LevelManager>();
             LevelInfo info = DataManager.Instance.levelInfos[levelManagerTemp.indexTxtQuest/*level*/ /*+ count*/];
@@ -326,12 +328,12 @@ public class Gameplay : MonoBehaviour
         panelAfterWin.SetActive(false);
 
     }
-    static int countLevelLoop;
-    [SerializeField] GameObject pausePopup,settingPopUp;
+    public static int countLevelLoop;
+    [SerializeField] GameObject pausePopup, settingPopUp;
     public bool PopUpShow()
     {
         return settingPopUp.activeSelf || popUpRating.activeSelf || sepcialWarningPanel.activeSelf;
-    }    
+    }
     public void LoadBranchLevel()
     {
         SceneManager.LoadScene("BranchLevel");
@@ -476,7 +478,7 @@ public class Gameplay : MonoBehaviour
                 rewardFirstTime.gameObject.SetActive(false);
                 Debug.LogError("========== ko nhan thuong branch");
             }
-            EventController.WIN_LEVEL_SPECIAL(GameSystem.userdata.branchLevel + 1);
+            EventController.WIN_LEVEL_STORY(GameSystem.userdata.branchLevel + 1);
         }
         else
         {
@@ -511,13 +513,14 @@ public class Gameplay : MonoBehaviour
                         rewardFirstTime.gameObject.SetActive(false);
                         Debug.LogError("========== ko nhan thuong normal");
                     }
-                    EventController.WIN_LEVEL_SPECIAL(GameSystem.userdata.level + 1);
+                    if (Gameplay.countLevelLoop > 0)
+                        EventController.WIN_LEVEL_NORMAL(GameSystem.userdata.level + 1);
                 }
                 catch
                 {
                     rewardFirstTime.gameObject.SetActive(false);
                 }
- 
+
             }
         }
     }
@@ -637,7 +640,7 @@ public class Gameplay : MonoBehaviour
                 else
                 {
                     countLevelLoop++;
-                }    
+                }
             }
             GameSystem.SaveUserDataToLocal();
         }
