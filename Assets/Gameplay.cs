@@ -513,7 +513,7 @@ public class Gameplay : MonoBehaviour
                         rewardFirstTime.gameObject.SetActive(false);
                         Debug.LogError("========== ko nhan thuong normal");
                     }
-                    if (Gameplay.countLevelLoop > 0)
+                    if (countLevelLoop > 0)
                         EventController.WIN_LEVEL_NORMAL(GameSystem.userdata.level + 1);
                 }
                 catch

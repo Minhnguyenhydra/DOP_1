@@ -155,8 +155,8 @@ MonoBehaviour:
   maxSpecialLevel: 5
   maxNormalLevel: 60
   maxBranchLevel: 6
-  testLevel: 0
-  debug: 0
+  testLevel: 1
+  debug: 1
   anUI: 0
   anAds: 0
   testIAP: 0
