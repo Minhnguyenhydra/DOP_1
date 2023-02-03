@@ -108,9 +108,9 @@ public class DataManager : MonoBehaviour
         titles.Add("Help him.");//58
         titles.Add("He wants a ghost.");//59
         titles.Add("Help Her fix the airpod");//60
-
-
-
+        titles.Add("Erase and win."); // 61 == 65
+        titles.Add("What is the man hiding?"); // 62 == 66
+        titles.Add("Help the girl save this image."); // 63 == 67
 
 
         for (int i = 0; i < titles.Count; i++) {

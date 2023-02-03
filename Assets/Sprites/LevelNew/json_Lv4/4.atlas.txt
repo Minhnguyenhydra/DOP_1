@@ -1,0 +1,286 @@
+
+4.png
+size: 1576,604
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BBody
+  rotate: true
+  xy: 1017, 137
+  size: 108, 181
+  orig: 108, 181
+  offset: 0, 0
+  index: -1
+BEyes
+  rotate: false
+  xy: 838, 19
+  size: 52, 22
+  orig: 52, 22
+  offset: 0, 0
+  index: -1
+BFace
+  rotate: false
+  xy: 1416, 240
+  size: 71, 89
+  orig: 71, 89
+  offset: 0, 0
+  index: -1
+BHair
+  rotate: false
+  xy: 1406, 169
+  size: 91, 69
+  orig: 91, 69
+  offset: 0, 0
+  index: -1
+BLHand
+  rotate: false
+  xy: 1200, 132
+  size: 113, 113
+  orig: 113, 113
+  offset: 0, 0
+  index: -1
+BLeg
+  rotate: false
+  xy: 1300, 432
+  size: 147, 170
+  orig: 147, 170
+  offset: 0, 0
+  index: -1
+BMouth
+  rotate: false
+  xy: 1447, 331
+  size: 31, 18
+  orig: 31, 18
+  offset: 0, 0
+  index: -1
+BRHand
+  rotate: false
+  xy: 1036, 25
+  size: 137, 110
+  orig: 137, 110
+  offset: 0, 0
+  index: -1
+Bg
+  rotate: true
+  xy: 2, 3
+  size: 599, 684
+  orig: 599, 684
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 1300, 259
+  size: 70, 114
+  orig: 70, 114
+  offset: 0, 0
+  index: -1
+BoyHead
+  rotate: false
+  xy: 1315, 157
+  size: 89, 100
+  orig: 89, 100
+  offset: 0, 0
+  index: -1
+Door_1
+  rotate: false
+  xy: 688, 122
+  size: 327, 480
+  orig: 327, 480
+  offset: 0, 0
+  index: -1
+Door_2
+  rotate: false
+  xy: 1017, 326
+  size: 281, 276
+  orig: 281, 276
+  offset: 0, 0
+  index: -1
+GBody
+  rotate: false
+  xy: 1449, 433
+  size: 102, 169
+  orig: 102, 169
+  offset: 0, 0
+  index: -1
+GEyes
+  rotate: true
+  xy: 1553, 557
+  size: 45, 21
+  orig: 45, 21
+  offset: 0, 0
+  index: -1
+GFace
+  rotate: false
+  xy: 1447, 351
+  size: 64, 79
+  orig: 64, 79
+  offset: 0, 0
+  index: -1
+GHair1
+  rotate: false
+  xy: 1437, 82
+  size: 65, 85
+  orig: 65, 85
+  offset: 0, 0
+  index: -1
+GHair2
+  rotate: true
+  xy: 1499, 198
+  size: 73, 63
+  orig: 73, 63
+  offset: 0, 0
+  index: -1
+GLHand_1
+  rotate: false
+  xy: 1489, 273
+  size: 56, 76
+  orig: 56, 76
+  offset: 0, 0
+  index: -1
+GLHand_2
+  rotate: false
+  xy: 961, 2
+  size: 73, 118
+  orig: 73, 118
+  offset: 0, 0
+  index: -1
+GLeg_Left
+  rotate: true
+  xy: 688, 43
+  size: 77, 271
+  orig: 77, 271
+  offset: 0, 0
+  index: -1
+GMouth
+  rotate: false
+  xy: 1507, 2
+  size: 16, 12
+  orig: 16, 12
+  offset: 0, 0
+  index: -1
+GRHand_1
+  rotate: false
+  xy: 1513, 362
+  size: 61, 69
+  orig: 61, 69
+  offset: 0, 0
+  index: -1
+GRHand_2
+  rotate: true
+  xy: 1329, 20
+  size: 56, 93
+  orig: 56, 93
+  offset: 0, 0
+  index: -1
+GRLeg_Right
+  rotate: true
+  xy: 1017, 247
+  size: 77, 271
+  orig: 77, 271
+  offset: 0, 0
+  index: -1
+GVay
+  rotate: false
+  xy: 1300, 331
+  size: 145, 99
+  orig: 145, 99
+  offset: 0, 0
+  index: -1
+Smoke_1
+  rotate: false
+  xy: 1507, 50
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Smoke_2
+  rotate: false
+  xy: 1507, 16
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+WEyes
+  rotate: false
+  xy: 838, 2
+  size: 32, 15
+  orig: 32, 15
+  offset: 0, 0
+  index: -1
+WFace
+  rotate: true
+  xy: 688, 3
+  size: 38, 47
+  orig: 38, 47
+  offset: 0, 0
+  index: -1
+WGLHand_2
+  rotate: false
+  xy: 1328, 78
+  size: 107, 77
+  orig: 107, 77
+  offset: 0, 0
+  index: -1
+WHair_Back
+  rotate: true
+  xy: 1504, 132
+  size: 64, 57
+  orig: 64, 57
+  offset: 0, 0
+  index: -1
+WHair_Up
+  rotate: false
+  xy: 737, 5
+  size: 43, 36
+  orig: 43, 36
+  offset: 0, 0
+  index: -1
+WLHand1
+  rotate: true
+  xy: 1504, 84
+  size: 22, 43
+  orig: 22, 43
+  offset: 0, 0
+  index: -1
+WLHand2
+  rotate: true
+  xy: 782, 18
+  size: 23, 54
+  orig: 23, 54
+  offset: 0, 0
+  index: -1
+WLLeg
+  rotate: true
+  xy: 1175, 76
+  size: 54, 151
+  orig: 54, 151
+  offset: 0, 0
+  index: -1
+WMouth
+  rotate: true
+  xy: 1290, 314
+  size: 10, 8
+  orig: 10, 8
+  offset: 0, 0
+  index: -1
+WRHand
+  rotate: true
+  xy: 1504, 108
+  size: 22, 54
+  orig: 22, 54
+  offset: 0, 0
+  index: -1
+WRLeg
+  rotate: true
+  xy: 1175, 20
+  size: 54, 152
+  orig: 54, 152
+  offset: 0, 0
+  index: -1
+WShoe
+  rotate: true
+  xy: 1437, 2
+  size: 78, 68
+  orig: 78, 68
+  offset: 0, 0
+  index: -1

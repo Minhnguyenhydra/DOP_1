@@ -1,0 +1,202 @@
+
+5.png
+size: 1580,604
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BBody
+  rotate: false
+  xy: 1076, 10
+  size: 99, 165
+  orig: 99, 165
+  offset: 0, 0
+  index: -1
+BHead
+  rotate: false
+  xy: 1376, 290
+  size: 63, 93
+  orig: 63, 93
+  offset: 0, 0
+  index: -1
+BLHand
+  rotate: false
+  xy: 1329, 385
+  size: 111, 140
+  orig: 111, 140
+  offset: 0, 0
+  index: -1
+BLeg
+  rotate: false
+  xy: 1018, 378
+  size: 179, 223
+  orig: 179, 223
+  offset: 0, 0
+  index: -1
+BMouth
+  rotate: false
+  xy: 1041, 162
+  size: 20, 13
+  orig: 20, 13
+  offset: 0, 0
+  index: -1
+BMouth2
+  rotate: false
+  xy: 1018, 160
+  size: 21, 15
+  orig: 21, 15
+  offset: 0, 0
+  index: -1
+BRHand
+  rotate: false
+  xy: 1177, 16
+  size: 68, 159
+  orig: 68, 159
+  offset: 0, 0
+  index: -1
+Bg
+  rotate: true
+  xy: 2, 2
+  size: 599, 684
+  orig: 599, 684
+  offset: 0, 0
+  index: -1
+CGBody
+  rotate: false
+  xy: 1442, 435
+  size: 133, 90
+  orig: 133, 90
+  offset: 0, 0
+  index: -1
+CGHair_Back
+  rotate: true
+  xy: 1412, 94
+  size: 89, 87
+  orig: 89, 87
+  offset: 0, 0
+  index: -1
+CGHair_Front
+  rotate: true
+  xy: 1376, 261
+  size: 27, 60
+  orig: 27, 60
+  offset: 0, 0
+  index: -1
+CGHead
+  rotate: false
+  xy: 1336, 83
+  size: 74, 92
+  orig: 74, 92
+  offset: 0, 0
+  index: -1
+CGLHand
+  rotate: true
+  xy: 1376, 527
+  size: 74, 178
+  orig: 74, 178
+  offset: 0, 0
+  index: -1
+CGLLeg
+  rotate: false
+  xy: 688, 8
+  size: 192, 150
+  orig: 192, 150
+  offset: 0, 0
+  index: -1
+CGRHand
+  rotate: false
+  xy: 1199, 380
+  size: 63, 221
+  orig: 63, 221
+  offset: 0, 0
+  index: -1
+CGRLeg
+  rotate: false
+  xy: 1018, 177
+  size: 177, 199
+  orig: 177, 199
+  offset: 0, 0
+  index: -1
+Curtain
+  rotate: false
+  xy: 688, 160
+  size: 328, 441
+  orig: 328, 441
+  offset: 0, 0
+  index: -1
+GBody
+  rotate: false
+  xy: 1442, 343
+  size: 133, 90
+  orig: 133, 90
+  offset: 0, 0
+  index: -1
+GHair_Back
+  rotate: true
+  xy: 1430, 3
+  size: 89, 87
+  orig: 89, 87
+  offset: 0, 0
+  index: -1
+GHair_Front
+  rotate: false
+  xy: 1329, 541
+  size: 27, 60
+  orig: 27, 60
+  offset: 0, 0
+  index: -1
+GHead
+  rotate: true
+  xy: 1336, 7
+  size: 74, 92
+  orig: 74, 92
+  offset: 0, 0
+  index: -1
+GLHand
+  rotate: true
+  xy: 1376, 185
+  size: 74, 178
+  orig: 74, 178
+  offset: 0, 0
+  index: -1
+GLLeg
+  rotate: false
+  xy: 882, 8
+  size: 192, 150
+  orig: 192, 150
+  offset: 0, 0
+  index: -1
+GRHand
+  rotate: false
+  xy: 1264, 380
+  size: 63, 221
+  orig: 63, 221
+  offset: 0, 0
+  index: -1
+GRLeg
+  rotate: false
+  xy: 1197, 177
+  size: 177, 199
+  orig: 177, 199
+  offset: 0, 0
+  index: -1
+RedFace
+  rotate: true
+  xy: 1247, 6
+  size: 50, 29
+  orig: 50, 29
+  offset: 0, 0
+  index: -1
+WBLHand
+  rotate: true
+  xy: 1441, 261
+  size: 80, 124
+  orig: 80, 124
+  offset: 0, 0
+  index: -1
+WBRHand
+  rotate: false
+  xy: 1247, 58
+  size: 87, 117
+  orig: 87, 117
+  offset: 0, 0
+  index: -1

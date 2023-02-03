@@ -1,0 +1,153 @@
+
+2.png
+size: 2440,604
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bg_cloud
+  rotate: true
+  xy: 2, 3
+  size: 599, 723
+  orig: 599, 723
+  offset: 0, 0
+  index: -1
+Bg_sun
+  rotate: true
+  xy: 727, 3
+  size: 599, 723
+  orig: 599, 723
+  offset: 0, 0
+  index: -1
+Cloud
+  rotate: true
+  xy: 2138, 227
+  size: 228, 144
+  orig: 228, 144
+  offset: 0, 0
+  index: -1
+NBody
+  rotate: false
+  xy: 1853, 19
+  size: 283, 281
+  orig: 283, 281
+  offset: 0, 0
+  index: -1
+NHair_Front
+  rotate: true
+  xy: 2354, 513
+  size: 89, 81
+  orig: 89, 81
+  offset: 0, 0
+  index: -1
+NHair_back
+  rotate: true
+  xy: 2183, 475
+  size: 127, 169
+  orig: 127, 169
+  offset: 0, 0
+  index: -1
+NLHand_1
+  rotate: false
+  xy: 1974, 304
+  size: 94, 40
+  orig: 94, 40
+  offset: 0, 0
+  index: -1
+NLHand_2
+  rotate: true
+  xy: 2284, 247
+  size: 94, 98
+  orig: 94, 98
+  offset: 0, 0
+  index: -1
+NRHand
+  rotate: false
+  xy: 2138, 2
+  size: 110, 88
+  orig: 110, 88
+  offset: 0, 0
+  index: -1
+NWater
+  rotate: true
+  xy: 1728, 12
+  size: 141, 114
+  orig: 141, 114
+  offset: 0, 0
+  index: -1
+Nface
+  rotate: true
+  xy: 2342, 28
+  size: 62, 77
+  orig: 62, 77
+  offset: 0, 0
+  index: -1
+Sun
+  rotate: false
+  xy: 1452, 2
+  size: 274, 274
+  orig: 274, 274
+  offset: 0, 0
+  index: -1
+WBody
+  rotate: true
+  xy: 1974, 457
+  size: 145, 207
+  orig: 145, 207
+  offset: 0, 0
+  index: -1
+WHat
+  rotate: false
+  xy: 1728, 155
+  size: 120, 121
+  orig: 120, 121
+  offset: 0, 0
+  index: -1
+WL_arm
+  rotate: true
+  xy: 2284, 343
+  size: 130, 106
+  orig: 130, 106
+  offset: 0, 0
+  index: -1
+WLeg
+  rotate: false
+  xy: 2138, 92
+  size: 296, 133
+  orig: 296, 133
+  offset: 0, 0
+  index: -1
+WMouth
+  rotate: false
+  xy: 2070, 331
+  size: 14, 13
+  orig: 14, 13
+  offset: 0, 0
+  index: -1
+WR_arm
+  rotate: false
+  xy: 1974, 346
+  size: 138, 109
+  orig: 138, 109
+  offset: 0, 0
+  index: -1
+Wface
+  rotate: true
+  xy: 2250, 20
+  size: 70, 90
+  orig: 70, 90
+  offset: 0, 0
+  index: -1
+Wouter
+  rotate: true
+  xy: 1452, 278
+  size: 324, 399
+  orig: 324, 399
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 1853, 302
+  size: 300, 119
+  orig: 300, 119
+  offset: 0, 0
+  index: -1

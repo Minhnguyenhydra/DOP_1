@@ -1,0 +1,55 @@
+
+Lv62.png
+size: 3240,580
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Box
+  rotate: true
+  xy: 2, 12
+  size: 566, 724
+  orig: 566, 724
+  offset: 0, 0
+  index: -1
+Check
+  rotate: false
+  xy: 3084, 69
+  size: 126, 123
+  orig: 126, 123
+  offset: 0, 0
+  index: -1
+Light
+  rotate: true
+  xy: 728, 2
+  size: 576, 704
+  orig: 576, 704
+  offset: 0, 0
+  index: -1
+Light_2
+  rotate: true
+  xy: 1434, 2
+  size: 576, 704
+  orig: 576, 704
+  offset: 0, 0
+  index: -1
+Lottery
+  rotate: true
+  xy: 3084, 194
+  size: 384, 152
+  orig: 384, 152
+  offset: 0, 0
+  index: -1
+Nor
+  rotate: true
+  xy: 2140, 97
+  size: 481, 470
+  orig: 481, 470
+  offset: 0, 0
+  index: -1
+Win
+  rotate: true
+  xy: 2612, 97
+  size: 481, 470
+  orig: 481, 470
+  offset: 0, 0
+  index: -1

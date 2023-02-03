@@ -1,0 +1,125 @@
+
+Lv64.png
+size: 680,1036
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: true
+  xy: 248, 165
+  size: 178, 309
+  orig: 178, 309
+  offset: 0, 0
+  index: -1
+Buble
+  rotate: false
+  xy: 248, 4
+  size: 187, 159
+  orig: 187, 159
+  offset: 0, 0
+  index: -1
+Camera
+  rotate: false
+  xy: 569, 698
+  size: 93, 95
+  orig: 93, 95
+  offset: 0, 0
+  index: -1
+Face
+  rotate: false
+  xy: 569, 795
+  size: 96, 119
+  orig: 96, 119
+  offset: 0, 0
+  index: -1
+Hair_back
+  rotate: true
+  xy: 2, 2
+  size: 147, 162
+  orig: 147, 162
+  offset: 0, 0
+  index: -1
+Hair_front
+  rotate: true
+  xy: 569, 592
+  size: 104, 86
+  orig: 104, 86
+  offset: 0, 0
+  index: -1
+L_Hand_1
+  rotate: false
+  xy: 166, 4
+  size: 79, 145
+  orig: 79, 145
+  offset: 0, 0
+  index: -1
+L_Hand_2
+  rotate: false
+  xy: 590, 10
+  size: 66, 180
+  orig: 66, 180
+  offset: 0, 0
+  index: -1
+Leg
+  rotate: true
+  xy: 2, 151
+  size: 192, 244
+  orig: 192, 244
+  offset: 0, 0
+  index: -1
+Mouth
+  rotate: false
+  xy: 520, 36
+  size: 13, 10
+  orig: 13, 10
+  offset: 0, 0
+  index: -1
+Mouth_Win
+  rotate: false
+  xy: 559, 166
+  size: 29, 24
+  orig: 29, 24
+  offset: 0, 0
+  index: -1
+R_hand_1
+  rotate: false
+  xy: 569, 447
+  size: 75, 143
+  orig: 75, 143
+  offset: 0, 0
+  index: -1
+R_hand_2
+  rotate: true
+  xy: 437, 48
+  size: 115, 148
+  orig: 115, 148
+  offset: 0, 0
+  index: -1
+R_hand_2_W
+  rotate: false
+  xy: 559, 192
+  size: 114, 151
+  orig: 114, 151
+  offset: 0, 0
+  index: -1
+bg
+  rotate: false
+  xy: 2, 345
+  size: 565, 686
+  orig: 565, 686
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 437, 12
+  size: 81, 34
+  orig: 81, 34
+  offset: 0, 0
+  index: -1
+star
+  rotate: false
+  xy: 569, 916
+  size: 106, 115
+  orig: 106, 115
+  offset: 0, 0
+  index: -1

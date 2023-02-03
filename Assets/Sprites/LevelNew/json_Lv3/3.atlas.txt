@@ -1,0 +1,188 @@
+
+3.png
+size: 1676,616
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bg
+  rotate: true
+  xy: 2, 14
+  size: 599, 754
+  orig: 599, 754
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 1208, 144
+  size: 132, 224
+  orig: 132, 224
+  offset: 0, 0
+  index: -1
+Eyes
+  rotate: false
+  xy: 1423, 2
+  size: 78, 34
+  orig: 78, 34
+  offset: 0, 0
+  index: -1
+Eyes_W
+  rotate: false
+  xy: 1503, 2
+  size: 78, 34
+  orig: 78, 34
+  offset: 0, 0
+  index: -1
+Face
+  rotate: false
+  xy: 1559, 477
+  size: 108, 136
+  orig: 108, 136
+  offset: 0, 0
+  index: -1
+Face_W
+  rotate: true
+  xy: 1439, 279
+  size: 108, 136
+  orig: 108, 136
+  offset: 0, 0
+  index: -1
+G_Body
+  rotate: false
+  xy: 1439, 435
+  size: 118, 178
+  orig: 118, 178
+  offset: 0, 0
+  index: -1
+G_Hair_Back
+  rotate: true
+  xy: 1188, 18
+  size: 124, 125
+  orig: 124, 125
+  offset: 0, 0
+  index: -1
+G_Hair_Front
+  rotate: true
+  xy: 1113, 195
+  size: 109, 93
+  orig: 109, 93
+  offset: 0, 0
+  index: -1
+G_Head
+  rotate: false
+  xy: 1113, 28
+  size: 69, 85
+  orig: 69, 85
+  offset: 0, 0
+  index: -1
+G_Head_Win
+  rotate: false
+  xy: 1603, 207
+  size: 69, 85
+  orig: 69, 85
+  offset: 0, 0
+  index: -1
+G_LHand_1
+  rotate: true
+  xy: 1583, 21
+  size: 45, 86
+  orig: 45, 86
+  offset: 0, 0
+  index: -1
+G_LHand_2
+  rotate: false
+  xy: 1577, 294
+  size: 63, 93
+  orig: 63, 93
+  offset: 0, 0
+  index: -1
+G_Lhand
+  rotate: true
+  xy: 1439, 389
+  size: 44, 216
+  orig: 44, 216
+  offset: 0, 0
+  index: -1
+G_RHand_1
+  rotate: false
+  xy: 1113, 115
+  size: 73, 78
+  orig: 73, 78
+  offset: 0, 0
+  index: -1
+G_RHand_12
+  rotate: true
+  xy: 974, 12
+  size: 49, 97
+  orig: 49, 97
+  offset: 0, 0
+  index: -1
+G_Rhand
+  rotate: false
+  xy: 1434, 38
+  size: 70, 238
+  orig: 70, 238
+  offset: 0, 0
+  index: -1
+Hair
+  rotate: true
+  xy: 1315, 3
+  size: 139, 106
+  orig: 139, 106
+  offset: 0, 0
+  index: -1
+LHand
+  rotate: true
+  xy: 758, 20
+  size: 127, 214
+  orig: 127, 214
+  offset: 0, 0
+  index: -1
+Leg
+  rotate: false
+  xy: 982, 63
+  size: 129, 241
+  orig: 129, 241
+  offset: 0, 0
+  index: -1
+Mouth
+  rotate: true
+  xy: 1073, 15
+  size: 46, 26
+  orig: 46, 26
+  offset: 0, 0
+  index: -1
+Mouth_W
+  rotate: false
+  xy: 1559, 449
+  size: 46, 26
+  orig: 46, 26
+  offset: 0, 0
+  index: -1
+RHand
+  rotate: false
+  xy: 1506, 68
+  size: 95, 209
+  orig: 95, 209
+  offset: 0, 0
+  index: -1
+Voinuoc
+  rotate: true
+  xy: 1208, 278
+  size: 335, 229
+  orig: 335, 229
+  offset: 0, 0
+  index: -1
+Water
+  rotate: true
+  xy: 758, 149
+  size: 155, 222
+  orig: 155, 222
+  offset: 0, 0
+  index: -1
+tree
+  rotate: false
+  xy: 758, 306
+  size: 448, 307
+  orig: 448, 307
+  offset: 0, 0
+  index: -1

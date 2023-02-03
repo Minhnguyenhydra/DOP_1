@@ -1,0 +1,118 @@
+{
+"skeleton": {
+	"hash": "8lcBZSfNF3yq+LYxbkT6e8cKU3A",
+	"spine": "3.8.85",
+	"x": -291.63,
+	"y": -1.86,
+	"width": 576,
+	"height": 724,
+	"images": "./images/",
+	"audio": "D:/Khanh/4.DOP/Lv62"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "Box", "parent": "root", "x": -1.51, "y": -187.31 },
+	{ "name": "Lottery", "parent": "Box", "x": -9.91, "y": 786.46 },
+	{ "name": "Check", "parent": "Box", "x": -177.58, "y": 620.11 }
+],
+"slots": [
+	{ "name": "Box", "bone": "Box", "attachment": "Box" },
+	{ "name": "Light", "bone": "Box", "attachment": "Light" },
+	{ "name": "Win", "bone": "Box", "attachment": "Win" },
+	{ "name": "Nor", "bone": "Box", "attachment": "Nor2" },
+	{ "name": "Lottery", "bone": "Lottery", "attachment": "Lottery" },
+	{ "name": "Check", "bone": "Check" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Box": {
+				"Box": { "x": -2.12, "y": 547.45, "width": 566, "height": 724 }
+			},
+			"Check": {
+				"Check": { "x": 16.46, "y": 19.84, "width": 126, "height": 123 }
+			},
+			"Light": {
+				"Light": { "x": -2.12, "y": 554.45, "width": 576, "height": 704 },
+				"Light_2": { "x": -2.12, "y": 554.45, "width": 576, "height": 704 }
+			},
+			"Lottery": {
+				"Lottery": { "x": 8.79, "y": 5, "width": 384, "height": 152 }
+			},
+			"Win": {
+				"Win": { "x": -1.62, "y": 483.45, "width": 481, "height": 470 }
+			}
+		}
+	},
+	{ "name": "After" },
+	{
+		"name": "Before",
+		"attachments": {
+			"Nor": {
+				"Nor2": { "path": "Nor", "x": -1.62, "y": 483.45, "width": 481, "height": 470 }
+			}
+		}
+	},
+	{
+		"name": "Normal",
+		"attachments": {
+			"Nor": {
+				"Nor2": { "path": "Nor", "x": -1.62, "y": 483.45, "width": 481, "height": 470 }
+			}
+		}
+	}
+],
+"animations": {
+	"Normal": {
+		"slots": {
+			"Light": {
+				"attachment": [
+					{ "time": 0.3333, "name": "Light_2" },
+					{ "time": 0.6667, "name": "Light" },
+					{ "time": 1, "name": "Light_2" },
+					{ "time": 1.3333, "name": "Light" }
+				]
+			}
+		}
+	},
+	"Win": {
+		"slots": {
+			"Check": {
+				"attachment": [
+					{ "name": "Check" }
+				]
+			},
+			"Light": {
+				"attachment": [
+					{ "time": 0.3333, "name": "Light_2" },
+					{ "time": 0.6667, "name": "Light" },
+					{ "time": 1, "name": "Light_2" },
+					{ "time": 1.3333, "name": "Light" }
+				]
+			},
+			"Nor": {
+				"attachment": [
+					{ "name": null }
+				]
+			}
+		},
+		"bones": {
+			"Lottery": {
+				"scale": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.6667, "x": 1.183, "y": 1.183, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1.3333 }
+				]
+			},
+			"Check": {
+				"scale": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.6667, "x": 1.259, "y": 1.259, "curve": 0.25, "c3": 0.75 },
+					{ "time": 1.3333 }
+				]
+			}
+		}
+	}
+}
+}
