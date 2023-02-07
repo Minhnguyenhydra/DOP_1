@@ -1,0 +1,34 @@
+
+Lv_70.png
+size: 1092,652
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arrow
+  rotate: true
+  xy: 562, 2
+  size: 127, 203
+  orig: 127, 203
+  offset: 0, 0
+  index: -1
+bg
+  rotate: true
+  xy: 2, 5
+  size: 643, 558
+  orig: 643, 558
+  offset: 0, 0
+  index: -1
+dolphin
+  rotate: true
+  xy: 824, 143
+  size: 505, 263
+  orig: 505, 263
+  offset: 0, 0
+  index: -1
+dolphin_win
+  rotate: true
+  xy: 562, 131
+  size: 517, 260
+  orig: 517, 260
+  offset: 0, 0
+  index: -1

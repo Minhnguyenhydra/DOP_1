@@ -48,70 +48,75 @@ public class DataManager : MonoBehaviour
         List<string> titles = new List<string>();
 
         //1
-        titles.Add("What is the girl looking at?");//1
-        titles.Add("Make the farmer happy");//2
-        titles.Add("Unlock My Phone");//3
-        titles.Add("Erase the excess.");//4
-        titles.Add("Help him get contact with friends.");//5
-        titles.Add("Save the Cat.");//6
-        titles.Add("Find the good girl.");//7
-        titles.Add("Feed the lizard.");//8
-        titles.Add("Someone's Looking");//9
-        titles.Add("Catch the thief.");//10
-        titles.Add("Help the witch transform");//11
-        titles.Add("Help him lift the weight");//12
-        titles.Add("Time out");//13
-        titles.Add("What is she affraid of?");//14
-        titles.Add("Where is a female toilet?");//15
-        titles.Add("Find a ninja");//16
-        titles.Add("Taking Off The Mask");//17
-        titles.Add("Help the girl to fly");//18
-        titles.Add("Help her warm up");//19
-        titles.Add("Beautiful girl and photographer.");//20
-        titles.Add("Is this the real Santa?");//21
-        titles.Add("How did the prisoner escape?");//22
-        titles.Add("Find the frog.");//23
-        titles.Add("Find the suprising girl");//24
-        titles.Add("What are they doing?");//25
-        titles.Add("Why is he worried?");//26
-        titles.Add("Get the rid of vampire.");//27
-        titles.Add("Help the girl");//28
-        titles.Add("Make him sexy");//29
-        titles.Add("Use your imagination");//30
-        titles.Add("Find the mysterious person.");//31
-        titles.Add("Wake up!");//32
-        titles.Add("Summon the genie.");//33
-        titles.Add("Find the second girl");//34
-        titles.Add("Help the boy stay awake.");//35
-        titles.Add("Who is real?.");//36
-        titles.Add("Help him please her.");//37
-        titles.Add("Help them relax...");//38
-        titles.Add("Find the first full tank.");//39
-        titles.Add("What is she doing?");//40
-        titles.Add("You will be surprised.");//41
-        titles.Add("Help him a singer");//42
-        titles.Add("Kill the monster");//43
-        titles.Add("Help her lose weight.");//44
-        titles.Add("Kill The Vampires.");//45
-        titles.Add("Catch the robber");//46
-        titles.Add("Make her happy");//47
-        titles.Add("Make it cool!");//48
-        titles.Add("Find the letter O.");//49
-        titles.Add("Find the sheep.");//50
-        titles.Add("Find an omelet");//51
-        titles.Add("Find the thief");//52
-        titles.Add("Help the bus to drive through.");//53
-        titles.Add("Surprise gift.");//54
-        titles.Add("");//55
-        titles.Add("Finish the costume");//56
-        titles.Add("Save the girl.");//57
-        titles.Add("Help him.");//58
-        titles.Add("He wants a ghost.");//59
-        titles.Add("Help Her fix the airpod");//60
-        titles.Add("Erase and win."); // 61 == 65
-        titles.Add("What is the man hiding?"); // 62 == 66
-        titles.Add("Help the girl save this image."); // 63 == 67
-
+        titles.Add("What is the girl looking at?");//0
+        titles.Add("Make the farmer happy");//1
+        titles.Add("Unlock My Phone");//2
+        titles.Add("Erase the excess.");//3
+        titles.Add("Help him get contact with friends.");//4
+        titles.Add("Save the Cat.");//5
+        titles.Add("Find the good girl.");//6
+        titles.Add("Feed the lizard.");//7
+        titles.Add("Someone's Looking");//8
+        titles.Add("Catch the thief.");//9
+        titles.Add("Help the witch transform");//10
+        titles.Add("Help him lift the weight");//11
+        titles.Add("Time out");//12
+        titles.Add("What is she affraid of?");//13
+        titles.Add("Where is a female toilet?");//14
+        titles.Add("Find a ninja");//15
+        titles.Add("Taking Off The Mask");//16
+        titles.Add("Help the girl to fly");//17
+        titles.Add("Help her warm up");//18
+        titles.Add("Beautiful girl and photographer.");//19
+        titles.Add("Is this the real Santa?");//20
+        titles.Add("How did the prisoner escape?");//21
+        titles.Add("Find the frog.");//22
+        titles.Add("Find the suprising girl");//23
+        titles.Add("What are they doing?");//24
+        titles.Add("Why is he worried?");//25
+        titles.Add("Get the rid of vampire.");//26
+        titles.Add("Help the girl");//27
+        titles.Add("Make him sexy");//28
+        titles.Add("Use your imagination");//29
+        titles.Add("Find the mysterious person.");//30
+        titles.Add("Wake up!");//31
+        titles.Add("Summon the genie.");//32
+        titles.Add("Find the second girl");//33
+        titles.Add("Help the boy stay awake.");//34
+        titles.Add("Who is real?.");//35
+        titles.Add("Help him please her.");//36
+        titles.Add("Help them relax...");//37
+        titles.Add("Find the first full tank.");//38
+        titles.Add("What is she doing?");//39
+        titles.Add("You will be surprised.");//40
+        titles.Add("Help him a singer");//41
+        titles.Add("Kill the monster");//42
+        titles.Add("Help her lose weight.");//43
+        titles.Add("Kill The Vampires.");//44
+        titles.Add("Catch the robber");//45
+        titles.Add("Make her happy");//46
+        titles.Add("Make it cool!");//47
+        titles.Add("Find the letter O.");//48
+        titles.Add("Find the sheep.");//49
+        titles.Add("Find an omelet");//50
+        titles.Add("Find the thief");//51
+        titles.Add("Help the bus to drive through.");//52
+        titles.Add("Surprise gift.");//53
+        titles.Add("");//54
+        titles.Add("Finish the costume");//55
+        titles.Add("Save the girl.");//56
+        titles.Add("Help him.");//57
+        titles.Add("He wants a ghost.");//58
+        titles.Add("Help Her fix the airpod");//59
+        titles.Add("Erase and win."); // 60
+        titles.Add("What is the man hiding?"); // 61
+        titles.Add("Help the girl save this image."); // 62
+        titles.Add("Let's jump over the stream."); // 63
+        titles.Add("Help the boy fly"); // 64
+        titles.Add("Find pearls"); // 65
+        titles.Add("Renew the hammer"); // 66
+        titles.Add("Save the little fish."); // 67
+        titles.Add("Heal Dolphins' Wounds"); // 68
 
         for (int i = 0; i < titles.Count; i++) {
             int index = i;

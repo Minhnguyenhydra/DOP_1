@@ -1,0 +1,48 @@
+
+Lv_69.png
+size: 960,564
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Fish
+  rotate: false
+  xy: 647, 142
+  size: 94, 78
+  orig: 94, 78
+  offset: 0, 0
+  index: -1
+Shark
+  rotate: false
+  xy: 647, 222
+  size: 308, 338
+  orig: 308, 338
+  offset: 0, 0
+  index: -1
+bg
+  rotate: false
+  xy: 2, 2
+  size: 643, 558
+  orig: 643, 558
+  offset: 0, 0
+  index: -1
+eye_1
+  rotate: false
+  xy: 647, 73
+  size: 26, 11
+  orig: 26, 11
+  offset: 0, 0
+  index: -1
+eye_2
+  rotate: false
+  xy: 743, 208
+  size: 36, 12
+  orig: 36, 12
+  offset: 0, 0
+  index: -1
+mohoi
+  rotate: false
+  xy: 647, 86
+  size: 44, 54
+  orig: 44, 54
+  offset: 0, 0
+  index: -1

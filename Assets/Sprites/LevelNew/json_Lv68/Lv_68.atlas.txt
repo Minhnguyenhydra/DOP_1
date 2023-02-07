@@ -1,0 +1,125 @@
+
+Lv_68.png
+size: 1104,572
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Cape
+  rotate: false
+  xy: 690, 179
+  size: 243, 141
+  orig: 243, 141
+  offset: 0, 0
+  index: -1
+Hammer_1
+  rotate: true
+  xy: 935, 182
+  size: 138, 137
+  orig: 138, 137
+  offset: 0, 0
+  index: -1
+Hammer_2
+  rotate: false
+  xy: 873, 38
+  size: 139, 139
+  orig: 139, 139
+  offset: 0, 0
+  index: -1
+L_Arm
+  rotate: false
+  xy: 1014, 41
+  size: 65, 66
+  orig: 65, 66
+  offset: 0, 0
+  index: -1
+Leye
+  rotate: false
+  xy: 1049, 460
+  size: 46, 32
+  orig: 46, 32
+  offset: 0, 0
+  index: -1
+Leye_2
+  rotate: true
+  xy: 1061, 412
+  size: 46, 32
+  orig: 46, 32
+  offset: 0, 0
+  index: -1
+R_Arm
+  rotate: true
+  xy: 1014, 109
+  size: 71, 58
+  orig: 71, 58
+  offset: 0, 0
+  index: -1
+Reye
+  rotate: false
+  xy: 1016, 345
+  size: 42, 32
+  orig: 42, 32
+  offset: 0, 0
+  index: -1
+Reye_2
+  rotate: false
+  xy: 1060, 345
+  size: 42, 32
+  orig: 42, 32
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: true
+  xy: 975, 348
+  size: 221, 39
+  orig: 221, 39
+  offset: 0, 0
+  index: -1
+bg
+  rotate: true
+  xy: 2, 4
+  size: 565, 686
+  orig: 565, 686
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 690, 2
+  size: 175, 181
+  orig: 175, 181
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 690, 322
+  size: 283, 247
+  orig: 283, 247
+  offset: 0, 0
+  index: -1
+longmay_1
+  rotate: true
+  xy: 1016, 456
+  size: 113, 31
+  orig: 113, 31
+  offset: 0, 0
+  index: -1
+longmay_2
+  rotate: false
+  xy: 873, 5
+  size: 128, 31
+  orig: 128, 31
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: true
+  xy: 1049, 494
+  size: 75, 43
+  orig: 75, 43
+  offset: 0, 0
+  index: -1
+mouth_2
+  rotate: true
+  xy: 1016, 379
+  size: 75, 43
+  orig: 75, 43
+  offset: 0, 0
+  index: -1

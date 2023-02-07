@@ -1,0 +1,125 @@
+
+Lv_67.png
+size: 1248,572
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+L_Hand
+  rotate: true
+  xy: 935, 186
+  size: 96, 153
+  orig: 96, 153
+  offset: 0, 0
+  index: -1
+R_Hand
+  rotate: false
+  xy: 1167, 286
+  size: 75, 159
+  orig: 75, 159
+  offset: 0, 0
+  index: -1
+R_Hand_2
+  rotate: true
+  xy: 935, 98
+  size: 86, 156
+  orig: 86, 156
+  offset: 0, 0
+  index: -1
+bg
+  rotate: true
+  xy: 2, 2
+  size: 565, 686
+  orig: 565, 686
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 1093, 79
+  size: 106, 142
+  orig: 106, 142
+  offset: 0, 0
+  index: -1
+body_2
+  rotate: false
+  xy: 690, 150
+  size: 243, 295
+  orig: 243, 295
+  offset: 0, 0
+  index: -1
+face
+  rotate: true
+  xy: 1003, 4
+  size: 92, 80
+  orig: 92, 80
+  offset: 0, 0
+  index: -1
+fish
+  rotate: false
+  xy: 1090, 187
+  size: 127, 95
+  orig: 127, 95
+  offset: 0, 0
+  index: -1
+grass_1
+  rotate: false
+  xy: 690, 41
+  size: 215, 107
+  orig: 215, 107
+  offset: 0, 0
+  index: -1
+grass_2
+  rotate: false
+  xy: 690, 447
+  size: 533, 120
+  orig: 533, 120
+  offset: 0, 0
+  index: -1
+hair
+  rotate: false
+  xy: 935, 284
+  size: 230, 161
+  orig: 230, 161
+  offset: 0, 0
+  index: -1
+longmay
+  rotate: true
+  xy: 1225, 509
+  size: 58, 20
+  orig: 58, 20
+  offset: 0, 0
+  index: -1
+longmay_win
+  rotate: false
+  xy: 690, 23
+  size: 61, 16
+  orig: 61, 16
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: true
+  xy: 907, 121
+  size: 27, 12
+  orig: 27, 12
+  offset: 0, 0
+  index: -1
+mouth_win
+  rotate: true
+  xy: 921, 121
+  size: 27, 12
+  orig: 27, 12
+  offset: 0, 0
+  index: -1
+ngoctrai
+  rotate: true
+  xy: 907, 14
+  size: 82, 94
+  orig: 82, 94
+  offset: 0, 0
+  index: -1
+ngoctrai_2
+  rotate: false
+  xy: 1085, 39
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,139 @@
+
+Lv65.png
+size: 1392,572
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+L_Hand_1
+  rotate: false
+  xy: 1224, 136
+  size: 35, 45
+  orig: 35, 45
+  offset: 0, 0
+  index: -1
+L_Hand_2
+  rotate: false
+  xy: 1224, 183
+  size: 36, 56
+  orig: 36, 56
+  offset: 0, 0
+  index: -1
+L_Leg_1
+  rotate: true
+  xy: 690, 2
+  size: 28, 87
+  orig: 28, 87
+  offset: 0, 0
+  index: -1
+L_Leg_2
+  rotate: true
+  xy: 1226, 90
+  size: 44, 30
+  orig: 44, 30
+  offset: 0, 0
+  index: -1
+R_Hand_1
+  rotate: false
+  xy: 1258, 95
+  size: 34, 39
+  orig: 34, 39
+  offset: 0, 0
+  index: -1
+R_Hand_2
+  rotate: true
+  xy: 779, 3
+  size: 27, 55
+  orig: 27, 55
+  offset: 0, 0
+  index: -1
+R_Leg_1
+  rotate: false
+  xy: 1183, 226
+  size: 32, 88
+  orig: 32, 88
+  offset: 0, 0
+  index: -1
+R_Leg_2
+  rotate: true
+  xy: 1226, 48
+  size: 40, 33
+  orig: 40, 33
+  offset: 0, 0
+  index: -1
+Stick1
+  rotate: false
+  xy: 1167, 215
+  size: 14, 99
+  orig: 14, 99
+  offset: 0, 0
+  index: -1
+Stick2
+  rotate: true
+  xy: 941, 15
+  size: 15, 294
+  orig: 15, 294
+  offset: 0, 0
+  index: -1
+bg
+  rotate: true
+  xy: 2, 5
+  size: 565, 686
+  orig: 565, 686
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 1167, 118
+  size: 55, 95
+  orig: 55, 95
+  offset: 0, 0
+  index: -1
+eyes
+  rotate: false
+  xy: 853, 12
+  size: 42, 18
+  orig: 42, 18
+  offset: 0, 0
+  index: -1
+eyes_lose
+  rotate: false
+  xy: 897, 12
+  size: 42, 18
+  orig: 42, 18
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 1217, 241
+  size: 58, 73
+  orig: 58, 73
+  offset: 0, 0
+  index: -1
+hair
+  rotate: true
+  xy: 1167, 41
+  size: 75, 57
+  orig: 75, 57
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: true
+  xy: 836, 4
+  size: 26, 15
+  orig: 26, 15
+  offset: 0, 0
+  index: -1
+tree
+  rotate: true
+  xy: 690, 32
+  size: 538, 475
+  orig: 538, 475
+  offset: 0, 0
+  index: -1
+tree_2
+  rotate: false
+  xy: 1167, 316
+  size: 221, 254
+  orig: 221, 254
+  offset: 0, 0
+  index: -1
