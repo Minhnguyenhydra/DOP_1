@@ -20,7 +20,7 @@ public class Gameplay : MonoBehaviour
     public Button btnNextWin;
     public GameObject twoBtnBot;
     public static Gameplay Instance;
-    [SerializeField] GameObject btnCheat, btnSpecialLevel;
+    [SerializeField] GameObject btnCheat/*, btnSpecialLevel*/;
     [SerializeField] GameObject[] animSpecialBtn, animSpecialPanel;
     public GameplayType GameplayType { get; private set; }
 
@@ -183,55 +183,39 @@ public class Gameplay : MonoBehaviour
             animSpecialBtn[i].SetActive(false);
             animSpecialPanel[i].SetActive(false);
         }
-        if (Datacontroller.instance.saveData.levelSpecial < Datacontroller.instance.maxSpecialLevel)
-        {
-            if (Datacontroller.instance.saveData.levelSpecial == 0)
-            {
-                sepcialWarningPanel.SetActive(Datacontroller.instance.saveData.newSpecialActive);
-                btnSpecialLevel.transform.GetChild(2).gameObject.SetActive(true);
-            }
-            animSpecialBtn[Datacontroller.instance.saveData.levelSpecial].SetActive(true);
-            animSpecialPanel[Datacontroller.instance.saveData.levelSpecial].SetActive(true);
+        //if (Datacontroller.instance.saveData.levelSpecial < Datacontroller.instance.maxSpecialLevel)
+        //{
+        //    if (Datacontroller.instance.saveData.levelSpecial == 0)
+        //    {
+        //        sepcialWarningPanel.SetActive(Datacontroller.instance.saveData.newSpecialActive);
+        //        btnSpecialLevel.transform.GetChild(2).gameObject.SetActive(true);
+        //    }
+        //    animSpecialBtn[Datacontroller.instance.saveData.levelSpecial].SetActive(true);
+        //    animSpecialPanel[Datacontroller.instance.saveData.levelSpecial].SetActive(true);
 
-            btnSpecialLevel.SetActive(Datacontroller.instance.saveData.newSpecialActive);
+        //    btnSpecialLevel.SetActive(Datacontroller.instance.saveData.newSpecialActive);
 
-        }
-        else
-        {
-            btnSpecialLevel.SetActive(false);
-        }
+        //}
+        //else
+        //{
+        //    btnSpecialLevel.SetActive(false);
+        //}
 
-        txtQuestion.text = "";
-        if (DataManager.Instance.levelInfos.Count > level /*+ count*/)
-        {
-            LevelManager levelManagerTemp = obj.GetComponent<LevelManager>();
-            LevelInfo info = DataManager.Instance.levelInfos[levelManagerTemp.indexTxtQuest/*level*/ /*+ count*/];
-
-            //if (GameSystem.userdata.level == 3)
-            //{
-            //    txtQuestion.text = null;
-            //}
-            //else
-            //{
-            //    txtQuestion.text = info.levelTitle;
-            //}
-            txtQuestion.text = info.levelTitle;
-        }
 
         if (obj != null)
         {
+
             levelObject = Instantiate(obj);
             GameSystem.userdata.level = level /*+ count*/;
             GameSystem.SaveUserDataToLocal();
 
             EventController.PLAY_LEVEL_NORMAL(level + 1);
-            //break;
+
+            LevelManager levelManagerTemp = obj.GetComponent<LevelManager>();
+            LevelInfo info = DataManager.Instance.levelInfos[levelManagerTemp.indexTxtQuest/*level*/ /*+ count*/];
+            txtQuestion.text = info.levelTitle;
         }
-        //else
-        //{
-        //    count++;
-        //}
-        // }
+
         else
         {
 
@@ -248,22 +232,13 @@ public class Gameplay : MonoBehaviour
             }
 
             txtLevel.text = "LEVEL " + (countLevelLoop + 1);
-
-            //   EventController.PLAY_LEVEL_NORMAL(countLevelLoop + 1);
-
             LevelManager levelManagerTemp = obj.GetComponent<LevelManager>();
             LevelInfo info = DataManager.Instance.levelInfos[levelManagerTemp.indexTxtQuest/*level*/ /*+ count*/];
-
-            //if (GameSystem.userdata.level == 3)
-            //{
-            //    txtQuestion.text = null;
-            //}
-            //else
-            //{
-            //    txtQuestion.text = info.levelTitle;
-            //}
             txtQuestion.text = info.levelTitle;
+            //   EventController.PLAY_LEVEL_NORMAL(countLevelLoop + 1);
+
         }
+
         if (!GameSystem.userdata.showRating && GameSystem.userdata.level == 5)
         {
             popUpRating.SetActive(true);
@@ -689,7 +664,7 @@ public class Gameplay : MonoBehaviour
 
         Datacontroller.instance.saveData.passSpecial[Datacontroller.instance.saveData.levelSpecial] = 2;
 
-        btnSpecialLevel.SetActive(false);
+    //    btnSpecialLevel.SetActive(false);
 
         if (Datacontroller.instance.saveData.levelSpecial == 0)
         {

@@ -2192,7 +2192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &82268018
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6618,7 +6618,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &264455982
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7886,7 +7886,6 @@ MonoBehaviour:
   btnNextWin: {fileID: 0}
   twoBtnBot: {fileID: 0}
   btnCheat: {fileID: 0}
-  btnSpecialLevel: {fileID: 0}
   animSpecialBtn: []
   animSpecialPanel: []
   effects:
@@ -7919,6 +7918,8 @@ MonoBehaviour:
   levelObject: {fileID: 0}
   won: 0
   isPlayingSpecial: 0
+  pausePopup: {fileID: 0}
+  settingPopUp: {fileID: 0}
   eraseSpecialLevel: {fileID: 0}
   animHint: {fileID: 0}
 --- !u!1 &321643311
@@ -15607,7 +15608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &650215043
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26380,7 +26381,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1136525154
 RectTransform:
   m_ObjectHideFlags: 0
